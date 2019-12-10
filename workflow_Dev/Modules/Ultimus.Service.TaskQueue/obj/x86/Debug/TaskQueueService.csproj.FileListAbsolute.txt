@@ -1,0 +1,8 @@
+C:\UltimusClient2013\Modules\TaskQueueService\bin\Debug\TaskQueueService.exe.config
+C:\UltimusClient2013\Modules\TaskQueueService\bin\Debug\TaskQueueService.exe
+C:\UltimusClient2013\Modules\TaskQueueService\bin\Debug\TaskQueueService.pdb
+C:\UltimusClient2013\Modules\TaskQueueService\bin\Debug\MyLib.dll
+C:\UltimusClient2013\Modules\TaskQueueService\obj\x86\Debug\TaskQueueService.csprojResolveAssemblyReference.cache
+C:\UltimusClient2013\Modules\TaskQueueService\obj\x86\Debug\TaskQueueService.exe
+C:\UltimusClient2013\Modules\TaskQueueService\obj\x86\Debug\TaskQueueService.pdb
+C:\UltimusClient2013\Modules\TaskQueueService\bin\Debug\UltLibrary.dll

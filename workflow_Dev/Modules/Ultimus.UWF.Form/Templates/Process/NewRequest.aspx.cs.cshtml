@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
+using System.Text;
+using System.Data;
+using Ultimus.UWF.Form.ProcessControl;
+using MyLib;
+
+namespace @Model.ProcessName
+{
+    public partial class NewRequest : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+		@foreach(Ultimus.UWF.Form.Entity.TableEntity table in @Model.Tables)
+		{
+
+        @:protected void btn_@(table.Name)Add_Click(object sender, EventArgs e)
+        @:{
+        @:    UserInfo userInfo = Page.FindControl("UserInfo1") as UserInfo;
+        @:    userInfo.AddNewRow(fld_detail_PROC_@(Model.ProcessName)_@(table.Name));
+        @:}
+
+        @:protected void fld_detail_PROC_@(Model.ProcessName)_@(table.Name)_ItemCommand(object source, RepeaterCommandEventArgs e)
+        @:{
+        @:    UserInfo userInfo = Page.FindControl("UserInfo1") as UserInfo;
+        @:    userInfo.DeleteRow(fld_detail_PROC_@(Model.ProcessName)_@(table.Name), e);
+        @:}
+
+		}
+    }
+}

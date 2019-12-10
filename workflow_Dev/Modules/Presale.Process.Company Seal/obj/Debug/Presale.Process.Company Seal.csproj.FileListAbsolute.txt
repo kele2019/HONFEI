@@ -1,0 +1,9 @@
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\bin\Presale.Process.Company Seal.dll
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\bin\Presale.Process.Company Seal.pdb
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\Modules\Presale.Process.Company Seal\obj\Debug\Presale.Process.Company Seal.dll
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\Modules\Presale.Process.Company Seal\obj\Debug\Presale.Process.Company Seal.pdb
+C:\Project\西安鸿飞\bin\Presale.Process.Company Seal.dll
+C:\Project\西安鸿飞\bin\Presale.Process.Company Seal.pdb
+C:\Project\西安鸿飞\Modules\Presale.Process.Company Seal\obj\Debug\Presale.Process.Company Seal.csprojResolveAssemblyReference.cache
+C:\Project\西安鸿飞\Modules\Presale.Process.Company Seal\obj\Debug\Presale.Process.Company Seal.dll
+C:\Project\西安鸿飞\Modules\Presale.Process.Company Seal\obj\Debug\Presale.Process.Company Seal.pdb

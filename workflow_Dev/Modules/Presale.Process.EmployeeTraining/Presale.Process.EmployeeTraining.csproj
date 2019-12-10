@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC3844FA-70E1-48EA-8E0B-C0875EFECD7D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presale.Process.EmployeeTraining</RootNamespace>
+    <AssemblyName>Presale.Process.EmployeeTraining</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MyLib, Version=1.5.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Presale.Process.Traval\Bin\MyLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Ultimus.UWF.Form.ProcessControl, Version=2.0.5779.39451, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..bin\Ultimus.UWF.Form.ProcessControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Answer.aspx.cs">
+      <DependentUpon>Answer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Answer.aspx.designer.cs">
+      <DependentUpon>Answer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnswerDetail.aspx.cs">
+      <DependentUpon>AnswerDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnswerDetail.aspx.designer.cs">
+      <DependentUpon>AnswerDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantConfirm.aspx.cs">
+      <DependentUpon>ApplicantConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantConfirm.aspx.designer.cs">
+      <DependentUpon>ApplicantConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Approval.aspx.cs">
+      <DependentUpon>Approval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Approval.aspx.designer.cs">
+      <DependentUpon>Approval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControllerTraining.aspx.cs">
+      <DependentUpon>ControllerTraining.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControllerTraining.aspx.designer.cs">
+      <DependentUpon>ControllerTraining.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeTraningAnswerReports.aspx.cs">
+      <DependentUpon>EmployeeTraningAnswerReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeTraningAnswerReports.aspx.designer.cs">
+      <DependentUpon>EmployeeTraningAnswerReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployyeTrainingReports.aspx.cs">
+      <DependentUpon>EmployyeTrainingReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployyeTrainingReports.aspx.designer.cs">
+      <DependentUpon>EmployyeTrainingReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\CheckUser.cs" />
+    <Compile Include="Entity\PractiseEntity.cs" />
+    <Compile Include="Entity\UserEntity.cs" />
+    <Compile Include="Entity\UserIntity.cs" />
+    <Compile Include="EvaluationDetailPage.aspx.cs">
+      <DependentUpon>EvaluationDetailPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EvaluationDetailPage.aspx.designer.cs">
+      <DependentUpon>EvaluationDetailPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRApproval.aspx.cs">
+      <DependentUpon>HRApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRApproval.aspx.designer.cs">
+      <DependentUpon>HRApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRComplete.aspx.cs">
+      <DependentUpon>HRComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRComplete.aspx.designer.cs">
+      <DependentUpon>HRComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewRequest.aspx.cs">
+      <DependentUpon>NewRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewRequest.aspx.designer.cs">
+      <DependentUpon>NewRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Practise.aspx.cs">
+      <DependentUpon>Practise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Practise.aspx.designer.cs">
+      <DependentUpon>Practise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrainingEvaluateApprove.aspx.cs">
+      <DependentUpon>TrainingEvaluateApprove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingEvaluateApprove.aspx.designer.cs">
+      <DependentUpon>TrainingEvaluateApprove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingEvaluateNewReqeust.aspx.cs">
+      <DependentUpon>TrainingEvaluateNewReqeust.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingEvaluateNewReqeust.aspx.designer.cs">
+      <DependentUpon>TrainingEvaluateNewReqeust.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingListReport.aspx.cs">
+      <DependentUpon>TrainingListReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingListReport.aspx.designer.cs">
+      <DependentUpon>TrainingListReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingPracticeAppraisal.aspx.cs">
+      <DependentUpon>TrainingPracticeAppraisal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingPracticeAppraisal.aspx.designer.cs">
+      <DependentUpon>TrainingPracticeAppraisal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingReports.aspx.cs">
+      <DependentUpon>TrainingReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingReports.aspx.designer.cs">
+      <DependentUpon>TrainingReports.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Answer.aspx" />
+    <Content Include="AnswerDetail.aspx" />
+    <Content Include="ApplicantConfirm.aspx" />
+    <Content Include="Approval.aspx" />
+    <Content Include="ControllerTraining.aspx" />
+    <Content Include="EmployeeTraningAnswerReports.aspx" />
+    <Content Include="EmployyeTrainingReports.aspx" />
+    <Content Include="EvaluationDetailPage.aspx" />
+    <Content Include="HRApproval.aspx" />
+    <Content Include="HRComplete.aspx" />
+    <Content Include="NewRequest.aspx" />
+    <Content Include="Practise.aspx" />
+    <Content Include="TrainingEvaluateApprove.aspx" />
+    <Content Include="TrainingEvaluateNewReqeust.aspx" />
+    <Content Include="TrainingListReport.aspx" />
+    <Content Include="TrainingPracticeAppraisal.aspx" />
+    <Content Include="TrainingReports.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Presale.Process.Common\Presale.Process.Common.csproj">
+      <Project>{49137556-9D2B-4630-9B33-BA41515BE0BC}</Project>
+      <Name>Presale.Process.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>35796</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

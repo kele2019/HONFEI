@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CompletedTaskDeleted">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CompletedTaskDeletedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IncidentAborted">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strReason" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncidentAbortedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IncidentCompleted">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncidentCompletedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IncidentInitiated">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncidentInitiatedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="QueueTaskActivated">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueueTaskActivatedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="StepAborted">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="nStepType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStepId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStepLabel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StepAbortedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TaskActivated">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="nStepType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaskActivatedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TaskAssigned">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAssignedUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaskAssignedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TaskCompleted">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="nStepType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaskCompletedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TaskConferred">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaskConferredResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TaskDelayed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaskDelayedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TaskDeletedOnMinResponseComplete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaskDeletedOnMinResponseCompleteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TaskLate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaskLateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TaskResubmitted">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaskResubmittedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TaskReturned">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="nStepType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaskReturnedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TaskSubmitFailed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaskSubmitFailedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TasksPerDayThresholdReached">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lTasksPerDayLimit" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="lThreshold" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TasksPerDayThresholdReachedResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckInTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckInTaskResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckOutTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckOutTaskResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="FindReplaceIncident">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nIncident" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindReplaceIncidentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="FindReplaceTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindReplaceTaskResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SaveTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveTaskResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="LogInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="info" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogInfoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="LogError">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogErrorResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CompletedTaskDeletedSoapIn">
+    <wsdl:part name="parameters" element="tns:CompletedTaskDeleted" />
+  </wsdl:message>
+  <wsdl:message name="CompletedTaskDeletedSoapOut">
+    <wsdl:part name="parameters" element="tns:CompletedTaskDeletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncidentAbortedSoapIn">
+    <wsdl:part name="parameters" element="tns:IncidentAborted" />
+  </wsdl:message>
+  <wsdl:message name="IncidentAbortedSoapOut">
+    <wsdl:part name="parameters" element="tns:IncidentAbortedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncidentCompletedSoapIn">
+    <wsdl:part name="parameters" element="tns:IncidentCompleted" />
+  </wsdl:message>
+  <wsdl:message name="IncidentCompletedSoapOut">
+    <wsdl:part name="parameters" element="tns:IncidentCompletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncidentInitiatedSoapIn">
+    <wsdl:part name="parameters" element="tns:IncidentInitiated" />
+  </wsdl:message>
+  <wsdl:message name="IncidentInitiatedSoapOut">
+    <wsdl:part name="parameters" element="tns:IncidentInitiatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueueTaskActivatedSoapIn">
+    <wsdl:part name="parameters" element="tns:QueueTaskActivated" />
+  </wsdl:message>
+  <wsdl:message name="QueueTaskActivatedSoapOut">
+    <wsdl:part name="parameters" element="tns:QueueTaskActivatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="StepAbortedSoapIn">
+    <wsdl:part name="parameters" element="tns:StepAborted" />
+  </wsdl:message>
+  <wsdl:message name="StepAbortedSoapOut">
+    <wsdl:part name="parameters" element="tns:StepAbortedResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaskActivatedSoapIn">
+    <wsdl:part name="parameters" element="tns:TaskActivated" />
+  </wsdl:message>
+  <wsdl:message name="TaskActivatedSoapOut">
+    <wsdl:part name="parameters" element="tns:TaskActivatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaskAssignedSoapIn">
+    <wsdl:part name="parameters" element="tns:TaskAssigned" />
+  </wsdl:message>
+  <wsdl:message name="TaskAssignedSoapOut">
+    <wsdl:part name="parameters" element="tns:TaskAssignedResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaskCompletedSoapIn">
+    <wsdl:part name="parameters" element="tns:TaskCompleted" />
+  </wsdl:message>
+  <wsdl:message name="TaskCompletedSoapOut">
+    <wsdl:part name="parameters" element="tns:TaskCompletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaskConferredSoapIn">
+    <wsdl:part name="parameters" element="tns:TaskConferred" />
+  </wsdl:message>
+  <wsdl:message name="TaskConferredSoapOut">
+    <wsdl:part name="parameters" element="tns:TaskConferredResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaskDelayedSoapIn">
+    <wsdl:part name="parameters" element="tns:TaskDelayed" />
+  </wsdl:message>
+  <wsdl:message name="TaskDelayedSoapOut">
+    <wsdl:part name="parameters" element="tns:TaskDelayedResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaskDeletedOnMinResponseCompleteSoapIn">
+    <wsdl:part name="parameters" element="tns:TaskDeletedOnMinResponseComplete" />
+  </wsdl:message>
+  <wsdl:message name="TaskDeletedOnMinResponseCompleteSoapOut">
+    <wsdl:part name="parameters" element="tns:TaskDeletedOnMinResponseCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaskLateSoapIn">
+    <wsdl:part name="parameters" element="tns:TaskLate" />
+  </wsdl:message>
+  <wsdl:message name="TaskLateSoapOut">
+    <wsdl:part name="parameters" element="tns:TaskLateResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaskResubmittedSoapIn">
+    <wsdl:part name="parameters" element="tns:TaskResubmitted" />
+  </wsdl:message>
+  <wsdl:message name="TaskResubmittedSoapOut">
+    <wsdl:part name="parameters" element="tns:TaskResubmittedResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaskReturnedSoapIn">
+    <wsdl:part name="parameters" element="tns:TaskReturned" />
+  </wsdl:message>
+  <wsdl:message name="TaskReturnedSoapOut">
+    <wsdl:part name="parameters" element="tns:TaskReturnedResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaskSubmitFailedSoapIn">
+    <wsdl:part name="parameters" element="tns:TaskSubmitFailed" />
+  </wsdl:message>
+  <wsdl:message name="TaskSubmitFailedSoapOut">
+    <wsdl:part name="parameters" element="tns:TaskSubmitFailedResponse" />
+  </wsdl:message>
+  <wsdl:message name="TasksPerDayThresholdReachedSoapIn">
+    <wsdl:part name="parameters" element="tns:TasksPerDayThresholdReached" />
+  </wsdl:message>
+  <wsdl:message name="TasksPerDayThresholdReachedSoapOut">
+    <wsdl:part name="parameters" element="tns:TasksPerDayThresholdReachedResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckInTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckInTask" />
+  </wsdl:message>
+  <wsdl:message name="CheckInTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckInTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckOutTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckOutTask" />
+  </wsdl:message>
+  <wsdl:message name="CheckOutTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckOutTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindReplaceIncidentSoapIn">
+    <wsdl:part name="parameters" element="tns:FindReplaceIncident" />
+  </wsdl:message>
+  <wsdl:message name="FindReplaceIncidentSoapOut">
+    <wsdl:part name="parameters" element="tns:FindReplaceIncidentResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindReplaceTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:FindReplaceTask" />
+  </wsdl:message>
+  <wsdl:message name="FindReplaceTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:FindReplaceTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveTask" />
+  </wsdl:message>
+  <wsdl:message name="SaveTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:LogInfo" />
+  </wsdl:message>
+  <wsdl:message name="LogInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:LogInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogErrorSoapIn">
+    <wsdl:part name="parameters" element="tns:LogError" />
+  </wsdl:message>
+  <wsdl:message name="LogErrorSoapOut">
+    <wsdl:part name="parameters" element="tns:LogErrorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SubscriberServiceSoap">
+    <wsdl:operation name="CompletedTaskDeleted">
+      <wsdl:input message="tns:CompletedTaskDeletedSoapIn" />
+      <wsdl:output message="tns:CompletedTaskDeletedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncidentAborted">
+      <wsdl:input message="tns:IncidentAbortedSoapIn" />
+      <wsdl:output message="tns:IncidentAbortedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncidentCompleted">
+      <wsdl:input message="tns:IncidentCompletedSoapIn" />
+      <wsdl:output message="tns:IncidentCompletedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncidentInitiated">
+      <wsdl:input message="tns:IncidentInitiatedSoapIn" />
+      <wsdl:output message="tns:IncidentInitiatedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueTaskActivated">
+      <wsdl:input message="tns:QueueTaskActivatedSoapIn" />
+      <wsdl:output message="tns:QueueTaskActivatedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StepAborted">
+      <wsdl:input message="tns:StepAbortedSoapIn" />
+      <wsdl:output message="tns:StepAbortedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaskActivated">
+      <wsdl:input message="tns:TaskActivatedSoapIn" />
+      <wsdl:output message="tns:TaskActivatedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaskAssigned">
+      <wsdl:input message="tns:TaskAssignedSoapIn" />
+      <wsdl:output message="tns:TaskAssignedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaskCompleted">
+      <wsdl:input message="tns:TaskCompletedSoapIn" />
+      <wsdl:output message="tns:TaskCompletedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaskConferred">
+      <wsdl:input message="tns:TaskConferredSoapIn" />
+      <wsdl:output message="tns:TaskConferredSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaskDelayed">
+      <wsdl:input message="tns:TaskDelayedSoapIn" />
+      <wsdl:output message="tns:TaskDelayedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaskDeletedOnMinResponseComplete">
+      <wsdl:input message="tns:TaskDeletedOnMinResponseCompleteSoapIn" />
+      <wsdl:output message="tns:TaskDeletedOnMinResponseCompleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaskLate">
+      <wsdl:input message="tns:TaskLateSoapIn" />
+      <wsdl:output message="tns:TaskLateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaskResubmitted">
+      <wsdl:input message="tns:TaskResubmittedSoapIn" />
+      <wsdl:output message="tns:TaskResubmittedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaskReturned">
+      <wsdl:input message="tns:TaskReturnedSoapIn" />
+      <wsdl:output message="tns:TaskReturnedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaskSubmitFailed">
+      <wsdl:input message="tns:TaskSubmitFailedSoapIn" />
+      <wsdl:output message="tns:TaskSubmitFailedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TasksPerDayThresholdReached">
+      <wsdl:input message="tns:TasksPerDayThresholdReachedSoapIn" />
+      <wsdl:output message="tns:TasksPerDayThresholdReachedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckInTask">
+      <wsdl:input message="tns:CheckInTaskSoapIn" />
+      <wsdl:output message="tns:CheckInTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOutTask">
+      <wsdl:input message="tns:CheckOutTaskSoapIn" />
+      <wsdl:output message="tns:CheckOutTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindReplaceIncident">
+      <wsdl:input message="tns:FindReplaceIncidentSoapIn" />
+      <wsdl:output message="tns:FindReplaceIncidentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindReplaceTask">
+      <wsdl:input message="tns:FindReplaceTaskSoapIn" />
+      <wsdl:output message="tns:FindReplaceTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTask">
+      <wsdl:input message="tns:SaveTaskSoapIn" />
+      <wsdl:output message="tns:SaveTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogInfo">
+      <wsdl:input message="tns:LogInfoSoapIn" />
+      <wsdl:output message="tns:LogInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogError">
+      <wsdl:input message="tns:LogErrorSoapIn" />
+      <wsdl:output message="tns:LogErrorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SubscriberServiceSoap" type="tns:SubscriberServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CompletedTaskDeleted">
+      <soap:operation soapAction="http://tempuri.org/CompletedTaskDeleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncidentAborted">
+      <soap:operation soapAction="http://tempuri.org/IncidentAborted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncidentCompleted">
+      <soap:operation soapAction="http://tempuri.org/IncidentCompleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncidentInitiated">
+      <soap:operation soapAction="http://tempuri.org/IncidentInitiated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueTaskActivated">
+      <soap:operation soapAction="http://tempuri.org/QueueTaskActivated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StepAborted">
+      <soap:operation soapAction="http://tempuri.org/StepAborted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskActivated">
+      <soap:operation soapAction="http://tempuri.org/TaskActivated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskAssigned">
+      <soap:operation soapAction="http://tempuri.org/TaskAssigned" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskCompleted">
+      <soap:operation soapAction="http://tempuri.org/TaskCompleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskConferred">
+      <soap:operation soapAction="http://tempuri.org/TaskConferred" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskDelayed">
+      <soap:operation soapAction="http://tempuri.org/TaskDelayed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskDeletedOnMinResponseComplete">
+      <soap:operation soapAction="http://tempuri.org/TaskDeletedOnMinResponseComplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskLate">
+      <soap:operation soapAction="http://tempuri.org/TaskLate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskResubmitted">
+      <soap:operation soapAction="http://tempuri.org/TaskResubmitted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskReturned">
+      <soap:operation soapAction="http://tempuri.org/TaskReturned" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskSubmitFailed">
+      <soap:operation soapAction="http://tempuri.org/TaskSubmitFailed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TasksPerDayThresholdReached">
+      <soap:operation soapAction="http://tempuri.org/TasksPerDayThresholdReached" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckInTask">
+      <soap:operation soapAction="http://tempuri.org/CheckInTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOutTask">
+      <soap:operation soapAction="http://tempuri.org/CheckOutTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindReplaceIncident">
+      <soap:operation soapAction="http://tempuri.org/FindReplaceIncident" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindReplaceTask">
+      <soap:operation soapAction="http://tempuri.org/FindReplaceTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTask">
+      <soap:operation soapAction="http://tempuri.org/SaveTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogInfo">
+      <soap:operation soapAction="http://tempuri.org/LogInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogError">
+      <soap:operation soapAction="http://tempuri.org/LogError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SubscriberServiceSoap12" type="tns:SubscriberServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CompletedTaskDeleted">
+      <soap12:operation soapAction="http://tempuri.org/CompletedTaskDeleted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncidentAborted">
+      <soap12:operation soapAction="http://tempuri.org/IncidentAborted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncidentCompleted">
+      <soap12:operation soapAction="http://tempuri.org/IncidentCompleted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncidentInitiated">
+      <soap12:operation soapAction="http://tempuri.org/IncidentInitiated" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueTaskActivated">
+      <soap12:operation soapAction="http://tempuri.org/QueueTaskActivated" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StepAborted">
+      <soap12:operation soapAction="http://tempuri.org/StepAborted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskActivated">
+      <soap12:operation soapAction="http://tempuri.org/TaskActivated" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskAssigned">
+      <soap12:operation soapAction="http://tempuri.org/TaskAssigned" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskCompleted">
+      <soap12:operation soapAction="http://tempuri.org/TaskCompleted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskConferred">
+      <soap12:operation soapAction="http://tempuri.org/TaskConferred" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskDelayed">
+      <soap12:operation soapAction="http://tempuri.org/TaskDelayed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskDeletedOnMinResponseComplete">
+      <soap12:operation soapAction="http://tempuri.org/TaskDeletedOnMinResponseComplete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskLate">
+      <soap12:operation soapAction="http://tempuri.org/TaskLate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskResubmitted">
+      <soap12:operation soapAction="http://tempuri.org/TaskResubmitted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskReturned">
+      <soap12:operation soapAction="http://tempuri.org/TaskReturned" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaskSubmitFailed">
+      <soap12:operation soapAction="http://tempuri.org/TaskSubmitFailed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TasksPerDayThresholdReached">
+      <soap12:operation soapAction="http://tempuri.org/TasksPerDayThresholdReached" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckInTask">
+      <soap12:operation soapAction="http://tempuri.org/CheckInTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOutTask">
+      <soap12:operation soapAction="http://tempuri.org/CheckOutTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindReplaceIncident">
+      <soap12:operation soapAction="http://tempuri.org/FindReplaceIncident" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindReplaceTask">
+      <soap12:operation soapAction="http://tempuri.org/FindReplaceTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTask">
+      <soap12:operation soapAction="http://tempuri.org/SaveTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogInfo">
+      <soap12:operation soapAction="http://tempuri.org/LogInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogError">
+      <soap12:operation soapAction="http://tempuri.org/LogError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SubscriberService">
+    <wsdl:port name="SubscriberServiceSoap" binding="tns:SubscriberServiceSoap">
+      <soap:address location="http://localhost:8088/Service/SubscriberService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SubscriberServiceSoap12" binding="tns:SubscriberServiceSoap12">
+      <soap12:address location="http://localhost:8088/Service/SubscriberService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

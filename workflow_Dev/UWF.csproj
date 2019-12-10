@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31E111C9-5099-4CB3-9405-F8DDFBAC15D1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UWF</RootNamespace>
+    <AssemblyName>UWF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MyLib, Version=1.5.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assets\ref\MyLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\css\base.css" />
+    <Content Include="Assets\css\bootstrap-custom.css" />
+    <Content Include="Assets\css\bootstrap-responsive.css" />
+    <Content Include="Assets\css\bootstrap.css" />
+    <Content Include="Assets\css\home.css" />
+    <Content Include="Assets\css\pager.css" />
+    <Content Include="Assets\css\listpage.css" />
+    <Content Include="Assets\css\validationEngine.jquery.css" />
+    <Content Include="Assets\doc\release.txt" />
+    <Content Include="Assets\images\add.png" />
+    <Content Include="Assets\images\base.css" />
+    <Content Include="Assets\images\bg.jpg" />
+    <Content Include="Assets\images\bg10.gif" />
+    <Content Include="Assets\images\bg11.gif" />
+    <Content Include="Assets\images\bg11.png" />
+    <Content Include="Assets\images\bg12.png" />
+    <Content Include="Assets\images\bg13.png" />
+    <Content Include="Assets\images\bg2.gif" />
+    <Content Include="Assets\images\bg3.gif" />
+    <Content Include="Assets\images\bg4.gif" />
+    <Content Include="Assets\images\bg5.gif" />
+    <Content Include="Assets\images\bg6.gif" />
+    <Content Include="Assets\images\bg7.gif" />
+    <Content Include="Assets\images\bg8.gif" />
+    <Content Include="Assets\images\bg9.gif" />
+    <Content Include="Assets\images\bi_1.gif" />
+    <Content Include="Assets\images\bt01.jpg" />
+    <Content Include="Assets\images\bt02.jpg" />
+    <Content Include="Assets\images\bt03.jpg" />
+    <Content Include="Assets\images\bt04.jpg" />
+    <Content Include="Assets\images\check.png" />
+    <Content Include="Assets\images\chosen-sprite.png" />
+    <Content Include="Assets\images\code.jpg" />
+    <Content Include="Assets\images\content.css" />
+    <Content Include="Assets\images\d1.gif" />
+    <Content Include="Assets\images\delect.jpg" />
+    <Content Include="Assets\images\DepartIcon.png" />
+    <Content Include="Assets\images\guanbi.jpg" />
+    <Content Include="Assets\images\icon_all.gif" />
+    <Content Include="Assets\images\icon_bag.gif" />
+    <Content Include="Assets\images\icon_car.gif" />
+    <Content Include="Assets\images\icon_cheng.gif" />
+    <Content Include="Assets\images\icon_computer.gif" />
+    <Content Include="Assets\images\icon_db.gif" />
+    <Content Include="Assets\images\icon_hammer.gif" />
+    <Content Include="Assets\images\icon_h_com.gif" />
+    <Content Include="Assets\images\icon_h_fav.gif" />
+    <Content Include="Assets\images\icon_h_mark.gif" />
+    <Content Include="Assets\images\icon_h_pass.gif" />
+    <Content Include="Assets\images\icon_jinyi.gif" />
+    <Content Include="Assets\images\icon_list.gif" />
+    <Content Include="Assets\images\icon_man.gif" />
+    <Content Include="Assets\images\icon_m_crm.png" />
+    <Content Include="Assets\images\icon_m_crm_h.png" />
+    <Content Include="Assets\images\icon_m_document.png" />
+    <Content Include="Assets\images\icon_m_document_h.png" />
+    <Content Include="Assets\images\icon_m_yun.png" />
+    <Content Include="Assets\images\icon_m_yun_h.png" />
+    <Content Include="Assets\images\icon_star.gif" />
+    <Content Include="Assets\images\icon_s_app.gif" />
+    <Content Include="Assets\images\icon_s_busi.gif" />
+    <Content Include="Assets\images\icon_s_chat.gif" />
+    <Content Include="Assets\images\icon_s_clock.gif" />
+    <Content Include="Assets\images\icon_s_custom.gif" />
+    <Content Include="Assets\images\icon_s_document.gif" />
+    <Content Include="Assets\images\icon_s_dsub.gif" />
+    <Content Include="Assets\images\icon_s_event.gif" />
+    <Content Include="Assets\images\icon_s_lock.gif" />
+    <Content Include="Assets\images\icon_s_msg.gif" />
+    <Content Include="Assets\images\icon_s_nc.gif" />
+    <Content Include="Assets\images\icon_s_sys.gif" />
+    <Content Include="Assets\images\icon_tianping.gif" />
+    <Content Include="Assets\images\icon_t_loc.gif" />
+    <Content Include="Assets\images\icon_t_msg.gif" />
+    <Content Include="Assets\images\icon_t_o1.gif" />
+    <Content Include="Assets\images\icon_t_o2.gif" />
+    <Content Include="Assets\images\icon_t_o3.gif" />
+    <Content Include="Assets\images\icon_t_rss.gif" />
+    <Content Include="Assets\images\listpic01.jpg" />
+    <Content Include="Assets\images\listpic02.jpg" />
+    <Content Include="Assets\images\listpicbg.jpg" />
+    <Content Include="Assets\images\listpicfooter.jpg" />
+    <Content Include="Assets\images\listtop.jpg" />
+    <Content Include="Assets\images\liucheng.gif" />
+    <Content Include="Assets\images\logo _biger.jpg" />
+    <Content Include="Assets\images\logo.jpg" />
+    <Content Include="Assets\images\midbg.jpg" />
+    <Content Include="Assets\images\new_kdhrms_en_11-old.png" />
+    <Content Include="Assets\images\refresh.jpg" />
+    <Content Include="Assets\images\scdwjj.jpg" />
+    <Content Include="Assets\images\sxlb.jpg" />
+    <Content Include="Assets\images\tabnavpic.jpg" />
+    <Content Include="Assets\images\tabs\b1_2.gif" />
+    <Content Include="Assets\images\tabs\scroll-left.gif" />
+    <Content Include="Assets\images\tabs\scroll-right.gif" />
+    <Content Include="Assets\images\tabs\tab-close.gif" />
+    <Content Include="Assets\images\tabs\tab-close2.gif" />
+    <Content Include="Assets\images\tabs\tab-close3.gif" />
+    <Content Include="Assets\images\tabs\tab-close4.gif" />
+    <Content Include="Assets\images\tabs\tab-close5.gif" />
+    <Content Include="Assets\images\tabs\tab-refresh.png" />
+    <Content Include="Assets\images\tabs\tab-strip-bg.gif" />
+    <Content Include="Assets\images\tabs\tabs-sprite.gif" />
+    <Content Include="Assets\images\tabs\tab_bg.gif" />
+    <Content Include="Assets\images\tabs\tab_bg.png" />
+    <Content Include="Assets\images\tabs\tab_bg2.gif" />
+    <Content Include="Assets\images\tabs\v3_scroll-left.gif" />
+    <Content Include="Assets\images\tabs\v3_scroll-right.gif" />
+    <Content Include="Assets\images\tabs\v3_tabBottom_bg.gif" />
+    <Content Include="Assets\images\tijiao.jpg" />
+    <Content Include="Assets\images\tipnum.gif" />
+    <Content Include="Assets\images\top_arr.gif" />
+    <Content Include="Assets\images\wnd.gif" />
+    <Content Include="Assets\images\wtbl.jpg" />
+    <Content Include="Assets\img\bg.jpg" />
+    <Content Include="Assets\img\logo.gif" />
+    <Content Include="Assets\js\autoSearch.js" />
+    <Content Include="Assets\js\bootstrap.js" />
+    <Content Include="Assets\js\BPMCommon.js" />
+    <Content Include="Assets\js\common.js" />
+    <Content Include="Assets\js\contrib\other-validations.js" />
+    <Content Include="Assets\js\jquery.cookie.js" />
+    <Content Include="Assets\js\jquery.fixedheadertable.js" />
+    <Content Include="Assets\js\jquery.js" />
+    <Content Include="Assets\js\jquery.pager.js" />
+    <Content Include="Assets\js\jquery.tabs.js" />
+    <Content Include="Assets\js\jquery.validationEngine.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-cz.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-da.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-de.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-en.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-es.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-et.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-fa.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-fi.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-fr.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-hr.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-it.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-ja.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-nl.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-pl.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-pt.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-ro.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-ru.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-sv.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-tr.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-zh_CN.js" />
+    <Content Include="Assets\js\languages\jquery.validationEngine-zh_TW.js" />
+    <Content Include="Assets\js\locale.js" />
+    <Content Include="Assets\js\My97DatePicker\calendar.js" />
+    <Content Include="Assets\js\My97DatePicker\config.js" />
+    <Content Include="Assets\js\My97DatePicker\lang\en.js" />
+    <Content Include="Assets\js\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Assets\js\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Assets\js\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="Assets\js\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Assets\js\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Assets\js\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Assets\js\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Assets\js\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Assets\js\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Assets\js\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Assets\js\My97DatePicker\WdatePicker.js" />
+    <Content Include="Assets\js\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="Assets\js\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="Assets\js\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="Assets\js\My97DatePicker\开发包\readme.txt" />
+    <Content Include="Assets\js\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="Assets\js\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="Assets\js\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="Assets\js\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="Assets\js\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="Assets\js\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="Assets\js\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Assets\js\project.js" />
+    <Content Include="Assets\js\selector.js" />
+    <Content Include="Assets\js\selectorNew.js" />
+    <Content Include="Assets\js\listpage.js" />
+    <Content Include="Assets\js\standard.js" />
+    <Content Include="Assets\ref\AspNetPager.dll" />
+    <Content Include="Assets\ref\MyLib.dll" />
+    <Content Include="Assets\ref\Newtonsoft.Json.dll" />
+    <Content Include="Assets\ref\nunit.framework.dll" />
+    <Content Include="Assets\ref\RazorEngine.dll" />
+    <Content Include="Assets\ref\System.Web.Razor.dll" />
+    <Content Include="RedirectPage.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="FromPortal.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="OperatorData.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SSOLogin\API.disco" />
+    <Content Include="TestHtmlPage.htm" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web References\SSOLogin\ItemPageOfDocumentEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSOLogin\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SSOLogin\RepResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSOLogin\RepResultOfString.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RedirectPage.aspx.cs">
+      <DependentUpon>RedirectPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RedirectPage.aspx.designer.cs">
+      <DependentUpon>RedirectPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FromPortal.aspx.cs">
+      <DependentUpon>FromPortal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FromPortal.aspx.designer.cs">
+      <DependentUpon>FromPortal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="OperatorData.aspx.cs">
+      <DependentUpon>OperatorData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OperatorData.aspx.designer.cs">
+      <DependentUpon>OperatorData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\Service.cs" />
+    <Compile Include="Web References\SSOLogin\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Modules\Ultimus.UWF.Common\Ultimus.UWF.Common.csproj">
+      <Project>{4E7B6F3F-E6A5-4E48-9022-1BD87730C50C}</Project>
+      <Name>Ultimus.UWF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\Ultimus.UWF.Form.ProcessControl\Ultimus.UWF.Form.ProcessControl.csproj">
+      <Project>{6A2E1632-64FE-4B15-BD79-2BCE0B197882}</Project>
+      <Name>Ultimus.UWF.Form.ProcessControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\Ultimus.UWF.Form\Ultimus.UWF.Form.csproj">
+      <Project>{A50B38E3-CE17-4EE0-B0DC-B05F9C00C1FF}</Project>
+      <Name>Ultimus.UWF.Form</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\Ultimus.UWF.Home2\Ultimus.UWF.Home2.csproj">
+      <Project>{DCAEF23F-3DD9-4443-AA17-9F9EFE4A66CE}</Project>
+      <Name>Ultimus.UWF.Home2</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\Ultimus.UWF.Office\Ultimus.UWF.Office.csproj">
+      <Project>{00FC1294-A92B-4FE0-BD33-9A5F50517272}</Project>
+      <Name>Ultimus.UWF.Office</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\Ultimus.UWF.OrgChart\Ultimus.UWF.OrgChart.csproj">
+      <Project>{AF096E41-83B7-4AC3-8B3D-F7389868F025}</Project>
+      <Name>Ultimus.UWF.OrgChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\Ultimus.UWF.Security\Ultimus.UWF.Security.csproj">
+      <Project>{4AA2E97E-D542-49B6-811E-8FE883C18DDF}</Project>
+      <Name>Ultimus.UWF.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\Ultimus.UWF.V7\Ultimus.UWF.V7.csproj">
+      <Project>{182B4944-21DF-49B0-AB9E-09FB63EA4B59}</Project>
+      <Name>Ultimus.UWF.V7</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\Ultimus.UWF.V8\Ultimus.UWF.V8.csproj">
+      <Project>{D23C9839-ED46-4007-95FB-0F87E6C877DE}</Project>
+      <Name>Ultimus.UWF.V8</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\Ultimus.UWF.Workflow\Ultimus.UWF.Workflow.csproj">
+      <Project>{5416C705-BEFE-48B1-97D3-854FBAF3EAB7}</Project>
+      <Name>Ultimus.UWF.Workflow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\images\tabs\Thumbs.db" />
+    <None Include="Web References\SSOLogin\API.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://moss.ptcent.com:8000/API.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SSOLogin\</RelPath>
+      <UpdateFromURL>http://moss.ptcent.com:8000/API.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UWF_SSOLogin_API</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3747</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

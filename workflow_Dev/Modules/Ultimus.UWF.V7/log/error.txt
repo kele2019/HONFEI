@@ -1,0 +1,15 @@
+2015-07-01 11:07:37,133 [7] ERROR MyLib - ★ [] The assembly Ultimus.UWF.V8 could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.V8 could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.V8”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)

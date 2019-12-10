@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67E5D424-4608-4EE3-AE5C-B419E0A0ABBD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presale.Process.EmployeePerformanceReport</RootNamespace>
+    <AssemblyName>Presale.Process.EmployeePerformanceReport</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assets\ref\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MyLib, Version=1.5.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Presale.Process.Traval\Bin\MyLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Presale.Process.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..bin\Presale.Process.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Ultimus.UWF.Form.ProcessControl, Version=2.0.5779.39451, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..bin\Ultimus.UWF.Form.ProcessControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllEmployeeFinish.aspx.cs">
+      <DependentUpon>AllEmployeeFinish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllEmployeeFinish.aspx.designer.cs">
+      <DependentUpon>AllEmployeeFinish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BeginYearGoalPlanComplete.aspx.cs">
+      <DependentUpon>BeginYearGoalPlanComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BeginYearGoalPlanComplete.aspx.designer.cs">
+      <DependentUpon>BeginYearGoalPlanComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BeginYearDepartmentApproval.aspx.cs">
+      <DependentUpon>BeginYearDepartmentApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BeginYearDepartmentApproval.aspx.designer.cs">
+      <DependentUpon>BeginYearDepartmentApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\ApplicantUserEntity.cs" />
+    <Compile Include="Entity\EmployeeLoginEntity.cs" />
+    <Compile Include="Entity\StatusEntity.cs" />
+    <Compile Include="Entity\UserIntity.cs" />
+    <Compile Include="Entity\UserManager.cs" />
+    <Compile Include="getStatus.ashx.cs">
+      <DependentUpon>getStatus.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MidYearComplete.aspx.cs">
+      <DependentUpon>MidYearComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MidYearComplete.aspx.designer.cs">
+      <DependentUpon>MidYearComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewRequestGoalPlan.aspx.cs">
+      <DependentUpon>NewRequestGoalPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewRequestGoalPlan.aspx.designer.cs">
+      <DependentUpon>NewRequestGoalPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MidYearDepartmentApproval.aspx.cs">
+      <DependentUpon>MidYearDepartmentApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MidYearDepartmentApproval.aspx.designer.cs">
+      <DependentUpon>MidYearDepartmentApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MidYearEmployeeSubmit.aspx.cs">
+      <DependentUpon>MidYearEmployeeSubmit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MidYearEmployeeSubmit.aspx.designer.cs">
+      <DependentUpon>MidYearEmployeeSubmit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MidYearUpdate.aspx.cs">
+      <DependentUpon>MidYearUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MidYearUpdate.aspx.designer.cs">
+      <DependentUpon>MidYearUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewRequest.aspx.cs">
+      <DependentUpon>NewRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewRequest.aspx.designer.cs">
+      <DependentUpon>NewRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceReportPage.aspx.cs">
+      <DependentUpon>PerformanceReportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformanceReportPage.aspx.designer.cs">
+      <DependentUpon>PerformanceReportPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YearEndComplete.aspx.cs">
+      <DependentUpon>YearEndComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YearEndComplete.aspx.designer.cs">
+      <DependentUpon>YearEndComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YearEndDepartmentApproval.aspx.cs">
+      <DependentUpon>YearEndDepartmentApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YearEndDepartmentApproval.aspx.designer.cs">
+      <DependentUpon>YearEndDepartmentApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YearEndSecondDepartmentApproval.aspx.cs">
+      <DependentUpon>YearEndSecondDepartmentApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YearEndSecondDepartmentApproval.aspx.designer.cs">
+      <DependentUpon>YearEndSecondDepartmentApproval.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AllEmployeeFinish.aspx" />
+    <Content Include="BeginYearGoalPlanComplete.aspx" />
+    <Content Include="BeginYearDepartmentApproval.aspx" />
+    <Content Include="HTMLPage1.htm" />
+    <Content Include="MidYearComplete.aspx" />
+    <Content Include="NewRequestGoalPlan.aspx" />
+    <Content Include="MidYearDepartmentApproval.aspx" />
+    <Content Include="MidYearEmployeeSubmit.aspx" />
+    <Content Include="MidYearUpdate.aspx" />
+    <Content Include="NewRequest.aspx" />
+    <Content Include="PerformanceReportPage.aspx" />
+    <Content Include="standar.png" />
+    <Content Include="YearEndComplete.aspx" />
+    <Content Include="YearEndDepartmentApproval.aspx" />
+    <Content Include="YearEndSecondDepartmentApproval.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="getStatus.ashx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>35793</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

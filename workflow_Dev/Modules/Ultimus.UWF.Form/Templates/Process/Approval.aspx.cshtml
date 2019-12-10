@@ -1,0 +1,128 @@
+﻿@("<%@ Page Language=\"C#\" AutoEventWireup=\"true\" CodeFile=\"Approval.aspx.cs\" Inherits=\"")@(Model.ProcessName)@(".Approval\" %>")
+@("<%@ Register Src=\"/Modules/Ultimus.UWF.Form.ProcessControl/UserInfo.ascx\" TagName=\"UserInfo\" TagPrefix=\"ui\" %>")
+@("<%@ Register Src=\"/Modules/Ultimus.UWF.Form.ProcessControl/ApprovalHistory.ascx\" TagName=\"ApprovalHistory\" TagPrefix=\"ah\" %>")
+@("<%@ Register Src=\"/Modules/Ultimus.UWF.Form.ProcessControl/Attachments.ascx\" TagName=\"Attachments\" TagPrefix=\"attach\" %>")
+@("<%@ Register Src=\"/Modules/Ultimus.UWF.Form.ProcessControl/ButtonList.ascx\" TagName=\"ButtonList\" TagPrefix=\"btn\" %>")
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>@Model.ProcessName</title>
+    <script type="text/javascript" src="/Assets/js/common.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container">
+        <div class="row">
+            <ui:userinfo id="UserInfo1" processtitle="@Model.ProcessName" processprefix="FP" tablename="@Model.TableName"
+                tablenamedetail="@Model.TableNameDetail" ReadOnly="true" runat="server"></ui:userinfo>
+        </div>
+        <div class="row">
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <td class="banner" colspan="4">
+                        详细信息
+                    </td>
+                </tr>
+				@{
+				
+				List<Ultimus.UWF.Form.Entity.FieldEntity> flds= @Model.Fields.FindAll(p => p.ComplexType.ToUpper().Trim() == "GLOBALTYPE");
+				for(var i=0;i<flds.Count;i++)
+				{
+					Ultimus.UWF.Form.Entity.FieldEntity fld=@Model.Fields[i];
+					if(i%2==0)
+					{
+					@: <tr>
+						<td class="td-label">
+							@fld.Description：
+						</td>
+						<td class="td-content">
+							<asp:Label ID="read_@(fld.Name)" runat="server" CssClass="validate[ustom[number]]" />
+						</td>
+					}
+					else
+					{
+						<td class="td-label">
+							@fld.Description：
+						</td>
+						<td class="td-content">
+							<asp:Label ID="read_@(fld.Name)" runat="server" CssClass="validate[ustom[number]]" />
+						</td>
+					@: </tr>
+					}
+                }
+
+				if(flds.Count%2!=0)
+				{
+					<td class="td-label">
+						</td>
+						<td class="td-content">
+						</td>
+					@: </tr>
+				}
+
+				foreach(Ultimus.UWF.Form.Entity.TableEntity table in @Model.Tables)
+				{
+				  flds=@Model.Fields.FindAll(p => p.ComplexType.ToUpper().Trim() == table.Name.ToUpper());
+				<tr>
+                    <td colspan="10">
+                        <table class="table table-condensed table-bordered tablerequired">
+                            <tr>
+                                <th class="hidden">
+                                    FORMID
+                                </th>
+								@foreach(Ultimus.UWF.Form.Entity.FieldEntity fld in flds)
+								{
+                                <th>
+                                    @fld.Description
+                                </th>
+								}
+                            </tr>
+                            <asp:Repeater ID="read_detail_PROC_@(Model.ProcessName)_@(table.Name)" runat="server">
+                                <ItemTemplate>
+                                    <tr>
+                                        <td class="hidden">
+                                            <asp:TextBox ID="read_FORMID" Text='<%#Eval("FORMID") %>' runat="server"/>
+                                        </td>
+										@foreach(Ultimus.UWF.Form.Entity.FieldEntity fld in flds)
+										{
+                                        <td>
+							@if(fld.Type=="dateTime")
+							{
+								 <asp:Label ID="read_@(fld.Name)" runat="server" 
+                                                Text='<%#MyLib.ConvertUtil.ToShortDateString(Eval("@(fld.Name)"))%>'/>
+							 }
+							else
+							{
+								<asp:Label ID="read_@(fld.Name)" runat="server" 
+                                                Text='<%#Eval("@(fld.Name)")%>'/>
+							 }
+                                        </td>
+										}
+                                    </tr>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </table>
+                    </td>
+                </tr>
+				}
+				}
+
+            </table>
+        </div>
+        <div class="row">
+            <attach:attachments id="Attachments1" runat="server" readonly="true"></attach:attachments>
+        </div>
+        <div class="row">
+            <ah:approvalhistory id="ApprovalHistory1" showaction="true" runat="server"></ah:approvalhistory>
+        </div>
+        <div class="row">
+        </div>
+    </div>
+    <btn:buttonlist id="ButtonList1" runat="server"></btn:buttonlist>
+    <div style="display: none;">
+        
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+C:\ultgw\Modules\UltimusArchive\bin\Debug\UltimusArchive.exe.config
+C:\ultgw\Modules\UltimusArchive\bin\Debug\UltimusArchive.exe
+C:\ultgw\Modules\UltimusArchive\bin\Debug\UltimusArchive.pdb
+C:\ultgw\Modules\UltimusArchive\bin\Debug\MyLib.dll
+C:\ultgw\Modules\UltimusArchive\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\ultgw\Modules\UltimusArchive\obj\x86\Debug\UltimusArchive.exe
+C:\ultgw\Modules\UltimusArchive\obj\x86\Debug\UltimusArchive.pdb
+C:\UltimusClient2013\Modules\UltimusArchive\bin\Debug\UltimusArchive.exe.config
+C:\UltimusClient2013\Modules\UltimusArchive\obj\x86\Debug\UltimusArchive.exe
+C:\UltimusClient2013\Modules\UltimusArchive\obj\x86\Debug\UltimusArchive.pdb
+C:\UltimusClient2013\Modules\UltimusArchive\bin\Debug\UltimusArchive.exe
+C:\UltimusClient2013\Modules\UltimusArchive\bin\Debug\UltimusArchive.pdb
+C:\UltimusClient2013\Modules\UltimusArchive\bin\Debug\MyLib.dll
+C:\UltimusClient2013\Modules\UltimusArchive\obj\x86\Debug\ResolveAssemblyReference.cache

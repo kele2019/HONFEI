@@ -1,0 +1,137 @@
+/* CSS Document */
+
+div,ul,li,h1,h2,h3,p,span,input,dl,dt,dd,table,form{ margin:0; padding:0; list-style:none; font-size:14px; font-family:segoe ui, Arial, "Microsoft Yahei";}
+
+a:link,a:visited,a:hover,a:active{text-decoration:none;}
+
+.clear{ clear:both; margin:0; padding:0; list-style:none; height:0px; line-height:0px;}
+
+body{ margin:0 auto; background:#fff}
+
+.contant{ background:#fff url(../img/contant_bg.gif) center top repeat-y;}
+
+.top{ margin:0 auto;  min-width:1200px;border-bottom:2px #ddd solid;  }
+/*.top{margin:0 auto; min-width:1200px; border-bottom:1px;}*/
+.top .box{ height:90px; margin:0 auto; width:1200px;}
+/*.top .box h1{ background:url(../img/logo_workflow.png) left center no-repeat; float:left; height:90px; width:400px;}*/
+/*.top .box .home{ float:right; cursor:pointer; background:url(../img/l_1.png) left top repeat-y; width:66px; padding-left:1px; height:90px; position:relative}*/
+.top .box .home{ float:right; cursor:pointer;  padding-left:1px; position:relative}
+.top .box .home dt p{ height:90px; width:26px; margin:0 auto; background:url(../img/i_2.png) left center no-repeat;}
+.top .box .home dd{ display:none; overflow:hidden; border:1px #ddd solid; border-top:0px; background:#fff; position:absolute; top:90px; z-index:99; right:0px; padding:10px; width:240px; -moz-box-shadow:0px 2px 5px #ccc;/*firefox*/  -webkit-box-shadow:0px 2px 5px #ccc;/*webkit*/  box-shadow:0px 2px 5px #ccc;/*opera或ie9*/  }
+.top .box .home dd a{ float:left; width:70px;line-height:40px; padding-left:10px;}
+.top .box .home dd a:hover{ background:#f5f5f5; color:#09f;}
+.top .box .home:hover dd{ display:block;}
+.top .box .home:hover dt p{ background:url(../img/i_2.png) right center no-repeat}
+/*.top .box span{ float:right; height:90px; padding-left:50px;padding-right:10px; color:#fff; font-size:14px; line-height:90px;}*/
+
+.contant{ background:#fff url(../img/contant_bg.gif) center top repeat-y; width:1200px; margin:0 auto; overflow:hidden}
+.contant_list{ width:100%; margin:0 auto; }
+
+.contant_left{ width:240px; float:left; padding:20px 0px;}
+.contant_left .menubox{ margin-bottom:20px;}
+.contant_left .menubox h1{ height:36px; line-height:36px; font-size:20px; color:#000; padding-left:10px; padding-bottom:10px}
+.contant_left .menubox .boxhover{ background:url(../img/t_1.gif) right center no-repeat}
+.contant_left .menubox dl{margin:0px 20px 0px 0px;}
+.contant_left .menubox dl dt a{ display:block; height:40px; padding-left:10px; line-height:40px; color:#333; font-size:20px}
+.contant_left .menubox dl dd a{ display:block; height:36px; line-height:36px; padding-left:24px; color:#666; font-size:14px; background-image:url(../img/dot.gif); background-position:10px center; background-repeat:no-repeat}
+.contant_left .menubox .hover{ background-color:#eee; color:#3366cc} 
+.contant_left .menubox a:hover{ background-color:#f5f5f5;}
+
+.contatn_right{ width:920px; float:left; padding:20px; }
+.contatn_right .app_box{ overflow:hidden;}
+.contatn_right .app_box .box1{ float:right; width:150px; padding-left:20px;}
+.contatn_right .app_box .box2{ float:left; width:800px;}
+.contatn_right .app_box .app{ float:left;text-align:center;vertical-align:middle; background-color:#00b2bf; color:#fff; text-align:center; width:130px; height:43px; padding-top:100px; font-size:15px; margin-right:10px; margin-bottom:10px; line-height:20px;}
+.contatn_right .app_box .app:hover{ background-color:#007ebf}
+.contatn_right .app_box .wn_app{ display:block; width:110px; height:110px; padding:20px; font-size:18px; line-height:30px; background-color:#f93; color:#fff;}
+.contatn_right .app_box .wn_app p{ line-height:50px; font-size:30px;}
+.contatn_right .app_box .Admin_1{ background-image:url(../img/Admin/yinzhang_icon.png);background-repeat:no-repeat; background-position:40px 40px;}
+.contatn_right .app_box .Admin_2{ background-image:url(../img/Admin/waifawenjain_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Admin_3{ background-image:url(../img/Admin/zhengzhao_icon.png);  background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Admin_4{ background-image:url(../img/Admin/menjinka_icon.png);  background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Admin_5{ background-image:url(../img/Admin/yaoshi_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Admin_6{ background-image:url(../img/Admin/menjinkadiushi_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Admin_7{ background-image:url(../img/Admin/paiche_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .HR_1{ background-image:url(../img/HR/yuangongruzhi_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .HR_2{ background-image:url(../img/HR/lizhishenqing_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .HR_3{ background-image:url(../img/HR/lizhi_icon.png);  background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .HR_4{ background-image:url(../img/HR/peixun_icon.png);  background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .HR_5{ background-image:url(../img/HR/jixiao_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .HR_6{ background-image:url(../img/HR/jiaban_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .HR_7{ background-image:url(../img/HR/huanxiu_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .HR_8{ background-image:url(../img/HR/qingjia_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .HR_9{ background-image:url(../img/IT/fangwenquanxian_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .IT_1{ background-image:url(../img/IT/fangwenquanxian_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .IT_2{ background-image:url(../img/IT/beifen_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .IT_3{ background-image:url(../img/IT/shujuhuifu_icon.png);  background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .IT_4{ background-image:url(../img/IT/ruanyingjian_icon.png);  background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .IT_5{ background-image:url(../img/IT/lingyong_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .IT_6{ background-image:url(../img/IT/wangzhanfangwen_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .IT_7{ background-image:url(../img/IT/dengji_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Quality_1{ background-image:url(../img/Quality/zhilaingwendang_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Quality_2{ background-image:url(../img/Quality/fangke_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Purchase_1{ background-image:url(../img/Purchase/caigoushenqing_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Purchase_2{ background-image:url(../img/Purchase/caigoudingdan_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Finance_1{ background-image:url(../img/Finanace/yuangongbaoxiao_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Finance_2{ background-image:url(../img/Finanace/chuchaibaoxiao_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Finance_3{ background-image:url(../img/Finanace/chuchaishenqing_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Finance_4{ background-image:url(../img/Finanace/gongyingshangfukuan_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+.contatn_right .app_box .Finance_5{ background-image:url(../img/Finanace/yufukuan_icon.png); background-repeat:no-repeat;background-position:40px 40px;}
+
+.contatn_right .dept{ width:100%;}
+.contatn_right .dept td{ text-align:center;width:20px; height:30px;  }
+
+
+.contatn_right .dept a{ float:left; background-image:url(../hFimg/Department_bg_icon.png); color:#fff; text-align:center; width:64px; height:49px; padding-top:15px; font-size:20px; margin-left:40px; margin-bottom:10px; line-height:20px;}
+.contatn_right .dept p{ text-align:center; width:80px; margin-top:20px; padding-left:30px;}
+
+.listpage_contant{ padding-bottom:40px;}
+.listpage_list{ padding:20px 0px 20px 0px; font-size:18px; line-height:30px; color:#444;}
+.listpage_list .listtable{ width:100%; border:1px #ddd solid; border-collapse:collapse}
+.listpage_list .listtable td{ height:40px; color:#666; border-bottom:#ddd solid 1px ; padding:0px 10px;}
+.listpage_list .listtable .type{font-weight:bold; background:#eee; text-align:center;}
+.listpage_list .listtable .t1{ width:40px;}
+.listpage_list .listtable .t2{ width:120px;}
+.listpage_list .listtable .t3{ width:180px;}
+.inputtext{ width:278px; padding:0px 2px; height:25px; line-height:24px; border:1px #ddd solid; line-height:24px; font-family:segoe ui, Arial, "Microsoft Yahei"; color:#666;}
+.inputbtn{width:80px; background:#f5f5f5; text-align:center; cursor:pointer; line-height:26px; border:1px #ddd solid;}
+
+.screenbox{ border-bottom:1px #ddd solid; background:#f5f5f5; height:50px;}
+.screenbox .screen{ padding:10px 0px 0px 0px; margin:0 auto}
+.screenbox dl{ float:left;}
+.screenbox dl dt{ float:left; font-weight:bold; line-height:26px; padding:0px 5px 0px 5px; color:#333;}
+.screenbox dl dd{ float:left; padding:2px 0px 2px 0px;}
+.screenbox dl dd .search_input{ width:278px; padding:0px 2px; height:25px; line-height:24px; border:1px #ddd solid; line-height:24px; font-family:segoe ui, Arial, "Microsoft Yahei"; color:#666;}
+.screenbox dl dd .time_input{ width:90px; padding:0px 2px 0px 20px; height:25px; line-height:24px; border:1px #ddd solid; line-height:24px; font-family:segoe ui, Arial, "Microsoft Yahei"; color:#666; background:#fff url(../img/i_3.gif) 4px center no-repeat;}
+.screenbox dl .selectbox{ position:relative; cursor:pointer}
+.screenbox dl .selectbox .s1{ width:178px; border:1px #ddd solid; height:24px; line-height:24px; padding:0px 2px; background:#fff url(../img/t_2.gif) right center no-repeat;}
+.screenbox dl .selectbox .s2{ display:none; position:absolute; background:#fff; top:28px; left:0px; width:182px; border:1px #ddd solid; border-top:0px;}
+.screenbox dl .selectbox:hover .s2{ display:block}
+.screenbox dl .selectbox .s2 a{ display:block; line-height:36px; padding:0px 6px; color:#333; border-bottom:1px #eee solid;}
+.screenbox dl .selectbox .s2 a:hover{ background:#eee;}
+.screenbox dl .nd{ float:left; padding:2px 10px 2px 0px;}
+.screenbox .btnbox{ float:left; padding:2px 10px 2px 10px;}
+.screenbox .btnbox a{ display:block; width:80px; background:#007ebf; color:#fff; text-align:center; line-height:26px;}
+.screenbox .btnbox a:hover{ background:#00b2bf}
+
+.file_patch{ border-bottom:1px #ddd solid; background:#f5f5f5;}
+.file_patch p{ padding-top:10px; line-height:30px; width:1200px; color:#999; margin:0 auto; font-family:"宋体"}
+.file_patch a{ font-size:12px; color:#666; font-family:segoe ui, Arial, "Microsoft Yahei";}
+.file_patch a:hover{ text-decoration:underline} 
+
+.pagelist{ font-size:12px; padding:10px 0px; text-align:right; border-top:1px #eee solid;}
+.pagelist table td{ height:30px; vertical-align:middle; width:30px; padding:0px 2px; font-family:segoe ui; text-align:center}
+.pagelist table td a{ color:#666; display:block; line-height:30px; width:30px; text-align:center;}
+.pagelist table td a:hover{ background:#ddd;}
+.pagelist table td .hover{ color:#09F; font-weight:bold}
+
+
+
+.list_line{ background-color:#f5f5f5;}
+
+
+
+
+
+
+

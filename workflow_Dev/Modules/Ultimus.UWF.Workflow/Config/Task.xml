@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="ibatisnet" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <statements>
+    <select id="TaskLogic_GetMyTask" resultClass="Ultimus.UWF.Workflow.Entity.TaskEntity" >
+      SELECT TASKID,
+      a.PROCESSNAME,
+      a.INCIDENT,
+      b.SUMMARY,
+      b.INITIATOR,
+      a.STEPLABEL,
+      a.TASKUSER,
+      a.ASSIGNEDTOUSER,
+      a.STATUS,
+      a.SUBSTATUS,
+      a.STARTTIME,
+      a.ENDTIME,
+      a.STEPID
+      ,b.STARTTIME  OVERDUETIME
+      ,b.STATUS as PROCESSSTATUS
+      ,$SERVERNAME$ as SERVERNAME
+      ,RTRIM(REPLACE(b.INITIATOR,'HONFEI/','')) RequestorDate
+      FROM TASKS a  with(nolock)
+      INNER JOIN INCIDENTS b with(nolock)  ON a.PROCESSNAME = b.PROCESSNAME AND a.INCIDENT = b.INCIDENT
+      WHERE a.STATUS=1 AND a.ASSIGNEDTOUSER=$ASSIGNEDTOUSER$
+      <dynamic prepend="AND">
+        <isParameterPresent>
+          a.STARTTIME BETWEEN #STARTTIME# AND #ENDTIME#
+        </isParameterPresent>
+      </dynamic>
+      $filter$
+      ORDER BY $Sort$
+    </select>
+    <select id="TaskLogic_GetMyTaskCount"  >
+      SELECT count(1) FROM TASKS a with(nolock) INNER JOIN INCIDENTS b  with(nolock) ON a.PROCESSNAME = b.PROCESSNAME AND a.INCIDENT = b.INCIDENT
+      WHERE a.STATUS=1 AND a.ASSIGNEDTOUSER=$ASSIGNEDTOUSER$
+      <dynamic prepend="AND">
+        <isParameterPresent>
+          a.STARTTIME BETWEEN #STARTTIME# AND #ENDTIME#
+        </isParameterPresent>
+      </dynamic>
+      $filter$
+    </select>
+
+    <select id="TaskLogic_GetMyRequest" resultClass="Ultimus.UWF.Workflow.Entity.TaskEntity" >
+      SELECT TASKID,
+      a.PROCESSNAME,
+      a.INCIDENT,
+      b.SUMMARY,
+      b.INITIATOR,
+      a.STEPLABEL,
+       a.TASKUSER,
+      a.STATUS,
+      a.SUBSTATUS,
+      a.ENDTIME,
+      a.STEPID,
+      a.OVERDUETIME
+      ,b.STATUS as PROCESSSTATUS,
+      b.STARTTIME
+      ,$SERVERNAME$ as SERVERNAME
+      FROM TASKS a with(nolock)
+      INNER JOIN INCIDENTS b  with(nolock) ON a.PROCESSNAME = b.PROCESSNAME AND a.INCIDENT = b.INCIDENT
+      INNER JOIN PROCESSSTEPS c  with(nolock) ON a.PROCESSNAME=c.PROCESSNAME and a.PROCESSVERSION=c.PROCESSVERSION and a.STEPID=c.STEPID AND c.STEPTYPE=2
+
+      WHERE 1=1 AND (INITIATOR=$ASSIGNEDTOUSER$ )
+      <dynamic prepend="AND">
+        <isParameterPresent>
+          b.STARTTIME BETWEEN #STARTTIME# AND #ENDTIME#
+        </isParameterPresent>
+      </dynamic>
+      $filter$
+      ORDER BY $Sort$
+    </select>
+    <select id="TaskLogic_GetMyRequestCount"  >
+      SELECT count(1)
+      FROM TASKS a with(nolock)
+      INNER JOIN INCIDENTS b  with(nolock) ON a.PROCESSNAME = b.PROCESSNAME AND a.INCIDENT = b.INCIDENT
+      INNER JOIN PROCESSSTEPS c with(nolock)  ON a.PROCESSNAME=c.PROCESSNAME and a.PROCESSVERSION=c.PROCESSVERSION and a.STEPID=c.STEPID AND c.STEPTYPE=2
+
+      WHERE 1=1 AND (ASSIGNEDTOUSER=$ASSIGNEDTOUSER$ )
+      <dynamic prepend="AND">
+        <isParameterPresent>
+          a.STARTTIME BETWEEN #STARTTIME# AND #ENDTIME#
+        </isParameterPresent>
+      </dynamic>
+      $filter$
+    </select>
+
+    <select id="TaskLogic_GetMyApproval" resultClass="Ultimus.UWF.Workflow.Entity.TaskEntity">
+      SELECT TASKID,
+      a.PROCESSNAME,
+      a.INCIDENT,
+      b.SUMMARY,
+      b.INITIATOR,
+      a.STEPLABEL,
+      a.TASKUSER,
+      a.ASSIGNEDTOUSER,
+      a.STATUS,
+      a.SUBSTATUS,
+      b.STARTTIME,
+      a.ENDTIME,
+      a.STEPID,
+      a.OVERDUETIME
+      ,b.STATUS as PROCESSSTATUS
+      ,$SERVERNAME$ as SERVERNAME
+      FROM TASKS a with(nolock)
+      INNER JOIN INCIDENTS b  with(nolock) ON a.PROCESSNAME = b.PROCESSNAME AND a.INCIDENT = b.INCIDENT
+      INNER JOIN PROCESSSTEPS c  with(nolock) ON a.PROCESSNAME=c.PROCESSNAME and a.PROCESSVERSION=c.PROCESSVERSION and a.STEPID=c.STEPID
+      WHERE c.STEPTYPE=4 AND a.STATUS in (3,4,7) AND ASSIGNEDTOUSER=$ASSIGNEDTOUSER$
+      <dynamic prepend="AND">
+        <isParameterPresent>
+          a.STARTTIME BETWEEN #STARTTIME# AND #ENDTIME#
+        </isParameterPresent>
+      </dynamic>
+      $filter$
+      ORDER BY $Sort$
+    </select>
+    <select id="TaskLogic_GetMyApprovalCount">
+      SELECT COUNT(1)
+      FROM TASKS a with(nolock)
+      INNER JOIN INCIDENTS b with(nolock)  ON a.PROCESSNAME = b.PROCESSNAME AND a.INCIDENT = b.INCIDENT
+      INNER JOIN PROCESSSTEPS c  with(nolock) ON a.PROCESSNAME=c.PROCESSNAME and a.PROCESSVERSION=c.PROCESSVERSION and a.STEPID=c.STEPID
+      WHERE c.STEPTYPE=4 AND a.STATUS in (3,4,7) AND ASSIGNEDTOUSER=$ASSIGNEDTOUSER$
+      <dynamic prepend="AND">
+        <isParameterPresent>
+          a.STARTTIME BETWEEN #STARTTIME# AND #ENDTIME#
+        </isParameterPresent>
+      </dynamic>
+      $filter$
+    </select>
+
+    <select id="TaskLogic_GetEntity"  resultClass="Ultimus.UWF.Workflow.Entity.TaskEntity" >
+      SELECT TASKID,
+      a.PROCESSNAME,
+      a.INCIDENT,
+      a.STEPLABEL,
+      a.TASKUSER,
+      a.ASSIGNEDTOUSER,
+      a.STATUS,
+      a.SUBSTATUS,
+      a.STARTTIME,
+      a.ENDTIME,
+      a.STEPID,
+      a.OVERDUETIME
+      ,isnull(b.Summary,'') as SUMMARY
+      ,$SERVERNAME$ as SERVERNAME
+      FROM TASKS a with(nolock)
+      INNER JOIN incidents b with(nolock) on a.processname=b.processname and a.incident=b.incident
+      WHERE taskID=#taskID#
+    </select>
+
+    <select id="TaskLogic_GetStartEntity"  resultClass="Ultimus.UWF.Workflow.Entity.TaskEntity" >
+      SELECT INITIATEID as TASKID
+      ,PROCESSNAME
+      ,0 as INCIDENT
+      ,'' as SUMMARY
+      ,STEPLABEL
+      ,'' as TASKUSER
+      ,'' as ASSIGNEDTOUSER
+      ,0 as STATUS
+      ,0 as SUBSTAUTS
+      FROM INITIATE with(nolock)
+      WHERE INITIATEID=#taskID#
+    </select>
+
+    <insert id="TaskLogic_InsertBackFromArchive">
+      INSERT INTO INCIDENTS SELECT * FROM $ArchiveDBName$..INCIDENTS WHERE PROCESSNAME=#processName# AND INCIDENT=#incident#
+      INSERT INTO TASKS SELECT * FROM $ArchiveDBName$..TASKS WHERE PROCESSNAME=#processName# AND INCIDENT = #incident#
+      DELETE FROM $ArchiveDBName$..INCIDENTS WHERE PROCESSNAME=#processName# AND INCIDENT=#incident#
+      DELETE FROM $ArchiveDBName$..TASKS WHERE PROCESSNAME=#processName# AND INCIDENT = #incident#
+    </insert>
+
+    <insert id="TaskLogic_InsertBackFromArchiveOracle">
+      begin
+      INSERT INTO INCIDENTS SELECT * FROM $ArchiveDBName$.INCIDENTS WHERE PROCESSNAME=#processName# AND INCIDENT=#incident#;
+      INSERT INTO TASKS SELECT * FROM $ArchiveDBName$.TASKS WHERE PROCESSNAME=#processName# AND INCIDENT = #incident#;
+      DELETE FROM $ArchiveDBName$.INCIDENTS WHERE PROCESSNAME=#processName# AND INCIDENT=#incident#;
+      DELETE FROM $ArchiveDBName$.TASKS WHERE PROCESSNAME=#processName# AND INCIDENT = #incident#;
+      end;
+    </insert>
+
+    <select id="TaskLogic_GetTaskList" resultClass="Ultimus.UWF.Workflow.Entity.TaskEntity" >
+      SELECT TASKID,
+      a.PROCESSNAME,
+      a.INCIDENT,
+      b.SUMMARY,
+      b.INITIATOR,
+      a.STEPID,
+      a.STEPLABEL,
+      a.TASKUSER,
+      a.ASSIGNEDTOUSER,
+      a.STATUS,
+      a.SUBSTATUS,
+      a.STARTTIME,
+      a.ENDTIME,
+      b.STATUS as PROCESSSTATUS,
+      a.OVERDUETIME
+      ,$SERVERNAME$ as SERVERNAME
+      FROM TASKS a with(nolock)
+      INNER JOIN INCIDENTS b with(nolock)  ON a.PROCESSNAME = b.PROCESSNAME AND a.INCIDENT = b.INCIDENT
+      WHERE a.PROCESSNAME=#PROCESSNAME# AND a.INCIDENT=#INCIDENT#
+    </select>
+
+    <select id="TaskLogic_GetStepType"  >
+      SELECT     STEPTYPE
+      FROM         PROCESSSTEPS with(nolock)
+      WHERE STEPID=#STEPID#
+    </select>
+  </statements>
+</sqlMap>

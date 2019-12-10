@@ -1,0 +1,31 @@
+2013-09-04 12:02:49,073 [1] INFO  commonLog [(null)] - 数据库名称UltDB，连接字符串Data Source=.;Initial Catalog=UltimusDB;Integrated Security=True;
+2013-09-04 12:02:49,143 [1] INFO  commonLog [(null)] - 开始数据迁移...可迁移的Incident总记录数：2
+2013-09-04 12:02:49,153 [1] INFO  commonLog [(null)] - 成功 INCIDENTS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[1] 
+2013-09-04 12:02:49,153 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[1] 步骤名称:[人员B1审批]
+2013-09-04 12:02:49,153 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[1] 步骤名称:[QA修改]
+2013-09-04 12:02:49,163 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[1] 步骤名称:[FIN审批]
+2013-09-04 12:02:49,163 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[1] 步骤名称:[Step 5]
+2013-09-04 12:02:49,163 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[1] 步骤名称:[Step 9]
+2013-09-04 12:02:49,163 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[1] 步骤名称:[Step 10]
+2013-09-04 12:02:49,163 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[1] 步骤名称:[导出文件]
+2013-09-04 12:02:49,163 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[1] 步骤名称:[写入SAP]
+2013-09-04 12:02:49,163 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[1] 步骤名称:[Begin]
+2013-09-04 12:02:49,183 [1] INFO  commonLog [(null)] - 成功迁移 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[1]
+2013-09-04 12:02:49,183 [1] INFO  commonLog [(null)] - 成功 INCIDENTS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[2] 
+2013-09-04 12:02:49,183 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[2] 步骤名称:[人员B1审批]
+2013-09-04 12:02:49,183 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[2] 步骤名称:[QA修改]
+2013-09-04 12:02:49,183 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[2] 步骤名称:[FIN审批]
+2013-09-04 12:02:49,183 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[2] 步骤名称:[Step 5]
+2013-09-04 12:02:49,183 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[2] 步骤名称:[Step 9]
+2013-09-04 12:02:49,183 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[2] 步骤名称:[Step 10]
+2013-09-04 12:02:49,193 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[2] 步骤名称:[导出文件]
+2013-09-04 12:02:49,193 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[2] 步骤名称:[写入SAP]
+2013-09-04 12:02:49,193 [1] INFO  commonLog [(null)] - 成功 TASKS表数据 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[2] 步骤名称:[Begin]
+2013-09-04 12:02:49,193 [1] INFO  commonLog [(null)] - 成功迁移 流程名称:[客户主数据维护流程] 流程版本:[2] 实例编号:[2]
+2013-09-04 12:02:49,193 [1] INFO  commonLog [(null)] - 成功迁移 2 条实例数据.
+2013-09-04 12:02:49,193 [1] INFO  commonLog [(null)] - 当前没有数据满足迁移条件...,此次不做动作.
+2015-07-24 13:03:05,898 [9] INFO  commonLog [(null)] - 数据库名称BizDB，连接字符串Data Source=.;Initial Catalog=UltimusBusiness;Integrated Security=True;
+2015-07-24 13:03:44,257 [9] INFO  commonLog [(null)] - 数据库名称BizDB，连接字符串Data Source=.;Initial Catalog=UltimusBusiness;Integrated Security=True;
+2015-07-24 13:04:01,726 [9] INFO  commonLog [(null)] - 数据库名称BizDB，连接字符串Data Source=.;Initial Catalog=UltimusBusiness;Integrated Security=True;
+2015-07-24 13:05:36,457 [10] INFO  commonLog [(null)] - 数据库名称BizDB，连接字符串Data Source=.;Initial Catalog=UltimusBusiness;Integrated Security=True;
+2015-07-24 13:06:00,258 [10] INFO  commonLog [(null)] - 成功.3

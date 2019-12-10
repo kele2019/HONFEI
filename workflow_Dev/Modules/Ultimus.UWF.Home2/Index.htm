@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+        body
+        {
+            margin: 0px 0px 0px 0px;
+            text-align:center;
+            font-family:宋体;
+        }
+        #bigFrame
+        {
+            padding-left:60px;
+            padding-right:60px;
+            background-color:#999;
+            height:700px;
+            padding-top:40px;
+            min-width:1000px;
+        }
+        #oFrame
+        {
+            margin-right:auto;
+            margin-left:auto;
+            background-color:#fff;
+        }
+        #mTop
+        {
+            height:40px;
+            line-height:40px;
+        }
+        #mTopNavgation
+        {
+            cursor:pointer;
+            float:left;
+        }
+        #mTopLanguage
+        {
+            cursor:pointer;
+            float:right;
+            background-image:url(images/V2/language1.png);
+            background-repeat:no-repeat;
+            background-position:30px 8px;
+        }
+        #mTopLanguage:hover
+        {
+            background-image:url(images/V2/language2.png);
+        }
+        #divLog
+        {
+        }
+        #divBarner
+        {
+            height:80px;
+            line-height:80px;
+        }
+        #mMain
+        {
+        }
+        #mLeft
+        {
+            width:200px;
+            background-color:#ddd;
+            float:left;
+        }
+        #mContent
+        {
+            float:left;
+        }
+        #divNavgation
+        {
+            height:30px;
+            font-size:14px;
+            padding-top:8px;
+        }
+    </style>
+    <style>
+        .menuDownUpIco
+        {
+            width:22px;
+            height:22px;
+        }
+        .menuCate1Frame
+        {
+            height:50px;
+            background-color:#eaeaea;
+            color:#1a6da3;
+            cursor:pointer;
+        }
+        .menuCate1Title
+        {
+            width:125px;
+            float:left;
+            font-size:18px;
+            padding-left:38px;
+            margin-top:14px;
+        }
+        .menuCate1Btn
+        {
+            margin-top:14px;
+            width:22px;
+            float:left;
+        }
+        .menuCate2Frame
+        {
+            background-color:#f4f4f4;
+            color:#228ed7;
+        }
+        .menuCate2Title
+        {
+            padding-left:25px;
+            font-size:16px;
+            font-weight:bold;
+        }
+        .menuActive > td
+        {
+            color:#fca95b;
+        }
+        .menuActive > td > img
+        {
+            display:block;
+        }
+        .menuActiveLeftImg
+        {
+            width:3px;
+            height:16px;
+        }
+        .mainContentIFrame
+        {
+            /*border:1px solid #d8d8d8;*/
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bigFrame">
+        <div id="oFrame">
+            <div id="mTop">
+                <div id="mTopNavgation">
+                    <img src="images/V2/back1.png" width="24px" height="24px" style="padding:10px 0px 0px 14px;" border="0" onmouseover="this.src='images/V2/back2.png';" onmouseout="this.src='images/V2/back1.png';" />
+                </div>
+                <div id="mTopLanguage">
+                    <div style="font-size:12px; padding-right:38px;">
+                        中文
+                    </div>
+                </div>
+            </div>
+            <div id="mHeader">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td align="left" width="218px">
+                            <a href="#">
+                                <img src="images/V2/logo.png" border="0" width="218px" height="80px" />
+                            </a>
+                        </td>
+                        <td width="10px">&nbsp;</td>
+                        <td align="left" style="background-color:#e4f0e4;">
+                            <img src="images/V2/barner.png" border="0" height="70px" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="mMain">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td align="left" width="218px" valign="top">
+                            <div style="height:10px;">&nbsp;</div>
+                            <div>
+                                <div>
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="menuCate2Frame">
+                                        <tr height="50px" style="cursor:pointer;">
+                                            <td width="20px" align="right">
+                                                <img src="images/V2/menuActive.png" class="menuActiveLeftImg" border="0" style="display:none;" />
+                                            </td>
+                                            <td class="menuCate2Title">
+                                                创建流程
+                                            </td>
+                                        </tr>
+                                        <tr height="50px" style="cursor:pointer;" class="menuActive">
+                                            <td width="20px" align="right">
+                                                <img src="images/V2/menuActive.png" class="menuActiveLeftImg" border="0" />
+                                            </td>
+                                            <td class="menuCate2Title">
+                                                待办列表
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="10px">&nbsp;</td>
+                        <td align="left" valign="top">
+                            <iframe id="fContent" height="500px" width="100%" frameborder="0" src="Create.htm" class="mainContentIFrame" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

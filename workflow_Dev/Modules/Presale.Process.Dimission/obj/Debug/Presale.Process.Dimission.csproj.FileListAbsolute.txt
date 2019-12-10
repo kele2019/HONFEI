@@ -1,0 +1,5 @@
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\bin\Presale.Process.Dimission.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\bin\Presale.Process.Dimission.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.Dimission\obj\Debug\ResolveAssemblyReference.cache
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.Dimission\obj\Debug\Presale.Process.Dimission.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.Dimission\obj\Debug\Presale.Process.Dimission.pdb

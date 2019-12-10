@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A2E1632-64FE-4B15-BD79-2BCE0B197882}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ultimus.UWF.Form.ProcessControl</RootNamespace>
+    <AssemblyName>Ultimus.UWF.Form.ProcessControl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MyLib">
+      <HintPath>..\..\Assets\ref\MyLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApprovalHistory.ascx.cs">
+      <DependentUpon>ApprovalHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApprovalHistory.ascx.designer.cs">
+      <DependentUpon>ApprovalHistory.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attachments.ascx.cs">
+      <DependentUpon>Attachments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attachments.ascx.designer.cs">
+      <DependentUpon>Attachments.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\AttachmentEntity.cs" />
+    <Compile Include="Logic\AttachmentLogic.cs" />
+    <Compile Include="Logic\BarCodeToHTML.cs" />
+    <Compile Include="Logic\CommonLogic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\lang.Designer.cs">
+      <DependentUpon>lang.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\lang.zh-CN.Designer.cs">
+      <DependentUpon>lang.zh-CN.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UserInfo.ascx.cs">
+      <DependentUpon>UserInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInfo.ascx.designer.cs">
+      <DependentUpon>UserInfo.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonList.ascx.cs">
+      <DependentUpon>ButtonList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ButtonList.ascx.designer.cs">
+      <DependentUpon>ButtonList.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApprovalHistory.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Attachments.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="css\loading.css" />
+    <Content Include="img\banner_bg.png" />
+    <Content Include="img\js\Loading.js" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\Allen He.png" />
+    <Content Include="img\Nicky She.png" />
+    <Content Include="img\NI Xiaobin.png" />
+    <Content Include="img\LIU Gang.png" />
+    <Content Include="img\JIANG Xueliang.png" />
+    <Content Include="img\Eason Sun.png" />
+    <Content Include="img\Nico Zhang.png" />
+    <Content Include="img\Wayne Zhang.png" />
+    <Content Include="img\Jack Shue.png" />
+    <Content Include="img\Jimmy Zhu.png" />
+    <Content Include="img\Joseph Li.png" />
+    <Content Include="img\LI Quan.png" />
+    <Content Include="img\LI Zhe.png" />
+    <Content Include="img\LI Lin.png" />
+    <Content Include="img\Haobin Duan .png" />
+    <Content Include="img\Rod Beal.png" />
+    <Content Include="img\Ziyang Jiao.png" />
+    <Content Include="img\Tony Wang.png" />
+    <Content Include="img\WANG Jianyuan.png" />
+    <Content Include="img\WANG Xuan.png" />
+    <Content Include="img\Chris Wang.png" />
+    <Content Include="img\Philip Wang.png" />
+    <Content Include="img\Angel Sheng.png" />
+    <Content Include="img\Sophia Nie.png" />
+    <Content Include="img\Andy Chu.png" />
+    <Content Include="img\Sharon Zhao.png" />
+    <Content Include="img\Ryder Zhao.png" />
+    <Content Include="UserInfo.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ButtonList.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\lang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\lang.zh-CN.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang.zh-CN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ultimus.UWF.Common\Ultimus.UWF.Common.csproj">
+      <Project>{4E7B6F3F-E6A5-4E48-9022-1BD87730C50C}</Project>
+      <Name>Ultimus.UWF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultimus.UWF.OrgChart\Ultimus.UWF.OrgChart.csproj">
+      <Project>{AF096E41-83B7-4AC3-8B3D-F7389868F025}</Project>
+      <Name>Ultimus.UWF.OrgChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultimus.UWF.Workflow\Ultimus.UWF.Workflow.csproj">
+      <Project>{5416C705-BEFE-48B1-97D3-854FBAF3EAB7}</Project>
+      <Name>Ultimus.UWF.Workflow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

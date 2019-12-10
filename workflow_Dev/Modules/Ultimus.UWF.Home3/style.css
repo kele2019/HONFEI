@@ -1,0 +1,27 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+	color:#ffffff;
+}
+img{
+	border:none;
+}
+body{
+	font-family:"宋体";
+	font-size:12px;
+	color:#333333;
+    background:url(login_images/bg.jpg) left top no-repeat; background-size:cover;
+    /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_images/bg.jpg',sizingMethod='scale');*/
+}
+.loginbg {background:url(login_images/loginbg.png) no-repeat top center;height:318px;width:373px;background-size:cover;margin-left:60%;margin-top:150px;}
+.loginfont {color:#e5e9e9;height:48px;line-height:48px;font-size:17px;font-family:'Microsoft YaHei';text-align:center;}
+.txt1 {height:38px;width:270px;background:url(login_images/account.png) no-repeat;border:0px;margin-left:20px;margin-top:15px;padding-left:55px;}
+.txt2 {height:38px;width:270px;background:url(login_images/pwd.png) no-repeat;border:0px;margin-left:20px;margin-top:15px;padding-left:55px;}
+.txt3 {height:38px;width:327px;background:url(login_images/name.png) no-repeat;border:0px;margin-left:20px;margin-top:15px;padding-left:55px;}
+.rempwd_l {color:#e5e9e9;font-size:12px;font-family:'Microsoft YaHei';float:left;margin:15px 0px 10px 25px;}
+.rempwd_r {float:right;margin:15px 30px 15px 0px;}
+.chk {background:url(login_images/chk.png) no-repeat;border:0px;}
+.btn {height:38px;width:325px;background:url(login_images/login.png) no-repeat;border:0px;margin-left:20px;cursor:pointer;}

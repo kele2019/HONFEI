@@ -1,0 +1,5 @@
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\bin\Presale.Process.ProbationEvaluation.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\bin\Presale.Process.ProbationEvaluation.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.ProbationEvaluation\obj\Debug\ResolveAssemblyReference.cache
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.ProbationEvaluation\obj\Debug\Presale.Process.ProbationEvaluation.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.ProbationEvaluation\obj\Debug\Presale.Process.ProbationEvaluation.pdb

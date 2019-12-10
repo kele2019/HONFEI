@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6FDAB0F-5FC4-4CAB-83B8-77D44A7CF4E7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ultimus.UWF.Report</RootNamespace>
+    <AssemblyName>Ultimus.UWF.Report</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assets\ref\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="HaruP">
+      <HintPath>ImportDLL\HaruP.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MyLib, Version=1.5.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\MyLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="UltEik, Version=8.0.0.0, Culture=neutral, PublicKeyToken=8dab84876b1af50a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assets\ref\UltEik.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjaxPage\GenerateReports.ashx.cs">
+      <DependentUpon>GenerateReports.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxPage\GetAlterGuidInformation.ashx.cs">
+      <DependentUpon>GetAlterGuidInformation.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxPage\GetConnectionStringList.ashx.cs">
+      <DependentUpon>GetConnectionStringList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxPage\GetDataBaseTables.ashx.cs">
+      <DependentUpon>GetDataBaseTables.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxPage\GetProcessName.ashx.cs">
+      <DependentUpon>GetProcessName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxPage\GetUserInfo.ashx.cs">
+      <DependentUpon>GetUserInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxPage\TryConnection.ashx.cs">
+      <DependentUpon>TryConnection.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Alias.cs" />
+    <Compile Include="Class\clsOleDB.cs" />
+    <Compile Include="Class\DataBase.cs" />
+    <Compile Include="Class\FieldName.cs" />
+    <Compile Include="Class\FieldRules.cs" />
+    <Compile Include="Class\OracleDatabaseOperate.cs" />
+    <Compile Include="Class\ReaderTextConnectionString.cs" />
+    <Compile Include="Class\SelectWhere.cs" />
+    <Compile Include="Class\SortType.cs" />
+    <Compile Include="Class\TableInformation.cs" />
+    <Compile Include="Class\TableRelation.cs" />
+    <Compile Include="Class\TableRelationFields.cs" />
+    <Compile Include="Class\TablesAndFields.cs" />
+    <Compile Include="Class\UltimusOrgOC.cs" />
+    <Compile Include="DayOffReport.aspx.cs">
+      <DependentUpon>DayOffReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DayOffReport.aspx.designer.cs">
+      <DependentUpon>DayOffReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentReiwBallotingList.aspx.cs">
+      <DependentUpon>DocumentReiwBallotingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocumentReiwBallotingList.aspx.designer.cs">
+      <DependentUpon>DocumentReiwBallotingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentReviewBallotingForm.aspx.cs">
+      <DependentUpon>DocumentReviewBallotingForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocumentReviewBallotingForm.aspx.designer.cs">
+      <DependentUpon>DocumentReviewBallotingForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\DocumentDetailEntity.cs" />
+    <Compile Include="Entity\DocumentEntity.cs" />
+    <Compile Include="Entity\LocalExpenseEntity.cs" />
+    <Compile Include="Entity\PeronalEntity.cs" />
+    <Compile Include="Entity\TravelExpenseDetailEntity.cs" />
+    <Compile Include="Entity\TravelExpenseEntity.cs" />
+    <Compile Include="Entity\TravelExpenseReportEntity.cs" />
+    <Compile Include="Leavetest.aspx.cs">
+      <DependentUpon>Leavetest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Leavetest.aspx.designer.cs">
+      <DependentUpon>Leavetest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalExpense.aspx.cs">
+      <DependentUpon>LocalExpense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocalExpense.aspx.designer.cs">
+      <DependentUpon>LocalExpense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalExpenseReport.aspx.cs">
+      <DependentUpon>LocalExpenseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocalExpenseReport.aspx.designer.cs">
+      <DependentUpon>LocalExpenseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OTAndDayOffReport.aspx.cs">
+      <DependentUpon>OTAndDayOffReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OTAndDayOffReport.aspx.designer.cs">
+      <DependentUpon>OTAndDayOffReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OTReport.aspx.cs">
+      <DependentUpon>OTReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OTReport.aspx.designer.cs">
+      <DependentUpon>OTReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalExpenseReport.aspx.cs">
+      <DependentUpon>PersonalExpenseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalExpenseReport.aspx.designer.cs">
+      <DependentUpon>PersonalExpenseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportIndex.aspx.cs">
+      <DependentUpon>ReportIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportIndex.aspx.designer.cs">
+      <DependentUpon>ReportIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportList.aspx.cs">
+      <DependentUpon>ReportList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportList.aspx.designer.cs">
+      <DependentUpon>ReportList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportWebService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\AjaxPage\getlist.ashx.cs">
+      <DependentUpon>getlist.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\AjaxPage\getList.aspx.cs">
+      <DependentUpon>getList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\AjaxPage\getList.aspx.designer.cs">
+      <DependentUpon>getList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ProcessEfficiency.aspx.cs">
+      <DependentUpon>ProcessEfficiency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ProcessEfficiency.aspx.designer.cs">
+      <DependentUpon>ProcessEfficiency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ProcessElapsedTime.aspx.cs">
+      <DependentUpon>ProcessElapsedTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ProcessElapsedTime.aspx.designer.cs">
+      <DependentUpon>ProcessElapsedTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ProcessHandleReport.aspx.cs">
+      <DependentUpon>ProcessHandleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ProcessHandleReport.aspx.designer.cs">
+      <DependentUpon>ProcessHandleReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ProcessRunningEff.aspx.cs">
+      <DependentUpon>ProcessRunningEff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ProcessRunningEff.aspx.designer.cs">
+      <DependentUpon>ProcessRunningEff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ProcessRunningReport.aspx.cs">
+      <DependentUpon>ProcessRunningReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ProcessRunningReport.aspx.designer.cs">
+      <DependentUpon>ProcessRunningReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Template.aspx.cs">
+      <DependentUpon>Template.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Template.aspx.designer.cs">
+      <DependentUpon>Template.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraveExpense.aspx.cs">
+      <DependentUpon>TraveExpense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraveExpense.aspx.designer.cs">
+      <DependentUpon>TraveExpense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TravelExpenseReport.aspx.cs">
+      <DependentUpon>TravelExpenseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TravelExpenseReport.aspx.designer.cs">
+      <DependentUpon>TravelExpenseReport.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\css.css" />
+    <Content Include="css\global.css" />
+    <Content Include="DayOffReport.aspx" />
+    <Content Include="DocumentReiwBallotingList.aspx" />
+    <Content Include="DocumentReviewBallotingForm.aspx" />
+    <Content Include="images\404.jpg" />
+    <Content Include="images\add.jpg" />
+    <Content Include="images\adjested.jpg" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\bg1.jpg" />
+    <Content Include="images\btn1-1.gif" />
+    <Content Include="images\btn1.gif" />
+    <Content Include="images\btn2-1.gif" />
+    <Content Include="images\btn2.gif" />
+    <Content Include="images\btn3-1.gif" />
+    <Content Include="images\btn3.gif" />
+    <Content Include="images\btnBg.jpg" />
+    <Content Include="images\btnBg1.jpg" />
+    <Content Include="images\btnBg2.jpg" />
+    <Content Include="images\btnBg_bak.jpg" />
+    <Content Include="images\cancel.jpg" />
+    <Content Include="images\copy.jpg" />
+    <Content Include="images\datagrid_sort_asc.gif" />
+    <Content Include="images\datagrid_sort_desc.gif" />
+    <Content Include="images\date.gif" />
+    <Content Include="images\Del.JPG" />
+    <Content Include="images\delete.jpg" />
+    <Content Include="images\down2.gif" />
+    <Content Include="images\exit.gif" />
+    <Content Include="images\h3icon.gif" />
+    <Content Include="images\headerBg.jpg" />
+    <Content Include="images\icon.gif" />
+    <Content Include="images\icon1.gif" />
+    <Content Include="images\icon2.gif" />
+    <Content Include="images\icon3.gif" />
+    <Content Include="images\icon4.gif" />
+    <Content Include="images\icon5.gif" />
+    <Content Include="images\icon6.gif" />
+    <Content Include="images\icon7.gif" />
+    <Content Include="images\icon8.gif" />
+    <Content Include="images\iconCu.gif" />
+    <Content Include="images\iconlabel.gif" />
+    <Content Include="images\iconlabel1.gif" />
+    <Content Include="images\iconlabel2.gif" />
+    <Content Include="images\icon_main.png" />
+    <Content Include="images\ico_delete.gif" />
+    <Content Include="images\lbg.jpg" />
+    <Content Include="images\lc1.jpg" />
+    <Content Include="images\lc2.jpg" />
+    <Content Include="images\lc3.jpg" />
+    <Content Include="images\lc4.jpg" />
+    <Content Include="images\lc5.jpg" />
+    <Content Include="images\left.gif" />
+    <Content Include="images\leftMenu-1.gif" />
+    <Content Include="images\leftMenu.gif" />
+    <Content Include="images\loginbackground.jpg" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\main_55.gif" />
+    <Content Include="images\main_55_1.gif" />
+    <Content Include="images\menuBg.jpg" />
+    <Content Include="images\nav.gif" />
+    <Content Include="images\navBg.jpg" />
+    <Content Include="images\navBg_bak.jpg" />
+    <Content Include="images\navCu.jpg" />
+    <Content Include="images\no.jpg" />
+    <Content Include="images\Other.jpg" />
+    <Content Include="images\pagelist.gif" />
+    <Content Include="images\plselect.jpg" />
+    <Content Include="images\qybg.jpg" />
+    <Content Include="images\right.gif" />
+    <Content Include="images\save.jpg" />
+    <Content Include="images\save1.jpg" />
+    <Content Include="images\save2.jpg" />
+    <Content Include="images\search.jpg" />
+    <Content Include="images\search1.jpg" />
+    <Content Include="images\tc.jpg" />
+    <Content Include="images\tc1.jpg" />
+    <Content Include="images\thBg.gif" />
+    <Content Include="images\thinstatus_on.gif" />
+    <Content Include="images\thin_statusaborted.gif" />
+    <Content Include="images\thin_statusactive.gif" />
+    <Content Include="images\thin_statusarchive.gif" />
+    <Content Include="images\thin_statusbusy.gif" />
+    <Content Include="images\thin_statuscomplete.gif" />
+    <Content Include="images\thin_statusinvalid.gif" />
+    <Content Include="images\thin_statusreturned.gif" />
+    <Content Include="images\toolbar_find.png" />
+    <Content Include="images\topimg1.gif" />
+    <Content Include="images\topimg2.gif" />
+    <Content Include="images\topimg3.gif" />
+    <Content Include="images\topimg4.gif" />
+    <Content Include="images\topimg5.gif" />
+    <Content Include="images\topimg6.gif" />
+    <Content Include="images\TreeNode.gif" />
+    <Content Include="images\yes.jpg" />
+    <Content Include="images\yx_loading.gif" />
+    <Content Include="images\yx_loading_bg.png" />
+    <Content Include="ImportDLL\AspNetPager.dll" />
+    <Content Include="ImportDLL\Interop.Excel.dll" />
+    <Content Include="ImportDLL\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="ImportDLL\Office.dll" />
+    <Content Include="ImportScript\jquery-1.7.1.min.js" />
+    <Content Include="ImportScript\jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="ImportScript\jquery.validationEngine-zh_CN.js" />
+    <Content Include="ImportScript\jquery.validationEngine.js" />
+    <Content Include="ImportScript\My97DatePicker\demo.htm" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\calendar.js" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\config.js" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\lang\en.js" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\skin\default\img.gif" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\WdatePicker.js" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\开发包\readme.txt" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="ImportScript\My97DatePicker\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="jquery-1.7.1.min.js" />
+    <Content Include="jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="jquery.validationEngine-zh_CN.js" />
+    <Content Include="jquery.validationEngine.js" />
+    <Content Include="JS\jquery.min.js" />
+    <Content Include="JS\jquery.table2excel.js" />
+    <Content Include="Leavetest.aspx" />
+    <Content Include="LocalExpense.aspx" />
+    <Content Include="LocalExpenseReport.aspx" />
+    <Content Include="OTAndDayOffReport.aspx" />
+    <Content Include="OTReport.aspx" />
+    <Content Include="PersonalExpenseReport.aspx" />
+    <Content Include="ReportIndex.aspx" />
+    <Content Include="ReportList.aspx" />
+    <Content Include="ReportWebService.asmx" />
+    <Content Include="Report\AjaxPage\getList.aspx" />
+    <Content Include="Report\css\loading.gif" />
+    <Content Include="Report\css\reportCss.css" />
+    <Content Include="Report\ProcessEfficiency.aspx" />
+    <Content Include="Report\ProcessElapsedTime.aspx" />
+    <Content Include="Report\ProcessHandleReport.aspx" />
+    <Content Include="Report\ProcessRunningEff.aspx" />
+    <Content Include="Report\ProcessRunningReport.aspx" />
+    <Content Include="Report\script\js.js" />
+    <Content Include="SysScript\AddTablesAndField.js" />
+    <Content Include="SysScript\SaveReport.js" />
+    <Content Include="SysScript\SelectDataBaseTables.js" />
+    <Content Include="SysScript\SetFieldName.js" />
+    <Content Include="SysScript\SetOther.js" />
+    <Content Include="SysScript\SetSelectWhere.js" />
+    <Content Include="SysScript\TableFieldRelation.js" />
+    <Content Include="SysScript\TryConnection.js" />
+    <Content Include="Template\Template.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AjaxPage\GenerateReports.ashx" />
+    <Content Include="AjaxPage\GetAlterGuidInformation.ashx" />
+    <Content Include="AjaxPage\GetConnectionStringList.ashx" />
+    <Content Include="AjaxPage\GetDataBaseTables.ashx" />
+    <Content Include="AjaxPage\GetProcessName.ashx" />
+    <Content Include="AjaxPage\GetTableInformcation.ashx" />
+    <Content Include="AjaxPage\GetUserInfo.ashx" />
+    <Content Include="AjaxPage\TryConnection.ashx" />
+    <Content Include="Report\AjaxPage\getlist.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GenerateReportFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ultimus.UWF.Common\Ultimus.UWF.Common.csproj">
+      <Project>{4E7B6F3F-E6A5-4E48-9022-1BD87730C50C}</Project>
+      <Name>Ultimus.UWF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultimus.UWF.OrgChart\Ultimus.UWF.OrgChart.csproj">
+      <Project>{AF096E41-83B7-4AC3-8B3D-F7389868F025}</Project>
+      <Name>Ultimus.UWF.OrgChart</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TraveExpense.aspx" />
+    <Content Include="TravelExpenseReport.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>35688</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

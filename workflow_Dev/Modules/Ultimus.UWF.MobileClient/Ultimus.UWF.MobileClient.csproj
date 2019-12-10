@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EDC89592-743D-4AF2-96ED-5C6A5AD4FB1F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MobileClient</RootNamespace>
+    <AssemblyName>MobileClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager">
+      <HintPath>..\..\Assets\ref\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MyLib, Version=1.2.0.0, Culture=neutral, PublicKeyToken=49f149d10ce8ecec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assets\ref\MyLib.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=1f722ed313f51831, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assets\ref\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assets\ref\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Background\ControlSourceConfig.aspx" />
+    <Content Include="Background\Css\bootstrap.min.css" />
+    <Content Include="Background\Css\CSS.css" />
+    <Content Include="Background\DataSaveConfig.aspx" />
+    <Content Include="Background\Default.aspx" />
+    <Content Include="Background\FormConfiguration.aspx" />
+    <Content Include="Background\GenPageTest.aspx" />
+    <Content Include="Background\ProcessConfig.aspx" />
+    <Content Include="Background\ProcessStepList.aspx" />
+    <Content Include="Background\Script\jquery-1.8.3.min.js" />
+    <Content Include="Background\Script\My97DatePicker\calendar.js" />
+    <Content Include="Background\Script\My97DatePicker\config.js" />
+    <Content Include="Background\Script\My97DatePicker\lang\en.js" />
+    <Content Include="Background\Script\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Background\Script\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Background\Script\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="Background\Script\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Background\Script\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Background\Script\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Background\Script\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Background\Script\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Background\Script\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Background\Script\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Background\Script\My97DatePicker\WdatePicker.js" />
+    <Content Include="Background\Script\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="Background\Script\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="Background\Script\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="Background\Script\My97DatePicker\开发包\readme.txt" />
+    <Content Include="Background\Script\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="Background\Script\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="Background\Script\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="Background\Script\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="Background\Script\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="Background\Script\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="Background\Script\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Background\StepConfigCopy.aspx" />
+    <Content Include="SQL\oracle.sql" />
+    <Content Include="SQL\sqlserver.sql" />
+    <Content Include="Web\AlreadyDoTask.aspx" />
+    <Content Include="Web\cordova.js" />
+    <Content Include="Web\cordova_plugins.js" />
+    <Content Include="Web\Css\bootstrap.min.css" />
+    <Content Include="Web\Css\CSS.css" />
+    <Content Include="Web\Header.ascx" />
+    <Content Include="Web\images\approve.png" />
+    <Content Include="Web\images\back.png" />
+    <Content Include="Web\images\bg.jpg" />
+    <Content Include="Web\images\bg1.jpg" />
+    <Content Include="Web\images\box.png" />
+    <Content Include="Web\images\btn_blue.png" />
+    <Content Include="Web\images\btn_Gray.png" />
+    <Content Include="Web\images\btn_green.png" />
+    <Content Include="Web\images\btn_red.png" />
+    <Content Include="Web\images\drop.png" />
+    <Content Include="Web\images\home.png" />
+    <Content Include="Web\images\Icon_1.png" />
+    <Content Include="Web\images\Icon_2.png" />
+    <Content Include="Web\images\Input_bot.png" />
+    <Content Include="Web\images\Input_box.png" />
+    <Content Include="Web\images\Input_cen.png" />
+    <Content Include="Web\images\Input_top.png" />
+    <Content Include="Web\images\jiankong.png" />
+    <Content Include="Web\images\lock.png" />
+    <Content Include="Web\images\Login.png" />
+    <Content Include="Web\images\logo.png" />
+    <Content Include="Web\images\logo_2.png" />
+    <Content Include="Web\images\lt_bg.gif" />
+    <Content Include="Web\images\more.png" />
+    <Content Include="Web\images\pic.gif" />
+    <Content Include="Web\images\return.jpg" />
+    <Content Include="Web\images\return.png" />
+    <Content Include="Web\images\Search.png" />
+    <Content Include="Web\images\submit.jpg" />
+    <Content Include="Web\images\submit.png" />
+    <Content Include="Web\images\user1.png" />
+    <Content Include="Web\Login.aspx" />
+    <Content Include="Web\NewTask.aspx" />
+    <Content Include="Web\NewTaskList.aspx" />
+    <Content Include="Web\OpenForm.aspx" />
+    <Content Include="Web\plugins\org.apache.cordova.toast\www\toast.js" />
+    <Content Include="Web\ProcessMonitoring.aspx" />
+    <Content Include="Web\ProcessPage\0.aspx" />
+    <Content Include="Web\ProcessPage\88.aspx" />
+    <Content Include="Web\ProcessPage\ApprovalHistory.aspx" />
+    <Content Include="Web\ProcessPage\Damo.aspx" />
+    <Content Include="Web\ProcessPage\FlowChart.aspx" />
+    <Content Include="Web\ProcessPage\FormHeader.ascx" />
+    <Content Include="Web\ProcessPage\FormSample.aspx" />
+    <Content Include="Web\ProcessPage\GraphicalView.aspx" />
+    <Content Include="Web\ProcessPage\jquery.js" />
+    <Content Include="Web\ProcessPage\My97DatePicker\calendar.js" />
+    <Content Include="Web\ProcessPage\My97DatePicker\config.js" />
+    <Content Include="Web\ProcessPage\My97DatePicker\lang\en.js" />
+    <Content Include="Web\ProcessPage\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Web\ProcessPage\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Web\ProcessPage\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="Web\ProcessPage\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Web\ProcessPage\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Web\ProcessPage\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Web\ProcessPage\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Web\ProcessPage\My97DatePicker\WdatePicker.js" />
+    <Content Include="Web\ProcessPage\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="Web\ProcessPage\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="Web\ProcessPage\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="Web\ProcessPage\My97DatePicker\开发包\readme.txt" />
+    <Content Include="Web\ProcessPage\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="Web\ProcessPage\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="Web\ProcessPage\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="Web\ProcessPage\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Web\ProcessPage\SelectUser.aspx" />
+    <Content Include="Web\ProcessPage\SelectUser.js" />
+    <Content Include="Web\SSO.aspx" />
+    <Content Include="Web\ToDoTask.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web\images\Thumbs.db" />
+    <Content Include="Web\ProcessPage\Ajax.ashx" />
+    <None Include="Web\ProcessPage\My97DatePicker\.svn\all-wcprops" />
+    <None Include="Web\ProcessPage\My97DatePicker\.svn\entries" />
+    <None Include="Web\ProcessPage\My97DatePicker\.svn\text-base\calendar.js.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\.svn\text-base\config.js.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\.svn\text-base\My97DatePicker.htm.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\.svn\text-base\WdatePicker.js.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\lang\.svn\all-wcprops" />
+    <None Include="Web\ProcessPage\My97DatePicker\lang\.svn\entries" />
+    <None Include="Web\ProcessPage\My97DatePicker\lang\.svn\text-base\en.js.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\lang\.svn\text-base\zh-cn.js.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\lang\.svn\text-base\zh-tw.js.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\.svn\all-wcprops" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\.svn\entries" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\.svn\prop-base\datePicker.gif.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\.svn\text-base\datePicker.gif.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\.svn\text-base\WdatePicker.css.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\default\.svn\all-wcprops" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\default\.svn\entries" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\default\.svn\prop-base\img.gif.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\default\.svn\text-base\datepicker.css.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\default\.svn\text-base\img.gif.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\.svn\all-wcprops" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\.svn\entries" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\.svn\prop-base\bg.jpg.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\.svn\prop-base\img.gif.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\.svn\text-base\bg.jpg.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\.svn\text-base\datepicker.css.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\.svn\text-base\img.gif.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\.svn\all-wcprops" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\.svn\entries" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\.svn\text-base\readme.txt.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\lang\.svn\all-wcprops" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\lang\.svn\entries" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\lang\.svn\text-base\en.js.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\lang\.svn\text-base\zh-cn.js.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\lang\.svn\text-base\zh-tw.js.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\.svn\all-wcprops" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\.svn\entries" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\.svn\prop-base\datePicker.gif.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\.svn\text-base\datePicker.gif.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\.svn\text-base\WdatePicker.css.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\default\.svn\all-wcprops" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\default\.svn\entries" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\default\.svn\prop-base\img.gif.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\default\.svn\text-base\datepicker.css.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\default\.svn\text-base\img.gif.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\.svn\all-wcprops" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\.svn\entries" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\.svn\prop-base\bg.jpg.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\.svn\prop-base\img.gif.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\.svn\text-base\bg.jpg.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\.svn\text-base\datepicker.css.svn-base" />
+    <None Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\.svn\text-base\img.gif.svn-base" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Resource.zh-CN1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Background\BasePage\BasePageClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Background\ControlSourceConfig.aspx.cs">
+      <DependentUpon>ControlSourceConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Background\ControlSourceConfig.aspx.designer.cs">
+      <DependentUpon>ControlSourceConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Background\DataSaveConfig.aspx.cs">
+      <DependentUpon>DataSaveConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Background\DataSaveConfig.aspx.designer.cs">
+      <DependentUpon>DataSaveConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Background\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Background\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Background\FormConfiguration.aspx.cs">
+      <DependentUpon>FormConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Background\FormConfiguration.aspx.designer.cs">
+      <DependentUpon>FormConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Background\GenPageTest.aspx.cs">
+      <DependentUpon>GenPageTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Background\GenPageTest.aspx.designer.cs">
+      <DependentUpon>GenPageTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Background\PageEntity.cs" />
+    <Compile Include="Background\PageSource.cs" />
+    <Compile Include="Background\ProcessConfig.aspx.cs">
+      <DependentUpon>ProcessConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Background\ProcessConfig.aspx.designer.cs">
+      <DependentUpon>ProcessConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Background\ProcessStepList.aspx.cs">
+      <DependentUpon>ProcessStepList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Background\ProcessStepList.aspx.designer.cs">
+      <DependentUpon>ProcessStepList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Background\Ser.cs" />
+    <Compile Include="Background\StepConfigCopy.aspx.cs">
+      <DependentUpon>StepConfigCopy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Background\StepConfigCopy.aspx.designer.cs">
+      <DependentUpon>StepConfigCopy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\CreatePage.cs" />
+    <Compile Include="Entity\DataBase.cs" />
+    <Compile Include="Entity\Initiate.cs" />
+    <Compile Include="Entity\MobileClient_Classification.cs" />
+    <Compile Include="Entity\MobileClient_Control.cs" />
+    <Compile Include="Entity\MobileClient_Process.cs" />
+    <Compile Include="Entity\MobileClient_Step.cs" />
+    <Compile Include="Entity\MobileClient_StepControl.cs" />
+    <Compile Include="Entity\PageControl.cs" />
+    <Compile Include="Entity\ProcessStep.cs" />
+    <Compile Include="Entity\PublicClass.cs" />
+    <Compile Include="Logic\CommandInfo.cs" />
+    <Compile Include="Logic\DbHelperSQL.cs" />
+    <Compile Include="Logic\DESEncrypt.cs" />
+    <Compile Include="Logic\PubConstant.cs" />
+    <Compile Include="Entity\Initiate1.cs" />
+    <Compile Include="Entity\MobileClient_Classification1.cs" />
+    <Compile Include="Entity\MobileClient_Control1.cs" />
+    <Compile Include="Entity\MobileClient_Process1.cs" />
+    <Compile Include="Entity\MobileClient_Step1.cs" />
+    <Compile Include="Entity\MobileClient_StepControl1.cs" />
+    <Compile Include="Entity\PageConfig1.cs" />
+    <Compile Include="Entity\PageConfig_Control.cs" />
+    <Compile Include="Entity\PageConfig_Step.cs" />
+    <Compile Include="Entity\ProcessStep1.cs" />
+    <Compile Include="Entity\Tasks.cs" />
+    <Compile Include="Entity\UserInfo.cs" />
+    <Compile Include="Entity\VariableInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web\AlreadyDoTask.aspx.cs">
+      <DependentUpon>AlreadyDoTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\AlreadyDoTask.aspx.designer.cs">
+      <DependentUpon>AlreadyDoTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\BasePageClass\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\NewTask.aspx.cs">
+      <DependentUpon>NewTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\NewTask.aspx.designer.cs">
+      <DependentUpon>NewTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\NewTaskList.aspx.cs">
+      <DependentUpon>NewTaskList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\NewTaskList.aspx.designer.cs">
+      <DependentUpon>NewTaskList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\OpenForm.aspx.cs">
+      <DependentUpon>OpenForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\OpenForm.aspx.designer.cs">
+      <DependentUpon>OpenForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\ProcessMonitoring.aspx.cs">
+      <DependentUpon>ProcessMonitoring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ProcessMonitoring.aspx.designer.cs">
+      <DependentUpon>ProcessMonitoring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\ProcessPage\0.aspx.cs">
+      <DependentUpon>0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ProcessPage\0.aspx.designer.cs">
+      <DependentUpon>0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\ProcessPage\Ajax.ashx.cs">
+      <DependentUpon>Ajax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\ProcessPage\ApprovalHistory.aspx.cs">
+      <DependentUpon>ApprovalHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ProcessPage\ApprovalHistory.aspx.designer.cs">
+      <DependentUpon>ApprovalHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\ProcessPage\Damo.aspx.cs">
+      <DependentUpon>Damo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ProcessPage\Damo.aspx.designer.cs">
+      <DependentUpon>Damo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\ProcessPage\FlowChart.aspx.cs">
+      <DependentUpon>FlowChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ProcessPage\FlowChart.aspx.designer.cs">
+      <DependentUpon>FlowChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\ProcessPage\FormHeader.ascx.cs">
+      <DependentUpon>FormHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ProcessPage\FormHeader.ascx.designer.cs">
+      <DependentUpon>FormHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\ProcessPage\GraphicalView.aspx.cs">
+      <DependentUpon>GraphicalView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ProcessPage\SelectUser.aspx.cs">
+      <DependentUpon>SelectUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ProcessPage\SelectUser.aspx.designer.cs">
+      <DependentUpon>SelectUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\PublicFunctionClass\PublicClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\SSO.aspx.cs">
+      <DependentUpon>SSO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\SSO.aspx.designer.cs">
+      <DependentUpon>SSO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\ToDoTask.aspx.cs">
+      <DependentUpon>ToDoTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ToDoTask.aspx.designer.cs">
+      <DependentUpon>ToDoTask.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource1.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Resource.zh-CN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.zh-CN1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Background\Template\ProcessForm.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataBaseLibrary\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\.svn\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\.svn\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\.svn\tmp\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\.svn\tmp\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\.svn\tmp\text-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\lang\.svn\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\lang\.svn\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\lang\.svn\tmp\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\lang\.svn\tmp\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\lang\.svn\tmp\text-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\skin\.svn\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\skin\.svn\tmp\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\skin\.svn\tmp\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\skin\.svn\tmp\text-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\skin\default\.svn\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\skin\default\.svn\tmp\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\skin\default\.svn\tmp\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\skin\default\.svn\tmp\text-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\.svn\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\.svn\tmp\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\.svn\tmp\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\skin\whyGreen\.svn\tmp\text-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\.svn\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\.svn\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\.svn\tmp\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\.svn\tmp\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\.svn\tmp\text-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\lang\.svn\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\lang\.svn\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\lang\.svn\tmp\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\lang\.svn\tmp\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\lang\.svn\tmp\text-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\skin\.svn\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\skin\.svn\tmp\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\skin\.svn\tmp\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\skin\.svn\tmp\text-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\skin\default\.svn\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\skin\default\.svn\tmp\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\skin\default\.svn\tmp\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\skin\default\.svn\tmp\text-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\.svn\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\.svn\tmp\prop-base\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\.svn\tmp\props\" />
+    <Folder Include="Web\ProcessPage\My97DatePicker\开发包\skin\whyGreen\.svn\tmp\text-base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ClientService\ClientService.csproj">
+      <Project>{ED7C59A6-254F-4A2D-9981-758434041755}</Project>
+      <Name>ClientService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4706</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

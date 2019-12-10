@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5416C705-BEFE-48B1-97D3-854FBAF3EAB7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ultimus.UWF.Workflow</RootNamespace>
+    <AssemblyName>Ultimus.UWF.Workflow</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assets\ref\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="MyLib, Version=1.5.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assets\ref\MyLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Assets\ref\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjaxClass.ashx.cs">
+      <DependentUpon>AjaxClass.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AssginDetailInfo.aspx.cs">
+      <DependentUpon>AssginDetailInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssginDetailInfo.aspx.designer.cs">
+      <DependentUpon>AssginDetailInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assign.aspx.cs">
+      <DependentUpon>Assign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assign.aspx.designer.cs">
+      <DependentUpon>Assign.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignmentList.aspx.cs">
+      <DependentUpon>AssignmentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignmentList.aspx.designer.cs">
+      <DependentUpon>AssignmentList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttachmentControl.aspx.cs">
+      <DependentUpon>AttachmentControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttachmentControl.aspx.designer.cs">
+      <DependentUpon>AttachmentControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttachmentPreview.aspx.cs">
+      <DependentUpon>AttachmentPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttachmentPreview.aspx.designer.cs">
+      <DependentUpon>AttachmentPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\PerformanceHandler.ashx.cs">
+      <DependentUpon>PerformanceHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\TaskClient.ashx.cs">
+      <DependentUpon>TaskClient.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\TaskClient.aspx.cs">
+      <DependentUpon>TaskClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controller\TaskClient.aspx.designer.cs">
+      <DependentUpon>TaskClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DraftList.aspx.cs">
+      <DependentUpon>DraftList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DraftList.aspx.designer.cs">
+      <DependentUpon>DraftList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DraftList2.aspx.cs">
+      <DependentUpon>DraftList2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DraftList2.aspx.designer.cs">
+      <DependentUpon>DraftList2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\ApprovalHistoryEntity.cs" />
+    <Compile Include="Entity\AttachmentEntity.cs" />
+    <Compile Include="Entity\CashEntity.cs" />
+    <Compile Include="Entity\FilterEntity.cs" />
+    <Compile Include="Entity\MyDB.cs" />
+    <Compile Include="Entity\PageEntity.cs" />
+    <Compile Include="Entity\PersonalAllownce.cs" />
+    <Compile Include="Entity\PersonalExpense.cs" />
+    <Compile Include="Entity\ProcessCategoryEntity.cs" />
+    <Compile Include="Entity\ProcessEntity.cs" />
+    <Compile Include="Entity\ServerEntity.cs" />
+    <Compile Include="Entity\StepSettings.cs" />
+    <Compile Include="Entity\TaskEntity.cs" />
+    <Compile Include="Entity\TravalEntity.cs" />
+    <Compile Include="Entity\VarEntity.cs" />
+    <Compile Include="GraphicalView.aspx.cs">
+      <DependentUpon>GraphicalView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Groups.aspx.cs">
+      <DependentUpon>Groups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Groups.aspx.designer.cs">
+      <DependentUpon>Groups.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryAssignList.aspx.cs">
+      <DependentUpon>HistoryAssignList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HistoryAssignList.aspx.designer.cs">
+      <DependentUpon>HistoryAssignList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Implementation\BusinessData.cs" />
+    <Compile Include="Implementation\MultiServerTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementation\DatabaseTask.cs" />
+    <Compile Include="Implementation\EIKClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\IProcessCategory.cs" />
+    <Compile Include="Interface\ITask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\ApprovalHistoryLogic.cs" />
+    <Compile Include="Logic\AttachmentLogic.cs" />
+    <Compile Include="Logic\FormatToJson.cs" />
+    <Compile Include="Logic\ProcessLogic.cs" />
+    <Compile Include="Logic\ServerLogic.cs" />
+    <Compile Include="Logic\StepSettingsHandler.cs" />
+    <Compile Include="Logic\StepSettingsLogic.cs" />
+    <Compile Include="Implementation\DatabaseCategoryLogic.cs" />
+    <Compile Include="Logic\UltimusLib.cs" />
+    <Compile Include="NewTask.aspx.cs">
+      <DependentUpon>NewTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewTask.aspx.designer.cs">
+      <DependentUpon>NewTask.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewTask2.aspx.cs">
+      <DependentUpon>NewTask2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewTask2.aspx.designer.cs">
+      <DependentUpon>NewTask2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OpenForm.aspx.cs">
+      <DependentUpon>OpenForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OpenForm.aspx.designer.cs">
+      <DependentUpon>OpenForm.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProcessCategory.aspx.cs">
+      <DependentUpon>ProcessCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcessCategory.aspx.designer.cs">
+      <DependentUpon>ProcessCategory.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Ser.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service\BusinessAPI.asmx.cs">
+      <DependentUpon>BusinessAPI.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\EIKHandler.ashx.cs">
+      <DependentUpon>EIKHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\EIKService.asmx.cs">
+      <DependentUpon>EIKService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TaskList.aspx.cs">
+      <DependentUpon>TaskList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TaskList.aspx.designer.cs">
+      <DependentUpon>TaskList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TaskList2.aspx.cs">
+      <DependentUpon>TaskList2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TaskList2.aspx.designer.cs">
+      <DependentUpon>TaskList2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TaskStatus.aspx.cs">
+      <DependentUpon>TaskStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ToDoTaskService.asmx.cs">
+      <DependentUpon>ToDoTaskService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Maintenance\CompleteTaskList.aspx.cs">
+      <DependentUpon>CompleteTaskList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Maintenance\CompleteTaskList.aspx.designer.cs">
+      <DependentUpon>CompleteTaskList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Maintenance\MyTaskList.aspx.cs">
+      <DependentUpon>MyTaskList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Maintenance\MyTaskList.aspx.designer.cs">
+      <DependentUpon>MyTaskList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Maintenance\NewTaskList.aspx.cs">
+      <DependentUpon>NewTaskList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Maintenance\NewTaskList.aspx.designer.cs">
+      <DependentUpon>NewTaskList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Maintenance\OpenForm.aspx.cs">
+      <DependentUpon>OpenForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Maintenance\OpenForm.aspx.designer.cs">
+      <DependentUpon>OpenForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Maintenance\OpenGraphical.aspx.cs">
+      <DependentUpon>OpenGraphical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Maintenance\OpenGraphical.aspx.designer.cs">
+      <DependentUpon>OpenGraphical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Maintenance\ProcessApply.aspx.cs">
+      <DependentUpon>ProcessApply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Maintenance\ProcessApply.aspx.designer.cs">
+      <DependentUpon>ProcessApply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\PerformanceReport.aspx.cs">
+      <DependentUpon>PerformanceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Report\PerformanceReport.aspx.designer.cs">
+      <DependentUpon>PerformanceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\UltimusReport.aspx.cs">
+      <DependentUpon>UltimusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Report\UltimusReport.aspx.designer.cs">
+      <DependentUpon>UltimusReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EIKServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="AsstTask.aspx.cs">
+      <DependentUpon>AsstTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AsstTask.aspx.designer.cs">
+      <DependentUpon>AsstTask.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\sqlmap.config">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\multiservertask.config">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\ProcessCategory.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\dbcategory.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AssginDetailInfo.aspx" />
+    <Content Include="Assign.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="AssignmentList.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="AttachmentControl.aspx" />
+    <Content Include="AsstTask.aspx" />
+    <Content Include="Controller\TaskClient.aspx" />
+    <Content Include="HistoryAssignList.aspx" />
+    <Content Include="Images\question.png" />
+    <Content Include="Service\BusinessAPI.asmx" />
+    <Content Include="Service\EIKHandler.ashx" />
+    <Content Include="AjaxClass.ashx" />
+    <None Include="Web References\EIKServiceRef\EIKService.disco" />
+    <EmbeddedResource Include="Config\Task.xml" />
+    <Content Include="AttachmentPreview.aspx" />
+    <Content Include="Css\home.css" />
+    <Content Include="Css\pager.css" />
+    <Content Include="Css\style.css" />
+    <Content Include="Css\task.css" />
+    <Content Include="DraftList.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="DraftList2.aspx" />
+    <Content Include="GraphicalView.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Groups.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="History.aspx" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\all.png" />
+    <Content Include="Images\allSel.png" />
+    <Content Include="Images\base.css" />
+    <Content Include="Images\bg.jpg" />
+    <Content Include="Images\bg10.gif" />
+    <Content Include="Images\bg11.gif" />
+    <Content Include="Images\bg11.png" />
+    <Content Include="Images\bg12.png" />
+    <Content Include="Images\bg13.png" />
+    <Content Include="Images\bg2.gif" />
+    <Content Include="Images\bg3.gif" />
+    <Content Include="Images\bg4.gif" />
+    <Content Include="Images\bg5.gif" />
+    <Content Include="Images\bg6.gif" />
+    <Content Include="Images\bg7.gif" />
+    <Content Include="Images\bg8.gif" />
+    <Content Include="Images\bg9.gif" />
+    <Content Include="Images\bi_1.gif" />
+    <Content Include="Images\bt01.jpg" />
+    <Content Include="Images\bt02.jpg" />
+    <Content Include="Images\bt03.jpg" />
+    <Content Include="Images\bt04.jpg" />
+    <Content Include="Images\calendar.png" />
+    <Content Include="Images\check.png" />
+    <Content Include="Images\chosen-sprite.png" />
+    <Content Include="Images\code.jpg" />
+    <Content Include="Images\content.css" />
+    <Content Include="Images\control.png" />
+    <Content Include="Images\d1.gif" />
+    <Content Include="Images\delect.jpg" />
+    <Content Include="Images\document.png" />
+    <Content Include="Images\fav.jpg" />
+    <Content Include="Images\fav1.jpg" />
+    <Content Include="Images\folder.png" />
+    <Content Include="Images\guanbi.jpg" />
+    <Content Include="Images\halfclose.png" />
+    <Content Include="Images\help.png" />
+    <Content Include="Images\icon8.gif" />
+    <Content Include="Images\icon_all.gif" />
+    <Content Include="Images\icon_bag.gif" />
+    <Content Include="Images\icon_car.gif" />
+    <Content Include="Images\icon_cheng.gif" />
+    <Content Include="Images\icon_computer.gif" />
+    <Content Include="Images\icon_db.gif" />
+    <Content Include="Images\icon_hammer.gif" />
+    <Content Include="Images\icon_h_com.gif" />
+    <Content Include="Images\icon_h_fav.gif" />
+    <Content Include="Images\icon_h_mark.gif" />
+    <Content Include="Images\icon_h_pass.gif" />
+    <Content Include="Images\icon_jinyi.gif" />
+    <Content Include="Images\icon_list.gif" />
+    <Content Include="Images\icon_man.gif" />
+    <Content Include="Images\icon_m_crm.png" />
+    <Content Include="Images\icon_m_crm_h.png" />
+    <Content Include="Images\icon_m_document.png" />
+    <Content Include="Images\icon_m_document_h.png" />
+    <Content Include="Images\icon_m_yun.png" />
+    <Content Include="Images\icon_m_yun_h.png" />
+    <Content Include="Images\icon_star.gif" />
+    <Content Include="Images\icon_s_app.gif" />
+    <Content Include="Images\icon_s_busi.gif" />
+    <Content Include="Images\icon_s_chat.gif" />
+    <Content Include="Images\icon_s_clock.gif" />
+    <Content Include="Images\icon_s_custom.gif" />
+    <Content Include="Images\icon_s_document.gif" />
+    <Content Include="Images\icon_s_dsub.gif" />
+    <Content Include="Images\icon_s_event.gif" />
+    <Content Include="Images\icon_s_lock.gif" />
+    <Content Include="Images\icon_s_msg.gif" />
+    <Content Include="Images\icon_s_nc.gif" />
+    <Content Include="Images\icon_s_sys.gif" />
+    <Content Include="Images\icon_tianping.gif" />
+    <Content Include="Images\icon_t_loc.gif" />
+    <Content Include="Images\icon_t_msg.gif" />
+    <Content Include="Images\icon_t_o1.gif" />
+    <Content Include="Images\icon_t_o2.gif" />
+    <Content Include="Images\icon_t_o3.gif" />
+    <Content Include="Images\icon_t_rss.gif" />
+    <Content Include="Images\jiankong.png" />
+    <Content Include="Images\jiankong1.png" />
+    <Content Include="Images\lc1.jpg" />
+    <Content Include="Images\lc2.jpg" />
+    <Content Include="Images\lc3.jpg" />
+    <Content Include="Images\lc4.jpg" />
+    <Content Include="Images\lc5.jpg" />
+    <Content Include="Images\listpic01.jpg" />
+    <Content Include="Images\listpic02.jpg" />
+    <Content Include="Images\listpicbg.jpg" />
+    <Content Include="Images\listpicfooter.jpg" />
+    <Content Include="Images\listtop.jpg" />
+    <Content Include="Images\liucheng.gif" />
+    <Content Include="Images\logo _biger.jpg" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\menu.png" />
+    <Content Include="Images\midbg.jpg" />
+    <Content Include="Images\msgnum.png" />
+    <Content Include="Images\navigation1.png" />
+    <Content Include="Images\navigation1Sel.png" />
+    <Content Include="Images\navigation2.png" />
+    <Content Include="Images\navigation2Sel.png" />
+    <Content Include="Images\navigation3.png" />
+    <Content Include="Images\navigation3Sel.png" />
+    <Content Include="Images\navigation4.png" />
+    <Content Include="Images\navigation4Sel.png" />
+    <Content Include="Images\newMsg.png" />
+    <Content Include="Images\new_kdhrms_en_11-old.png" />
+    <Content Include="Images\open.png" />
+    <Content Include="Images\pudown.png" />
+    <Content Include="Images\refresh.jpg" />
+    <Content Include="Images\refresh.png" />
+    <Content Include="Images\reorder1.png" />
+    <Content Include="Images\reorder1Sel.png" />
+    <Content Include="Images\reorder2.png" />
+    <Content Include="Images\reorder2Sel.png" />
+    <Content Include="Images\reorder3.png" />
+    <Content Include="Images\reorder3Sel.png" />
+    <Content Include="Images\reorder4.png" />
+    <Content Include="Images\reorder4Sel.png" />
+    <Content Include="Images\scdwjj.jpg" />
+    <Content Include="Images\selMenu.png" />
+    <Content Include="Images\sortbtn1.png" />
+    <Content Include="Images\sortbtn1Sel.png" />
+    <Content Include="Images\sortbtn2.png" />
+    <Content Include="Images\sortbtn2Sel.png" />
+    <Content Include="Images\sortbtn3.png" />
+    <Content Include="Images\sortbtn3Sel.png" />
+    <Content Include="Images\sortbtn4.png" />
+    <Content Include="Images\sortbtn4Sel.png" />
+    <Content Include="Images\sortbtn5.png" />
+    <Content Include="Images\sortbtn5Sel.png" />
+    <Content Include="Images\sxlb.jpg" />
+    <Content Include="Images\tabnavpic.jpg" />
+    <Content Include="Images\tabs\b1_2.gif" />
+    <Content Include="Images\tabs\scroll-left.gif" />
+    <Content Include="Images\tabs\scroll-right.gif" />
+    <Content Include="Images\tabs\tab-close.gif" />
+    <Content Include="Images\tabs\tab-close2.gif" />
+    <Content Include="Images\tabs\tab-close3.gif" />
+    <Content Include="Images\tabs\tab-close4.gif" />
+    <Content Include="Images\tabs\tab-close5.gif" />
+    <Content Include="Images\tabs\tab-refresh.png" />
+    <Content Include="Images\tabs\tab-strip-bg.gif" />
+    <Content Include="Images\tabs\tabs-sprite.gif" />
+    <Content Include="Images\tabs\tab_bg.gif" />
+    <Content Include="Images\tabs\tab_bg.png" />
+    <Content Include="Images\tabs\tab_bg2.gif" />
+    <Content Include="Images\tabs\v3_scroll-left.gif" />
+    <Content Include="Images\tabs\v3_scroll-right.gif" />
+    <Content Include="Images\tabs\v3_tabBottom_bg.gif" />
+    <Content Include="Images\task_aborted.gif" />
+    <Content Include="Images\task_active.gif" />
+    <Content Include="Images\task_archived.gif" />
+    <Content Include="Images\task_complete.gif" />
+    <Content Include="Images\task_monitor.gif" />
+    <Content Include="Images\task_overdue.gif" />
+    <Content Include="Images\task_reassigned.gif" />
+    <Content Include="Images\task_return.gif" />
+    <Content Include="Images\task_urgent.gif" />
+    <Content Include="Images\tijiao.jpg" />
+    <Content Include="Images\tipnum.gif" />
+    <Content Include="Images\top_arr.gif" />
+    <Content Include="Images\wnd.gif" />
+    <Content Include="Images\wtbl.jpg" />
+    <Content Include="main.js" />
+    <Content Include="NewTask.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="NewTask2.aspx" />
+    <Content Include="OpenForm.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ProcessCategory.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Service\EIKService.asmx" />
+    <Content Include="style.css" />
+    <Content Include="TaskList.aspx" />
+    <Content Include="TaskList2.aspx" />
+    <Content Include="TaskStatus.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ToDoTaskService.asmx" />
+    <Content Include="View\Maintenance\CompleteTaskList.aspx" />
+    <Content Include="View\Maintenance\MyTaskList.aspx" />
+    <Content Include="View\Maintenance\NewTaskList.aspx" />
+    <Content Include="View\Maintenance\OpenForm.aspx" />
+    <Content Include="View\Maintenance\OpenGraphical.aspx" />
+    <Content Include="View\Maintenance\ProcessApply.aspx" />
+    <Content Include="View\Report\Charts\amcharts\amcharts.js" />
+    <Content Include="View\Report\Charts\amcharts\exporting\amexport.js" />
+    <Content Include="View\Report\Charts\amcharts\exporting\canvg.js" />
+    <Content Include="View\Report\Charts\amcharts\exporting\filesaver.js" />
+    <Content Include="View\Report\Charts\amcharts\exporting\jspdf.js" />
+    <Content Include="View\Report\Charts\amcharts\exporting\jspdf.plugin.addimage.js" />
+    <Content Include="View\Report\Charts\amcharts\exporting\rgbcolor.js" />
+    <Content Include="View\Report\Charts\amcharts\funnel.js" />
+    <Content Include="View\Report\Charts\amcharts\gauge.js" />
+    <Content Include="View\Report\Charts\amcharts\images\dragIcon.gif" />
+    <Content Include="View\Report\Charts\amcharts\images\dragIconBlack.gif" />
+    <Content Include="View\Report\Charts\amcharts\images\dragIconH.gif" />
+    <Content Include="View\Report\Charts\amcharts\images\dragIconHBlack.gif" />
+    <Content Include="View\Report\Charts\amcharts\images\export.png" />
+    <Content Include="View\Report\Charts\amcharts\images\exportWhite.png" />
+    <Content Include="View\Report\Charts\amcharts\images\lens.png" />
+    <Content Include="View\Report\Charts\amcharts\images\lensWhite.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern1.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern10.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern11.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern12.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern13.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern14.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern15.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern16.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern17.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern18.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern19.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern2.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern20.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern21.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern3.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern4.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern5.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern6.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern7.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern8.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\black\pattern9.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\chalk\pattern1.jpg" />
+    <Content Include="View\Report\Charts\amcharts\patterns\chalk\pattern1r.jpg" />
+    <Content Include="View\Report\Charts\amcharts\patterns\chalk\pattern2.jpg" />
+    <Content Include="View\Report\Charts\amcharts\patterns\chalk\pattern3.jpg" />
+    <Content Include="View\Report\Charts\amcharts\patterns\chalk\pattern4.jpg" />
+    <Content Include="View\Report\Charts\amcharts\patterns\chalk\pattern5.jpg" />
+    <Content Include="View\Report\Charts\amcharts\patterns\chalk\pattern6.jpg" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern1.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern10.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern11.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern12.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern13.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern14.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern15.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern16.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern17.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern18.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern19.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern2.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern20.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern21.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern3.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern4.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern5.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern6.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern7.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern8.png" />
+    <Content Include="View\Report\Charts\amcharts\patterns\white\pattern9.png" />
+    <Content Include="View\Report\Charts\amcharts\pie.js" />
+    <Content Include="View\Report\Charts\amcharts\radar.js" />
+    <Content Include="View\Report\Charts\amcharts\serial.js" />
+    <Content Include="View\Report\Charts\amcharts\themes\chalk.js" />
+    <Content Include="View\Report\Charts\amcharts\themes\dark.js" />
+    <Content Include="View\Report\Charts\amcharts\themes\light.js" />
+    <Content Include="View\Report\Charts\amcharts\themes\patterns.js" />
+    <Content Include="View\Report\Charts\amcharts\xy.js" />
+    <Content Include="View\Report\Charts\custom.css" />
+    <Content Include="View\Report\Charts\images\0.gif" />
+    <Content Include="View\Report\Charts\images\1.gif" />
+    <Content Include="View\Report\Charts\images\2.gif" />
+    <Content Include="View\Report\Charts\images\3.gif" />
+    <Content Include="View\Report\Charts\images\bg.gif" />
+    <Content Include="View\Report\Charts\images\bg.jpg" />
+    <Content Include="View\Report\Charts\images\bgSky.jpg" />
+    <Content Include="View\Report\Charts\images\bicycle.png" />
+    <Content Include="View\Report\Charts\images\board.jpg" />
+    <Content Include="View\Report\Charts\images\car.png" />
+    <Content Include="View\Report\Charts\images\logo.png" />
+    <Content Include="View\Report\Charts\images\motorcycle.png" />
+    <Content Include="View\Report\Charts\images\redstar.png" />
+    <Content Include="View\Report\Charts\images\star.png" />
+    <Content Include="View\Report\Charts\images\style.css" />
+    <Content Include="View\Report\jpaginate\css\style.css" />
+    <Content Include="View\Report\jpaginate\images\next.png" />
+    <Content Include="View\Report\jpaginate\images\previous.png" />
+    <Content Include="View\Report\jpaginate\images\snext.png" />
+    <Content Include="View\Report\jpaginate\images\sprevious.png" />
+    <Content Include="View\Report\jpaginate\jquery.paginate.js" />
+    <Content Include="View\Report\MutipleSelect\css\multi-select.css" />
+    <Content Include="View\Report\MutipleSelect\img\switch.png" />
+    <Content Include="View\Report\MutipleSelect\js\jquery.multi-select.js" />
+    <Content Include="View\Report\PerformanceReport.aspx" />
+    <Content Include="View\Report\UltimusReport.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EIKServiceRef\EIKService.wsdl" />
+    <None Include="Web References\EIKServiceRef\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EIKServiceRef\ServerEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EIKServiceRef\TaskEntity1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EIKServiceRef\VarEntity1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Presale.Process.Common\Presale.Process.Common.csproj">
+      <Project>{49137556-9D2B-4630-9B33-BA41515BE0BC}</Project>
+      <Name>Presale.Process.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presale.Process.TravalExpense\Presale.Process.TravalExpense.csproj">
+      <Project>{926D8172-2D23-4752-8567-C3157075CBB5}</Project>
+      <Name>Presale.Process.TravalExpense</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultimus.UWF.Common\Ultimus.UWF.Common.csproj">
+      <Project>{4E7B6F3F-E6A5-4E48-9022-1BD87730C50C}</Project>
+      <Name>Ultimus.UWF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultimus.UWF.Form\Ultimus.UWF.Form.csproj">
+      <Project>{A50B38E3-CE17-4EE0-B0DC-B05F9C00C1FF}</Project>
+      <Name>Ultimus.UWF.Form</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultimus.UWF.OrgChart\Ultimus.UWF.OrgChart.csproj">
+      <Project>{AF096E41-83B7-4AC3-8B3D-F7389868F025}</Project>
+      <Name>Ultimus.UWF.OrgChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultimus.UWF.Security\Ultimus.UWF.Security.csproj">
+      <Project>{4AA2E97E-D542-49B6-811E-8FE883C18DDF}</Project>
+      <Name>Ultimus.UWF.Security</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\Process\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controller\TaskClient.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controller\PerformanceHandler.ashx" />
+    <None Include="Images\tabs\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:5175/Service/EIKService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EIKServiceRef\</RelPath>
+      <UpdateFromURL>http://localhost:5175/Service/EIKService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Ultimus_UWF_Workflow_TaskV8Service_TaskService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>35929</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:8090/Modules/Ultimus.UWF.Workflow</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

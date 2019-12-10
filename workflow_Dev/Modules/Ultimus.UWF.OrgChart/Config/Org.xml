@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="ibatisnet" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <statements>
+
+        <insert id="OrgLogic_InsertUser" parameterClass="Ultimus.UWF.OrgChart.Entity.UserEntity" >
+            INSERT INTO ORG_USER
+            (
+            USERID, USERCODE, USERNAME, LOGINNAME,  EMAIL, MOBILENO, TEL,
+            IM, PASSWORD, PICTURE,  ORDERNO, CREATEDATE, CREATEBY, UPDATEDATE, UPDATEBY,  ISACTIVE,
+            EXT01, EXT02, EXT03, EXT04, EXT05, EXT06, EXT07, EXT08, EXT09, EXT10, EXT11, EXT12, EXT13, EXT14, EXT15, EXT16,
+            EXT17, EXT18, EXT19, EXT20, EXT21, EXT22, EXT23, EXT24, EXT25, EXT26, EXT27, EXT28, EXT29, EXT30
+            )
+            VALUES(
+            #USERID#,#USERCODE#,#USERNAME#,#LOGINNAME#,#EMAIL#,#MOBILENO#,#TEL#,#
+            IM#,#PASSWORD#,#PICTURE#,#ORDERNO#,#CREATEDATE#,#CREATEBY#,#UPDATEDATE#,#UPDATEBY#, #ISACTIVE#,
+            #EXT01#,#EXT02#,#EXT03#,#EXT04#,#EXT05#,#EXT06#,#EXT07#,#EXT08#,#EXT09#,#EXT10#,#EXT11#,#EXT12#,#EXT13#,#EXT14#,#EXT15#,#EXT16#,#
+            EXT17#,#EXT18#,#EXT19#,#EXT20#,#EXT21#,#EXT22#,#EXT23#,#EXT24#,#EXT25#,#EXT26#,#EXT27#,#EXT28#,#EXT29#,#EXT30#
+            )
+        </insert>
+
+        <update id="OrgLogic_UpdateUser" parameterClass="Ultimus.UWF.OrgChart.Entity.UserEntity" >
+            UPDATE ORG_USER SET
+            USERCODE=#USERCODE#, USERNAME=#USERNAME#, LOGINNAME=#LOGINNAME#,  EMAIL=#EMAIL#, MOBILENO=#MOBILENO#, TEL=#TEL#,
+            IM=#IM#, PASSWORD=#PASSWORD#, PICTURE=#PICTURE#,  ORDERNO=#ORDERNO#,
+            CREATEDATE=#CREATEDATE#, CREATEBY=#CREATEBY#, UPDATEDATE=#UPDATEDATE#, UPDATEBY=#UPDATEBY#, ISACTIVE=#ISACTIVE#,
+            EXT01=#EXT01#, EXT02=#EXT02#, EXT03=#EXT03#, EXT04=#EXT04#, EXT05=#EXT05#, EXT06=#EXT06#,
+            EXT07=#EXT07#, EXT08=#EXT08#, EXT09=#EXT09#, EXT10=#EXT10#, EXT11=#EXT11#,
+            EXT12=#EXT12#, EXT13=#EXT13#, EXT14=#EXT14#, EXT15=#EXT15#, EXT16=#EXT16#,
+            EXT17=#EXT17#, EXT18=#EXT18#, EXT19=#EXT19#, EXT20=#EXT20#, EXT21=#EXT21#,
+            EXT22=#EXT22#, EXT23=#EXT23#, EXT24=#EXT24#, EXT25=#EXT25#, EXT26=#EXT26#, EXT27=#EXT27#,
+            EXT28=#EXT28#, EXT29=#EXT29#, EXT30=#EXT30#
+            WHERE USERID=#USERID#
+        </update>
+
+        <delete id="OrgLogic_DeleteUser">
+            UPDATE ORG_USER SET ISACTIVE=0 WHERE USERID=#USERID#
+        </delete>
+
+        <insert id="OrgLogic_InsertJob" parameterClass="Ultimus.UWF.OrgChart.Entity.JobEntity" >
+          INSERT INTO ORG_JOB
+          (
+          JOBID, USERID, DEPARTMENTID, JOBFUNCTION, JOBGRADE, SUPERVISORJOBID, ISMANAGER, ISPRIMARY,
+          EXT01, EXT02, EXT03, EXT04, EXT05, EXT06, EXT07, EXT08, EXT09, EXT10, EXT11, EXT12, EXT13, EXT14, EXT15, EXT16,
+          EXT17, EXT18, EXT19, EXT20, EXT21, EXT22, EXT23, EXT24, EXT25, EXT26, EXT27, EXT28, EXT29, EXT30
+          )
+          VALUES(
+          #JOBID#, #USERID#, #DEPARTMENTID#, #JOBFUNCTION#, #JOBGRADE#, #SUPERVISORJOBID#, #ISMANAGER#, #ISPRIMARY#,
+          #EXT01#,#EXT02#,#EXT03#,#EXT04#,#EXT05#,#EXT06#,#EXT07#,#EXT08#,#EXT09#,#EXT10#,#EXT11#,#EXT12#,#EXT13#,#EXT14#,#EXT15#,#EXT16#,#
+          EXT17#,#EXT18#,#EXT19#,#EXT20#,#EXT21#,#EXT22#,#EXT23#,#EXT24#,#EXT25#,#EXT26#,#EXT27#,#EXT28#,#EXT29#,#EXT30#
+          )
+        </insert>
+
+        <update id="OrgLogic_UpdateJob" parameterClass="Ultimus.UWF.OrgChart.Entity.JobEntity" >
+          UPDATE ORG_JOB SET
+          JOBID=#JOBID#, USERID=#USERID#, DEPARTMENTID=#DEPARTMENTID#, JOBFUNCTION=#JOBFUNCTION#, JOBGRADE=#JOBGRADE#, SUPERVISORJOBID=#SUPERVISORJOBID#,
+          ISMANAGER=#ISMANAGER#, ISPRIMARY=#ISPRIMARY#,
+          EXT01=#EXT01#, EXT02=#EXT02#, EXT03=#EXT03#, EXT04=#EXT04#, EXT05=#EXT05#, EXT06=#EXT06#,
+          EXT07=#EXT07#, EXT08=#EXT08#, EXT09=#EXT09#, EXT10=#EXT10#, EXT11=#EXT11#,
+          EXT12=#EXT12#, EXT13=#EXT13#, EXT14=#EXT14#, EXT15=#EXT15#, EXT16=#EXT16#,
+          EXT17=#EXT17#, EXT18=#EXT18#, EXT19=#EXT19#, EXT20=#EXT20#, EXT21=#EXT21#,
+          EXT22=#EXT22#, EXT23=#EXT23#, EXT24=#EXT24#, EXT25=#EXT25#, EXT26=#EXT26#, EXT27=#EXT27#,
+          EXT28=#EXT28#, EXT29=#EXT29#, EXT30=#EXT30#
+          WHERE JOBID=#JOBID#
+        </update>
+
+        <delete id="OrgLogic_DeleteJob">
+            DELETE FROM ORG_JOB WHERE JOBID=#JOBID#
+        </delete>
+
+        <insert id="OrgLogic_InsertDepartment" parameterClass="Ultimus.UWF.OrgChart.Entity.DepartmentEntity" >
+            INSERT INTO ORG_DEPARTMENT
+            (
+            DEPARTMENTID
+            ,DEPARTMENTNAME
+            ,PARENTID
+            ,DEPARTMENTTYPE
+            ,CREATEDATE
+            ,CREATEBY
+            ,UPDATEDATE
+            ,UPDATEBY,
+            EXT01, EXT02, EXT03, EXT04, EXT05, EXT06, EXT07, EXT08, EXT09, EXT10, EXT11, EXT12, EXT13, EXT14, EXT15, EXT16,
+            EXT17, EXT18, EXT19, EXT20, EXT21, EXT22, EXT23, EXT24, EXT25, EXT26, EXT27, EXT28, EXT29, EXT30
+            )
+            VALUES(
+            #DEPARTMENTID#
+            ,#DEPARTMENTNAME#
+            ,#PARENTID#
+            ,#DEPARTMENTTYPE#
+            ,#CREATEDATE#
+            ,#CREATEBY#
+            ,#UPDATEDATE#
+            ,#UPDATEBY#,
+            #EXT01#,#EXT02#,#EXT03#,#EXT04#,#EXT05#,#EXT06#,#EXT07#,#EXT08#,#EXT09#,#EXT10#,#EXT11#,#EXT12#,#EXT13#,#EXT14#,#EXT15#,#EXT16#,#
+            EXT17#,#EXT18#,#EXT19#,#EXT20#,#EXT21#,#EXT22#,#EXT23#,#EXT24#,#EXT25#,#EXT26#,#EXT27#,#EXT28#,#EXT29#,#EXT30#
+            )
+        </insert>
+
+        <update id="OrgLogic_UpdateDepartment" parameterClass="Ultimus.UWF.OrgChart.Entity.DepartmentEntity" >
+            UPDATE ORG_DEPARTMENT SET
+            DEPARTMENTID=#DEPARTMENTID#
+            ,DEPARTMENTNAME=#DEPARTMENTNAME#
+            ,PARENTID=#PARENTID#
+            ,DEPARTMENTTYPE=#DEPARTMENTTYPE#
+            ,CREATEDATE=#CREATEDATE#
+            ,CREATEBY=#CREATEBY#
+            ,UPDATEDATE=#UPDATEDATE#
+            ,UPDATEBY=#UPDATEBY#,
+            EXT01=#EXT01#, EXT02=#EXT02#, EXT03=#EXT03#, EXT04=#EXT04#, EXT05=#EXT05#, EXT06=#EXT06#,
+            EXT07=#EXT07#, EXT08=#EXT08#, EXT09=#EXT09#, EXT10=#EXT10#, EXT11=#EXT11#,
+            EXT12=#EXT12#, EXT13=#EXT13#, EXT14=#EXT14#, EXT15=#EXT15#, EXT16=#EXT16#,
+            EXT17=#EXT17#, EXT18=#EXT18#, EXT19=#EXT19#, EXT20=#EXT20#, EXT21=#EXT21#,
+            EXT22=#EXT22#, EXT23=#EXT23#, EXT24=#EXT24#, EXT25=#EXT25#, EXT26=#EXT26#, EXT27=#EXT27#,
+            EXT28=#EXT28#, EXT29=#EXT29#, EXT30=#EXT30#
+            WHERE DEPARTMENTID=#DEPARTMENTID#
+        </update>
+
+        <delete id="OrgLogic_DeleteDepartment">
+            DELETE FROM ORG_DEPARTMENT WHERE DEPARTMENTID=#departmentID#
+        </delete>
+
+        <select id="OrgLogic_GetDepartmentList" resultClass="Ultimus.UWF.OrgChart.Entity.DepartmentEntity">
+            SELECT  DEPARTMENTID
+            ,DEPARTMENTNAME
+            ,PARENTID
+            ,DEPARTMENTTYPE
+            ,CREATEDATE
+            ,CREATEBY
+            ,UPDATEDATE
+            ,UPDATEBY
+            ,EXT01
+            ,EXT02
+            ,EXT03
+            ,EXT04
+            ,EXT05
+            ,EXT06
+            ,EXT07
+            ,EXT08
+            ,EXT09
+            ,EXT10
+            ,EXT11
+            ,EXT12
+            ,EXT13
+            ,EXT14
+            ,EXT15
+            ,EXT16
+            ,EXT17
+            ,EXT18
+            ,EXT19
+            ,EXT20
+            ,EXT21
+            ,EXT22
+            ,EXT23
+            ,EXT24
+            ,EXT25
+            ,EXT26
+            ,EXT27
+            ,EXT28
+            ,EXT29
+            ,EXT30
+            FROM  ORG_DEPARTMENT
+        </select>
+
+        <select id="OrgLogic_GetDepartmentEntity" resultClass="Ultimus.UWF.OrgChart.Entity.DepartmentEntity">
+            SELECT  DEPARTMENTID
+            ,DEPARTMENTNAME
+            ,PARENTID
+            ,DEPARTMENTTYPE
+            ,CREATEDATE
+            ,CREATEBY
+            ,UPDATEDATE
+            ,UPDATEBY
+            ,EXT01
+            ,EXT02
+            ,EXT03
+            ,EXT04
+            ,EXT05
+            ,EXT06
+            ,EXT07
+            ,EXT08
+            ,EXT09
+            ,EXT10
+            ,EXT11
+            ,EXT12
+            ,EXT13
+            ,EXT14
+            ,EXT15
+            ,EXT16
+            ,EXT17
+            ,EXT18
+            ,EXT19
+            ,EXT20
+            ,EXT21
+            ,EXT22
+            ,EXT23
+            ,EXT24
+            ,EXT25
+            ,EXT26
+            ,EXT27
+            ,EXT28
+            ,EXT29
+            ,EXT30
+            FROM  ORG_DEPARTMENT
+            WHERE DEPARTMENTID=#DEPARTMENTID#
+        </select>
+        
+        <select id="OrgLogic_GetUserList" resultClass="Ultimus.UWF.OrgChart.Entity.UserEntity">
+            SELECT   USERID
+            ,LOGINNAME
+            ,USERNAME
+            ,USERCODE
+            ,EMAIL
+            ,MOBILENO
+            ,TEL
+            ,IM
+            ,PASSWORD
+            ,PICTURE
+            ,ORDERNO
+            ,CREATEDATE
+            ,CREATEBY
+            ,UPDATEDATE
+            ,UPDATEBY
+            ,ISACTIVE
+            ,EXT01
+            ,EXT02
+            ,EXT03
+            ,EXT04
+            ,EXT05
+            ,EXT06
+            ,EXT07
+            ,EXT08
+            ,EXT09
+            ,EXT10
+            ,EXT11
+            ,EXT12
+            ,EXT13
+            ,EXT14
+            ,EXT15
+            ,EXT16
+            ,EXT17
+            ,EXT18
+            ,EXT19
+            ,EXT20
+            ,EXT21
+            ,EXT22
+            ,EXT23
+            ,EXT24
+            ,EXT25
+            ,EXT26
+            ,EXT27
+            ,EXT28
+            ,EXT29
+            ,EXT30
+            FROM  ORG_USER
+        </select>
+
+        <select id="OrgLogic_GetUserEntity" resultClass="Ultimus.UWF.OrgChart.Entity.UserEntity">
+            SELECT   USERID
+            ,LOGINNAME
+            ,USERNAME
+            ,USERCODE
+            ,EMAIL
+            ,MOBILENO
+            ,TEL
+            ,IM
+            ,PASSWORD
+            ,PICTURE
+            ,ORDERNO
+            ,CREATEDATE
+            ,CREATEBY
+            ,UPDATEDATE
+            ,UPDATEBY
+            ,ISACTIVE
+            ,EXT01
+            ,EXT02
+            ,EXT03
+            ,EXT04
+            ,EXT05
+            ,EXT06
+            ,EXT07
+            ,EXT08
+            ,EXT09
+            ,EXT10
+            ,EXT11
+            ,EXT12
+            ,EXT13
+            ,EXT14
+            ,EXT15
+            ,EXT16
+            ,EXT17
+            ,EXT18
+            ,EXT19
+            ,EXT20
+            ,EXT21
+            ,EXT22
+            ,EXT23
+            ,EXT24
+            ,EXT25
+            ,EXT26
+            ,EXT27
+            ,EXT28
+            ,EXT29
+            ,EXT30
+            FROM  ORG_USER
+            WHERE LOGINNAME=#LOGINNAME#
+        </select>
+
+        <select id="OrgLogic_GetUserEntityByID" resultClass="Ultimus.UWF.OrgChart.Entity.UserEntity">
+            SELECT   USERID
+            ,LOGINNAME
+            ,USERNAME
+            ,USERCODE
+            ,EMAIL
+            ,MOBILENO
+            ,TEL
+            ,IM
+            ,PASSWORD
+            ,PICTURE
+            ,ORDERNO
+            ,CREATEDATE
+            ,CREATEBY
+            ,UPDATEDATE
+            ,UPDATEBY
+            ,ISACTIVE
+            ,EXT01
+            ,EXT02
+            ,EXT03
+            ,EXT04
+            ,EXT05
+            ,EXT06
+            ,EXT07
+            ,EXT08
+            ,EXT09
+            ,EXT10
+            ,EXT11
+            ,EXT12
+            ,EXT13
+            ,EXT14
+            ,EXT15
+            ,EXT16
+            ,EXT17
+            ,EXT18
+            ,EXT19
+            ,EXT20
+            ,EXT21
+            ,EXT22
+            ,EXT23
+            ,EXT24
+            ,EXT25
+            ,EXT26
+            ,EXT27
+            ,EXT28
+            ,EXT29
+            ,EXT30
+            FROM  ORG_USER
+            WHERE USERID=#USERID#
+        </select>
+
+        <select id="OrgLogic_GetUserEntityByJob" resultClass="Ultimus.UWF.OrgChart.Entity.UserEntity">
+            select a.* from ORG_USER a inner join ORG_JOB b on a.USERID=b.USERID and b.JOBID=#JOBID# 
+        </select>
+
+        <select id="OrgLogic_GetJobEntity" resultClass="Ultimus.UWF.OrgChart.Entity.JobEntity">
+            select * from ORG_JOB where JOBID=#JOBID#
+        </select>
+
+        <select id="OrgLogic_GetJobEntityByUserID" resultClass="Ultimus.UWF.OrgChart.Entity.JobEntity">
+            select * from ORG_JOB where USERID=#USERID#
+        </select>
+
+      
+    </statements>
+</sqlMap>

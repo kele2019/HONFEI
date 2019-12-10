@@ -1,0 +1,46 @@
+body {    font-size:9pt;}
+.pt10{    padding-top:10px;}
+.pb10{    padding-bottom:10px;}
+.pl10{    padding-left:10px;}
+.pr10{    padding-right:10px;}
+.pr50{    padding-right:50px;}
+.pr100{    padding-right:100px;}
+.red{    color:Red;}
+.left {float:left;} 
+.right {float:right; } 
+.wrapper{width:98%;margin:0 auto;}
+.wrapper1{width:98%;margin:0 auto;}
+.lh{line-height:31px;}
+
+.topbar{height:31px;background:#efefef;border-bottom:1px solid #dedede;color:#666;}
+.userinfo_box a{color:#66c;}
+.userinfo_box a:hover{color:#66c;text-decoration:underline;}
+.head{height:69px;margin:0 auto;position:relative;z-index:10;}
+.logotext{line-height:58px;margin:16px 0;font-size:14px;}
+
+.navmod{width:98%;margin:0 auto;height:37px;background-image:url("../img/banner_bg.png");background-repeat:repeat-x;}
+.nav{width:100%;height:43px;margin:0 auto;}
+.nav li{float:left;font:14px/33px "Microsoft YaHei";color:#fff;font-weight:normal;}
+.nav li span{padding-right:15px;display:inline-block;}
+.nav li a{padding-left:15px;color:#fff;display:inline-block;cursor:pointer;}
+.nav li a:hover{color:#000;text-decoration:none;}
+.nav .act{padding:0;}
+.nav .act a{padding:0 15px;position:relative;background-color:#0C5C9F;border-left:1px solid #0F5FA2;border-right:1px solid #0F5FA2;}
+.nav .act a:hover{color:#fff;text-decoration:none;}
+.nav .act span{padding:0;}
+
+.modbox{border-bottom:1px solid #d9c7a7;border-left:1px solid #d9c7a7;border-right:1px solid #d9c7a7;background:#fffaf2;}
+.mod_hd{position:relative;background-image:url("../img/menu_bg.png");background-repeat:repeat-x;border-bottom:1px solid #d9c7a7;}
+.mod_hd h3{padding-left:10px;font-size:14px;margin:0;}
+
+.category_nav_box{margin:15px auto 0;border:1px solid #C8E3FF;border-top:2px solid #C8E3FF;background:#fff;}
+.category_nav_box dl{height:20px;padding:6px 5px;margin:0 10px;position:relative;border-top:1px dotted #cbcbcb;line-height:20px;}
+.category_nav_box dt{width:105px;position:absolute;top:6px;left:5px;font-size:14px;font-weight:bold;}
+.category_nav_box dd{margin-left:107px;}
+.category_nav_box dd a,.category_nav_box dd span{padding:2px 7px;margin:0 7px;}
+.category_nav_box .cur,.category_nav_box dd a:hover{padding:2px 6px;background:#C8E3FF;border:1px solid #C8E3FF;color:#000;text-decoration:none;}
+.category_nav_box .first{border:0 none;}
+.category_nav_box dd em{color:#999;}
+.category_nav_box .cur em,.category_nav_box dd a:hover em{color:#fff;}
+
+.menulist li{ background-image:url(../img/left_menu_icon.gif); list-style:none;background-repeat:no-repeat; text-align:left; line-height:24px; height:24px; text-indent:17px; background-position:5px 7px;}

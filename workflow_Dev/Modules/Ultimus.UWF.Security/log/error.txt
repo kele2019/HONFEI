@@ -1,0 +1,5 @@
+2014-11-26 11:07:50,674 [4] ERROR MyLib - Ёя [WIN-NH12D4FTL91\Administrator] This SQL map does not contain a MappedStatement named SecurityLogic_GetList
+IBatisNet.DataMapper.Exceptions.DataMapperException: This SQL map does not contain a MappedStatement named SecurityLogic_GetList
+   дк IBatisNet.DataMapper.SqlMapper.GetMappedStatement(String id)
+   дк IBatisNet.DataMapper.SqlMapper.QueryForList[T](String statementName, Object parameterObject)
+   дк MyLib.DataAccess.GetList[T](String statementName, Object parameterObject)

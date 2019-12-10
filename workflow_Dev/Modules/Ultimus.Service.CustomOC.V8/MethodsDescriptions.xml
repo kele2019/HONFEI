@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CustomDirectory</name>
+    </assembly>
+    <members>
+        <member name="T:CustomDirectory.Helper">
+            <summary>
+            This class contains some helper fucntions tpo be used in OCSync class
+            </summary>
+        </member>
+        <member name="M:CustomDirectory.Helper.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:CustomDirectory.Helper.RunQuery(System.String,System.String@,System.Data.Common.DbConnection@)">
+            <summary>
+            This method executes the specifed query and returns the result in a record set
+            </summary>
+            <param name="strQuery">SQL query to be executed as a string</param>
+            <param name="strError">contains the error description if method fails</param>
+            <param name="dbConnection">An object of DbConnection.</param>
+            <returns>An object of type OleDbDataReader containing record set returned by the SQL query</returns>
+        </member>
+        <member name="M:CustomDirectory.Helper.RunQueryRef(System.String,System.String@,System.Data.Common.DbConnection@)">
+            <summary>
+            This method executes the specifed query and returns the result in a record set
+            </summary>
+            <param name="strQuery">SQL query to be executed as a string</param>
+            <param name="strError">contains the error description if method fails</param>
+            <param name="dbConnection">An object of DbConnection.</param>
+            <returns>An object of type OleDbDataReader containing record set returned by the SQL query</returns>
+        </member>
+        <member name="M:CustomDirectory.Helper.GetTotalRows(System.String)">
+            <summary>
+            Executes the select query and returns the total number of rows returned
+            </summary>
+            <param name="strQuery">SQL query to be executed as a string</param>
+            <returns>Total number of rows returned by the SQL query</returns>
+        </member>
+        <member name="M:CustomDirectory.Helper.AppendTextToLog(System.String)">
+            <summary>
+            Appends a text line to the log file
+            </summary>
+            <param name="strText">Text to be appended</param>
+        </member>
+        <member name="M:CustomDirectory.OCSync.isGroupMemberWx(System.String,System.String)">
+            <summary>
+            根据组名称和登陆帐号判断用户是否在组中
+            </summary>
+            <param name="groupname"></param>
+            <param name="LOGINNAME"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CustomDirectory.DbHelper">
+            <summary>
+            说 明: .NET通用数据库操作帮助类,可支持Odbc、OleDb、OracleClient、SqlClient、SqlServerCe等多种数据库提供程序操作
+            </summary>
+        </member>
+        <member name="F:CustomDirectory.DbHelper.DbProviderName">
+            <summary>
+            获取当前数据库配置的提供程序名称值DbProviderName
+            </summary>
+        </member>
+        <member name="F:CustomDirectory.DbHelper.DbConnectionString">
+            <summary>
+            获取当前数据库配置的连接字符串值DbConnectionString
+            </summary>
+        </member>
+        <member name="F:CustomDirectory.DbHelper._dbFactory">
+            <summary>
+            当前默认配置的数据库提供程序DbProviderFactory
+            </summary>
+        </member>
+        <member name="F:CustomDirectory.DbHelper._dbConnection">
+            <summary>
+            当前数据库链接DbConnection对象
+            </summary>
+        </member>
+        <member name="F:CustomDirectory.DbHelper._dbProviderName">
+            <summary>
+            当前的数据库提供程序
+            </summary>
+        </member>
+        <member name="F:CustomDirectory.DbHelper._dbConnectionString">
+            <summary>
+            当前的数据库连接字符串
+            </summary>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.#ctor">
+            <summary>
+            根据配置的数据库提供程序和链接串进行初始化此对象实例
+            </summary>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.#ctor(System.String,System.String)">
+            <summary>
+            根据数据库链接串和数据库提供程序名称两个参数进行初始化此对象实例
+            </summary>
+            <param name="connectionString">数据库连接配置字符串</param>
+            <param name="providerName">数据库提供程序的名称</param>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.CreateDbProviderFactory">
+            <summary>
+            根据配置的数据库提供程序的DbProviderName名称来创建一个数据库配置的提供程序DbProviderFactory对象
+            </summary>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.CreateDbProviderFactory(System.String)">
+            <summary>
+            根据参数名称创建一个数据库提供程序DbProviderFactory对象
+            </summary>
+            <param name="dbProviderName">数据库提供程序的名称</param>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.CreateDbConnection">
+            <summary>
+            根据配置的数据库提供程序和链接串来创建数据库链接.
+            </summary>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.CreateDbConnection(System.String,System.String)">
+            <summary>
+            根据数据库连接字符串参数来创建数据库链接.
+            </summary>
+            <param name="connectionString">数据库连接配置字符串</param>
+            <param name="dbProviderName">数据库提供程序的名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.GetStoredProcedureCommond(System.String)">
+            <summary>
+            根据存储过程名称来构建当前数据库链接的DbCommand对象
+            </summary>
+            <param name="storedProcedure">存储过程名称</param>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.GetSqlStringCommond(System.String)">
+            <summary>
+            根据SQL语句来构建当前数据库链接的DbCommand对象
+            </summary>
+            <param name="sqlQuery">SQL查询语句</param>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.AddParameterCollection(System.Data.Common.DbCommand,System.Data.Common.DbParameterCollection)">
+            <summary>
+            把参数集合添加到DbCommand对象中
+            </summary>
+            <param name="cmd">数据库命令操作对象</param>
+            <param name="dbParameterCollection">数据库操作集合</param>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.AddOutParameter(System.Data.Common.DbCommand,System.String,System.Data.DbType,System.Int32)">
+            <summary>
+            把输出参数添加到DbCommand对象中
+            </summary>
+            <param name="cmd">数据库命令操作对象</param>
+            <param name="parameterName">参数名称</param>
+            <param name="dbType">参数的类型</param>
+            <param name="size">参数的大小</param>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.AddInParameter(System.Data.Common.DbCommand,System.String,System.Data.DbType,System.Object)">
+            <summary>
+            把输入参数添加到DbCommand对象中
+            </summary>
+            <param name="cmd">数据库命令操作对象</param>
+            <param name="parameterName">参数名称</param>
+            <param name="dbType">参数的类型</param>
+            <param name="value">参数值</param>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.AddReturnParameter(System.Data.Common.DbCommand,System.String,System.Data.DbType)">
+            <summary>
+            把返回参数添加到DbCommand对象中
+            </summary>
+            <param name="cmd">数据库命令操作对象</param>
+            <param name="parameterName">参数名称</param>
+            <param name="dbType">参数的类型</param>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.GetParameter(System.Data.Common.DbCommand,System.String)">
+            <summary>
+            根据参数名称从DbCommand对象中获取相应的参数对象
+            </summary>
+            <param name="cmd">数据库命令操作对象</param>
+            <param name="parameterName">参数名称</param>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteDataSet(System.String)">
+            <summary>
+            执行相应的SQL命令，返回一个DataSet数据集合
+            </summary>
+            <param name="sqlQuery">需要执行的SQL语句</param>
+            <returns>返回一个DataSet数据集合</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteDataTable(System.String)">
+            <summary>
+            执行相应的SQL命令，返回一个DataTable数据集
+            </summary>
+            <param name="sqlQuery">需要执行的SQL语句</param>
+            <returns>返回一个DataTable数据集</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteReader(System.String)">
+            <summary>
+            执行相应的SQL命令，返回一个DbDataReader数据对象，如果没有则返回null值
+            </summary>
+            <param name="sqlQuery">需要执行的SQL命令</param>
+            <returns>返回一个DbDataReader数据对象，如果没有则返回null值</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteNonQuery(System.String)">
+            <summary>
+            执行相应的SQL命令，返回影响的数据记录数，如果不成功则返回-1
+            </summary>
+            <param name="sqlQuery">需要执行的SQL命令</param>
+            <returns>返回影响的数据记录数，如果不成功则返回-1</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteScalar(System.String)">
+            <summary>
+            执行相应的SQL命令，返回结果集中的第一行第一列的值，如果不成功则返回null值
+            </summary>
+            <param name="sqlQuery">需要执行的SQL命令</param>
+            <returns>返回结果集中的第一行第一列的值，如果不成功则返回null值</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteDataSet(System.Data.Common.DbCommand)">
+            <summary>
+            执行相应的命令，返回一个DataSet数据集合
+            </summary>
+            <param name="cmd">需要执行的DbCommand命令对象</param>
+            <returns>返回一个DataSet数据集合</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteDataTable(System.Data.Common.DbCommand)">
+            <summary>
+            执行相应的命令，返回一个DataTable数据集合
+            </summary>
+            <param name="cmd">需要执行的DbCommand命令对象</param>
+            <returns>返回一个DataTable数据集合</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteReader(System.Data.Common.DbCommand)">
+            <summary>
+            执行相应的命令，返回一个DbDataReader数据对象，如果没有则返回null值
+            </summary>
+            <param name="cmd">需要执行的DbCommand命令对象</param>
+            <returns>返回一个DbDataReader数据对象，如果没有则返回null值</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteNonQuery(System.Data.Common.DbCommand)">
+            <summary>
+            执行相应的命令，返回影响的数据记录数，如果不成功则返回-1
+            </summary>
+            <param name="cmd">需要执行的DbCommand命令对象</param>
+            <returns>返回影响的数据记录数，如果不成功则返回-1</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteScalar(System.Data.Common.DbCommand)">
+            <summary>
+            执行相应的命令，返回结果集中的第一行第一列的值，如果不成功则返回null值
+            </summary>
+            <param name="cmd">需要执行的DbCommand命令对象</param>
+            <returns>返回结果集中的第一行第一列的值，如果不成功则返回null值</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteDataSet(System.Data.Common.DbCommand,CustomDirectory.Trans)">
+            <summary>
+            以事务的方式执行相应的命令，返回一个DataSet数据集合
+            </summary>
+            <param name="cmd">需要执行的DbCommand命令对象</param>
+            <param name="trans">数据库事务对象</param>
+            <returns>返回一个DataSet数据集合</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteDataTable(System.Data.Common.DbCommand,CustomDirectory.Trans)">
+            <summary>
+            以事务的方式执行相应的命令，返回一个DataTable数据集合
+            </summary>
+            <param name="cmd">需要执行的DbCommand命令对象</param>
+            <param name="trans">数据库事务对象</param>
+            <returns>返回一个DataTable数据集合</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteReader(System.Data.Common.DbCommand,CustomDirectory.Trans)">
+            <summary>
+            以事务的方式执行相应的命令，返回一个DbDataReader数据对象，如果没有则返回null值
+            </summary>
+            <param name="cmd">需要执行的DbCommand命令对象</param>
+            <param name="trans">数据库事务对象</param>
+            <returns>返回一个DbDataReader数据对象，如果没有则返回null值</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteNonQuery(System.Data.Common.DbCommand,CustomDirectory.Trans)">
+            <summary>
+            以事务的方式执行相应的命令，返回影响的数据记录数，如果不成功则返回-1
+            </summary>
+            <param name="cmd">需要执行的DbCommand命令对象</param>
+            <param name="trans">数据库事务对象</param>
+            <returns>返回影响的数据记录数，如果不成功则返回-1</returns>
+        </member>
+        <member name="M:CustomDirectory.DbHelper.ExecuteScalar(System.Data.Common.DbCommand,CustomDirectory.Trans)">
+            <summary>
+            以事务的方式执行相应的命令，返回结果集中的第一行第一列的值，如果不成功则返回null值
+            </summary>
+            <param name="cmd">需要执行的DbCommand命令对象</param>
+            <param name="trans">数据库事务对象</param>
+            <returns>返回结果集中的第一行第一列的值，如果不成功则返回null值</returns>
+        </member>
+        <member name="T:CustomDirectory.Trans">
+            <summary>
+            说 明: 数据库事务操作对象
+            </summary>
+        </member>
+        <member name="M:CustomDirectory.Trans.#ctor">
+            <summary>
+            根据配置的数据库提供程序和连接字符串来创建此事务对象
+            </summary>
+        </member>
+        <member name="M:CustomDirectory.Trans.#ctor(System.String,System.String)">
+            <summary>
+            根据数据库连接字符串来创建此事务对象
+            </summary>
+            <param name="connectionString">数据库连接字符串</param>
+            <param name="dbProviderName">数据库提供程序的名称</param>
+        </member>
+        <member name="M:CustomDirectory.Trans.Commit">
+            <summary>
+            提交此数据库事务操作
+            </summary>
+        </member>
+        <member name="M:CustomDirectory.Trans.RollBack">
+            <summary>
+            回滚此数据库事务操作
+            </summary>
+        </member>
+        <member name="M:CustomDirectory.Trans.Close">
+            <summary>
+            关闭此数据库事务链接
+            </summary>
+        </member>
+        <member name="M:CustomDirectory.Trans.Dispose">
+            <summary>
+            执行与释放或重置非托管资源相关的应用程序定义的任务。
+            </summary>
+        </member>
+        <member name="P:CustomDirectory.Trans.Connection">
+            <summary>
+            获取当前数据库链接对象
+            </summary>
+        </member>
+        <member name="P:CustomDirectory.Trans.Transaction">
+            <summary>
+            获取当前数据库事务对象
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlreadyDoTask_ErrorMessage1" xml:space="preserve">
+    <value>加载已办任务列表出错</value>
+  </data>
+  <data name="AlreadyDoTask_ProcessName" xml:space="preserve">
+    <value>请输入流程名称</value>
+  </data>
+  <data name="AspNetPager_FirstPageText" xml:space="preserve">
+    <value>首页   </value>
+  </data>
+  <data name="AspNetPager_FirstPageText1" xml:space="preserve">
+    <value>首页   </value>
+  </data>
+  <data name="AspNetPager_LastPageText" xml:space="preserve">
+    <value>末页</value>
+  </data>
+  <data name="AspNetPager_LastPageText1" xml:space="preserve">
+    <value>末页</value>
+  </data>
+  <data name="AspNetPager_NextPageText" xml:space="preserve">
+    <value>   下一页   </value>
+  </data>
+  <data name="AspNetPager_NextPageText1" xml:space="preserve">
+    <value>   下一页   </value>
+  </data>
+  <data name="AspNetPager_PrevPageText" xml:space="preserve">
+    <value>上一页   </value>
+  </data>
+  <data name="AspNetPager_PrevPageText1" xml:space="preserve">
+    <value>上一页   </value>
+  </data>
+  <data name="ControlSourceConfig_ColumnName" xml:space="preserve">
+    <value>字段名称</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSourceType" xml:space="preserve">
+    <value>数据源类型</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_ColumnName" xml:space="preserve">
+    <value>字段名称</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_ConnectionString" xml:space="preserve">
+    <value>连接字符串</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_DataBase" xml:space="preserve">
+    <value>数据库</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_ElectronicForm" xml:space="preserve">
+    <value>电子表格</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_strWhere" xml:space="preserve">
+    <value>过滤条件</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_TableName" xml:space="preserve">
+    <value>表名称</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_VariableName" xml:space="preserve">
+    <value>变量名称</value>
+  </data>
+  <data name="ControlSourceConfig_ErrorMessage1" xml:space="preserve">
+    <value>加载数据出错</value>
+  </data>
+  <data name="ControlSourceConfig_ErrorMessage2" xml:space="preserve">
+    <value>数据保存出错</value>
+  </data>
+  <data name="ControlSourceConfig_ProcessName" xml:space="preserve">
+    <value>流程名称</value>
+  </data>
+  <data name="ControlSourceConfig_StepName" xml:space="preserve">
+    <value>步骤名称</value>
+  </data>
+  <data name="DataSaveConfig_ColumnName" xml:space="preserve">
+    <value>字段名称</value>
+  </data>
+  <data name="DataSaveConfig_ConnectionString" xml:space="preserve">
+    <value>连接字符串</value>
+  </data>
+  <data name="DataSaveConfig_DataBase" xml:space="preserve">
+    <value>数据库</value>
+  </data>
+  <data name="DataSaveConfig_ElectronicForm" xml:space="preserve">
+    <value>电子表格</value>
+  </data>
+  <data name="DataSaveConfig_FieldName" xml:space="preserve">
+    <value>字段名称</value>
+  </data>
+  <data name="DataSaveConfig_IsMaster" xml:space="preserve">
+    <value>是否主表</value>
+  </data>
+  <data name="DataSaveConfig_IsSublist" xml:space="preserve">
+    <value>是否明细表</value>
+  </data>
+  <data name="DataSaveConfig_MasterConfig" xml:space="preserve">
+    <value>主表配置</value>
+  </data>
+  <data name="DataSaveConfig_No" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="DataSaveConfig_ProcessName" xml:space="preserve">
+    <value>流程名称</value>
+  </data>
+  <data name="DataSaveConfig_StepName" xml:space="preserve">
+    <value>步骤名称</value>
+  </data>
+  <data name="DataSaveConfig_SublistConfig" xml:space="preserve">
+    <value>明细表配置</value>
+  </data>
+  <data name="DataSaveConfig_TableName" xml:space="preserve">
+    <value>表名称</value>
+  </data>
+  <data name="DataSaveConfig_VariableName" xml:space="preserve">
+    <value>变量名称</value>
+  </data>
+  <data name="Default_CreatePage" xml:space="preserve">
+    <value>生成页面</value>
+  </data>
+  <data name="Default_List_ConfigurationOrModify" xml:space="preserve">
+    <value>配置/修改</value>
+  </data>
+  <data name="Default_List_CreatePage" xml:space="preserve">
+    <value>生成页面</value>
+  </data>
+  <data name="Default_List_CreateTime" xml:space="preserve">
+    <value>创建时间</value>
+  </data>
+  <data name="Default_List_ErrorMessage1" xml:space="preserve">
+    <value>加载列表信息出错</value>
+  </data>
+  <data name="Default_List_No" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="Default_List_Operation" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="Default_List_ProcessName" xml:space="preserve">
+    <value>流程名称</value>
+  </data>
+  <data name="Default_List_UpdateTime" xml:space="preserve">
+    <value>更新时间</value>
+  </data>
+  <data name="Default_Search_CreatePage" xml:space="preserve">
+    <value>是否生成页面</value>
+  </data>
+  <data name="Default_Search_CreateTime" xml:space="preserve">
+    <value>创建时间</value>
+  </data>
+  <data name="Default_Search_ProcessName" xml:space="preserve">
+    <value>流程名称</value>
+  </data>
+  <data name="Default_Search_ResetButton" xml:space="preserve">
+    <value>重　置</value>
+  </data>
+  <data name="Default_Search_SearchButton" xml:space="preserve">
+    <value>搜　索</value>
+  </data>
+  <data name="Default_Search_UpdateTime" xml:space="preserve">
+    <value>更新时间</value>
+  </data>
+  <data name="FormConfiguration_List_AddButton" xml:space="preserve">
+    <value>添加行</value>
+  </data>
+  <data name="FormConfiguration_List_Choose" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="FormConfiguration_List_ColumnName" xml:space="preserve">
+    <value>字段名称</value>
+  </data>
+  <data name="FormConfiguration_List_Configure" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="FormConfiguration_List_ConfigureDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="FormConfiguration_List_ControlName" xml:space="preserve">
+    <value>控件名称</value>
+  </data>
+  <data name="FormConfiguration_List_ControlValueFormat" xml:space="preserve">
+    <value>显示格式</value>
+  </data>
+  <data name="FormConfiguration_List_DelButton" xml:space="preserve">
+    <value>删除行</value>
+  </data>
+  <data name="FormConfiguration_List_ErrorMessage1" xml:space="preserve">
+    <value>加载列表信息出错</value>
+  </data>
+  <data name="FormConfiguration_List_ErrorMessage2" xml:space="preserve">
+    <value>添加行出错</value>
+  </data>
+  <data name="FormConfiguration_List_ErrorMessage3" xml:space="preserve">
+    <value>删除行出错</value>
+  </data>
+  <data name="FormConfiguration_List_ErrorMessage4" xml:space="preserve">
+    <value>加载控件列表出错</value>
+  </data>
+  <data name="FormConfiguration_List_ErrorMessage5" xml:space="preserve">
+    <value>保存数据出错</value>
+  </data>
+  <data name="FormConfiguration_List_ExternalLinks" xml:space="preserve">
+    <value>外部链接</value>
+  </data>
+  <data name="FormConfiguration_List_GoBackButton" xml:space="preserve">
+    <value>保存并返回</value>
+  </data>
+  <data name="FormConfiguration_List_IsShow" xml:space="preserve">
+    <value>是否显示</value>
+  </data>
+  <data name="FormConfiguration_List_No" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="FormConfiguration_List_OrderBy" xml:space="preserve">
+    <value>显示顺序</value>
+  </data>
+  <data name="FormConfiguration_List_ProcessName" xml:space="preserve">
+    <value>流程名称</value>
+  </data>
+  <data name="FormConfiguration_List_ReadOnly" xml:space="preserve">
+    <value>是否只读</value>
+  </data>
+  <data name="FormConfiguration_List_Required" xml:space="preserve">
+    <value>是否必填</value>
+  </data>
+  <data name="FormConfiguration_List_StepName" xml:space="preserve">
+    <value>步骤名称</value>
+  </data>
+  <data name="Form_ApprovalHistory" xml:space="preserve">
+    <value>审批记录</value>
+  </data>
+  <data name="Form_FlowChart" xml:space="preserve">
+    <value>流程图</value>
+  </data>
+  <data name="Form_Text" xml:space="preserve">
+    <value>流程表单</value>
+  </data>
+  <data name="Login_Domain" xml:space="preserve">
+    <value>域名</value>
+  </data>
+  <data name="Login_ErrorMessage1" xml:space="preserve">
+    <value>获取域信息出错</value>
+  </data>
+  <data name="Login_ErrorMessage2" xml:space="preserve">
+    <value>登陆出错</value>
+  </data>
+  <data name="Login_ErrorMessage3" xml:space="preserve">
+    <value>用户名或密码错误,请重新输入</value>
+  </data>
+  <data name="Login_PassWord" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="Login_UserName" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="NewTaskList_ErrorMessage1" xml:space="preserve">
+    <value>加载流程数出错</value>
+  </data>
+  <data name="NewTaskList_ErrorMessage2" xml:space="preserve">
+    <value>加载流程信息出错</value>
+  </data>
+  <data name="NewTaskList_Remark1" xml:space="preserve">
+    <value>点击具体流程进行发起</value>
+  </data>
+  <data name="NewTaskList_Remark2" xml:space="preserve">
+    <value>包含流程</value>
+  </data>
+  <data name="NewTaskList_Remark3" xml:space="preserve">
+    <value>个</value>
+  </data>
+  <data name="NewTask_AlreadyDoTask" xml:space="preserve">
+    <value>已办任务</value>
+  </data>
+  <data name="NewTask_ErrorMessage1" xml:space="preserve">
+    <value>加载分类出错</value>
+  </data>
+  <data name="NewTask_NewTask" xml:space="preserve">
+    <value>发起流程</value>
+  </data>
+  <data name="NewTask_ToDoTask" xml:space="preserve">
+    <value>待办任务</value>
+  </data>
+  <data name="ProcessConfig_CheckFileMessage1" xml:space="preserve">
+    <value>请上传</value>
+  </data>
+  <data name="ProcessConfig_CheckFileMessage2" xml:space="preserve">
+    <value>类型的文件</value>
+  </data>
+  <data name="ProcessConfig_ConfigStep" xml:space="preserve">
+    <value>配置步骤</value>
+  </data>
+  <data name="ProcessConfig_ErrorMessage1" xml:space="preserve">
+    <value>加载数据出错</value>
+  </data>
+  <data name="ProcessConfig_LoGo" xml:space="preserve">
+    <value>页面Logo</value>
+  </data>
+  <data name="ProcessConfig_UpLoadButton" xml:space="preserve">
+    <value>上传/更新</value>
+  </data>
+  <data name="ProcessConfig_UpLoadErrorMessage1" xml:space="preserve">
+    <value>上传文件出错</value>
+  </data>
+  <data name="ProcessConfig_ViewImage" xml:space="preserve">
+    <value>查看图片</value>
+  </data>
+  <data name="ProcessMonitoring_ErrorMessage1" xml:space="preserve">
+    <value>加载流程监控图出错</value>
+  </data>
+  <data name="ProcessStepList_List_ApprovalConfiguration" xml:space="preserve">
+    <value>审批配置</value>
+  </data>
+  <data name="ProcessStepList_List_ApprovalOperation" xml:space="preserve">
+    <value>修改/配置</value>
+  </data>
+  <data name="ProcessStepList_List_Copy" xml:space="preserve">
+    <value>复制到其他步骤</value>
+  </data>
+  <data name="ProcessStepList_List_DataSave" xml:space="preserve">
+    <value>数据保存</value>
+  </data>
+  <data name="ProcessStepList_List_DataSaveConfig" xml:space="preserve">
+    <value>配置/修改</value>
+  </data>
+  <data name="ProcessStepList_List_ErrorMessage1" xml:space="preserve">
+    <value>数据保存出错</value>
+  </data>
+  <data name="ProcessStepList_List_ErrorMessage2" xml:space="preserve">
+    <value>加载列表出错</value>
+  </data>
+  <data name="ProcessStepList_List_ErrorMessage3" xml:space="preserve">
+    <value>加载{0}数据出错</value>
+  </data>
+  <data name="ProcessStepList_List_FormConfiguration" xml:space="preserve">
+    <value>表单配置</value>
+  </data>
+  <data name="ProcessStepList_List_FormOperation" xml:space="preserve">
+    <value>修改/配置</value>
+  </data>
+  <data name="ProcessStepList_List_No" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="ProcessStepList_List_ProcessName" xml:space="preserve">
+    <value>流程名称</value>
+  </data>
+  <data name="ProcessStepList_List_Shortcuts" xml:space="preserve">
+    <value>快捷操作</value>
+  </data>
+  <data name="ProcessStepList_List_StepCName" xml:space="preserve">
+    <value>步骤名称（中文）</value>
+  </data>
+  <data name="ProcessStepList_List_StepEName" xml:space="preserve">
+    <value>步骤名称（英文）</value>
+  </data>
+  <data name="ProcessStepList_List_StepName" xml:space="preserve">
+    <value>步骤名称</value>
+  </data>
+  <data name="StepConfigCopy_Confirm" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="StepConfigCopy_Return" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="ToDoTask_ErrorMessage1" xml:space="preserve">
+    <value>加载待办任务列表出错</value>
+  </data>
+  <data name="ToDoTask_Incident" xml:space="preserve">
+    <value>实例编号</value>
+  </data>
+  <data name="ToDoTask_OpenForm" xml:space="preserve">
+    <value>打开表单</value>
+  </data>
+  <data name="ToDoTask_ProcessMonitoring" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ToDoTask_ProcessName" xml:space="preserve">
+    <value>流程名称</value>
+  </data>
+  <data name="ToDoTask_StepName" xml:space="preserve">
+    <value>步骤名称</value>
+  </data>
+  <data name="ToDoTask_Summary" xml:space="preserve">
+    <value>流程摘要</value>
+  </data>
+  <data name="HeaderLogOff" xml:space="preserve">
+    <value>注　销</value>
+  </data>
+  <data name="LoginLanguages_EN" xml:space="preserve">
+    <value>英文</value>
+  </data>
+  <data name="LoginLanguages_ZH" xml:space="preserve">
+    <value>中文</value>
+  </data>
+  <data name="LoginLanguages" xml:space="preserve">
+    <value>语言</value>
+  </data>
+</root>

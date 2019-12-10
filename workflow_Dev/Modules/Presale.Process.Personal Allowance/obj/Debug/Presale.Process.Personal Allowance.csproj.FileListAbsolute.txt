@@ -1,0 +1,46 @@
+C:\◆项目\trunk\NEXTEV\V2.0.5\Modules\Presale.Process.Personal Allowance\bin\Presale.Process.Personal Allowance.dll
+C:\◆项目\trunk\NEXTEV\V2.0.5\Modules\Presale.Process.Personal Allowance\bin\Presale.Process.Personal Allowance.pdb
+C:\◆项目\trunk\NEXTEV\V2.0.5\Modules\Presale.Process.Personal Allowance\bin\MyLib.dll
+C:\◆项目\trunk\NEXTEV\V2.0.5\Modules\Presale.Process.Personal Allowance\bin\Ultimus.UWF.Form.ProcessControl.dll
+C:\◆项目\trunk\NEXTEV\V2.0.5\Modules\Presale.Process.Personal Allowance\bin\Ultimus.UWF.Form.ProcessControl.pdb
+C:\◆项目\trunk\NEXTEV\V2.0.5\Modules\Presale.Process.Personal Allowance\bin\zh-CN\Ultimus.UWF.Form.ProcessControl.resources.dll
+C:\◆项目\trunk\NEXTEV\V2.0.5\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.csprojResolveAssemblyReference.cache
+C:\◆项目\trunk\NEXTEV\V2.0.5\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.dll
+C:\◆项目\trunk\NEXTEV\V2.0.5\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.pdb
+C:\◆项目\trunk\NEXTEV\V2.0.5\Bin\Presale.Process.Personal Allowance.dll
+C:\◆项目\trunk\NEXTEV\V2.0.5\Bin\Presale.Process.Personal Allowance.pdb
+C:\nextev\V2.0.5\Bin\Presale.Process.Personal Allowance.dll
+C:\nextev\V2.0.5\Bin\Presale.Process.Personal Allowance.pdb
+C:\nextev\V2.0.5\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.csprojResolveAssemblyReference.cache
+C:\nextev\V2.0.5\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.dll
+C:\nextev\V2.0.5\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.pdb
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\Bin\Presale.Process.Personal Allowance.dll
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\Bin\Presale.Process.Personal Allowance.pdb
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.csprojResolveAssemblyReference.cache
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.dll
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.pdb
+C:\Solution\NewHonFei\Bin\Presale.Process.Personal Allowance.dll
+C:\Solution\NewHonFei\Bin\Presale.Process.Personal Allowance.pdb
+C:\Solution\NewHonFei\Modules\Presale.Process.Personal Allowance\obj\Debug\ResolveAssemblyReference.cache
+C:\Solution\NewHonFei\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.dll
+C:\Solution\NewHonFei\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.pdb
+C:\Solution\NewHonFei\HONFEI\Bin\Presale.Process.Personal Allowance.dll
+C:\Solution\NewHonFei\HONFEI\Bin\Presale.Process.Personal Allowance.pdb
+C:\Solution\NewHonFei\HONFEI\Modules\Presale.Process.Personal Allowance\obj\Debug\ResolveAssemblyReference.cache
+C:\Solution\NewHonFei\HONFEI\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.dll
+C:\Solution\NewHonFei\HONFEI\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.pdb
+D:\workflow_Dev\Bin\Presale.Process.Personal Allowance.dll
+D:\workflow_Dev\Bin\Presale.Process.Personal Allowance.pdb
+D:\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.csprojResolveAssemblyReference.cache
+D:\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.dll
+D:\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Bin\Presale.Process.Personal Allowance.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Bin\Presale.Process.Personal Allowance.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\ResolveAssemblyReference.cache
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Bin\Presale.Process.Personal Allowance.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Bin\Presale.Process.Personal Allowance.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\ResolveAssemblyReference.cache
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.pdb

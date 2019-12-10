@@ -1,0 +1,355 @@
+﻿@("<%@ Page Language=\"C#\" AutoEventWireup=\"true\" %>")
+@("<%@ Register Assembly=\"AspNetPager\" Namespace=\"Wuqi.Webdiyer\" TagPrefix=\"webdiyer\" %>")
+@("<%@ Register Src=\"FormHeader.ascx\" TagName=\"Header\" TagPrefix=\"uc1\" %>")
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Ultimus Mobile Client</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="../Css/CSS.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+    INPUT
+    {
+        width:auto;
+    }
+    </style>
+    <script type="text/C#" runat="server">
+        System.Data.DataSet InnerDataSet
+        {
+            get
+            {
+                if (ViewState["InnerDataSet"] != null)
+                {
+                    return ViewState["InnerDataSet"] as System.Data.DataSet;
+                }
+                return null;
+            }
+            set
+            {
+                ViewState["InnerDataSet"] = value;
+            }
+        }
+
+		protected override void InitializeCulture()
+        {
+            string Language = Request.ServerVariables["HTTP_ACCEPT_LANGUAGE"].ToString().Split(',')[0];
+            if (Session["Language"] != null)
+            {
+                Language = Session["Language"].ToString();
+            }
+            System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture(Language);
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Language);
+            base.InitializeCulture();
+        }
+
+        MobileClient.MobileClientBackgroundRef.Ultimus_MobileServices srv = new MobileClient.MobileClientBackgroundRef.Ultimus_MobileServices();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                hidProcessName.Value = Request.QueryString["ProcessName"];
+                hidIncident.Value = Request.QueryString["Incident"];
+                hidStepName.Value = Request.QueryString["StepName"];
+                hidTaskID.Value = Request.QueryString["TaskID"];
+				string yb=Request.QueryString["YB"];
+				if(yb=="1")
+				{
+					trBtn.Visible=false;
+					Control ctl = Page.FindControl("trApprovalRemark");
+                    if (ctl != null)
+                    {
+                        ctl.Visible = false;
+                    }
+				}
+				
+                int incident = 0;
+                if (!string.IsNullOrEmpty(hidIncident.Value))
+                {
+                    incident = Convert.ToInt32(hidIncident.Value);
+                }
+				System.Data.DataSet ctlDs = srv.GetPageControlSource(hidProcessName.Value, hidStepName.Value);
+                if (ctlDs != null)
+                {
+                    foreach (System.Data.DataTable dt in ctlDs.Tables)
+                    {
+                        if (dt.Rows.Count > 0)
+                        {
+                            Control ctl = Page.FindControl("ctl" + dt.TableName);
+                            if (ctl is DropDownList)
+                            {
+                                DropDownList ddl = ctl as DropDownList;
+                                if (dt.Columns.Count > 0)
+                                {
+                                    ddl.DataTextField = dt.Columns[0].ColumnName;
+                                    ddl.DataSource = dt;
+                                    ddl.DataBind();
+                                }
+                            }
+                        }
+                    }
+                }
+
+                System.Data.DataSet ds = srv.GetPageSource(hidProcessName.Value, incident,hidStepName.Value);
+                if (ds == null)
+                {
+                    return;
+                }
+                this.InnerDataSet = ds;
+                System.Data.DataTable mainDt = ds.Tables[0];//主表
+                if (mainDt.Rows.Count > 0)
+                {
+                    foreach (System.Data.DataColumn col in mainDt.Columns)
+                    {
+                        Control ctl = Page.FindControl("ctl" + col.ColumnName);
+                        if (ctl is Label)
+                        {
+							Label lbl=(ctl as Label);
+							if(lbl.ToolTip=="Date")
+							{
+								try
+								{
+									double d=double.Parse(Convert.ToString(mainDt.Rows[0][col]));
+									lbl.Text=DateTime.FromOADate(d).ToShortDateString();
+								}
+								catch
+								{
+									(ctl as Label).Text = Convert.ToString(mainDt.Rows[0][col]);
+								}
+							}
+							else
+							{
+								(ctl as Label).Text = Convert.ToString(mainDt.Rows[0][col]);
+							}
+                        }
+						else if (ctl is TextBox)
+                        {
+                            (ctl as TextBox).Text = Convert.ToString(mainDt.Rows[0][col]);
+                        }
+						else if (ctl is DropDownList)
+                        {
+                            (ctl as DropDownList).SelectedValue = Convert.ToString(mainDt.Rows[0][col]);
+                        }
+						else if (ctl is CheckBox)
+                        {
+                            (ctl as CheckBox).Checked = Convert.ToString(mainDt.Rows[0][col]) == "1" ? true : false;
+                        }
+						else if (ctl is RadioButton)
+                        {
+                            (ctl as RadioButton).Checked = Convert.ToString(mainDt.Rows[0][col]) == "1" ? true : false;
+                        }
+
+						//ishow
+
+                    }
+                }
+
+                for (int i = 1; i < ds.Tables.Count; i++)
+                {
+                    //子表
+                    System.Data.DataTable childDt = ds.Tables[i];
+                    Control ctl = Page.FindControl("ctl" + childDt.TableName);
+                    if (ctl is GridView)
+                    {
+                        (ctl as GridView).DataSource = childDt;
+                        (ctl as GridView).DataBind();
+                    }
+                }
+				//Attachments
+                if(Page.FindControl("ctlAttachments")!=null)
+                {
+                    GridView grid = Page.FindControl("ctlAttachments") as GridView;
+                    grid.DataSource = srv.GetProcessAttachments(hidProcessName.Value, hidIncident.Value);
+                    grid.DataBind();
+                }
+            }
+        }
+
+        protected void Btn_Click(object sender, ImageClickEventArgs e)
+        {
+            ImageButton btn = (ImageButton)sender;
+            System.Data.DataSet ds = this.InnerDataSet;
+            System.Data.DataTable mainDt = ds.Tables[0];//主表
+            if (mainDt.Rows.Count > 0)
+            {
+                foreach (System.Data.DataColumn col in mainDt.Columns)
+                {
+                    Control ctl = Page.FindControl("ctl" + col.ColumnName);
+                    if (ctl is Label)
+                    {
+                        mainDt.Rows[0][col]=(ctl as Label).Text;
+                    }
+
+                    if (ctl is TextBox)
+                    {
+                        mainDt.Rows[0][col]=(ctl as TextBox).Text ;
+                    }
+
+                    if (ctl is DropDownList)
+                    {
+                        mainDt.Rows[0][col] = (ctl as DropDownList).SelectedValue ;
+                    }
+
+                    if (ctl is CheckBox)
+                    {
+                        mainDt.Rows[0][col] =(ctl as CheckBox).Checked ? 1 : 0;
+                    }
+
+                    if (ctl is RadioButton)
+                    {
+                        mainDt.Rows[0][col]=(ctl as RadioButton).Checked  ? 1 : 0;
+                    }
+
+					if (ctl is ImageButton)
+                    {
+                        if (btn==ctl)
+                        {
+                            mainDt.Rows[0][col] = "1";
+                        }
+                    }
+                }
+            }
+
+			//审批历史记录
+			System.Data.DataTable dt = new System.Data.DataTable("ApprovalRemark");
+            Control remark = Page.FindControl("ctlApprovalRemark" );
+            if (remark != null)
+            {
+                System.Data.DataRow dr = dt.NewRow();
+                dt.Columns.Add("ApprovalRemark");
+                dr[0] = ((TextBox)remark).Text;
+                dt.Rows.Add(dr);
+            }
+            ds.Tables.Add(dt);
+
+			int tt=0;
+            switch (btn.CommandName)
+            {
+                case "Approve":
+                    tt=srv.Send(hidTaskID.Value,"",new List<MobileClient.MobileClientBackgroundRef.VariableInfo>().ToArray(),ds);
+                    break;
+                case "Return":
+                    tt=srv.Return(hidTaskID.Value,"",new List<MobileClient.MobileClientBackgroundRef.VariableInfo>().ToArray(),ds);
+                    break;
+				case "Submit":
+                    if (Session["UserInfo"] != null)
+                    {
+                        MobileClient.MobileClientBackgroundRef.UserInfo userInfo= (MobileClient.MobileClientBackgroundRef.UserInfo)Session["UserInfo"];
+                        tt=srv.SendForm(hidProcessName.Value, hidStepName.Value, "", userInfo.UserAccount, new List<MobileClient.MobileClientBackgroundRef.VariableInfo>().ToArray(), ds);
+                    }
+                    break;
+            }
+
+			if(tt>0)
+			{
+				Page.ClientScript.RegisterStartupScript(this.GetType(), "a", "alert('提交成功');window.location.href='../ToDoTask.aspx';",true);
+			}
+			else
+			{
+				Page.ClientScript.RegisterStartupScript(this.GetType(), "a", "alert('提交失败');",true);
+			}
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="cont">
+        <uc1:Header ID="Header1" runat="server" />
+        <div class="well well-small" style="color: #f56b00;padding-bottom:0;margin-bottom:0;">
+            <h4>
+                @Model.ProcessName [@Model.StepName]</h4>
+        </div>
+        <div>
+            <table class="table table-bordered">
+			@foreach(EntityLibrary.PageConfig_Control ctl in @Model.Controls)
+			{
+				if(@ctl.ControlEName=="Date")
+				{
+					<tr id="@("ctl"+@ctl.DestColumnName+"_row")" runat="server">
+						<th>@ctl.ColumnName</th>					
+						<td><asp:@ctl.Control ID="@("ctl"+@ctl.DestColumnName)" ToolTip="Date" runat="server"></asp:@ctl.Control></td>					
+					</tr>
+				}
+				else if(@ctl.ControlEName=="Attachments")
+				{
+					<tr id="@("ctl"+@ctl.DestColumnName+"_row")" runat="server">
+						<th>@ctl.ColumnName</th>					
+						<td>
+							<asp:GridView ID="@("ctlAttachments")"  CssClass="table table-bordered" runat="server" AutoGenerateColumns="false" ShowHeader="false">
+								<Columns>
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <a href='<%# System.Configuration.ConfigurationManager.AppSettings["AttachmentPath"] + hidProcessName.Value + "/" + Eval("NEWNAME") + Eval("FILETYPE")%>' target="_blank"><%# Eval("FILENAME")%></a>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+							</asp:GridView>
+						</td>					
+					</tr>
+				}
+				else
+				{
+					if(@ctl.ControlEName!="ApprovalRemark")
+					{
+						<tr id="@("ctl"+@ctl.DestColumnName+"_row")" runat="server">
+							<th>@ctl.ColumnName</th>					
+							<td><asp:@ctl.Control ID="@("ctl"+@ctl.DestColumnName)" runat="server"></asp:@ctl.Control></td>					
+						</tr>
+					}
+				}
+			}
+
+			@foreach(string tableName in @Model.Grids)
+			{
+				<tr>
+					<td colspan="2">
+						<asp:GridView ID="@("ctl"+@tableName)"  CssClass="table table-bordered" runat="server"></asp:GridView>
+					</td>
+				</tr>
+			}
+
+			@foreach(EntityLibrary.PageConfig_Control ctl in @Model.Controls)
+			{
+				if(@ctl.ControlEName=="ApprovalRemark")
+				{
+					<tr id="trApprovalRemark" runat="server">
+						<th>@ctl.ColumnName</th>					
+						<td><asp:@ctl.Control ID="ctlApprovalRemark"  TextMode="MultiLine" runat="server"></asp:@ctl.Control></td>					
+					</tr>
+				}
+			}
+
+			<tr id="trBtn" runat="server">
+				<td colspan="2" >
+					@foreach(EntityLibrary.PageConfig_Control ctl in @Model.Buttons)
+					{
+						if(ctl.Control=="ApproveButton")
+						{
+							<asp:ImageButton ID="@("ctl"+@ctl.DestColumnName)" runat="server" CommandName="Approve"  OnClientClick="return confirm('您确定要提交吗？');" ToolTip="Approve"  OnClick="Btn_Click" ImageUrl="../images/approve.png"/>
+						}
+
+						if(ctl.Control=="ReturnButton")
+						{
+							<asp:ImageButton ID="@("ctl"+@ctl.DestColumnName)" runat="server" CommandName="Return"  OnClientClick="return confirm('您确定要提交吗？');"  ToolTip="Return" OnClick="Btn_Click" ImageUrl="../images/return.png"/>
+						}
+
+						if(ctl.Control=="SubmitButton")
+						{
+							<asp:ImageButton ID="@("ctl"+@ctl.DestColumnName)" runat="server" CommandName="Submit"  OnClientClick="return confirm('您确定要提交吗？');" ToolTip="Submit"  OnClick="Btn_Click" ImageUrl="../images/submit.png"/>
+						}
+					}
+				</td>
+			</tr>
+            </table>
+        </div>
+    </div>
+	<div>
+        <asp:HiddenField ID="hidProcessName" runat="server" />
+        <asp:HiddenField ID="hidIncident" runat="server" />
+        <asp:HiddenField ID="hidStepName" runat="server" />
+        <asp:HiddenField ID="hidTaskID" runat="server" />
+    </div>
+    </form>
+</body>
+</html>

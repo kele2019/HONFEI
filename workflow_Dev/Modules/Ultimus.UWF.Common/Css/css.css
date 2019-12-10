@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.mt10 { margin-top:10px; }
+.listTable_1{ width:99.8%; border:1px solid #E5E5E5;  display:inline-block;margin-top:5px;background:#fff;}
+.listTable{ width:100%; overflow:hidden; background:#fff;}
+.listTable1{ width:98%;overflow:hidden; }
+	.listTable td,.listTable1 td{ padding:2px 5px;  text-align:left;}
+	.listTable .green{ color:#20952C;}
+	.listTable .even{ background:#F3F3F3;}
+	.listTable .current{ background:#FCFAE5;}
+	.listTable label,.listTable1 label{ width:119px; display:inline-block; text-align:right;margin-right:5px; line-height:20px; }
+	.listTable s,.listTable1 s{ color:#f00; text-decoration:none; margin-left:5px;}
+.listTable01{ border-top:none;}
+
+.listTable2{ width:100%; overflow:hidden; text-align:left; }
+
+.listTable3{ width:98%;overflow:hidden; text-align:left; }
+table.listTableBorder{border-top:1px solid #bac1c7;border-left:1px solid #bac1c7;}
+table.listTableBorder td{border-bottom:1px solid #bac1c7;border-right:1px solid #bac1c7;text-align:center;}
+table.listTableBorder th{border-bottom:1px solid #bac1c7;border-right:1px solid #bac1c7;text-align:center; font-weight:bold; padding:6px;}
+
+.tableTab{width:100%;  line-height:30px;  color:#BD4B1E;text-align:left; background:url(../images/lbg.jpg) repeat; border-top:1px solid #E1E1E1;border-bottom:1px solid #E1E1E1;position: relative; }
+.tableTab ul li{padding:0 10px; float:left;border-right:1px solid #E1E1E1;}
+.tableTab ul li a,.tableTab ul li a:hover{text-decoration:none;color:#BD4B1E; }
+.tableTab ul .currently{ background:url(../images/bg.jpg) repeat-x; font-weight:bold; top:1px; position:relative; z-index:1000;}
+.tableTab ul .currently a,.tableTab ul .currently a:hover{ color:#BD4B1E; font-size:12px; }
+.listTable3 .listTablebg th{border-top:1px solid #E1E1E1;border-bottom:1px solid #E1E1E1; background:url(../images/thBg.gif) repeat-x;  color:#000; height:25px;line-height:25px; padding-left:5px;}
+.listTable3  tr td{ padding:5px 0 5px 3px;}
+.grayBg{ background:#eeeeee;}
+.borderL{border-left:1px solid #E1E1E1;}
+.borderR{border-right:1px solid #E1E1E1;}
+.search{ background:url(../images/icon6.gif) no-repeat; padding-left:15px; font-weight:bold;}
+.search a,.search a:hover{ text-decoration:none;}
+.search-collapse{ background:url(../images/datagrid_sort_asc.gif) no-repeat; padding-left:15px; font-weight:bold;}
+.search-expand{ background:url(../images/datagrid_sort_desc.gif) no-repeat; padding-left:15px; font-weight:bold;}
+
+/*right*/
+
+
+.daiban{ background:#fff; width:100%; float:left; padding:10px 0;}

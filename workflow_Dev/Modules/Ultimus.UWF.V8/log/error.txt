@@ -1,0 +1,95 @@
+2015-07-11 15:23:10,047 [31] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2015-07-11 15:23:10,067 [31] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 C:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 14:07:31,243 [13] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2015-07-16 14:07:31,258 [13] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 14:17:39,901 [37] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2015-07-16 14:17:39,932 [37] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 15:07:04,943 [8] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 15:07:57,646 [17] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2015-07-16 15:22:12,492 [45] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 15:30:51,523 [42] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 15:38:04,883 [85] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 16:17:38,261 [43] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 16:21:06,589 [58] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 16:31:33,185 [15] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 16:34:39,700 [27] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 17:05:42,531 [7] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 17:06:45,344 [18] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 17:10:21,734 [65] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 17:15:38,650 [86] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 17:23:14,834 [88] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 17:32:57,599 [44] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 17:50:41,697 [116] ERROR MyLib - ★ [] ELIBA001:DB name BizDB can not found in config!
+MyLib.AppException: ELIBA001:DB name BizDB can not found in config!
+   在 MyLib.DataAccess..ctor(String dbName)
+   在 MyLib.DataAccess.Instance(String dbName)
+   在 Ultimus.UWF.Workflow.Logic.StepSettingsLogic..cctor() 位置 D:\Ultimus\UWF\Modules\Ultimus.UWF.Workflow\Logic\StepSettingsLogic.cs:行号 44
+2015-07-16 17:52:03,932 [9] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]

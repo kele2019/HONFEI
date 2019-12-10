@@ -1,0 +1,930 @@
+2017-04-14 11:06:53,686 [3] ERROR MyLib - ? [] ORDER BY items must appear in the select list if SELECT DISTINCT is specified.
+System.Data.SqlClient.SqlException (0x80131904): ORDER BY items must appear in the select list if SELECT DISTINCT is specified.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at MyLib.SqlHelper.ExecuteDataTable(DbCommand cmd)
+   at MyLib.SqlHelper.ExecuteDataTable(String commandText)
+   at Presale.Process.EmployeeTraining.TrainingListReport.GetBindBusData() in D:\workflow_Dev\Modules\Presale.Process.EmployeeTraining\TrainingListReport.aspx.cs:line 33
+   at Presale.Process.EmployeeTraining.TrainingListReport.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.EmployeeTraining\TrainingListReport.aspx.cs:line 18
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:f85e8fa5-c33d-49fe-a036-c0c76db1c688
+Error Number:145,State:1,Class:15
+2017-04-14 11:08:15,048 [3] ERROR MyLib - ? [] The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP or FOR XML is also specified.
+System.Data.SqlClient.SqlException (0x80131904): The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP or FOR XML is also specified.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at MyLib.SqlHelper.ExecuteDataTable(DbCommand cmd)
+   at MyLib.SqlHelper.ExecuteDataTable(String commandText)
+   at Presale.Process.EmployeeTraining.TrainingListReport.GetBindBusData() in D:\workflow_Dev\Modules\Presale.Process.EmployeeTraining\TrainingListReport.aspx.cs:line 33
+   at Presale.Process.EmployeeTraining.TrainingListReport.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.EmployeeTraining\TrainingListReport.aspx.cs:line 18
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:e8450bd5-12af-4e14-9a45-665e30fbbb81
+Error Number:1033,State:1,Class:15
+2017-04-14 11:10:18,958 [3] ERROR MyLib - ? [] Column 'TYear' does not belong to table .
+System.ArgumentException: Column 'TYear' does not belong to table .
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Presale.Process.EmployeeTraining.TrainingListReport.GetBindBusData() in D:\workflow_Dev\Modules\Presale.Process.EmployeeTraining\TrainingListReport.aspx.cs:line 44
+   at Presale.Process.EmployeeTraining.TrainingListReport.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.EmployeeTraining\TrainingListReport.aspx.cs:line 18
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-04-18 10:11:05,897 [8] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-04-18 11:14:16,751 [9] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-04-18 16:32:28,290 [6] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-04-18 16:32:36,992 [3] ERROR ????! - ? [HONFEI\joseph.li] Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'AdminLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'AdminLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:842385d8-b73a-421c-b325-6d4fcc4d3613
+Error Number:207,State:1,Class:16
+2017-04-18 16:32:49,149 [13] ERROR ????! - ? [HONFEI\joseph.li] Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'AdminLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'AdminLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:c143c910-32d0-4efa-95ce-a3b8eb582ad3
+Error Number:207,State:1,Class:16
+2017-04-18 16:33:49,307 [7] ERROR ????! - ? [HONFEI\joseph.li] Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'AdminLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'AdminLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:1759028a-7b5e-4373-9c46-4e19871c7737
+Error Number:207,State:1,Class:16
+2017-04-18 16:39:39,004 [22] ERROR ????! - ? [HONFEI\joseph.li] Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:8a7872c3-8036-428c-b676-1265d8d96308
+Error Number:207,State:1,Class:16
+2017-04-18 16:39:45,163 [3] ERROR ????! - ? [HONFEI\joseph.li] Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:54d0c1a1-ce35-4c39-af43-9c650214c102
+Error Number:207,State:1,Class:16
+2017-04-18 16:40:27,395 [26] ERROR ????! - ? [HONFEI\joseph.li] Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:9d83cde6-1695-436b-ba56-64a6d246b083
+Error Number:207,State:1,Class:16
+2017-04-18 16:41:15,488 [30] ERROR ????! - ? [HONFEI\joseph.li] Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:6543ecfc-5eea-4963-96b3-20fafa9398f0
+Error Number:207,State:1,Class:16
+2017-04-27 15:28:23,797 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-04-27 15:52:58,634 [11] ERROR ????! - ? [HONFEI\joseph.li] Invalid column name 'HR'.
+Invalid column name 'HRLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'HR'.
+Invalid column name 'HRLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:011e429b-79e8-4a6f-9713-d5d175b8b015
+Error Number:207,State:1,Class:16
+2017-04-27 16:34:07,554 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-04-27 16:34:08,435 [3] ERROR MyLib - ? [] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Presale.Process.HongFeiJVAccess.NewRequest1.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.HongFeiJVAccess\NewRequest.aspx.cs:line 73
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-04-27 16:38:08,612 [8] ERROR ????! - ? [HONFEI\joseph.li] The status of this task is 3. It cannot be submitted.
+System.Exception: The status of this task is 3. It cannot be submitted.
+   at Ultimus.WFServer.Task.SendFrom(String strUserName, String strMemo, String strSummary, Boolean bNoAbort, Int32& nIncidentNo, String& strError)
+   at Ultimus.UWF.V8.Implementation.UltimusTask.SubmitTask(TaskEntity entity) in D:\workflow_Dev\Modules\Ultimus.UWF.V8\Implementation\UltimusTask.cs:line 277
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.Submit(Int32 actionType, String taskId, String processName, Int32& incident, String stepLabel, String userName, String summary, Hashtable vars, String type, String tableName, List`1 detailTables, String formID, String documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 299
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 505
+2017-05-07 16:12:31,548 [7] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-07 16:12:41,779 [8] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'AdminLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'AdminLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:5b034ed0-293c-4dba-8a3e-5083b111c660
+Error Number:207,State:1,Class:16
+2017-05-07 16:26:00,044 [22] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-07 16:26:09,997 [12] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:432a511c-9e11-42e4-b64d-2ae596fc21ed
+Error Number:207,State:1,Class:16
+2017-05-07 16:26:26,830 [15] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:7251f45f-15c1-4f11-a331-6d0f1f77cf8f
+Error Number:207,State:1,Class:16
+2017-05-07 16:26:51,902 [12] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'AdminLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in C:\Solution\NewHonFei\HONFEI\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:432a511c-9e11-42e4-b64d-2ae596fc21ed
+Error Number:207,State:1,Class:16
+2017-05-07 16:28:35,963 [12] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-07 16:30:13,007 [17] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-07 16:47:39,569 [16] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-07 17:09:28,199 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-07 17:48:04,101 [36] ERROR ????! - ? [HONFEI\joseph.li] Invalid column name 'HR'.
+Invalid column name 'HRLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'HR'.
+Invalid column name 'HRLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:475c05ce-449d-4225-8d02-ed01a4b3887e
+Error Number:207,State:1,Class:16
+2017-05-07 17:49:13,141 [33] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-12 14:35:14,664 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-12 15:19:37,874 [19] ERROR MyLib - ? [HONFEI\sharon.zhao] Invalid column name 'SumHour'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SumHour'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at MyLib.SqlHelper.ExecuteNonQuery(String commandText)
+   at Presale.Process.OT.NewRequest.btnRevoke_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.OT\NewRequest.aspx.cs:line 93
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:6fe73cdc-c5a5-4494-a8fa-8b4a27d7103d
+Error Number:207,State:1,Class:16
+2017-05-12 15:19:52,006 [14] ERROR MyLib - ? [HONFEI\sharon.zhao] Invalid column name 'SumHour'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SumHour'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at MyLib.SqlHelper.ExecuteNonQuery(String commandText)
+   at Presale.Process.OT.NewRequest.btnRevoke_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.OT\NewRequest.aspx.cs:line 93
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:6fe73cdc-c5a5-4494-a8fa-8b4a27d7103d
+Error Number:207,State:1,Class:16
+2017-05-12 15:24:23,325 [6] ERROR MyLib - ? [HONFEI\sharon.zhao] Invalid column name 'SumHour'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SumHour'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at MyLib.SqlHelper.ExecuteNonQuery(String commandText)
+   at Presale.Process.OT.NewRequest.btnRevoke_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.OT\NewRequest.aspx.cs:line 93
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:ec1c7413-6394-45ba-a169-5a82033d5976
+Error Number:207,State:1,Class:16
+2017-05-12 15:24:32,152 [26] ERROR MyLib - ? [HONFEI\sharon.zhao] Invalid column name 'SumHour'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SumHour'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at MyLib.SqlHelper.ExecuteNonQuery(String commandText)
+   at Presale.Process.OT.NewRequest.btnRevoke_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.OT\NewRequest.aspx.cs:line 93
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:ec1c7413-6394-45ba-a169-5a82033d5976
+Error Number:207,State:1,Class:16
+2017-05-12 15:24:47,272 [19] ERROR MyLib - ? [HONFEI\joseph.li] Invalid column name 'SumHour'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SumHour'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at MyLib.SqlHelper.ExecuteNonQuery(String commandText)
+   at Presale.Process.OT.NewRequest.btnRevoke_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.OT\NewRequest.aspx.cs:line 93
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:ec1c7413-6394-45ba-a169-5a82033d5976
+Error Number:207,State:1,Class:16
+2017-05-12 15:27:42,981 [18] ERROR MyLib - ? [HONFEI\sharon.zhao] Invalid column name 'SumHour'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SumHour'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at MyLib.SqlHelper.ExecuteNonQuery(String commandText)
+   at Presale.Process.DayOffRecord.NewRequest.btnRevoke_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.DayOffRecord\NewRequest.aspx.cs:line 99
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:700f6806-8de1-481f-b73d-2d7ad2f16740
+Error Number:207,State:1,Class:16
+2017-05-12 15:42:32,727 [8] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'Trainer8'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Trainer8'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:620b93a1-1b6f-4c78-8c61-7b5cba54c8ca
+Error Number:207,State:1,Class:16
+2017-05-12 15:42:49,556 [28] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'Trainer8'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Trainer8'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:700f6806-8de1-481f-b73d-2d7ad2f16740
+Error Number:207,State:1,Class:16
+2017-05-12 15:42:57,877 [28] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'Trainer8'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Trainer8'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:ec1c7413-6394-45ba-a169-5a82033d5976
+Error Number:207,State:1,Class:16
+2017-05-12 16:35:23,088 [33] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITHelpLogin'.
+Invalid column name 'CTOLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'Special'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITHelpLogin'.
+Invalid column name 'CTOLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'Special'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:c3ec8b74-6db3-46f0-8dd6-2c280e4636f1
+Error Number:207,State:1,Class:16
+2017-05-12 16:36:15,560 [9] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITHelpLogin'.
+Invalid column name 'AdminLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITHelpLogin'.
+Invalid column name 'AdminLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:e2c14310-0e69-47ed-8367-afaff229f8c1
+Error Number:207,State:1,Class:16
+2017-05-12 16:36:25,383 [31] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITHelpLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITHelpLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:c4d1c58c-c2bc-4856-8d70-026aaf6fed51
+Error Number:207,State:1,Class:16
+2017-05-12 16:36:41,087 [31] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITM'.
+Invalid column name 'ITHelpLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'DGM'.
+Invalid column name 'GMLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITM'.
+Invalid column name 'ITHelpLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'DGM'.
+Invalid column name 'GMLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:e2c14310-0e69-47ed-8367-afaff229f8c1
+Error Number:207,State:1,Class:16
+2017-05-12 16:36:51,570 [17] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITHelpLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITHelpLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:c3ec8b74-6db3-46f0-8dd6-2c280e4636f1
+Error Number:207,State:1,Class:16
+2017-05-12 16:37:03,011 [31] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITHelpLogin'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITHelpLogin'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:c4d1c58c-c2bc-4856-8d70-026aaf6fed51
+Error Number:207,State:1,Class:16
+2017-05-14 16:29:48,321 [7] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-14 16:30:05,853 [6] ERROR ????! - ? [HONFEI\joseph.li] Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITHelpLogin'.
+Invalid column name 'CTOLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'Special'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'deptLogin'.
+Invalid column name 'ApplierLogin'.
+Invalid column name 'ITMLogin'.
+Invalid column name 'ITHelpLogin'.
+Invalid column name 'CTOLogin'.
+Invalid column name 'DGMLogin'.
+Invalid column name 'GMLogin'.
+Invalid column name 'Special'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:28b2606d-747f-496f-9bf8-d623ff8bc9e6
+Error Number:207,State:1,Class:16
+2017-05-14 16:33:26,390 [6] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-14 16:36:16,830 [21] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-14 16:37:39,056 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-14 16:39:01,063 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-14 16:40:27,137 [6] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-14 16:42:12,124 [12] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-14 16:43:25,225 [7] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-14 17:02:08,725 [23] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-14 17:02:54,747 [23] ERROR ????! - ? [HONFEI\sharon.zhao] Invalid column name 'Trainer8'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Trainer8'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.SaveBusinessData(DataSet formDS, String tableName, String formID, String processPrefix, Hashtable& vars, List`1& detailTables, Boolean snCreate, String& documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 259
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 465
+ClientConnectionId:e473ea23-f0c6-4045-aff4-8c0268c85b09
+Error Number:207,State:1,Class:16
+2017-05-14 17:10:42,831 [35] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-14 17:34:13,730 [26] ERROR ????! - ? [HONFEI\ryder.zhao] The status of this task is 3. It cannot be submitted.
+System.Exception: The status of this task is 3. It cannot be submitted.
+   at Ultimus.WFServer.Task.SendFrom(String strUserName, String strMemo, String strSummary, Boolean bNoAbort, Int32& nIncidentNo, String& strError)
+   at Ultimus.UWF.V8.Implementation.UltimusTask.SubmitTask(TaskEntity entity) in D:\workflow_Dev\Modules\Ultimus.UWF.V8\Implementation\UltimusTask.cs:line 277
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.Submit(Int32 actionType, String taskId, String processName, Int32& incident, String stepLabel, String userName, String summary, Hashtable vars, String type, String tableName, List`1 detailTables, String formID, String documentNo) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 299
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Form.ProcessControl\ButtonList.ascx.cs:line 505
+2017-05-14 17:38:10,536 [30] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-14 17:44:24,703 [37] ERROR MyLib - ? [HONFEI\ryder.zhao] Object cannot be cast from DBNull to other types.
+System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Ultimus.UWF.Form.ProcessControl.UserInfo.SetFormData()
+   at Ultimus.UWF.Form.ProcessControl.UserInfo.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-05-14 17:50:33,648 [25] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-14 17:51:12,507 [23] ERROR MyLib - ? [HONFEI\joseph.li] Invalid column name 'SumHour'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SumHour'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   at MyLib.SqlHelper.ExecuteNonQuery(String commandText)
+   at Presale.Process.OT.NewRequest.btnRevoke_Click(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.OT\NewRequest.aspx.cs:line 93
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:51fa6057-9913-4d0a-89eb-2149ab40381b
+Error Number:207,State:1,Class:16
+2017-05-14 17:56:00,495 [20] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-19 18:17:54,320 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-19 18:45:38,694 [18] ERROR MyLib - ? [HONFEI\joseph.li] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Presale.Process.EmployeePerformanceReport.GoalPlan.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.EmployeePerformanceReport\NewRequestGoalPlan.aspx.cs:line 61
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-05-19 18:45:46,226 [7] ERROR MyLib - ? [HONFEI\joseph.li] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Presale.Process.EmployeePerformanceReport.GoalPlan.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.EmployeePerformanceReport\NewRequestGoalPlan.aspx.cs:line 61
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-05-19 18:46:47,669 [18] ERROR MyLib - ? [HONFEI\joseph.li] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Presale.Process.EmployeePerformanceReport.GoalPlan.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.EmployeePerformanceReport\NewRequestGoalPlan.aspx.cs:line 61
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-05-19 18:47:20,836 [18] ERROR MyLib - ? [HONFEI\sharon.zhao] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Presale.Process.EmployeePerformanceReport.GoalPlan.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.EmployeePerformanceReport\NewRequestGoalPlan.aspx.cs:line 61
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-05-19 19:29:56,366 [18] ERROR ????! - ? [HONFEI\quan.li] The status of this task is 3. It cannot be submitted.
+System.Exception: The status of this task is 3. It cannot be submitted.
+   at Ultimus.WFServer.Task.SendFrom(String strUserName, String strMemo, String strSummary, Boolean bNoAbort, Int32& nIncidentNo, String& strError)
+   at Ultimus.UWF.V8.Implementation.UltimusTask.SubmitTask(TaskEntity entity) in D:\workflow_Dev\Modules\Ultimus.UWF.V8\Implementation\UltimusTask.cs:line 277
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.Submit(Int32 actionType, String taskId, String processName, Int32& incident, String stepLabel, String userName, String summary, Hashtable vars, String type, String tableName, List`1 detailTables, String formID, String documentNo)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e)
+2017-05-21 15:45:40,373 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-21 15:50:04,672 [3] ERROR ????! - ? [HONFEI\patrick.mo] The status of this task is 3. It cannot be submitted.
+System.Exception: The status of this task is 3. It cannot be submitted.
+   at Ultimus.WFServer.Task.SendFrom(String strUserName, String strMemo, String strSummary, Boolean bNoAbort, Int32& nIncidentNo, String& strError)
+   at Ultimus.UWF.V8.Implementation.UltimusTask.SubmitTask(TaskEntity entity) in D:\workflow_Dev\Modules\Ultimus.UWF.V8\Implementation\UltimusTask.cs:line 277
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.Submit(Int32 actionType, String taskId, String processName, Int32& incident, String stepLabel, String userName, String summary, Hashtable vars, String type, String tableName, List`1 detailTables, String formID, String documentNo)
+   at Ultimus.UWF.Form.ProcessControl.ButtonList.btnSubmit_Click(Object sender, EventArgs e)
+2017-05-21 15:56:45,179 [24] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-21 16:01:12,295 [22] ERROR MyLib - ? [HONFEI\patrick.mo] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Presale.Process.WebsiteAccess.NewRequest.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.WebsiteAccess\NewRequest.aspx.cs:line 67
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-05-21 16:07:53,135 [29] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-21 16:14:10,534 [27] ERROR MyLib - ? [HONFEI\joseph.li] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Presale.Process.EmployeePerformanceReport.GoalPlan.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.EmployeePerformanceReport\NewRequestGoalPlan.aspx.cs:line 61
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-05-21 16:20:30,451 [11] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-21 16:20:38,640 [23] ERROR MyLib - ? [HONFEI\joseph.li] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Presale.Process.EmployeePerformanceReport.GoalPlan.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Presale.Process.EmployeePerformanceReport\NewRequestGoalPlan.aspx.cs:line 61
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-05-21 16:28:21,244 [25] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-21 17:04:35,297 [36] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-21 17:10:12,518 [33] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-21 17:55:47,168 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-21 18:29:39,294 [10] ERROR MyLib - ? [HONFEI\joseph.li] Invalid object name 'dbo.COM_ASSGININFO'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.COM_ASSGININFO'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at MyLib.SqlHelper.ExecuteScalar(DbCommand cmd)
+   at MyLib.SqlHelper.ExecuteScalar(String commandText)
+   at Ultimus.UWF.Workflow.HistoryAssignList.GetBindDate()
+   at Ultimus.UWF.Workflow.HistoryAssignList.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:78fae6b8-19a6-41c7-80fe-00551125d475
+Error Number:208,State:1,Class:16
+2017-05-25 15:14:03,377 [7] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-05-27 16:25:25,742 [9] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-04 17:38:55,900 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-04 18:00:11,947 [14] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-04 18:23:14,584 [8] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-04 18:34:36,201 [21] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-05 09:58:27,940 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-05 10:20:44,949 [16] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-11 18:03:52,519 [10] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-11 18:09:38,258 [35] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-11 18:12:22,373 [23] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-11 18:14:03,298 [8] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-15 11:04:57,876 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-25 16:19:33,666 [6] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-25 17:13:09,213 [11] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-06-26 11:06:38,944 [14] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-07-27 09:29:22,975 [3] ERROR IBatisNet.DataMapper.MappedStatements.ReaderAutoMapper - The column [SUBSTAUTS] could not be auto mapped to a property on [Ultimus.UWF.Workflow.Entity.TaskEntity]
+2017-08-20 16:32:00,125 [9] ERROR MyLib - ? [] Column 'DEPARTMENTNAME' does not belong to table Table.
+System.ArgumentException: Column 'DEPARTMENTNAME' does not belong to table Table.
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Ultimus.UWF.Home2.Code.DAO.UserMgmt.Transfer(DataRow row) in D:\workflow_Dev\Modules\Ultimus.UWF.Home2\Code\DAO\UserMgmt.cs:line 251
+   at Ultimus.UWF.Home2.Code.DAO.UserMgmt.Get(Int32 id) in D:\workflow_Dev\Modules\Ultimus.UWF.Home2\Code\DAO\UserMgmt.cs:line 138
+   at Ultimus.UWF.Home2.UserEdit.BindData() in D:\workflow_Dev\Modules\Ultimus.UWF.Home2\UserEdit.aspx.cs:line 40
+   at Ultimus.UWF.Home2.UserEdit.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Home2\UserEdit.aspx.cs:line 28
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-08-20 16:36:12,164 [15] ERROR MyLib - ? [] Column 'DEPARTMENTNAME' does not belong to table Table.
+System.ArgumentException: Column 'DEPARTMENTNAME' does not belong to table Table.
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Ultimus.UWF.Home2.Code.DAO.UserMgmt.Transfer(DataRow row) in D:\workflow_Dev\Modules\Ultimus.UWF.Home2\Code\DAO\UserMgmt.cs:line 251
+   at Ultimus.UWF.Home2.Code.DAO.UserMgmt.Get(String loginName) in D:\workflow_Dev\Modules\Ultimus.UWF.Home2\Code\DAO\UserMgmt.cs:line 157
+   at Ultimus.UWF.Home2.UserEdit.BindData() in D:\workflow_Dev\Modules\Ultimus.UWF.Home2\UserEdit.aspx.cs:line 68
+   at Ultimus.UWF.Home2.UserEdit.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Home2\UserEdit.aspx.cs:line 28
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-08-20 16:38:20,681 [7] ERROR MyLib - ? [] Column 'DEPARTMENTNAME' does not belong to table Table.
+System.ArgumentException: Column 'DEPARTMENTNAME' does not belong to table Table.
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Ultimus.UWF.Home2.Code.DAO.UserMgmt.Transfer(DataRow row) in D:\workflow_Dev\Modules\Ultimus.UWF.Home2\Code\DAO\UserMgmt.cs:line 251
+   at Ultimus.UWF.Home2.Code.DAO.UserMgmt.Get(String loginName) in D:\workflow_Dev\Modules\Ultimus.UWF.Home2\Code\DAO\UserMgmt.cs:line 157
+   at Ultimus.UWF.Home2.UserEdit.BindData() in D:\workflow_Dev\Modules\Ultimus.UWF.Home2\UserEdit.aspx.cs:line 68
+   at Ultimus.UWF.Home2.UserEdit.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Home2\UserEdit.aspx.cs:line 28
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-08-20 17:03:29,432 [42] ERROR MyLib - ? [HONFEI\joseph.li] Column 'AssginTaskUseCNNAMEr' does not belong to table .
+System.ArgumentException: Column 'AssginTaskUseCNNAMEr' does not belong to table .
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Ultimus.UWF.Workflow.AssginDetailInfo.Page_Load(Object sender, EventArgs e) in D:\workflow_Dev\Modules\Ultimus.UWF.Workflow\AssginDetailInfo.aspx.cs:line 34
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="ibatisnet" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <statements>
+      <delete id="SecurityLogic_Delete" >
+        DELETE FROM SEC_MENURIGHTS WHERE RIGHTSID=#RIGHTSID#
+        DELETE FROM SEC_MENURIGHTSMEMBER WHERE RIGHTSID=#RIGHTSID#
+        DELETE FROM SEC_MENURIGHTSOBJECT WHERE RIGHTSID=#RIGHTSID#
+      </delete>
+
+      <delete id="SecurityLogic_DeleteMembers" >
+        DELETE FROM SEC_MENURIGHTSMEMBER WHERE RIGHTSID=#RIGHTSID#
+        DELETE FROM SEC_MENURIGHTSOBJECT WHERE RIGHTSID=#RIGHTSID#
+      </delete>
+
+      <insert id="SecurityLogic_Insert" parameterClass="Ultimus.UWF.Security.Entity.MenuRightsEntity" >
+        INSERT INTO SEC_MENURIGHTS
+        (
+        ID
+        ,RIGHTSID
+        ,RIGHTSNAME
+        ,MEMBERNAME
+        ,MEMBERID
+        ,REMARK
+        ,CREATEDATE
+        ,CREATEBY
+        ,UPDATEDATE
+        ,UPDATEBY
+        )
+        VALUES(
+        #ID#
+        ,#RIGHTSID#
+        ,#RIGHTSNAME#
+        ,#MEMBERNAME#
+        ,#MEMBERID#
+        ,#REMARK#
+        ,#CREATEDATE#
+        ,#CREATEBY#
+        ,#UPDATEDATE#
+        ,#UPDATEBY#
+        )
+      </insert>
+
+      <update id="SecurityLogic_Update" parameterClass="Ultimus.UWF.Security.Entity.MenuRightsEntity" >
+        UPDATE SEC_MENURIGHTS SET RIGHTSID=#RIGHTSID#
+        ,RIGHTSNAME=#RIGHTSNAME#
+        ,MEMBERNAME=#MEMBERNAME#
+        ,MEMBERID=#MEMBERID#
+        ,REMARK=#REMARK#
+        ,UPDATEDATE=#UPDATEDATE#
+        ,UPDATEBY=#UPDATEBY#
+        WHERE RIGHTSID=#RIGHTSID#
+      </update>
+
+      <insert id="SecurityLogic_InsertMember" parameterClass="Ultimus.UWF.Security.Entity.MenuRightsMemberEntity" >
+        INSERT INTO SEC_MENURIGHTSMEMBER
+        (
+        ID
+        ,RIGHTSID
+        ,MEMBERID
+        ,MEMBERNAME
+        ,MEMBERTYPE
+        )
+        VALUES(
+        #ID#
+        ,#RIGHTSID#
+        ,#MEMBERID#
+        ,#MEMBERNAME#
+        ,#MEMBERTYPE#
+        )
+      </insert>
+
+      <insert id="SecurityLogic_InsertObject" parameterClass="Ultimus.UWF.Security.Entity.MenuRightsObjectEntity" >
+        INSERT INTO SEC_MENURIGHTSOBJECT
+        (
+        ID,
+        RIGHTSID
+        ,MENUID
+        )
+        VALUES(
+        #ID#,
+        #RIGHTSID#
+        ,#MENUID#
+        )
+      </insert>
+
+      <select id="SecurityLogic_GetMenuRightsObjects" resultClass="Ultimus.UWF.Security.Entity.MenuRightsObjectEntity">
+        SELECT B.*
+        FROM SEC_MENURIGHTSMEMBER A
+        INNER JOIN SEC_MENURIGHTSOBJECT B ON A.RIGHTSID=B.RIGHTSID
+        WHERE A.MEMBERID=#USERID# AND A.MEMBERTYPE='USER'
+        UNION
+        SELECT B.*
+        FROM SEC_MENURIGHTSMEMBER A
+        INNER JOIN SEC_MENURIGHTSOBJECT B ON A.RIGHTSID=B.RIGHTSID
+        WHERE A.MEMBERID IN ($DEPT$) AND A.MEMBERTYPE='DEPT'
+        UNION
+        SELECT B.*
+        FROM SEC_MENURIGHTSMEMBER A
+        INNER JOIN SEC_MENURIGHTSOBJECT B ON A.RIGHTSID=B.RIGHTSID
+        WHERE A.MEMBERID IN ($GROUP$) AND A.MEMBERTYPE='GROUP'
+      </select>
+    </statements>
+</sqlMap>

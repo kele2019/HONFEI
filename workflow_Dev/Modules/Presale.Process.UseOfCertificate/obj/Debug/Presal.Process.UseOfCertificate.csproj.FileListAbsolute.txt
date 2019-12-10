@@ -1,0 +1,4 @@
+C:\Project\西安鸿飞\Modules\Presal.Process.UseOfCertificate\bin\Presal.Process.UseOfCertificate.dll
+C:\Project\西安鸿飞\Modules\Presal.Process.UseOfCertificate\bin\Presal.Process.UseOfCertificate.pdb
+C:\Project\西安鸿飞\Modules\Presal.Process.UseOfCertificate\obj\Debug\Presal.Process.UseOfCertificate.dll
+C:\Project\西安鸿飞\Modules\Presal.Process.UseOfCertificate\obj\Debug\Presal.Process.UseOfCertificate.pdb

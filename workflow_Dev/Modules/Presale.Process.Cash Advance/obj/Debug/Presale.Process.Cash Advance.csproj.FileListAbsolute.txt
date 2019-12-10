@@ -1,0 +1,45 @@
+C:\◆项目\trunk\NEXTEV\V2.0.5\Bin\Presale.Process.Cash Advance.dll
+C:\◆项目\trunk\NEXTEV\V2.0.5\Bin\Presale.Process.Cash Advance.pdb
+C:\◆项目\trunk\NEXTEV\V2.0.5\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.dll
+C:\◆项目\trunk\NEXTEV\V2.0.5\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.pdb
+C:\◆项目\trunk\NEXTEV\V2.0.5\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.csprojResolveAssemblyReference.cache
+C:\nextev\V2.0.5\Bin\Presale.Process.Cash Advance.dll
+C:\nextev\V2.0.5\Bin\Presale.Process.Cash Advance.pdb
+C:\nextev\V2.0.5\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.csprojResolveAssemblyReference.cache
+C:\nextev\V2.0.5\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.dll
+C:\nextev\V2.0.5\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.pdb
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\Bin\Presale.Process.Cash Advance.dll
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\Bin\Presale.Process.Cash Advance.pdb
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.csprojResolveAssemblyReference.cache
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.dll
+C:\◆项目\trunk\HongFei\NEXTEV\V2.0.5\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.pdb
+C:\Project\西安鸿飞\Bin\Presale.Process.Cash Advance.dll
+C:\Project\西安鸿飞\Bin\Presale.Process.Cash Advance.pdb
+C:\Project\西安鸿飞\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.csprojResolveAssemblyReference.cache
+C:\Project\西安鸿飞\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.dll
+C:\Project\西安鸿飞\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.pdb
+C:\Solution\NewHonFei\Bin\Presale.Process.Cash Advance.dll
+C:\Solution\NewHonFei\Bin\Presale.Process.Cash Advance.pdb
+C:\Solution\NewHonFei\Modules\Presale.Process.Cash Advance\obj\Debug\ResolveAssemblyReference.cache
+C:\Solution\NewHonFei\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.dll
+C:\Solution\NewHonFei\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.pdb
+C:\Solution\NewHonFei\HONFEI\Bin\Presale.Process.Cash Advance.dll
+C:\Solution\NewHonFei\HONFEI\Bin\Presale.Process.Cash Advance.pdb
+C:\Solution\NewHonFei\HONFEI\Modules\Presale.Process.Cash Advance\obj\Debug\ResolveAssemblyReference.cache
+C:\Solution\NewHonFei\HONFEI\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.dll
+C:\Solution\NewHonFei\HONFEI\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.pdb
+D:\workflow_Dev\Bin\Presale.Process.Cash Advance.dll
+D:\workflow_Dev\Bin\Presale.Process.Cash Advance.pdb
+D:\workflow_Dev\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.csprojResolveAssemblyReference.cache
+D:\workflow_Dev\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.dll
+D:\workflow_Dev\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Bin\Presale.Process.Cash Advance.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Bin\Presale.Process.Cash Advance.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.Cash Advance\obj\Debug\ResolveAssemblyReference.cache
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Bin\Presale.Process.Cash Advance.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Bin\Presale.Process.Cash Advance.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Cash Advance\obj\Debug\ResolveAssemblyReference.cache
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Cash Advance\obj\Debug\Presale.Process.Cash Advance.pdb

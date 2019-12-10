@@ -1,0 +1,10 @@
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\bin\Presale.Process.SupplierRegister.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\bin\Presale.Process.SupplierRegister.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.SupplierRegister\obj\Debug\ResolveAssemblyReference.cache
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.SupplierRegister\obj\Debug\Presale.Process.SupplierRegister.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\Workflow\workflow_Dev\workflow_Dev\Modules\Presale.Process.SupplierRegister\obj\Debug\Presale.Process.SupplierRegister.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presale.Process.SupplierRegister.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presale.Process.SupplierRegister.pdb
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.SupplierRegister\obj\Debug\ResolveAssemblyReference.cache
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.SupplierRegister\obj\Debug\Presale.Process.SupplierRegister.dll
+C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.SupplierRegister\obj\Debug\Presale.Process.SupplierRegister.pdb

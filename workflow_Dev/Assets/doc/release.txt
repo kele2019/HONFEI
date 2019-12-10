@@ -1,0 +1,183 @@
+V2.0.2
+--添加表WF_SERVER
+USE [UltimusBiz]
+GO
+
+/****** Object:  Table [dbo].[WF_SERVER]    Script Date: 07/03/2015 14:08:56 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[WF_SERVER](
+	[SERVERNAME] [nvarchar](50) NOT NULL,
+	[DESCRIPTION] [nvarchar](200) NULL,
+	[PRODUCT] [nvarchar](50) NULL,
+	[VERSION] [nvarchar](50) NULL,
+	[WEBSERVICEURL] [nvarchar](400) NULL,
+	[CLIENTASSEMBLY] [nvarchar](100) NULL,
+	[DBNAME] [nvarchar](50) NULL,
+	[DOMAINNAME] [nvarchar](50) NULL,
+	[ISACTIVE] [char](1) NULL,
+ CONSTRAINT [PK_WF_SERVER] PRIMARY KEY CLUSTERED 
+(
+	[SERVERNAME] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+--修改COM_SECTIONS，添加对应多服务器的接口实现
+	--*支持多台服务器：<include uri="assembly://Ultimus.UWF.Workflow/Ultimus.UWF.Workflow.Config.multiservertask.config"/>	实现待办
+	--*不支持多台：<include uri="assembly://Ultimus.UWF.V8/Ultimus.UWF.V8.Config.task.config"/>
+	--*添加GroupName字段，区分同一个内容，不同实现
+--如支持多台服务器，那么需要在WF_Server中表中添加记录
+	--*UltimusV8	NULL	NULL	NULL	http://localhost:8088/Service/EIKService.asmx	Ultimus.UWF.Workflow.Implementation.EIKClient,Ultimus.UWF.Workflow	NULL	1
+--COM_APPSETTINGS加配置项
+	--15	Ultimus.UWF.OrgChart	RootDepartment		1	根部门	NULL	NULL	NULL
+--添加表COM_REPORTDESIGN
+CREATE TABLE [dbo].[COM_REPORTDESIGN](
+	[GUID] [nvarchar](100) NOT NULL,
+	[USERCODE] [nvarchar](200) NULL,
+	[USERNAME] [nvarchar](50) NULL,
+	[CREATDATE] [datetime] NULL,
+	[REPORTPAGEPATH] [varchar](500) NULL,
+	[REPORTNAME] [nvarchar](500) NULL,
+	[CONNECTIONSTRING] [varchar](500) NULL,
+	[TABLESNAMES_FIELDNAMES] [text] NULL,
+	[TABLERELATION] [text] NULL,
+	[FIELDRULES] [text] NULL,
+	[SELECTWHERE] [text] NULL,
+	[ALIAS] [text] NULL,
+	[WHETHERPAGING] [varchar](50) NULL,
+	[ARTICLETHATNUMBER] [int] NULL,
+	[SORTSTYLE] [text] NULL,
+	[VIEWPRIVILEGE] [varchar](50) NULL,
+	[USERACCOUNTFIELDNAME] [varchar](200) NULL,
+	[VIEWREPORTUSERACCOUNT] [text] NULL,
+	[VIEWREPORTUSERNAME] [text] NULL,
+	[UPDATEDATE] [datetime] NULL,
+	[UPDATEUSERNAME] [nvarchar](50) NULL,
+	[UPDATEUSERACCOUNT] [varchar](100) NULL,
+	[TABLENAME] [nvarchar](200) NULL,
+	[PROCESSNAME] [nvarchar](200) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+--添加表WF_MESSAGEQUEUE
+
+CREATE TABLE [dbo].[COM_MESSAGEQUEUE](
+	[ID] [int] NOT NULL,
+	[MESSAGEID] [char](36) NULL,
+	[SOURCE] [nvarchar](50) NULL,
+	[FORMID] [char](36) NULL,
+	[FROMUSER] [nvarchar](50) NULL,
+	[TOUSER] [nvarchar](50) NULL,
+	[SUBJECT] [nvarchar](200) NULL,
+	[BODY] [nvarchar](4000) NULL,
+	[BODYTYPE] [nvarchar](50) NULL,
+	[SENDTYPE] [nvarchar](50) NULL,
+	[STATUS] [int] NULL,
+	[RETRYTIMES] [int] NULL,
+	[CREATEDATE] [datetime] NULL,
+	[SENDDATE] [datetime] NULL,
+ CONSTRAINT [PK_COM_MESSAGE] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+--添加表WF_TASKQUEUE
+
+CREATE TABLE [dbo].[WF_TASKQUEUE](
+	[ID] [int] NOT NULL,
+	[TASKID] [nvarchar](50) NULL,
+	[LOGINNAME] [nvarchar](50) NULL,
+	[SYNC] [char](1) NULL,
+	[SUMMARY] [nvarchar](200) NULL,
+	[REASON] [nvarchar](200) NULL,
+	[COMMENTS] [nvarchar](400) NULL,
+	[PROCESSNAME] [nvarchar](100) NULL,
+	[INCIDENT] [int] NULL,
+	[STEPNAME] [nvarchar](100) NULL,
+	[ERRORMESSAGE] [nvarchar](400) NULL,
+	[VARLIST] [xml] NULL,
+	[ACTION] [nvarchar](50) NULL,
+	[STATUS] [int] NULL,
+	[RETRYTIME] [int] NULL,
+	[CREATEDATE] [datetime] NULL,
+	[SUBMITDATE] [datetime] NULL,
+ CONSTRAINT [PK_WF_TASKQUEUE] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+--添加表WF_SUBSCRIPTION
+
+
+CREATE TABLE [dbo].[WF_SUBSCRIPTION](
+	[ID] [int] NOT NULL,
+	[EVENTTYPE] [nvarchar](50) NULL,
+	[DESCRIPTION] [nvarchar](200) NULL,
+	[PROCESSNAME] [nvarchar](50) NULL,
+	[INCIDENT] [int] NULL,
+	[TASKID] [nvarchar](50) NULL,
+	[STEPID] [int] NULL,
+	[STEPLABEL] [nvarchar](50) NULL,
+	[TASKUSER] [nvarchar](50) NULL,
+	[ASSIGNEDTOUSER] [nvarchar](50) NULL,
+	[CREATEDATE] [datetime] NULL,
+	[COMPLETEDATE] [datetime] NULL,
+	[STATUS] [int] NULL,
+	[RETRYTIMES] [int] NULL,
+ CONSTRAINT [PK_WF_SUBSCRIPTION] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+--修改视图
+
+ALTER  view [dbo].[V_ORG_DEPARTMENT] as
+select DEPARTMENTID ,
+  DEPARTMENTNAME+'['+CONVERT(nvarchar(20), DEPARTMENTID)+']' as DEPARTMENTNAME,
+  PARENTID,
+  ORGANIZATION
+ FROM ORG_DEPARTMENT  a with(nolock)  
+
+GO
+
+ALTER   view [dbo].[V_ORG_USERDEPARTMENT] as
+select a.USERID  ,
+	   a.DEPARTMENTID ,
+	   a.JOBID ,
+	   a.JOBFUNCTION+'['+CONVERT(nvarchar(20), a.JOBID)+']' as JOBFUNCTION,
+	   a.ISPRIMARY,
+	   a.ISMANAGER,
+	   a.SUPERVISORJOBID
+	   ,b.USERID as SUPERVISORUSERID
+FROM ORG_JOB   a with(nolock)
+left join ORG_JOB b with(nolock) on a.SUPERVISORJOBID=b.JOBID
+
+GO
+
+
+
+
+V2.0.1
+--初始版本
+
+
+

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="ibatisnet" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <cacheModels>
+    <cacheModel id="ProcessCategoryLogic_cache"  implementation="MEMORY" >
+      <flushInterval hours="24"/>
+      <property name="Type" value="Weak"/>
+      <flushOnExecute  statement="ProcessCategoryLogic_Clear"/>
+    </cacheModel>
+  </cacheModels>
+  
+  <statements>
+    <select id="ProcessCategoryLogic_GetList" resultClass="Ultimus.UWF.Workflow.Entity.ProcessCategoryEntity"  cacheModel="ProcessCategoryLogic_cache" >
+      SELECT DISTINCT CATEGORYID,CATEGORYNAME,CATEGORYENNAME,ORDERNO,ICON FROM V_WF_CATEGORY ORDER BY ORDERNO
+    </select>
+
+    <select id="ProcessCategoryLogic_GetProcessList" resultClass="Ultimus.UWF.Workflow.Entity.ProcessEntity"  cacheModel="ProcessCategoryLogic_cache" >
+      SELECT CATEGORYNAME
+      ,CATEGORYENNAME
+      ,PROCESSNAME
+      ,PROCESSENNAME
+      ,ORDERNO
+      ,PROCESSNO,ICON
+      FROM V_WF_CATEGORY WHERE 1=1
+      <dynamic prepend="AND">
+        <isParameterPresent>
+          CATEGORYNAME=#CATEGORYNAME# or CATEGORYENNAME=#CATEGORYNAME#
+        </isParameterPresent>
+      </dynamic>
+
+    </select>
+
+    <select id="ProcessCategoryLogic_Clear" resultClass="Ultimus.UWF.Workflow.Entity.ProcessEntity"  cacheModel="ProcessCategoryLogic_cache" >
+      SELECT 1
+    </select>
+
+    <select id="ProcessCategoryLogic_GetAllProcessList" resultClass="Ultimus.UWF.Workflow.Entity.ProcessEntity" >
+      SELECT CATEGORYID
+      ,CATEGORYNAME
+      ,CATEGORYENNAME
+      ,PROCESSNAME
+      ,PROCESSENNAME
+      ,ORDERNO
+      ,PROCESSNO
+      FROM V_WF_CATEGORY ORDER BY ORDERNO
+    </select>
+    
+  </statements>
+</sqlMap>

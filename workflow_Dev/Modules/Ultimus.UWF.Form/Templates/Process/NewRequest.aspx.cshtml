@@ -1,0 +1,244 @@
+﻿@("<%@ Page Language=\"C#\" AutoEventWireup=\"true\" CodeFile=\"NewRequest.aspx.cs\" Inherits=\"")@(Model.ProcessName)@(".NewRequest\" %>")
+@("<%@ Register Src=\"/Modules/Ultimus.UWF.Form.ProcessControl/UserInfo.ascx\" TagName=\"UserInfo\" TagPrefix=\"ui\" %>")
+@("<%@ Register Src=\"/Modules/Ultimus.UWF.Form.ProcessControl/ApprovalHistory.ascx\" TagName=\"ApprovalHistory\" TagPrefix=\"ah\" %>")
+@("<%@ Register Src=\"/Modules/Ultimus.UWF.Form.ProcessControl/Attachments.ascx\" TagName=\"Attachments\" TagPrefix=\"attach\" %>")
+@("<%@ Register Src=\"/Modules/Ultimus.UWF.Form.ProcessControl/ButtonList.ascx\" TagName=\"ButtonList\" TagPrefix=\"btn\" %>")
+@("<%@ Import Namespace=\"Ultimus.UWF.Common.Logic\" %>")
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>@Model.ProcessName</title>
+    <script type="text/javascript" src="/Assets/js/common.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container">
+        <div class="row">
+            <ui:userinfo id="UserInfo1" processtitle="@Model.ProcessName" processprefix="FP" tablename="@Model.TableName"
+                tablenamedetail="@Model.TableNameDetail" runat="server"></ui:userinfo>
+        </div>
+        <div class="row">
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <td class="banner" colspan="4">
+                        详细信息
+                    </td>
+                </tr>
+				@{
+				
+				List<Ultimus.UWF.Form.Entity.FieldEntity> flds= @Model.Fields.FindAll(p => p.ComplexType.ToUpper().Trim() == "GLOBALTYPE");
+				for(var i=0;i<flds.Count;i++)
+				{
+					Ultimus.UWF.Form.Entity.FieldEntity fld=@Model.Fields[i];
+					if(i%2==0)
+					{
+					@: <tr>
+						<td class="td-label">
+							@fld.Description：
+							@if(!fld.Nillable)
+							{
+							<span class="red">*</span>
+							}
+						</td>
+						<td class="td-content">
+							@if(fld.Type=="int" || fld.Type=="double" )
+							{
+								if(!fld.Nillable)
+								{
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" CssClass="validate[required,custom[number]]" ></asp:TextBox>
+								 }
+								 else
+								 {
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" CssClass="validate[ustom[number]]" ></asp:TextBox>
+								 }
+							 }
+							else if(fld.Type=="dateTime" )
+							{
+								if(!fld.Nillable)
+								{
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" OnClick="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})"
+                                                CssClass="Wdate validate[required,custom[date]]" ></asp:TextBox>
+								 }
+								 else
+								 {
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" OnClick="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})"
+                                                CssClass="Wdate validate[custom[date]]"></asp:TextBox>
+								 }
+							 }
+							else
+							{
+								if(!fld.Nillable)
+								{
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" CssClass="validate[required]" ></asp:TextBox>
+								 }
+								 else
+								 {
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" ></asp:TextBox>
+								 }
+							 }
+						</td>
+					}
+					else
+					{
+						<td class="td-label">
+							@fld.Description：
+							@if(!fld.Nillable)
+							{
+							<span class="red">*</span>
+							}
+						</td>
+						<td class="td-content">
+							@if(fld.Type=="int" || fld.Type=="double" )
+							{
+								if(!fld.Nillable)
+								{
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" CssClass="validate[required,custom[number]]" ></asp:TextBox>
+								 }
+								 else
+								 {
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" CssClass="validate[ustom[number]]" ></asp:TextBox>
+								 }
+							 }
+							else if(fld.Type=="dateTime" )
+							{
+								if(!fld.Nillable)
+								{
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" OnClick="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})"
+                                                CssClass="Wdate validate[required,custom[date]]" ></asp:TextBox>
+								 }
+								 else
+								 {
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" OnClick="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})"
+                                                CssClass="Wdate validate[custom[date]]"></asp:TextBox>
+								 }
+							 }
+							else
+							{
+								if(!fld.Nillable)
+								{
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" CssClass="validate[required]" ></asp:TextBox>
+								 }
+								 else
+								 {
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" ></asp:TextBox>
+								 }
+							 }
+
+							
+						</td>
+					@: </tr>
+					}
+                }
+
+				if(flds.Count%2!=0)
+				{
+					<td class="td-label">
+						</td>
+						<td class="td-content">
+						</td>
+					@: </tr>
+				}
+
+				foreach(Ultimus.UWF.Form.Entity.TableEntity table in @Model.Tables)
+				{
+				  flds=@Model.Fields.FindAll(p => p.ComplexType.ToUpper().Trim() == table.Name.ToUpper());
+				<tr>
+                    <td colspan="10">
+                        <table class="table table-condensed table-bordered tablerequired">
+                            <tr>
+                                <th class="hidden">
+                                    FORMID
+                                </th>
+								@foreach(Ultimus.UWF.Form.Entity.FieldEntity fld in flds)
+								{
+                                <th>
+                                    @fld.Description
+									@if(!fld.Nillable)
+									{
+									<span class="red">*</span>
+									}
+                                </th>
+								}
+                                <th>
+                                    <asp:Button ID="btn_@(table.Name)Add" runat="server" Text="增加" CssClass="btn" CausesValidation="false"
+                                        OnClick="btn_@(table.Name)Add_Click" />
+                                </th>
+                            </tr>
+                            <asp:Repeater ID="fld_detail_PROC_@(Model.ProcessName)_@(table.Name)" runat="server" OnItemCommand="fld_detail_PROC_@(Model.ProcessName)_@(table.Name)_ItemCommand">
+                                <ItemTemplate>
+                                    <tr>
+                                        <td class="hidden">
+                                            <asp:TextBox ID="fld_FORMID" Text='<%#Eval("FORMID") %>' runat="server"/>
+                                        </td>
+										@foreach(Ultimus.UWF.Form.Entity.FieldEntity fld in flds)
+										{	
+                                        <td>
+							@if(fld.Type=="int" || fld.Type=="double" )
+							{
+								if(!fld.Nillable)
+								{
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" CssClass="validate[required,custom[number]]"  Text='<%#Eval("@(fld.Name)")%>'  Width="90%"></asp:TextBox>
+								 }
+								 else
+								 {
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" CssClass="validate[ustom[number]]"  Text='<%#Eval("@(fld.Name)")%>'  Width="90%"></asp:TextBox>
+								 }
+							 }
+							else if(fld.Type=="dateTime" )
+							{
+								if(!fld.Nillable)
+								{
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" OnClick="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})"
+                                                CssClass="Wdate validate[required,custom[date]]"  Text='<%#MyLib.ConvertUtil.ToShortDateString(Eval("@(fld.Name)"))%>'  Width="90%"></asp:TextBox>
+								 }
+								 else
+								 {
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" OnClick="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})"
+                                                CssClass="Wdate validate[custom[date]]"  Text='<%#MyLib.ConvertUtil.ToShortDateString(Eval("@(fld.Name)"))%>'  Width="90%"></asp:TextBox>
+								 }
+							 }
+							else
+							{
+								if(!fld.Nillable)
+								{
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server" CssClass="validate[required]"  Text='<%#Eval("@(fld.Name)")%>'  Width="90%"></asp:TextBox>
+								 }
+								 else
+								 {
+								 <asp:TextBox ID="fld_@(fld.Name)" runat="server"  Text='<%#Eval("@(fld.Name)")%>'  Width="90%"></asp:TextBox>
+								 }
+							 }
+                                        </td>
+										}
+                                        <td>
+                                            <asp:Button ID="btnDelete" runat="server" Text="删除" CssClass="btn" CommandName="del"
+                                                ClientIDMode="Static" OnClientClick="return confirm('确认删除？')" />
+                                        </td>
+                                    </tr>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </table>
+                    </td>
+                </tr>
+				}
+				}
+
+            </table>
+        </div>
+        <div class="row">
+            <attach:attachments id="Attachments1" runat="server"></attach:attachments>
+        </div>
+        <div class="row">
+            <ah:approvalhistory id="ApprovalHistory1" showaction="false" runat="server"></ah:approvalhistory>
+        </div>
+        <div class="row">
+        </div>
+    </div>
+    <btn:buttonlist id="ButtonList1" runat="server"></btn:buttonlist>
+    <div style="display: none;">
+        
+    </div>
+    </form>
+</body>
+</html>

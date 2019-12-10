@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlreadyDoTask_ErrorMessage1" xml:space="preserve">
+    <value>Loading already do task list error</value>
+  </data>
+  <data name="AlreadyDoTask_ProcessName" xml:space="preserve">
+    <value>Please enter process name</value>
+  </data>
+  <data name="AspNetPager_FirstPageText" xml:space="preserve">
+    <value>First   </value>
+  </data>
+  <data name="AspNetPager_FirstPageText1" xml:space="preserve">
+    <value>First   </value>
+  </data>
+  <data name="AspNetPager_LastPageText" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="AspNetPager_LastPageText1" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="AspNetPager_NextPageText" xml:space="preserve">
+    <value>   Next   </value>
+  </data>
+  <data name="AspNetPager_NextPageText1" xml:space="preserve">
+    <value>   Next   </value>
+  </data>
+  <data name="AspNetPager_PrevPageText" xml:space="preserve">
+    <value>Prev   </value>
+  </data>
+  <data name="AspNetPager_PrevPageText1" xml:space="preserve">
+    <value>Prev   </value>
+  </data>
+  <data name="ControlSourceConfig_ColumnName" xml:space="preserve">
+    <value>Column Name</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSourceType" xml:space="preserve">
+    <value>Data source type</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_ColumnName" xml:space="preserve">
+    <value>Field Name</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_ConnectionString" xml:space="preserve">
+    <value>ConnectionString</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_DataBase" xml:space="preserve">
+    <value>DataBase</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_ElectronicForm" xml:space="preserve">
+    <value>ElectronicForm</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_strWhere" xml:space="preserve">
+    <value>Select Where</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_TableName" xml:space="preserve">
+    <value>TableName</value>
+  </data>
+  <data name="ControlSourceConfig_ControlSource_VariableName" xml:space="preserve">
+    <value>Variable Name</value>
+  </data>
+  <data name="ControlSourceConfig_ErrorMessage1" xml:space="preserve">
+    <value>Loading data error</value>
+  </data>
+  <data name="ControlSourceConfig_ErrorMessage2" xml:space="preserve">
+    <value>Data save error</value>
+  </data>
+  <data name="ControlSourceConfig_ProcessName" xml:space="preserve">
+    <value>Process Name</value>
+  </data>
+  <data name="ControlSourceConfig_StepName" xml:space="preserve">
+    <value>Step Name</value>
+  </data>
+  <data name="DataSaveConfig_ColumnName" xml:space="preserve">
+    <value>Column Name</value>
+  </data>
+  <data name="DataSaveConfig_ConnectionString" xml:space="preserve">
+    <value>Connection String</value>
+  </data>
+  <data name="DataSaveConfig_DataBase" xml:space="preserve">
+    <value>Save to database</value>
+  </data>
+  <data name="DataSaveConfig_ElectronicForm" xml:space="preserve">
+    <value>Save to electronic form</value>
+  </data>
+  <data name="DataSaveConfig_FieldName" xml:space="preserve">
+    <value>Field Name</value>
+  </data>
+  <data name="DataSaveConfig_IsMaster" xml:space="preserve">
+    <value>Is Master</value>
+  </data>
+  <data name="DataSaveConfig_IsSublist" xml:space="preserve">
+    <value>Is Sublist</value>
+  </data>
+  <data name="DataSaveConfig_MasterConfig" xml:space="preserve">
+    <value>Master Table Config</value>
+  </data>
+  <data name="DataSaveConfig_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="DataSaveConfig_ProcessName" xml:space="preserve">
+    <value>Process Name</value>
+  </data>
+  <data name="DataSaveConfig_StepName" xml:space="preserve">
+    <value>Step Name</value>
+  </data>
+  <data name="DataSaveConfig_SublistConfig" xml:space="preserve">
+    <value>Sublist Table Config</value>
+  </data>
+  <data name="DataSaveConfig_TableName" xml:space="preserve">
+    <value>Table Name</value>
+  </data>
+  <data name="DataSaveConfig_VariableName" xml:space="preserve">
+    <value>Variable Name</value>
+  </data>
+  <data name="Default_CreatePage" xml:space="preserve">
+    <value>Create Page</value>
+  </data>
+  <data name="Default_List_ConfigurationOrModify" xml:space="preserve">
+    <value>Configuration/Modify</value>
+  </data>
+  <data name="Default_List_CreatePage" xml:space="preserve">
+    <value>Create Page</value>
+  </data>
+  <data name="Default_List_CreateTime" xml:space="preserve">
+    <value>Create Time</value>
+  </data>
+  <data name="Default_List_ErrorMessage1" xml:space="preserve">
+    <value>Loading list information error</value>
+  </data>
+  <data name="Default_List_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Default_List_Operation" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="Default_List_ProcessName" xml:space="preserve">
+    <value>Process Name</value>
+  </data>
+  <data name="Default_List_UpdateTime" xml:space="preserve">
+    <value>Update Time</value>
+  </data>
+  <data name="Default_Search_CreatePage" xml:space="preserve">
+    <value>Is Create Page</value>
+  </data>
+  <data name="Default_Search_CreateTime" xml:space="preserve">
+    <value>Create Time</value>
+  </data>
+  <data name="Default_Search_ProcessName" xml:space="preserve">
+    <value>Process Name</value>
+  </data>
+  <data name="Default_Search_ResetButton" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Default_Search_SearchButton" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Default_Search_UpdateTime" xml:space="preserve">
+    <value>Update Time</value>
+  </data>
+  <data name="FormConfiguration_List_AddButton" xml:space="preserve">
+    <value>Add Row</value>
+  </data>
+  <data name="FormConfiguration_List_Choose" xml:space="preserve">
+    <value>Choose</value>
+  </data>
+  <data name="FormConfiguration_List_ColumnName" xml:space="preserve">
+    <value>Column Name</value>
+  </data>
+  <data name="FormConfiguration_List_Configure" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="FormConfiguration_List_ConfigureDataSource" xml:space="preserve">
+    <value>Data Source</value>
+  </data>
+  <data name="FormConfiguration_List_ControlName" xml:space="preserve">
+    <value>Control Name</value>
+  </data>
+  <data name="FormConfiguration_List_ControlValueFormat" xml:space="preserve">
+    <value>Value Format</value>
+  </data>
+  <data name="FormConfiguration_List_DelButton" xml:space="preserve">
+    <value>Delete rows</value>
+  </data>
+  <data name="FormConfiguration_List_ErrorMessage1" xml:space="preserve">
+    <value>Loading list information error</value>
+  </data>
+  <data name="FormConfiguration_List_ErrorMessage2" xml:space="preserve">
+    <value>Add line error</value>
+  </data>
+  <data name="FormConfiguration_List_ErrorMessage3" xml:space="preserve">
+    <value>Delete rows error</value>
+  </data>
+  <data name="FormConfiguration_List_ErrorMessage4" xml:space="preserve">
+    <value>Loading control list error</value>
+  </data>
+  <data name="FormConfiguration_List_ErrorMessage5" xml:space="preserve">
+    <value>Save data error</value>
+  </data>
+  <data name="FormConfiguration_List_ExternalLinks" xml:space="preserve">
+    <value>External Link</value>
+  </data>
+  <data name="FormConfiguration_List_GoBackButton" xml:space="preserve">
+    <value>Save and return</value>
+  </data>
+  <data name="FormConfiguration_List_IsShow" xml:space="preserve">
+    <value>Is Show</value>
+  </data>
+  <data name="FormConfiguration_List_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="FormConfiguration_List_OrderBy" xml:space="preserve">
+    <value>Order By</value>
+  </data>
+  <data name="FormConfiguration_List_ProcessName" xml:space="preserve">
+    <value>Process Name</value>
+  </data>
+  <data name="FormConfiguration_List_ReadOnly" xml:space="preserve">
+    <value>ReadOnly</value>
+  </data>
+  <data name="FormConfiguration_List_Required" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="FormConfiguration_List_StepName" xml:space="preserve">
+    <value>Step Name</value>
+  </data>
+  <data name="Form_ApprovalHistory" xml:space="preserve">
+    <value>Approval History</value>
+  </data>
+  <data name="Form_FlowChart" xml:space="preserve">
+    <value>Flow Chart</value>
+  </data>
+  <data name="Form_Text" xml:space="preserve">
+    <value>Form</value>
+  </data>
+  <data name="Login_Domain" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="Login_ErrorMessage1" xml:space="preserve">
+    <value>Get domain information error</value>
+  </data>
+  <data name="Login_ErrorMessage2" xml:space="preserve">
+    <value>Landing error</value>
+  </data>
+  <data name="Login_ErrorMessage3" xml:space="preserve">
+    <value>User name or password mistake, please enter again</value>
+  </data>
+  <data name="Login_PassWord" xml:space="preserve">
+    <value>Pass Word</value>
+  </data>
+  <data name="Login_UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="NewTaskList_ErrorMessage1" xml:space="preserve">
+    <value>Loading process number error</value>
+  </data>
+  <data name="NewTaskList_ErrorMessage2" xml:space="preserve">
+    <value>Error loading process information</value>
+  </data>
+  <data name="NewTaskList_Remark1" xml:space="preserve">
+    <value>Click on the specific process for launch</value>
+  </data>
+  <data name="NewTaskList_Remark2" xml:space="preserve">
+    <value>Contains process under</value>
+  </data>
+  <data name="NewTaskList_Remark3" xml:space="preserve">
+    <value>number</value>
+  </data>
+  <data name="NewTask_AlreadyDoTask" xml:space="preserve">
+    <value>Already Do Task</value>
+  </data>
+  <data name="NewTask_ErrorMessage1" xml:space="preserve">
+    <value>Loading classification error</value>
+  </data>
+  <data name="NewTask_NewTask" xml:space="preserve">
+    <value>Launch Process</value>
+  </data>
+  <data name="NewTask_ToDoTask" xml:space="preserve">
+    <value>To-Do Tasks</value>
+  </data>
+  <data name="ProcessConfig_CheckFileMessage1" xml:space="preserve">
+    <value>Please upload</value>
+  </data>
+  <data name="ProcessConfig_CheckFileMessage2" xml:space="preserve">
+    <value>Type of document</value>
+  </data>
+  <data name="ProcessConfig_ConfigStep" xml:space="preserve">
+    <value>Config Step</value>
+  </data>
+  <data name="ProcessConfig_ErrorMessage1" xml:space="preserve">
+    <value>Loading data error</value>
+  </data>
+  <data name="ProcessConfig_LoGo" xml:space="preserve">
+    <value>Page Logo</value>
+  </data>
+  <data name="ProcessConfig_UpLoadButton" xml:space="preserve">
+    <value>Upload/update</value>
+  </data>
+  <data name="ProcessConfig_UpLoadErrorMessage1" xml:space="preserve">
+    <value>Upload file error</value>
+  </data>
+  <data name="ProcessConfig_ViewImage" xml:space="preserve">
+    <value>View Image</value>
+  </data>
+  <data name="ProcessMonitoring_ErrorMessage1" xml:space="preserve">
+    <value>Loading process monitoring diagram error</value>
+  </data>
+  <data name="ProcessStepList_List_ApprovalConfiguration" xml:space="preserve">
+    <value>Approval Configuration</value>
+  </data>
+  <data name="ProcessStepList_List_ApprovalOperation" xml:space="preserve">
+    <value>Modify/configuration</value>
+  </data>
+  <data name="ProcessStepList_List_Copy" xml:space="preserve">
+    <value>Copy to other steps</value>
+  </data>
+  <data name="ProcessStepList_List_DataSave" xml:space="preserve">
+    <value>Data Save</value>
+  </data>
+  <data name="ProcessStepList_List_DataSaveConfig" xml:space="preserve">
+    <value>configuration/modify</value>
+  </data>
+  <data name="ProcessStepList_List_ErrorMessage1" xml:space="preserve">
+    <value>Data save error</value>
+  </data>
+  <data name="ProcessStepList_List_ErrorMessage2" xml:space="preserve">
+    <value>Loading list error</value>
+  </data>
+  <data name="ProcessStepList_List_ErrorMessage3" xml:space="preserve">
+    <value>Loading {0} data error</value>
+  </data>
+  <data name="ProcessStepList_List_FormConfiguration" xml:space="preserve">
+    <value>Form Configuration</value>
+  </data>
+  <data name="ProcessStepList_List_FormOperation" xml:space="preserve">
+    <value>Modify/configuration</value>
+  </data>
+  <data name="ProcessStepList_List_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ProcessStepList_List_ProcessName" xml:space="preserve">
+    <value>Process Name</value>
+  </data>
+  <data name="ProcessStepList_List_Shortcuts" xml:space="preserve">
+    <value>Shortcuts</value>
+  </data>
+  <data name="ProcessStepList_List_StepCName" xml:space="preserve">
+    <value>Step Name (Chinese)</value>
+  </data>
+  <data name="ProcessStepList_List_StepEName" xml:space="preserve">
+    <value>Step Name (English)</value>
+  </data>
+  <data name="ProcessStepList_List_StepName" xml:space="preserve">
+    <value>Step Name</value>
+  </data>
+  <data name="StepConfigCopy_Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="StepConfigCopy_Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="ToDoTask_ErrorMessage1" xml:space="preserve">
+    <value>Loading pending task list error</value>
+  </data>
+  <data name="ToDoTask_Incident" xml:space="preserve">
+    <value>Incident</value>
+  </data>
+  <data name="ToDoTask_OpenForm" xml:space="preserve">
+    <value>Open Form</value>
+  </data>
+  <data name="ToDoTask_ProcessMonitoring" xml:space="preserve">
+    <value>Monitoring</value>
+  </data>
+  <data name="ToDoTask_ProcessName" xml:space="preserve">
+    <value>Process Name</value>
+  </data>
+  <data name="ToDoTask_StepName" xml:space="preserve">
+    <value>Step Name</value>
+  </data>
+  <data name="ToDoTask_Summary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="HeaderLogOff" xml:space="preserve">
+    <value>Log Off</value>
+  </data>
+  <data name="LoginLanguages" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="LoginLanguages_EN" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="LoginLanguages_ZH" xml:space="preserve">
+    <value>Chinese</value>
+  </data>
+</root>

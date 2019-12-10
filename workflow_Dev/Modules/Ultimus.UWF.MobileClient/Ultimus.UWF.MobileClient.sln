@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultimus.UWF.MobileClient", "Ultimus.UWF.MobileClient.csproj", "{EDC89592-743D-4AF2-96ED-5C6A5AD4FB1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientService", "ClientService\ClientService.csproj", "{ED7C59A6-254F-4A2D-9981-758434041755}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDC89592-743D-4AF2-96ED-5C6A5AD4FB1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC89592-743D-4AF2-96ED-5C6A5AD4FB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC89592-743D-4AF2-96ED-5C6A5AD4FB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC89592-743D-4AF2-96ED-5C6A5AD4FB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED7C59A6-254F-4A2D-9981-758434041755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED7C59A6-254F-4A2D-9981-758434041755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED7C59A6-254F-4A2D-9981-758434041755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7C59A6-254F-4A2D-9981-758434041755}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

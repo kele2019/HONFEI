@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A50B734-98D8-4D29-8408-5B17D38FA8DE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ultimus.UWF.Home3</RootNamespace>
+    <AssemblyName>Ultimus.UWF.Home3</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MyLib">
+      <HintPath>..\..\Assets\ref\MyLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login1.aspx.cs">
+      <DependentUpon>Login1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login1.aspx.designer.cs">
+      <DependentUpon>Login1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\.svn\all-wcprops" />
+    <None Include="images\.svn\entries" />
+    <None Include="images\.svn\prop-base\add.png.svn-base" />
+    <None Include="images\.svn\prop-base\bg.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\bg10.gif.svn-base" />
+    <None Include="images\.svn\prop-base\bg11.gif.svn-base" />
+    <None Include="images\.svn\prop-base\bg11.png.svn-base" />
+    <None Include="images\.svn\prop-base\bg12.png.svn-base" />
+    <None Include="images\.svn\prop-base\bg13.png.svn-base" />
+    <None Include="images\.svn\prop-base\bg2.gif.svn-base" />
+    <None Include="images\.svn\prop-base\bg3.gif.svn-base" />
+    <None Include="images\.svn\prop-base\bg4.gif.svn-base" />
+    <None Include="images\.svn\prop-base\bg5.gif.svn-base" />
+    <None Include="images\.svn\prop-base\bg6.gif.svn-base" />
+    <None Include="images\.svn\prop-base\bg7.gif.svn-base" />
+    <None Include="images\.svn\prop-base\bg8.gif.svn-base" />
+    <None Include="images\.svn\prop-base\bg9.gif.svn-base" />
+    <None Include="images\.svn\prop-base\bi_1.gif.svn-base" />
+    <None Include="images\.svn\prop-base\bt01.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\bt02.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\bt03.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\bt04.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\check.png.svn-base" />
+    <None Include="images\.svn\prop-base\chosen-sprite.png.svn-base" />
+    <None Include="images\.svn\prop-base\code.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\d1.gif.svn-base" />
+    <None Include="images\.svn\prop-base\delect.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\guanbi.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\icon_all.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_bag.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_car.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_cheng.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_computer.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_db.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_hammer.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_h_com.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_h_fav.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_h_mark.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_h_pass.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_jinyi.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_list.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_man.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_m_crm.png.svn-base" />
+    <None Include="images\.svn\prop-base\icon_m_crm_h.png.svn-base" />
+    <None Include="images\.svn\prop-base\icon_m_document.png.svn-base" />
+    <None Include="images\.svn\prop-base\icon_m_document_h.png.svn-base" />
+    <None Include="images\.svn\prop-base\icon_m_yun.png.svn-base" />
+    <None Include="images\.svn\prop-base\icon_m_yun_h.png.svn-base" />
+    <None Include="images\.svn\prop-base\icon_star.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_s_app.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_s_busi.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_s_chat.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_s_clock.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_s_custom.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_s_document.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_s_dsub.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_s_event.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_s_lock.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_s_msg.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_s_nc.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_s_sys.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_tianping.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_t_loc.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_t_msg.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_t_o1.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_t_o2.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_t_o3.gif.svn-base" />
+    <None Include="images\.svn\prop-base\icon_t_rss.gif.svn-base" />
+    <None Include="images\.svn\prop-base\listpic01.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\listpic02.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\listpicbg.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\listpicfooter.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\listtop.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\liucheng.gif.svn-base" />
+    <None Include="images\.svn\prop-base\login_bg.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\logo _biger.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\logo.gif.svn-base" />
+    <None Include="images\.svn\prop-base\logo.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\midbg.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\new_kdhrms_en_11-old.png.svn-base" />
+    <None Include="images\.svn\prop-base\refresh.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\scdwjj.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\split.png.svn-base" />
+    <None Include="images\.svn\prop-base\sxlb.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\tabnavpic.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\tijiao.jpg.svn-base" />
+    <None Include="images\.svn\prop-base\tipnum.gif.svn-base" />
+    <None Include="images\.svn\prop-base\top_arr.gif.svn-base" />
+    <None Include="images\.svn\prop-base\wnd.gif.svn-base" />
+    <None Include="images\.svn\prop-base\wtbl.jpg.svn-base" />
+    <None Include="images\.svn\text-base\add.png.svn-base" />
+    <None Include="images\.svn\text-base\base.css.svn-base" />
+    <None Include="images\.svn\text-base\bg.jpg.svn-base" />
+    <None Include="images\.svn\text-base\bg10.gif.svn-base" />
+    <None Include="images\.svn\text-base\bg11.gif.svn-base" />
+    <None Include="images\.svn\text-base\bg11.png.svn-base" />
+    <None Include="images\.svn\text-base\bg12.png.svn-base" />
+    <None Include="images\.svn\text-base\bg13.png.svn-base" />
+    <None Include="images\.svn\text-base\bg2.gif.svn-base" />
+    <None Include="images\.svn\text-base\bg3.gif.svn-base" />
+    <None Include="images\.svn\text-base\bg4.gif.svn-base" />
+    <None Include="images\.svn\text-base\bg5.gif.svn-base" />
+    <None Include="images\.svn\text-base\bg6.gif.svn-base" />
+    <None Include="images\.svn\text-base\bg7.gif.svn-base" />
+    <None Include="images\.svn\text-base\bg8.gif.svn-base" />
+    <None Include="images\.svn\text-base\bg9.gif.svn-base" />
+    <None Include="images\.svn\text-base\bi_1.gif.svn-base" />
+    <None Include="images\.svn\text-base\bt01.jpg.svn-base" />
+    <None Include="images\.svn\text-base\bt02.jpg.svn-base" />
+    <None Include="images\.svn\text-base\bt03.jpg.svn-base" />
+    <None Include="images\.svn\text-base\bt04.jpg.svn-base" />
+    <None Include="images\.svn\text-base\check.png.svn-base" />
+    <None Include="images\.svn\text-base\chosen-sprite.png.svn-base" />
+    <None Include="images\.svn\text-base\code.jpg.svn-base" />
+    <None Include="images\.svn\text-base\content.css.svn-base" />
+    <None Include="images\.svn\text-base\d1.gif.svn-base" />
+    <None Include="images\.svn\text-base\delect.jpg.svn-base" />
+    <None Include="images\.svn\text-base\guanbi.jpg.svn-base" />
+    <None Include="images\.svn\text-base\icon_all.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_bag.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_car.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_cheng.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_computer.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_db.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_hammer.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_h_com.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_h_fav.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_h_mark.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_h_pass.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_jinyi.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_list.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_man.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_m_crm.png.svn-base" />
+    <None Include="images\.svn\text-base\icon_m_crm_h.png.svn-base" />
+    <None Include="images\.svn\text-base\icon_m_document.png.svn-base" />
+    <None Include="images\.svn\text-base\icon_m_document_h.png.svn-base" />
+    <None Include="images\.svn\text-base\icon_m_yun.png.svn-base" />
+    <None Include="images\.svn\text-base\icon_m_yun_h.png.svn-base" />
+    <None Include="images\.svn\text-base\icon_star.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_s_app.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_s_busi.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_s_chat.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_s_clock.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_s_custom.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_s_document.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_s_dsub.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_s_event.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_s_lock.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_s_msg.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_s_nc.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_s_sys.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_tianping.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_t_loc.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_t_msg.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_t_o1.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_t_o2.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_t_o3.gif.svn-base" />
+    <None Include="images\.svn\text-base\icon_t_rss.gif.svn-base" />
+    <None Include="images\.svn\text-base\listpic01.jpg.svn-base" />
+    <None Include="images\.svn\text-base\listpic02.jpg.svn-base" />
+    <None Include="images\.svn\text-base\listpicbg.jpg.svn-base" />
+    <None Include="images\.svn\text-base\listpicfooter.jpg.svn-base" />
+    <None Include="images\.svn\text-base\listtop.jpg.svn-base" />
+    <None Include="images\.svn\text-base\liucheng.gif.svn-base" />
+    <None Include="images\.svn\text-base\login_bg.jpg.svn-base" />
+    <None Include="images\.svn\text-base\logo _biger.jpg.svn-base" />
+    <None Include="images\.svn\text-base\logo.gif.svn-base" />
+    <None Include="images\.svn\text-base\logo.jpg.svn-base" />
+    <None Include="images\.svn\text-base\midbg.jpg.svn-base" />
+    <None Include="images\.svn\text-base\new_kdhrms_en_11-old.png.svn-base" />
+    <None Include="images\.svn\text-base\refresh.jpg.svn-base" />
+    <None Include="images\.svn\text-base\scdwjj.jpg.svn-base" />
+    <None Include="images\.svn\text-base\split.png.svn-base" />
+    <None Include="images\.svn\text-base\sxlb.jpg.svn-base" />
+    <None Include="images\.svn\text-base\tabnavpic.jpg.svn-base" />
+    <None Include="images\.svn\text-base\tijiao.jpg.svn-base" />
+    <None Include="images\.svn\text-base\tipnum.gif.svn-base" />
+    <None Include="images\.svn\text-base\top_arr.gif.svn-base" />
+    <None Include="images\.svn\text-base\wnd.gif.svn-base" />
+    <None Include="images\.svn\text-base\wtbl.jpg.svn-base" />
+    <None Include="images\tabs\.svn\all-wcprops" />
+    <None Include="images\tabs\.svn\entries" />
+    <None Include="images\tabs\.svn\prop-base\b1_2.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\scroll-left.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\scroll-right.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\tab-close.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\tab-close2.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\tab-close3.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\tab-close4.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\tab-close5.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\tab-refresh.png.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\tab-strip-bg.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\tabs-sprite.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\tab_bg.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\tab_bg.png.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\tab_bg2.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\Thumbs.db.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\v3_scroll-left.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\v3_scroll-right.gif.svn-base" />
+    <None Include="images\tabs\.svn\prop-base\v3_tabBottom_bg.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\b1_2.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\scroll-left.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\scroll-right.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\tab-close.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\tab-close2.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\tab-close3.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\tab-close4.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\tab-close5.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\tab-refresh.png.svn-base" />
+    <None Include="images\tabs\.svn\text-base\tab-strip-bg.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\tabs-sprite.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\tab_bg.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\tab_bg.png.svn-base" />
+    <None Include="images\tabs\.svn\text-base\tab_bg2.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\Thumbs.db.svn-base" />
+    <None Include="images\tabs\.svn\text-base\v3_scroll-left.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\v3_scroll-right.gif.svn-base" />
+    <None Include="images\tabs\.svn\text-base\v3_tabBottom_bg.gif.svn-base" />
+    <None Include="images\tabs\Thumbs.db" />
+    <None Include="js\.svn\all-wcprops" />
+    <None Include="js\.svn\entries" />
+    <None Include="js\.svn\text-base\jquery.min.js.svn-base" />
+    <None Include="js\.svn\text-base\jquery.tabs.js.svn-base" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ultimus.UWF.Common\Ultimus.UWF.Common.csproj">
+      <Project>{4E7B6F3F-E6A5-4E48-9022-1BD87730C50C}</Project>
+      <Name>Ultimus.UWF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultimus.UWF.OrgChart\Ultimus.UWF.OrgChart.csproj">
+      <Project>{AF096E41-83B7-4AC3-8B3D-F7389868F025}</Project>
+      <Name>Ultimus.UWF.OrgChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultimus.UWF.Security\Ultimus.UWF.Security.csproj">
+      <Project>{4AA2E97E-D542-49B6-811E-8FE883C18DDF}</Project>
+      <Name>Ultimus.UWF.Security</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\base.css" />
+    <Content Include="css\base2.css" />
+    <Content Include="Default.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="default.htm" />
+    <Content Include="default_page.html" />
+    <Content Include="Error.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="images\add.png" />
+    <Content Include="images\base.css" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\bg10.gif" />
+    <Content Include="images\bg11.gif" />
+    <Content Include="images\bg11.png" />
+    <Content Include="images\bg12.png" />
+    <Content Include="images\bg13.png" />
+    <Content Include="images\bg2.gif" />
+    <Content Include="images\bg3.gif" />
+    <Content Include="images\bg4.gif" />
+    <Content Include="images\bg5.gif" />
+    <Content Include="images\bg6.gif" />
+    <Content Include="images\bg7.gif" />
+    <Content Include="images\bg8.gif" />
+    <Content Include="images\bg9.gif" />
+    <Content Include="images\bi_1.gif" />
+    <Content Include="images\bt01.jpg" />
+    <Content Include="images\bt02.jpg" />
+    <Content Include="images\bt03.jpg" />
+    <Content Include="images\bt04.jpg" />
+    <Content Include="images\check.png" />
+    <Content Include="images\chosen-sprite.png" />
+    <Content Include="images\code.jpg" />
+    <Content Include="images\content.css" />
+    <Content Include="images\d1.gif" />
+    <Content Include="images\delect.jpg" />
+    <Content Include="images\guanbi.jpg" />
+    <Content Include="images\icon_all.gif" />
+    <Content Include="images\icon_bag.gif" />
+    <Content Include="images\icon_car.gif" />
+    <Content Include="images\icon_cheng.gif" />
+    <Content Include="images\icon_computer.gif" />
+    <Content Include="images\icon_db.gif" />
+    <Content Include="images\icon_hammer.gif" />
+    <Content Include="images\icon_h_com.gif" />
+    <Content Include="images\icon_h_fav.gif" />
+    <Content Include="images\icon_h_mark.gif" />
+    <Content Include="images\icon_h_pass.gif" />
+    <Content Include="images\icon_jinyi.gif" />
+    <Content Include="images\icon_list.gif" />
+    <Content Include="images\icon_man.gif" />
+    <Content Include="images\icon_m_crm.png" />
+    <Content Include="images\icon_m_crm_h.png" />
+    <Content Include="images\icon_m_document.png" />
+    <Content Include="images\icon_m_document_h.png" />
+    <Content Include="images\icon_m_yun.png" />
+    <Content Include="images\icon_m_yun_h.png" />
+    <Content Include="images\icon_star.gif" />
+    <Content Include="images\icon_s_app.gif" />
+    <Content Include="images\icon_s_busi.gif" />
+    <Content Include="images\icon_s_chat.gif" />
+    <Content Include="images\icon_s_clock.gif" />
+    <Content Include="images\icon_s_custom.gif" />
+    <Content Include="images\icon_s_document.gif" />
+    <Content Include="images\icon_s_dsub.gif" />
+    <Content Include="images\icon_s_event.gif" />
+    <Content Include="images\icon_s_lock.gif" />
+    <Content Include="images\icon_s_msg.gif" />
+    <Content Include="images\icon_s_nc.gif" />
+    <Content Include="images\icon_s_sys.gif" />
+    <Content Include="images\icon_tianping.gif" />
+    <Content Include="images\icon_t_loc.gif" />
+    <Content Include="images\icon_t_msg.gif" />
+    <Content Include="images\icon_t_o1.gif" />
+    <Content Include="images\icon_t_o2.gif" />
+    <Content Include="images\icon_t_o3.gif" />
+    <Content Include="images\icon_t_rss.gif" />
+    <Content Include="images\listpic01.jpg" />
+    <Content Include="images\listpic02.jpg" />
+    <Content Include="images\listpicbg.jpg" />
+    <Content Include="images\listpicfooter.jpg" />
+    <Content Include="images\listtop.jpg" />
+    <Content Include="images\liucheng.gif" />
+    <Content Include="images\login_bg.jpg" />
+    <Content Include="images\logo _biger.jpg" />
+    <Content Include="images\logo.gif" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\midbg.jpg" />
+    <Content Include="images\new_kdhrms_en_11-old.png" />
+    <Content Include="images\refresh.jpg" />
+    <Content Include="images\scdwjj.jpg" />
+    <Content Include="images\split.png" />
+    <Content Include="images\sxlb.jpg" />
+    <Content Include="images\tabnavpic.jpg" />
+    <Content Include="images\tabs\b1_2.gif" />
+    <Content Include="images\tabs\scroll-left.gif" />
+    <Content Include="images\tabs\scroll-right.gif" />
+    <Content Include="images\tabs\tab-close.gif" />
+    <Content Include="images\tabs\tab-close2.gif" />
+    <Content Include="images\tabs\tab-close3.gif" />
+    <Content Include="images\tabs\tab-close4.gif" />
+    <Content Include="images\tabs\tab-close5.gif" />
+    <Content Include="images\tabs\tab-refresh.png" />
+    <Content Include="images\tabs\tab-strip-bg.gif" />
+    <Content Include="images\tabs\tabs-sprite.gif" />
+    <Content Include="images\tabs\tab_bg.gif" />
+    <Content Include="images\tabs\tab_bg.png" />
+    <Content Include="images\tabs\tab_bg2.gif" />
+    <Content Include="images\tabs\v3_scroll-left.gif" />
+    <Content Include="images\tabs\v3_scroll-right.gif" />
+    <Content Include="images\tabs\v3_tabBottom_bg.gif" />
+    <Content Include="images\tijiao.jpg" />
+    <Content Include="images\tipnum.gif" />
+    <Content Include="images\top_arr.gif" />
+    <Content Include="images\wnd.gif" />
+    <Content Include="images\wtbl.jpg" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.tabs.js" />
+    <Content Include="Login.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Login1.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="login_images\account.png" />
+    <Content Include="login_images\bg.jpg" />
+    <Content Include="login_images\chk.png" />
+    <Content Include="login_images\gq.png" />
+    <Content Include="login_images\login.png" />
+    <Content Include="login_images\loginbg.png" />
+    <Content Include="login_images\name.png" />
+    <Content Include="login_images\pwd.png" />
+    <Content Include="style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\.svn\props\" />
+    <Folder Include="images\.svn\tmp\prop-base\" />
+    <Folder Include="images\.svn\tmp\props\" />
+    <Folder Include="images\.svn\tmp\text-base\" />
+    <Folder Include="images\tabs\.svn\props\" />
+    <Folder Include="images\tabs\.svn\tmp\prop-base\" />
+    <Folder Include="images\tabs\.svn\tmp\props\" />
+    <Folder Include="images\tabs\.svn\tmp\text-base\" />
+    <Folder Include="js\.svn\prop-base\" />
+    <Folder Include="js\.svn\props\" />
+    <Folder Include="js\.svn\tmp\prop-base\" />
+    <Folder Include="js\.svn\tmp\props\" />
+    <Folder Include="js\.svn\tmp\text-base\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1709</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

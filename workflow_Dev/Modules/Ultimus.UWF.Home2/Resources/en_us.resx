@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Barner" xml:space="preserve">
+    <value>Images/V2/barner-en.png</value>
+  </data>
+  <data name="BtnCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="BtnOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Btn_Create_CCBX" xml:space="preserve">
+    <value>Images/V2/ccbx-en.png</value>
+  </data>
+  <data name="Btn_Create_CCSQ" xml:space="preserve">
+    <value>Images/V2/ccsq-en.png</value>
+  </data>
+  <data name="Btn_Create_GRBT" xml:space="preserve">
+    <value>Images/V2/grbt-en.png</value>
+  </data>
+  <data name="Btn_Create_GRBX" xml:space="preserve">
+    <value>Images/V2/grbx-en.png</value>
+  </data>
+  <data name="Btn_Create_XJYZ" xml:space="preserve">
+    <value>Images/V2/xjyz-en.png</value>
+  </data>
+  <data name="Btn_Toolbar_Search" xml:space="preserve">
+    <value>Images/V2/search-en.png</value>
+  </data>
+  <data name="CheckUserInfoFail" xml:space="preserve">
+    <value>UserAccount Or Password Invalid</value>
+  </data>
+  <data name="CheckUserInfoNull" xml:space="preserve">
+    <value>UserAccount Or　Password Is Null</value>
+  </data>
+  <data name="DropdownListItemEmpty" xml:space="preserve">
+    <value>--Please select--</value>
+  </data>
+  <data name="FlowName_CCBX" xml:space="preserve">
+    <value>Travel Expense</value>
+  </data>
+  <data name="FlowName_CCSQ" xml:space="preserve">
+    <value>Travel Request</value>
+  </data>
+  <data name="FlowName_GRBT" xml:space="preserve">
+    <value>Personal Allowance</value>
+  </data>
+  <data name="FlowName_GRBX" xml:space="preserve">
+    <value>Personal Expense</value>
+  </data>
+  <data name="FlowName_XJYZ" xml:space="preserve">
+    <value>Cash Advance</value>
+  </data>
+  <data name="Grid_EmptyData_Text" xml:space="preserve">
+    <value>No records!</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>en-us</value>
+  </data>
+  <data name="Menu_CGX" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="Menu_CJLC" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Menu_DBRW" xml:space="preserve">
+    <value>Todo</value>
+  </data>
+  <data name="Menu_REPORT" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Menu_WDSQ" xml:space="preserve">
+    <value>My Request</value>
+  </data>
+  <data name="Menu_YBRW" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Text_GridHeader_CurrentBy" xml:space="preserve">
+    <value>Current Handler</value>
+  </data>
+  <data name="Text_GridHeader_CurrentStep" xml:space="preserve">
+    <value>Current Step</value>
+  </data>
+  <data name="Text_GridHeader_Flow" xml:space="preserve">
+    <value>Flow</value>
+  </data>
+  <data name="Text_GridHeader_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Text_GridHeader_RequestNo" xml:space="preserve">
+    <value>RequestNo.</value>
+  </data>
+  <data name="Text_GridHeader_SendBy" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="Text_GridHeader_SendDate" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Text_GridHeader_Step" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="Text_GridHeader_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Text_ToolBar_Date" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Text_ToolBar_Del" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Text_ToolBar_Flow" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Text_ToolBar_Monitor" xml:space="preserve">
+    <value>Monitor</value>
+  </data>
+  <data name="Text_ToolBar_Title" xml:space="preserve">
+    <value>Title/No.</value>
+  </data>
+  <data name="UserAccountChange" xml:space="preserve">
+    <value>Change User</value>
+  </data>
+</root>

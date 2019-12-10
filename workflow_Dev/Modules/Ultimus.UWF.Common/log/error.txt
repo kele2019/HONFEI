@@ -1,0 +1,660 @@
+2014-11-04 19:09:38,513 [4] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 19:09:38,611 [4] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Security could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Security could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Security”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 19:09:38,691 [4] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.OrgChart could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.OrgChart could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.OrgChart”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 19:09:38,772 [4] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 19:59:18,864 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 19:59:18,963 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Security could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Security could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Security”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 19:59:19,049 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.OrgChart could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.OrgChart could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.OrgChart”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 19:59:19,133 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 19:59:46,879 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 19:59:46,950 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Security could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Security could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Security”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 19:59:47,026 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.OrgChart could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.OrgChart could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.OrgChart”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 19:59:47,106 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:01:18,966 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:01:19,103 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Security could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Security could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Security”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:01:19,248 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.OrgChart could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.OrgChart could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.OrgChart”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:01:19,370 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:01:19,523 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:01:19,646 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Security could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Security could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Security”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:01:19,761 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.OrgChart could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.OrgChart could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.OrgChart”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:01:19,880 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:02,443 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:02,459 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Security could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Security could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Security”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:02,460 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.OrgChart could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.OrgChart could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.OrgChart”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:02,460 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:02,471 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:02,478 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Security could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Security could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Security”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:02,478 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.OrgChart could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.OrgChart could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.OrgChart”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:02,479 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:17,808 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:17,824 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Security could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Security could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Security”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:17,826 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.OrgChart could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.OrgChart could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.OrgChart”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:17,826 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:17,838 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:17,838 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Security could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Security could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Security”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:17,839 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.OrgChart could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.OrgChart could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.OrgChart”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:17,839 [8] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:48,991 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:49,008 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Security could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Security could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Security”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:49,009 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.OrgChart could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.OrgChart could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.OrgChart”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:49,010 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:49,040 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:49,048 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Security could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Security could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Security”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:49,049 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.OrgChart could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.OrgChart could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.OrgChart”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)
+2014-11-04 20:03:49,050 [11] ERROR MyLib - ★ [WIN-NH12D4FTL91\Administrator] The assembly Ultimus.UWF.Workflow could not be loaded
+Castle.Core.Resource.ResourceException: The assembly Ultimus.UWF.Workflow could not be loaded ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Ultimus.UWF.Workflow”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   在 System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   在 System.Reflection.Assembly.Load(String assemblyString)
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.Core.Resource.AssemblyResource.ObtainAssembly(String assemblyName)
+   在 Castle.Core.Resource.AssemblyResource.CreateResourceFromUri(CustomUri resourcex, String path)
+   在 Castle.Core.Resource.AssemblyResource.<>c__DisplayClass6.<.ctor>b__4()
+   在 Castle.Core.Resource.AbstractStreamResource.GetStreamReader()
+   在 Castle.Windsor.Configuration.Interpreters.XmlProcessor.ElementProcessors.IncludeElementProcessor.ProcessInclude(XmlElement element, String includeUri, IXmlProcessorEngine engine)

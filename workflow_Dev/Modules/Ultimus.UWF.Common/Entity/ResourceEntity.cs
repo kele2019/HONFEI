@@ -1,0 +1,450 @@
+﻿using System;
+using System.Data;
+using System.Text;
+using System.Data.SqlClient;
+namespace Ultimus.UWF.Common.Entity
+{
+	/// <summary>
+	/// 存放系统中所有的基础数据，如组织、菜单等。
+	/// </summary>
+	[Serializable]
+	public partial class ResourceEntity:IComparable
+	{
+        public ResourceEntity()
+		{}
+		#region Model
+		private int _Resourceid;
+		private string _cnname;
+		private string _enname;
+		private string _type;
+		private string _module;
+		private string _code;
+        private string _parentid;
+		private string _remark;
+		private int? _orderno;
+		private string _isactive;
+		private DateTime? _createdate;
+		private int? _createby;
+		private DateTime? _updatedate;
+		private int? _updateby;
+		private DateTime? _effectfrom;
+		private DateTime? _effectto;
+		private string _ext01;
+		private string _ext02;
+		private string _ext03;
+		private string _ext04;
+		private string _ext05;
+		private string _ext06;
+		private string _ext07;
+		private string _ext08;
+		private string _ext09;
+		private string _ext10;
+		private string _ext11;
+		private string _ext12;
+		private string _ext13;
+		private string _ext14;
+		private string _ext15;
+		private string _ext16;
+		private string _ext17;
+		private string _ext18;
+		private string _ext19;
+		private string _ext20;
+		private string _ext21;
+		private string _ext22;
+		private string _ext23;
+		private string _ext24;
+		private string _ext25;
+		private string _ext26;
+		private string _ext27;
+		private string _ext28;
+		private string _ext29;
+		private string _ext30;
+		/// <summary>
+		/// 
+		/// </summary>
+		public int ID
+		{
+			set{ _Resourceid=value;}
+			get{return _Resourceid;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string NAME
+		{
+			set{ _cnname=value;}
+			get{return _cnname;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string VALUE
+		{
+			set{ _enname=value;}
+			get{return _enname;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string TYPE
+		{
+			set{ _type=value;}
+			get{return _type;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string MODULE
+		{
+			set{ _module=value;}
+			get{return _module;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string CODE
+		{
+			set{ _code=value;}
+			get{return _code;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string PARENTID
+		{
+			set{ _parentid=value;}
+			get{return _parentid;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string REMARK
+		{
+			set{ _remark=value;}
+			get{return _remark;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public int? ORDERNO
+		{
+			set{ _orderno=value;}
+			get{return _orderno;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string ISACTIVE
+		{
+			set{ _isactive=value;}
+			get{return _isactive;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public DateTime? CREATEDATE
+		{
+			set{ _createdate=value;}
+			get{return _createdate;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public int? CREATEBY
+		{
+			set{ _createby=value;}
+			get{return _createby;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public DateTime? UPDATEDATE
+		{
+			set{ _updatedate=value;}
+			get{return _updatedate;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public int? UPDATEBY
+		{
+			set{ _updateby=value;}
+			get{return _updateby;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public DateTime? EFFECTFROM
+		{
+			set{ _effectfrom=value;}
+			get{return _effectfrom;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public DateTime? EFFECTTO
+		{
+			set{ _effectto=value;}
+			get{return _effectto;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT01
+		{
+			set{ _ext01=value;}
+			get{return _ext01;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT02
+		{
+			set{ _ext02=value;}
+			get{return _ext02;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT03
+		{
+			set{ _ext03=value;}
+			get{return _ext03;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT04
+		{
+			set{ _ext04=value;}
+			get{return _ext04;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT05
+		{
+			set{ _ext05=value;}
+			get{return _ext05;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT06
+		{
+			set{ _ext06=value;}
+			get{return _ext06;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT07
+		{
+			set{ _ext07=value;}
+			get{return _ext07;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT08
+		{
+			set{ _ext08=value;}
+			get{return _ext08;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT09
+		{
+			set{ _ext09=value;}
+			get{return _ext09;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT10
+		{
+			set{ _ext10=value;}
+			get{return _ext10;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT11
+		{
+			set{ _ext11=value;}
+			get{return _ext11;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT12
+		{
+			set{ _ext12=value;}
+			get{return _ext12;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT13
+		{
+			set{ _ext13=value;}
+			get{return _ext13;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT14
+		{
+			set{ _ext14=value;}
+			get{return _ext14;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT15
+		{
+			set{ _ext15=value;}
+			get{return _ext15;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT16
+		{
+			set{ _ext16=value;}
+			get{return _ext16;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT17
+		{
+			set{ _ext17=value;}
+			get{return _ext17;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT18
+		{
+			set{ _ext18=value;}
+			get{return _ext18;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT19
+		{
+			set{ _ext19=value;}
+			get{return _ext19;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT20
+		{
+			set{ _ext20=value;}
+			get{return _ext20;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT21
+		{
+			set{ _ext21=value;}
+			get{return _ext21;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT22
+		{
+			set{ _ext22=value;}
+			get{return _ext22;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT23
+		{
+			set{ _ext23=value;}
+			get{return _ext23;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT24
+		{
+			set{ _ext24=value;}
+			get{return _ext24;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT25
+		{
+			set{ _ext25=value;}
+			get{return _ext25;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT26
+		{
+			set{ _ext26=value;}
+			get{return _ext26;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT27
+		{
+			set{ _ext27=value;}
+			get{return _ext27;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT28
+		{
+			set{ _ext28=value;}
+			get{return _ext28;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT29
+		{
+			set{ _ext29=value;}
+			get{return _ext29;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EXT30
+		{
+			set{ _ext30=value;}
+			get{return _ext30;}
+		}
+		#endregion Model
+
+
+
+
+        public int CompareTo(object obj)
+        {
+            ResourceEntity pe = obj as ResourceEntity;
+            if (this.ORDERNO > pe.ORDERNO)
+            {
+                return 1;
+            }
+            if (this.ORDERNO < pe.ORDERNO)
+            {
+                return -1;
+            }
+            return 0;
+        }
+    }
+}
+
