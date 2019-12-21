@@ -28,3 +28,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.WebsiteAccess\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.WebsiteAccess\obj\Debug\Presale.Process.WebsiteAccess.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.WebsiteAccess\obj\Debug\Presale.Process.WebsiteAccess.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.WebsiteAccess.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.WebsiteAccess.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.WebsiteAccess\obj\Debug\Presale.Process.WebsiteAccess.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.WebsiteAccess\obj\Debug\Presale.Process.WebsiteAccess.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.WebsiteAccess\obj\Debug\Presale.Process.WebsiteAccess.pdb

@@ -23,3 +23,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\P
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presale.Process.PurchaseApplication.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presale.Process.PurchaseApplication.pdb
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.PurchaseApplication\obj\Debug\Presale.Process.PurchaseApplication.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.PurchaseApplication\obj\Debug\Presale.Process.PurchaseApplication.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.PurchaseApplication\obj\Debug\Presale.Process.PurchaseApplication.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.PurchaseApplication.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.PurchaseApplication.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.PurchaseApplication\obj\Debug\Presale.Process.PurchaseApplication.pdb

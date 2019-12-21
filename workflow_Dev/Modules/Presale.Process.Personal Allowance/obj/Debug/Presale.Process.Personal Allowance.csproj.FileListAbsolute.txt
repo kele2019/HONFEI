@@ -44,3 +44,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Bin\Presale.Process.Personal Allowance.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Bin\Presale.Process.Personal Allowance.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.Personal Allowance\obj\Debug\Presale.Process.Personal Allowance.pdb

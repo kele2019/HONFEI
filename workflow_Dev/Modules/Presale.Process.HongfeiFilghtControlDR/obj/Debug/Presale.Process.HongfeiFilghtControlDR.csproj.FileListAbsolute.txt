@@ -33,3 +33,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.HongfeiFilghtControlDR\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.HongfeiFilghtControlDR\obj\Debug\Presale.Process.HongfeiFilghtControlDR.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.HongfeiFilghtControlDR\obj\Debug\Presale.Process.HongfeiFilghtControlDR.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.HongfeiFilghtControlDR.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.HongfeiFilghtControlDR.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.HongfeiFilghtControlDR\obj\Debug\Presale.Process.HongfeiFilghtControlDR.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.HongfeiFilghtControlDR\obj\Debug\Presale.Process.HongfeiFilghtControlDR.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.HongfeiFilghtControlDR\obj\Debug\Presale.Process.HongfeiFilghtControlDR.pdb

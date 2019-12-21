@@ -35,3 +35,7 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\U
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.UWF.Office\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.UWF.Office\obj\Debug\Ultimus.UWF.Office.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.UWF.Office\obj\Debug\Ultimus.UWF.Office.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Office\bin\Ultimus.UWF.Office.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Office\bin\Ultimus.UWF.Office.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Office\obj\Debug\Ultimus.UWF.Office.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Office\obj\Debug\Ultimus.UWF.Office.pdb

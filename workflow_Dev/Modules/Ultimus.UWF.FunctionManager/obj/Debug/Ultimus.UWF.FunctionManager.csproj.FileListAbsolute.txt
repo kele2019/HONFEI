@@ -43,3 +43,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Ultim
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.UWF.FunctionManager\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.UWF.FunctionManager\obj\Debug\Ultimus.UWF.FunctionManager.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.UWF.FunctionManager\obj\Debug\Ultimus.UWF.FunctionManager.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Ultimus.UWF.FunctionManager.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Ultimus.UWF.FunctionManager.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.FunctionManager\obj\Debug\Ultimus.UWF.FunctionManager.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.FunctionManager\obj\Debug\Ultimus.UWF.FunctionManager.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.FunctionManager\obj\Debug\Ultimus.UWF.FunctionManager.pdb

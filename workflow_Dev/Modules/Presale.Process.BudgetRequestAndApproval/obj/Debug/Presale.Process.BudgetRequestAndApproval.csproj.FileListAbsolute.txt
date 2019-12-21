@@ -23,3 +23,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\P
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presale.Process.BudgetRequestAndApproval.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presale.Process.BudgetRequestAndApproval.pdb
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.BudgetRequestAndApproval\obj\Debug\Presale.Process.BudgetRequestAndApproval.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.BudgetRequestAndApproval\obj\Debug\Presale.Process.BudgetRequestAndApproval.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.BudgetRequestAndApproval\obj\Debug\Presale.Process.BudgetRequestAndApproval.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.BudgetRequestAndApproval.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.BudgetRequestAndApproval.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.BudgetRequestAndApproval\obj\Debug\Presale.Process.BudgetRequestAndApproval.pdb

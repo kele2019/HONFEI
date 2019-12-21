@@ -38,3 +38,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.TravalExpense\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.TravalExpense\obj\Debug\Presale.Process.TravalExpense.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.TravalExpense\obj\Debug\Presale.Process.TravalExpense.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Bin\Presale.Process.TravalExpense.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Bin\Presale.Process.TravalExpense.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.TravalExpense\obj\Debug\Presale.Process.TravalExpense.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.TravalExpense\obj\Debug\Presale.Process.TravalExpense.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.TravalExpense\obj\Debug\Presale.Process.TravalExpense.pdb

@@ -28,3 +28,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.BadgeLostPeadjustment\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.BadgeLostPeadjustment\obj\Debug\Presale.Process.BadgeLostPeadjustment.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.BadgeLostPeadjustment\obj\Debug\Presale.Process.BadgeLostPeadjustment.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.BadgeLostPeadjustment.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.BadgeLostPeadjustment.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.BadgeLostPeadjustment\obj\Debug\Presale.Process.BadgeLostPeadjustment.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.BadgeLostPeadjustment\obj\Debug\Presale.Process.BadgeLostPeadjustment.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.BadgeLostPeadjustment\obj\Debug\Presale.Process.BadgeLostPeadjustment.pdb

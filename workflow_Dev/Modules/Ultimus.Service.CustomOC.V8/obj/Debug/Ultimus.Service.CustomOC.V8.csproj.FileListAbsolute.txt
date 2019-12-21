@@ -61,3 +61,10 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\U
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.Service.CustomOC.V8\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.Service.CustomOC.V8\obj\Debug\CustomDirectory.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.Service.CustomOC.V8\obj\Debug\CustomDirectory.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.Service.CustomOC.V8\bin\Debug\CustomDirectory.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.Service.CustomOC.V8\bin\Debug\CustomDirectory.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.Service.CustomOC.V8\bin\Debug\MethodsDescriptions.xml
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.Service.CustomOC.V8\bin\Debug\SharedInterfaceLib.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.Service.CustomOC.V8\obj\Debug\Ultimus.Service.CustomOC.V8.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.Service.CustomOC.V8\obj\Debug\CustomDirectory.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.Service.CustomOC.V8\obj\Debug\CustomDirectory.pdb

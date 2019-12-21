@@ -29,3 +29,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Badge\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Badge\obj\Debug\Presale.Process.Badge.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Badge\obj\Debug\Presale.Process.Badge.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.Badge.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.Badge.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.Badge\obj\Debug\Presale.Process.Badge.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.Badge\obj\Debug\Presale.Process.Badge.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.Badge\obj\Debug\Presale.Process.Badge.pdb

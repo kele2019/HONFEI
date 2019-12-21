@@ -113,3 +113,11 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\U
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.UWF.Home2\obj\Debug\GenerateResource.write.1.tlog
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.UWF.Home2\obj\Debug\Ultimus.UWF.Home2.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.UWF.Home2\obj\Debug\Ultimus.UWF.Home2.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Ultimus.UWF.Home2.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Ultimus.UWF.Home2.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Home2\obj\Debug\Ultimus.UWF.Home2.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Home2\obj\Debug\Ultimus.UWF.Home2.Resources.en_us.resources
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Home2\obj\Debug\Ultimus.UWF.Home2.Resources.zh_cn.resources
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Home2\obj\Debug\Ultimus.UWF.Home2.csproj.GenerateResource.Cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Home2\obj\Debug\Ultimus.UWF.Home2.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Home2\obj\Debug\Ultimus.UWF.Home2.pdb

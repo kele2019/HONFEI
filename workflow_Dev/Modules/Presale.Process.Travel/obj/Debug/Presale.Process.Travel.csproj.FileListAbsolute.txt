@@ -23,3 +23,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\P
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presale.Process.Travel.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presale.Process.Travel.pdb
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.Travel\obj\Debug\Presale.Process.Travel.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.Travel\obj\Debug\Presale.Process.Travel.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.Travel\obj\Debug\Presale.Process.Travel.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.Travel.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.Travel.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.Travel\obj\Debug\Presale.Process.Travel.pdb

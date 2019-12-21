@@ -23,3 +23,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\P
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presale.Process.PaymentRequestForm.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presale.Process.PaymentRequestForm.pdb
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.PaymentRequestForm\obj\Debug\Presale.Process.PaymentRequestForm.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.PaymentRequestForm\obj\Debug\Presale.Process.PaymentRequestForm.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.PaymentRequestForm\obj\Debug\Presale.Process.PaymentRequestForm.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.PaymentRequestForm.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.PaymentRequestForm.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.PaymentRequestForm\obj\Debug\Presale.Process.PaymentRequestForm.pdb

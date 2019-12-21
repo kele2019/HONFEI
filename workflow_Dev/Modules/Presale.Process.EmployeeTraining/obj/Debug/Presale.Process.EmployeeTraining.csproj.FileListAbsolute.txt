@@ -28,3 +28,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.EmployeeTraining\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.EmployeeTraining\obj\Debug\Presale.Process.EmployeeTraining.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.EmployeeTraining\obj\Debug\Presale.Process.EmployeeTraining.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.EmployeeTraining.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.EmployeeTraining.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.EmployeeTraining\obj\Debug\Presale.Process.EmployeeTraining.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.EmployeeTraining\obj\Debug\Presale.Process.EmployeeTraining.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.EmployeeTraining\obj\Debug\Presale.Process.EmployeeTraining.pdb

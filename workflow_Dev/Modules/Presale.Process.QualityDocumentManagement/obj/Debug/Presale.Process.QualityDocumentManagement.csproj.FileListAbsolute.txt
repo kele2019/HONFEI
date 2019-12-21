@@ -23,3 +23,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.QualityDocumentManagement\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.QualityDocumentManagement\obj\Debug\Presale.Process.QualityDocumentManagement.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.QualityDocumentManagement\obj\Debug\Presale.Process.QualityDocumentManagement.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.QualityDocumentManagement.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.QualityDocumentManagement.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.QualityDocumentManagement\obj\Debug\Presale.Process.QualityDocumentManagement.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.QualityDocumentManagement\obj\Debug\Presale.Process.QualityDocumentManagement.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.QualityDocumentManagement\obj\Debug\Presale.Process.QualityDocumentManagement.pdb

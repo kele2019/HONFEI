@@ -23,3 +23,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.OT\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.OT\obj\Debug\Presale.Process.OT.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.OT\obj\Debug\Presale.Process.OT.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.OT.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.OT.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.OT\obj\Debug\Presale.Process.OT.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.OT\obj\Debug\Presale.Process.OT.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.OT\obj\Debug\Presale.Process.OT.pdb

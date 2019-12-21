@@ -43,3 +43,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.PersonalExpense\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.PersonalExpense\obj\Debug\Presale.Process.PersonalExpense.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.PersonalExpense\obj\Debug\Presale.Process.PersonalExpense.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Bin\Presale.Process.PersonalExpense.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Bin\Presale.Process.PersonalExpense.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.PersonalExpense\obj\Debug\Presale.Process.PersonalExpense.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.PersonalExpense\obj\Debug\Presale.Process.PersonalExpense.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.PersonalExpense\obj\Debug\Presale.Process.PersonalExpense.pdb

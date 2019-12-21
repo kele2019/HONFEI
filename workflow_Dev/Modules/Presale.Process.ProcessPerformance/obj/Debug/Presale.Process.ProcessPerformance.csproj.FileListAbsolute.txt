@@ -23,3 +23,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.ProcessPerformance\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.ProcessPerformance\obj\Debug\Presale.Process.ProcessPerformance.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.ProcessPerformance\obj\Debug\Presale.Process.ProcessPerformance.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.ProcessPerformance.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.ProcessPerformance.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.ProcessPerformance\obj\Debug\Presale.Process.ProcessPerformance.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.ProcessPerformance\obj\Debug\Presale.Process.ProcessPerformance.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.ProcessPerformance\obj\Debug\Presale.Process.ProcessPerformance.pdb

@@ -23,3 +23,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.VoluntaryResignation\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.VoluntaryResignation\obj\Debug\Presale.Process.VoluntaryResignation.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.VoluntaryResignation\obj\Debug\Presale.Process.VoluntaryResignation.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.VoluntaryResignation.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.VoluntaryResignation.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.VoluntaryResignation\obj\Debug\Presale.Process.VoluntaryResignation.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.VoluntaryResignation\obj\Debug\Presale.Process.VoluntaryResignation.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.VoluntaryResignation\obj\Debug\Presale.Process.VoluntaryResignation.pdb

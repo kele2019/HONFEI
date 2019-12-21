@@ -33,3 +33,8 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\bin\Presa
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.AssetBorrowing\obj\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.AssetBorrowing\obj\Debug\Presale.Process.AssetBorrowing.dll
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Presale.Process.AssetBorrowing\obj\Debug\Presale.Process.AssetBorrowing.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.AssetBorrowing.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.AssetBorrowing.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.AssetBorrowing\obj\Debug\Presale.Process.AssetBorrowing.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.AssetBorrowing\obj\Debug\Presale.Process.AssetBorrowing.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.AssetBorrowing\obj\Debug\Presale.Process.AssetBorrowing.pdb
