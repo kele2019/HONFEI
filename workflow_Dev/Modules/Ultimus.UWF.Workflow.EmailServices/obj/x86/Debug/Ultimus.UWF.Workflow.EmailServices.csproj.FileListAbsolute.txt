@@ -28,3 +28,5 @@ C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\U
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\obj\x86\Debug\Ultimus.UWF.Workflow.EmailServices.exe
 C:\Solution\NewHonFei\HONFEIV2\123HongFei\trunk\新版本\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\obj\x86\Debug\Ultimus.UWF.Workflow.EmailServices.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\obj\x86\Debug\Ultimus.UWF.Workflow.EmailServices.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\obj\x86\Debug\Ultimus.UWF.Workflow.EmailServices.exe

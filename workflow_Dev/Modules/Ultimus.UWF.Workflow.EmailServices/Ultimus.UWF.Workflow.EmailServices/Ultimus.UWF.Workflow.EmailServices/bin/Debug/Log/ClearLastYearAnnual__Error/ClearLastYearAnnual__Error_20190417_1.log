@@ -1,0 +1,42 @@
+BeginLog:2019-04-17 10:01:41 1853
+===========================
+ErrorMessage:A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.)
+ErrorSource:.Net SqlClient Data Provider
+ErrorStackTrace:   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at MyLib.SqlHelper.ExecuteDataTable(DbCommand cmd)
+   at MyLib.SqlHelper.ExecuteDataTable(String commandText)
+   at Ultimus.UWF.Workflow.EmailServices.ClearLastYearOTJob.ClearOTLastYear() in D:\Armstrong\Ultimus.UWF.Workflow.EmailServices\ClearLastYearOTJob.cs:line 31
+   at Ultimus.UWF.Workflow.EmailServices.ClearLastYearOTJob.OnStart() in D:\Armstrong\Ultimus.UWF.Workflow.EmailServices\ClearLastYearOTJob.cs:line 19
+===========================
+EndLog
+
+BeginLog:2019-04-17 10:01:41 1980
+===========================
+ErrorMessage:A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.)
+ErrorSource:.Net SqlClient Data Provider
+ErrorStackTrace:   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at MyLib.SqlHelper.ExecuteDataTable(DbCommand cmd)
+   at MyLib.SqlHelper.ExecuteDataTable(String commandText)
+   at Ultimus.UWF.Workflow.EmailServices.ClearLastYearAnnualJob.ClearPrevYearLevel() in D:\Armstrong\Ultimus.UWF.Workflow.EmailServices\ClearLastYearAnnualJob.cs:line 32
+   at Ultimus.UWF.Workflow.EmailServices.ClearLastYearAnnualJob.OnStart() in D:\Armstrong\Ultimus.UWF.Workflow.EmailServices\ClearLastYearAnnualJob.cs:line 21
+===========================
+EndLog
+

@@ -1,0 +1,11 @@
+BeginLog:2019-11-14 16:19:53 2989
+===========================
+ErrorMessage:列“DEPARTMENT”不属于表 。
+ErrorSource:System.Data
+ErrorStackTrace:   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 Ultimus.UWF.Workflow.EmailServices.EmployeePerformanceJob.OverrPerformanceData() 位置 C:\解压工具\Ultimus.UWF.Workflow.EmailServices\EmployeePerformanceJob.cs:行号 144
+   在 Ultimus.UWF.Workflow.EmailServices.EmployeePerformanceJob.OnStart() 位置 C:\解压工具\Ultimus.UWF.Workflow.EmailServices\EmployeePerformanceJob.cs:行号 20
+===========================
+EndLog
+

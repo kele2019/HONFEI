@@ -1,0 +1,18 @@
+BeginLog:2019-10-28 22:55:58 1695
+===========================
+ErrorMessage:在 INSERT 的 SET 子句或列列表中多次指定了列名“DeptManagerDate”。在同一子句中不得为一个列分配多个值。请修改该子句，以确保一个列仅更新一次。如果此语句在视图中更新或插入列，列别名可能掩盖您的代码中的重复情况。
+ErrorSource:.Net SqlClient Data Provider
+ErrorStackTrace:   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 MyLib.SqlHelper.ExecuteNonQuery(DbCommand cmd)
+   在 MyLib.SqlHelper.ExecuteNonQuery(String commandText)
+   在 Ultimus.UWF.Workflow.EmailServices.EmployeePerformanceJob.OverrPerformanceData() 位置 C:\解压工具\Ultimus.UWF.Workflow.EmailServices\EmployeePerformanceJob.cs:行号 128
+   在 Ultimus.UWF.Workflow.EmailServices.EmployeePerformanceJob.OnStart() 位置 C:\解压工具\Ultimus.UWF.Workflow.EmailServices\EmployeePerformanceJob.cs:行号 20
+===========================
+EndLog
+
