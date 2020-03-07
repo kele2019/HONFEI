@@ -13,6 +13,7 @@
     <RootNamespace>Presale.Process.EmployeePerformanceReport</RootNamespace>
     <AssemblyName>Presale.Process.EmployeePerformanceReport</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -145,6 +146,13 @@
       <DependentUpon>PerformanceReportPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingManagementPage.aspx.cs">
+      <DependentUpon>RatingManagementPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RatingManagementPage.aspx.designer.cs">
+      <DependentUpon>RatingManagementPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="YearEndComplete.aspx.cs">
       <DependentUpon>YearEndComplete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -179,6 +187,7 @@
     <Content Include="MidYearUpdate.aspx" />
     <Content Include="NewRequest.aspx" />
     <Content Include="PerformanceReportPage.aspx" />
+    <Content Include="RatingManagementPage.aspx" />
     <Content Include="standar.png" />
     <Content Include="YearEndComplete.aspx" />
     <Content Include="YearEndDepartmentApproval.aspx" />
