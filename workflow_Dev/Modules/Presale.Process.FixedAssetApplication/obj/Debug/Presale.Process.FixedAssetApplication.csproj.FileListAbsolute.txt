@@ -1,0 +1,5 @@
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.FixedAssetApplication.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.FixedAssetApplication.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.FixedAssetApplication\obj\Debug\Presale.Process.FixedAssetApplication.csprojResolveAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.FixedAssetApplication\obj\Debug\Presale.Process.FixedAssetApplication.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.FixedAssetApplication\obj\Debug\Presale.Process.FixedAssetApplication.pdb
