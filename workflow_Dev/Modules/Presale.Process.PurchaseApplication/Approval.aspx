@@ -187,6 +187,20 @@
                     </tr>
                 </table>
                 <table class="table table-condensed table-bordered">
+
+                  <tr>
+                    <td class="td-label">Department  budget of this year</td>
+                    <td colspan="3" class="td-content" >
+                    <asp:Label runat="server"  ID="read_IsBudgetyear" ></asp:Label>
+                    </td>
+                    </tr>
+                     <tr>
+                    <td class="td-label">Budget Comments</td>
+                    <td colspan="3">
+                     <asp:TextBox runat="server" ID="read_BudetComments" ReadOnly="true" TextMode="MultiLine" Rows="3" Width="98%"></asp:TextBox>
+                    </td>
+                    </tr>
+
                     <tr>
                         <td class="td-label" style="text-align:center">
                             <p style="text-align:center">Single Supplier</p>

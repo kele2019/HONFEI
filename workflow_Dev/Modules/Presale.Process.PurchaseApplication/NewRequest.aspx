@@ -41,8 +41,12 @@
                 alert("Please select currency");
                 return false;
             }
-            if ($("#fld_VAT") == "") {
+            if ($("#fld_VAT").val() == "") {
                 alert("Please select VAT");
+                return false;
+            }
+            if ($("#fld_IsBudgetyear").val() == "") {
+                alert("Please select Budget of this year");
                 return false;
             }
             var summary = "Purchase Request Process";
@@ -74,6 +78,12 @@
             }
             if ($("#fld_VAT").val() == "No") {
                 $("#vat2").attr("checked", true);
+            }
+            if ($("#fld_IsBudgetyear").val() == "Yes") {
+                $("#RadioButton1").attr("checked", true);
+            }
+            if ($("#fld_IsBudgetyear").val() == "No") {
+                $("#RadioButton2").attr("checked", true);
             }
             $("#costCenter").val($("#fld_CostCenterNumber").val());
             $("#currency").val($("#fld_Currency").val());
@@ -111,8 +121,27 @@
                     $("#fld_VAT").val("");
                 }
             }
-          
         }
+
+        function getButtonCheck1(obj, index) {
+            if (index == "1") {
+                if ($(obj).attr("checked")) {
+                    $("#fld_IsBudgetyear").val("Yes");
+                }
+                else {
+                    $("#fld_IsBudgetyear").val("");
+                }
+            }
+            if (index == "2") {
+                if ($(obj).attr("checked")) {
+                    $("#fld_IsBudgetyear").val("No");
+                }
+                else {
+                    $("#fld_IsBudgetyear").val("");
+                }
+            }
+        }
+
         function costCenter_onclick(obj) {
             var digStr = "dialogHeight:500px;dialogWidth:850px;";
             var ReturnValue = window.showModalDialog("./CostCenter.aspx", "", digStr);
@@ -357,8 +386,27 @@
                         </td>
                         <td></td>
                     </tr>
+                   
+
                 </table>
                  <table class="table table-condensed table-bordered">
+
+                  <tr>
+                    <td class="td-label">Department  budget of this year</td>
+                    <td colspan="3" class="td-content" >
+                    <asp:RadioButton ID="RadioButton1" runat="server" GroupName="Vatbudget" Text="Yes" onclick="getButtonCheck1(this,1)" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <asp:RadioButton ID="RadioButton2" runat="server" GroupName="Vatbudget" Text="No" onclick="getButtonCheck1(this,2)" />
+                    <asp:TextBox runat="server"  ID="fld_IsBudgetyear" style="display:none;"></asp:TextBox>
+                    </td>
+                    </tr>
+                     <tr>
+                    <td class="td-label">Budget Comments</td>
+                    <td colspan="3">
+                     <asp:TextBox runat="server" ID="fld_BudetComments" TextMode="MultiLine" Rows="3" Width="98%"></asp:TextBox>
+                    </td>
+                    </tr>
+
+
                     <tr>
                         <td class="td-label" style="text-align:center">
                             <p style="text-align:center">Single Supplier</p>
