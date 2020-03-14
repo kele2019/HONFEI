@@ -11,19 +11,22 @@
 
      <script type="text/javascript">
          $(document).ready(function () {
-
              $(".savebtn").bind("click", function () {
                  if (confirm("Confirm Save Data ?")) {
                      $("#btnSave").click();
-                                  }
-//                 layer.confirm('Confirm Save Data!', {
-//                     btn: ['Confirm', 'Cancel']
-//                 }, function (index, layero) {
-//                     $("#btnSave").click();
-//                 }
-             //  );
+                 }
+                 //                 layer.confirm('Confirm Save Data!', {
+                 //                     btn: ['Confirm', 'Cancel']
+                 //                 }, function (index, layero) {
+                 //                     $("#btnSave").click();
+                 //                 }
+                 //  );
 
              });
+             if ($("#hdEdit").val() == "N") {
+                 $(".savebtn").hide();
+                 $(".tblist").find('input[type="text"]').attr("disabled", "disabled");
+             }
          });
          function CompleteData(obj) {
            
@@ -61,25 +64,34 @@
        <td  class="td-label">
       Year
        </td>
-        <td  class="td-content"  style="width:85%">
-      <asp:DropDownList runat="server" Width="35%" ID="dropYear">
+        <td  class="td-content" >
+      <asp:DropDownList runat="server" Width="95%" ID="dropYear">
      </asp:DropDownList>
-       <asp:Button runat="server" ID="btnSearch"  style="margin-left:40px;" CssClass="btn" 
+     
+       </td>
+        <td  class="td-label">
+      Department
+       </td>
+         <td  class="td-content"  style="width:35%">
+            <asp:DropDownList runat="server" Width="65%" ID="DropDepartment">
+            </asp:DropDownList>
+           <asp:Button runat="server" ID="btnSearch"  style="margin-left:4px;" CssClass="btn" 
                 Text="Search" onclick="btnSearch_Click"  />
                 <input type="button" value="Save"  id="savebtn2" class="savebtn btn btn-primary" style="float:right;" />
-       </td>
+         </td>
        </tr>
         </table>
 
 
          <div class="row">
-         <table class="table table-condensed table-bordered">
+         <table class="table table-condensed table-bordered tblist">
           <tr>
-         <td class="banner"  colspan="3">Rating List</td>
+         <td class="banner"  colspan="4">Rating List</td>
          </tr>
          <tr>
          <th>No</th>
          <th>UserName</th>
+         <th>DepartmentName</th>
          <th>Rating Value</th>
          </tr>
 
@@ -90,16 +102,17 @@
           <asp:HiddenField runat="server" ID="hdUserLoginName" Value='<%#Eval("LOGINNAME") %>' />
           </td>
          <td><%#Eval("UserFullName")%></td>
+         <td><%#Eval("DEPARTMENTNAME")%></td>
          <td><asp:TextBox runat="server" ID="txtRating" Text='<%#Eval("RatingValue")%>' ></asp:TextBox></td>
-
          </tr>
          </ItemTemplate>
          </asp:Repeater>
 
         
         <tr>
-        <td colspan="3" style="text-align:center">
+        <td colspan="4" style="text-align:center">
          <input type="button" value="Save"  id="savebtn1" class="savebtn btn btn-primary"   />
+         <asp:HiddenField runat="server" ID="hdEdit" />
          <asp:Button runat="server"  ID="btnSave" Text="Save" CssClass="btn btn-primary"  style="display:none" onclick="btnSave_Click"/>
         </td>
         </tr>

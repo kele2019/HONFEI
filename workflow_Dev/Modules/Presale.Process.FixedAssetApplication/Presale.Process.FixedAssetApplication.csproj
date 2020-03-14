@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Approval.aspx" />
+    <Content Include="Item.aspx" />
     <Content Include="NewRequest.aspx" />
     <Content Include="Approval2.aspx" />
   </ItemGroup>
@@ -82,6 +83,13 @@
     </Compile>
     <Compile Include="Approval.aspx.designer.cs">
       <DependentUpon>Approval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Item.aspx.cs">
+      <DependentUpon>Item.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Item.aspx.designer.cs">
+      <DependentUpon>Item.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewRequest.aspx.cs">
       <DependentUpon>NewRequest.aspx</DependentUpon>

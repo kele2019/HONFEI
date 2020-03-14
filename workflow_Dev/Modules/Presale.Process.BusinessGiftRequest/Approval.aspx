@@ -98,6 +98,7 @@
                     <tr>
                         <th width="1%"><p style="text-align:center">No.</p></th>
                         <th ><p style="text-align:center">Name</p></th>
+                        <th ><p style="text-align:center">Quantity</p></th>
                         <th ><p style="text-align:center">Reasons</p></th>
                    <%--     <th width="10%"><p style="text-align:center">Vendor</p></th>
                         <th width="9%"><p style="text-align:center">Request Date</p></th>
@@ -119,6 +120,9 @@
                                 <td>
                                     <asp:Label runat="server" ID="read_GiftName" Text='<%#Eval("GiftName") %>'   ></asp:Label>
                                 </td>
+                                  <td>
+                                    <asp:Label runat="server" ID="read_Giftquality" Text='<%#Eval("Giftquality") %>'   ></asp:Label>
+                                </td>
                                 <td>
                                     <asp:Label runat="server" ID="read_GiftComments" Text='<%#Eval("GiftComments") %>' ></asp:Label>
                                 </td>
@@ -127,8 +131,17 @@
                     </asp:Repeater>
                     </tbody>
                 </table>
+                    <table class="table table-condensed table-bordered">
+                  <tr>
+                    <td class="td-label" style="text-align:center">Remark</td>
+                    <td colspan="3" class="td-content" >
+                    <asp:TextBox ID="read_GiftComments" TextMode="MultiLine" Rows="5" runat="server" Width="98%" ReadOnly="true"></asp:TextBox>
+                    </td>
+                    </tr>
+
+                     </table>
             </div>
-            <div class="row">
+            <div class="row hidden">
                 <attach:attachments id="Attachments1" runat="server" ReadOnly="true" ></attach:attachments>
             </div>
             <div class="row">

@@ -142,6 +142,7 @@
                     <tr>
                         <th width="1%"><p style="text-align:center">No.</p></th>
                         <th ><p style="text-align:center">Name</p></th>
+                        <th ><p style="text-align:center">Quantity</p></th>
                         <th ><p style="text-align:center">Reasons</p></th>
                    <%--     <th width="10%"><p style="text-align:center">Vendor</p></th>
                         <th width="9%"><p style="text-align:center">Request Date</p></th>
@@ -165,6 +166,9 @@
                                     <asp:DropDownList runat="server" ID="Item" Class="item" onchange="changeRat(this)"  CssClass="validate[required]"   style="width:99%"></asp:DropDownList>
                                     <%--<asp:TextBox runat="server" ID="fld_Items" Text='<%#Eval("Items") %>' style="display:none;"></asp:TextBox>--%>
                                     <asp:TextBox runat="server" ID="fld_GiftName" Text='<%#Eval("GiftName") %>'  style="display:none;"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:TextBox runat="server" ID="fld_Giftquality" Text='<%#Eval("Giftquality") %>'  CssClass="validate[required]"  ></asp:TextBox>
                                 </td>
                                 <td>
                                     <asp:TextBox runat="server" ID="fld_GiftComments" Text='<%#Eval("GiftComments") %>' CssClass="validate[required]" width="95%"></asp:TextBox>
@@ -202,12 +206,25 @@
                         <td colspan="2" style="text-align:left">
                             <asp:Button ID="btnAdd" runat="server" Text="add" CssClass="btn" CausesValidation="false" OnClick="btnAdd_Click"/>
                         </td>
-                        <td colspan="2">
+                        <td colspan="3">
                            </td>
                     </tr>
+                     
                 </table>
+
+                 <table class="table table-condensed table-bordered">
+                  <tr>
+                    <td class="td-label" style="text-align:center">Remark</td>
+                    <td colspan="3" class="td-content" >
+                    <asp:TextBox ID="fld_GiftComments" TextMode="MultiLine" Rows="5" runat="server" Width="98%" ></asp:TextBox>
+                    </td>
+                    </tr>
+
+                     </table>
+
+
             </div>
-            <div class="row">
+            <div class="row hidden">
                 <attach:attachments id="Attachments1" runat="server"></attach:attachments>
             </div>
             <div class="row">

@@ -121,7 +121,7 @@ namespace Presale.Process.BusinessGiftRequest
 		{
 			if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
 			{
-                string strSql = "select DicCode,DicText from COM_DICTIONRY where type = 'ITAsstesName'";
+                string strSql = "select DicCode,DicText from COM_DICTIONRY where type = 'GiftData'";
                 DataTable dtAssetsInfo = DataAccess.Instance("BizDB").ExecuteDataTable(strSql);
 
                 DropDownList ItemList = e.Item.FindControl("Item") as DropDownList;

@@ -392,7 +392,7 @@
                  <table class="table table-condensed table-bordered">
 
                   <tr>
-                    <td class="td-label">Department  budget of this year</td>
+                    <td class="td-label" style="text-align:center">Department  budget of this year</td>
                     <td colspan="3" class="td-content" >
                     <asp:RadioButton ID="RadioButton1" runat="server" GroupName="Vatbudget" Text="Yes" onclick="getButtonCheck1(this,1)" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                     <asp:RadioButton ID="RadioButton2" runat="server" GroupName="Vatbudget" Text="No" onclick="getButtonCheck1(this,2)" />
@@ -400,7 +400,7 @@
                     </td>
                     </tr>
                      <tr>
-                    <td class="td-label">Budget Comments</td>
+                    <td class="td-label" style="text-align:center">Budget Comments</td>
                     <td colspan="3">
                      <asp:TextBox runat="server" ID="fld_BudetComments" TextMode="MultiLine" Rows="3" Width="98%"></asp:TextBox>
                     </td>

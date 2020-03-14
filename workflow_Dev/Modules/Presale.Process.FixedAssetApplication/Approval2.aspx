@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Approval2.aspx.cs" Inherits="Presale.Process.FixedAssetApplication.Approval" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Approval2.aspx.cs" Inherits="Presale.Process.FixedAssetApplication.Approval2" %>
 
 <%@ Register Src="/Modules/Ultimus.UWF.Form.ProcessControl/UserInfo.ascx" TagName="UserInfo" TagPrefix="ui" %>
 <%@ Register Src="/Modules/Ultimus.UWF.Form.ProcessControl/ApprovalHistory.ascx" TagName="ApprovalHistory" TagPrefix="ah" %>
@@ -36,7 +36,7 @@
     <form id="form1" runat="server">
     <div id="myDiv" class="container">
             <div class="row">
-                <ui:userinfo id="UserInfo1" processtitle="Fixed Assets Request Process" processprefix="FA" tablename="PROC_FixedAssets"
+                <ui:userinfo id="UserInfo1" processtitle="Fixed Assets Disposal Request Process" processprefix="FA" tablename="PROC_FixedAssets"
                     runat="server"  ></ui:userinfo>
                 
             </div>

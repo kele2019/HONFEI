@@ -35,13 +35,34 @@ namespace Presale.Process.EmployeePerformanceReport
          else
              dropYear.Items.Insert(0, new ListItem(DateTime.Now.Year.ToString(), DateTime.Now.Year.ToString()));
 
+         string strsqld = "select * from ORG_DEPARTMENT where PARENTID=1";
+         DataTable dtd = DataAccess.Instance("BizDB").ExecuteDataTable(strsqld);
+         if (dtd.Rows.Count > 0)
+         {
+             DropDepartment.DataSource = dtd;
+             DropDepartment.DataTextField = "DEPARTMENTNAME";
+             DropDepartment.DataValueField = "DEPARTMENTID";
+             DropDepartment.DataBind();
+             DropDepartment.Items.Insert(0, new ListItem("--Pls Select--", ""));
+         }
+
+
         }
         public void DataBindPage()
         {
             string SelectYear = dropYear.SelectedItem.Value;
-            string strsql = @"select A.*, A.USERNAME+ '('+A.EXT04+')' UserFullName,B.RatingValue from (
+            string strsql = @"select AAA.*,BBB.DEPARTMENTID,BBB.DEPARTMENTNAME from 
+( select A.*, A.USERNAME+ '('+A.EXT04+')' UserFullName,B.RatingValue from (
 select * from ORG_USER where ISACTIVE=1) A left join
  (select * from  COM_UserRatingData where RatingYear='" + SelectYear + "' ) B on A.LOGINNAME=REPLACE(B.LOGINNAME,'/','\\')";
+           strsql+=@" ) AAA left join 
+ ( select AA.*,BB.DEPARTMENTNAME from (
+  select OJ.USERID,  (case PARENTID when '1' then OD.DEPARTMENTID else OD.PARENTID end)  DEPARTMENTID 
+   from ORG_JOB  OJ left join ORG_DEPARTMENT OD on OJ.DEPARTMENTID=OD.DEPARTMENTID)
+   AA left join ORG_DEPARTMENT BB on AA.DEPARTMENTID=BB.DEPARTMENTID)BBB on AAA.USERID=BBB.USERID
+   where 1=1";
+            if(DropDepartment.SelectedItem.Value!="")
+                strsql += " and BBB.DEPARTMENTID=" + DropDepartment.SelectedItem.Value;
             DataTable dtRating=DataAccess.Instance("BizDB").ExecuteDataTable(strsql);
             if (dtRating.Rows.Count > 0)
                 RPList.DataSource = dtRating;
@@ -52,6 +73,11 @@ select * from ORG_USER where ISACTIVE=1) A left join
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             DataBindPage();
+            if(dropYear.SelectedValue==DateTime.Now.Year.ToString())
+            hdEdit.Value = "Y";
+            else
+            hdEdit.Value = "N";
+
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {

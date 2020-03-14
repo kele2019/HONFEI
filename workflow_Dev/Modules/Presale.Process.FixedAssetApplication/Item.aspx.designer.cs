@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace Presale.Process.BusinessGiftRequest {
+namespace Presale.Process.FixedAssetApplication {
     
     
-    public partial class Approval {
+    public partial class Item {
         
         /// <summary>
         /// Head1 控件。
@@ -31,93 +31,75 @@ namespace Presale.Process.BusinessGiftRequest {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// UserInfo1 控件。
+        /// code 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.UserControl UserInfo1;
+        protected global::System.Web.UI.WebControls.TextBox code;
         
         /// <summary>
-        /// read_detail_PROC_BusinessGift_DT 控件。
+        /// name 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater read_detail_PROC_BusinessGift_DT;
+        protected global::System.Web.UI.WebControls.TextBox name;
         
         /// <summary>
-        /// read_GiftComments 控件。
+        /// btnSearch 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox read_GiftComments;
+        protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
-        /// Attachments1 控件。
+        /// ItemList 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.UserControl Attachments1;
+        protected global::System.Web.UI.WebControls.Repeater ItemList;
         
         /// <summary>
-        /// ApprovalHistory1 控件。
+        /// AspNetPager1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.UserControl ApprovalHistory1;
+        protected global::Wuqi.Webdiyer.AspNetPager AspNetPager1;
         
         /// <summary>
-        /// ButtonList1 控件。
+        /// ItemCodeValue 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.UserControl ButtonList1;
+        protected global::System.Web.UI.WebControls.TextBox ItemCodeValue;
         
         /// <summary>
-        /// fld_TRSummary 控件。
+        /// ItemNameValue 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fld_TRSummary;
+        protected global::System.Web.UI.WebControls.TextBox ItemNameValue;
         
         /// <summary>
-        /// hdIncident 控件。
+        /// btnSave 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdIncident;
-        
-        /// <summary>
-        /// hdPrint 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdPrint;
-        
-        /// <summary>
-        /// hdUrgeTask 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdUrgeTask;
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }

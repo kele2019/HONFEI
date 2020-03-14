@@ -16,7 +16,7 @@
     <script type="text/javascript">
         function beforeSubmit() {
 
-            var summary = "Fixed Assets Request Process";
+            var summary = "Fixed Assets Disposal Request Process";
             $("#UserInfo1_fld_PROCESSSUMMARY").val(summary);
             return true;
         }
@@ -41,10 +41,21 @@
         });
        
         function beforeSave() {
-            var summary = "Fixed Assets Request Process";
+            var summary = "Fixed Assets Disposal Request Process";
             $("#UserInfo1_fld_PROCESSSUMMARY").val(summary);
             $("#fld_TRSummary").val(summary);
             return true;
+        }
+        function openITEMNO(obj) {
+            var digStr = "dialogHeight:600px;dialogWidth:850px;";
+            var ReturnValue = window.showModalDialog("./Item.aspx", "", digStr);
+            if (ReturnValue != null) {
+                var purchaseNo = eval("(" + ReturnValue + ")");
+                var ItemCode = purchaseNo[0].ItemCodeValue;
+                var ItemName = purchaseNo[1].ItemNameValue;
+                $(obj).val(ItemName+"("+ItemCode+")");
+               // $(obj).parent().next().children().val(ItemName);
+            }
         }
     </script>
 </head>
@@ -52,7 +63,7 @@
     <form id="form1" runat="server">
      <div id="myDiv" class="container">
             <div class="row">
-                <ui:userinfo id="UserInfo1" processtitle="Fixed Assets Request Process" processprefix="FA" tablename="PROC_FixedAssets"
+                <ui:userinfo id="UserInfo1" processtitle="Fixed Assets Disposal Request Process" processprefix="FA" tablename="PROC_FixedAssets"
                     runat="server"  ></ui:userinfo>
                <%--<asp:TextBox runat="server" ID="fld_ApplicantUserName" style="display:none;"></asp:TextBox>
                 <asp:TextBox runat="server" ID="fld_DepartmentManager" style="display:none;"></asp:TextBox>--%>
@@ -74,7 +85,7 @@
                         <p style="text-align:center">FA Name</p>
                         </td>
                         <td class="td-content">
-                            <asp:TextBox runat="server" ID="fld_FAName"  CssClass="validate[required]" Width="95%"  style="display:block;"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="fld_FAName"  CssClass="validate[required]" Width="95%"  style="display:block;" onclick="openITEMNO(this)"></asp:TextBox>
                         </td>
                           <td class="td-label">
                         <p style="text-align:center">FA Tag No.</p>

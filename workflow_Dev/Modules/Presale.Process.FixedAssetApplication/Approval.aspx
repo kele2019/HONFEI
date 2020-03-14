@@ -36,7 +36,7 @@
     <form id="form1" runat="server">
     <div id="myDiv" class="container">
             <div class="row">
-                <ui:userinfo id="UserInfo1" processtitle="Fixed Assets Request Process" processprefix="FA" tablename="PROC_FixedAssets"
+                <ui:userinfo id="UserInfo1" processtitle="Fixed Assets Disposal Request Process" processprefix="FA" tablename="PROC_FixedAssets"
                     runat="server"  ></ui:userinfo>
                 
             </div>
