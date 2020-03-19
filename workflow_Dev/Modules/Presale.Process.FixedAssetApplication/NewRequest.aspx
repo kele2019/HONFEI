@@ -53,7 +53,8 @@
                 var purchaseNo = eval("(" + ReturnValue + ")");
                 var ItemCode = purchaseNo[0].ItemCodeValue;
                 var ItemName = purchaseNo[1].ItemNameValue;
-                $(obj).val(ItemName+"("+ItemCode+")");
+                $(obj).val(ItemCode);
+                $("#fld_FAModel").val(ItemName);
                // $(obj).parent().next().children().val(ItemName);
             }
         }
