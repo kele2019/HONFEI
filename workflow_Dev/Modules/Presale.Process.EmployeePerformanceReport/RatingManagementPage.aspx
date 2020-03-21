@@ -23,7 +23,7 @@
                  //  );
 
              });
-             if ($("#hdEdit").val() == "N") {
+             if ($("#hdEdit").val() != "Y") {
                  $(".savebtn").hide();
                  $(".tblist").find('input[type="text"]').attr("disabled", "disabled");
              }

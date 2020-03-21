@@ -15,6 +15,9 @@
         function submitPageReview(obj) {
             $("#ButtonList1_btnSubmit").click();
         }
+        function submitPageReject(obj) {
+            $("#ButtonList1_btnBack").click();
+        }
         $(document).ready(function () {
             if (request("type") == "myapproval") {
                 $("#btnDiv").hide();
@@ -100,6 +103,8 @@
 
                <div class="row" id="btnDiv" style="margin-left:50%">
             <input type="button" value="Review" class="btn" onclick="submitPageReview()"  />
+            <input type="button" value="Reject" class="btn" onclick="submitPageReject()" style="margin-left:15px;"  />
+
              </div>
 
         </div>

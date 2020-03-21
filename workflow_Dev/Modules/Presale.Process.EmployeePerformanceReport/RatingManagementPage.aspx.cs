@@ -73,7 +73,7 @@ select * from ORG_USER where ISACTIVE=1) A left join
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             DataBindPage();
-            if(dropYear.SelectedValue==DateTime.Now.Year.ToString())
+            if(dropYear.SelectedValue==(DateTime.Now.Year-1).ToString())
             hdEdit.Value = "Y";
             else
             hdEdit.Value = "N";
