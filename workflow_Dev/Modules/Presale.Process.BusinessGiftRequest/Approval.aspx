@@ -10,6 +10,15 @@
     <meta http-equiv="X-UA-Compatible"  content="IE=EmulateIE8" />
     <title>Business Gift Process</title>
     <script type="text/javascript" src="/Assets/js/common.js"></script>
+      <script type="text/javascript">
+          $(document).ready(function () {
+              var StepName = request("StepName");
+              var stepnamen = decodeURI(StepName)
+              if (stepnamen == "Admin confirm") {
+                  $("#ButtonList1_btnSubmit").val("Confirm");
+              }
+          });
+      </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -98,8 +107,8 @@
                     <tr>
                         <th width="1%"><p style="text-align:center">No.</p></th>
                         <th ><p style="text-align:center">Name</p></th>
-                        <th ><p style="text-align:center">Quantity</p></th>
-                        <th ><p style="text-align:center">Reasons</p></th>
+                        <th ><p style="text-align:center;width:10%;">Quantity</p></th>
+                        <th ><p style="text-align:center;width:50%;">Reasons</p></th>
                    <%--     <th width="10%"><p style="text-align:center">Vendor</p></th>
                         <th width="9%"><p style="text-align:center">Request Date</p></th>
                         <th width="9%"><p style="text-align:center">Lead Time</p></th>
@@ -107,7 +116,6 @@
                         <th width="5%"><p style="text-align:center">Unit</p></th>
                         <th width="4%"><p style="text-align:center">Qty.</p></th>
                         <th width="10%"><p style="text-align:center">Amount</p></th>--%>
-                        <th ></th>
                     </tr>
                     <tbody id="detail">
                     <asp:Repeater runat="server" ID="read_detail_PROC_BusinessGift_DT" >

@@ -142,8 +142,8 @@
                     <tr>
                         <th width="1%"><p style="text-align:center">No.</p></th>
                         <th ><p style="text-align:center">Name</p></th>
-                        <th ><p style="text-align:center">Quantity</p></th>
-                        <th ><p style="text-align:center">Reasons</p></th>
+                        <th width="10%" ><p style="text-align:center">Quantity</p></th>
+                        <th width="50%"><p style="text-align:center">Reasons</p></th>
                    <%--     <th width="10%"><p style="text-align:center">Vendor</p></th>
                         <th width="9%"><p style="text-align:center">Request Date</p></th>
                         <th width="9%"><p style="text-align:center">Lead Time</p></th>
@@ -168,7 +168,7 @@
                                     <asp:TextBox runat="server" ID="fld_GiftName" Text='<%#Eval("GiftName") %>'  style="display:none;"></asp:TextBox>
                                 </td>
                                 <td>
-                                    <asp:TextBox runat="server" ID="fld_Giftquality" Text='<%#Eval("Giftquality") %>'  CssClass="validate[required]"  ></asp:TextBox>
+                                    <asp:TextBox runat="server" ID="fld_Giftquality" Text='<%#Eval("Giftquality") %>'  CssClass="validate[required]"  width="85%" ></asp:TextBox>
                                 </td>
                                 <td>
                                     <asp:TextBox runat="server" ID="fld_GiftComments" Text='<%#Eval("GiftComments") %>' CssClass="validate[required]" width="95%"></asp:TextBox>

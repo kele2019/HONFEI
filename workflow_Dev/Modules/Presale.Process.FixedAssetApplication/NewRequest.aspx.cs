@@ -63,8 +63,9 @@ namespace Presale.Process.FixedAssetApplication
                 //fld_DGMLogin.Text = (DataAccess.Instance("BizDB").ExecuteScalar("select IDNO from dbo.ORG_USER where loginname = '" + Page.User.Identity.Name + "' ").ToString());
                 //fld_DGM.Text = (DataAccess.Instance("BizDB").ExecuteScalar("select USERCODE from ORG_USER  where loginname = '" + Page.User.Identity.Name + "' ").ToString());
                 //fld_GM.Text = DataAccess.Instance("BizDB").ExecuteScalar("select USERCODE from dbo.ORG_USER where EXT03 ='GM'").ToString();
-                ((ButtonList)ButtonList1).BeforeSubmit += new System.ComponentModel.CancelEventHandler(NewRequest_BeforeSubmit);
 			}
+            ((ButtonList)ButtonList1).BeforeSubmit += new System.ComponentModel.CancelEventHandler(NewRequest_BeforeSubmit);
+
 		}
         protected void NewRequest_BeforeSubmit(object sender, CancelEventArgs g)
         {
@@ -76,6 +77,8 @@ namespace Presale.Process.FixedAssetApplication
             Hashtable table = (Hashtable)sender;
             string IDNO= (DataAccess.Instance("BizDB").ExecuteScalar("select IDNO from dbo.ORG_USER where loginname = '" + Page.User.Identity.Name + "' ").ToString());
             table.Add("DGMLogin", IDNO);
+            table.Add("IDNO", IDNO);
+
 
             #endregion
         }

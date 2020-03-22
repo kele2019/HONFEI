@@ -182,11 +182,10 @@
                     </tr>
                       <tr>
                         <td class="td-label" style="vertical-align:middle;">
-                         <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
                         <p style="text-align:center">Remark</p>
                         </td>
                         <td class="td-content" colspan="3" >
-                            <asp:TextBox ID="fld_RequestRemark" TextMode="MultiLine" Rows="5" runat="server" Width="98%" CssClass="validate[required]"></asp:TextBox>
+                            <asp:TextBox ID="fld_RequestRemark" TextMode="MultiLine" Rows="5" runat="server" Width="98%"></asp:TextBox>
                         </td>
                     </tr>
                  </table>
