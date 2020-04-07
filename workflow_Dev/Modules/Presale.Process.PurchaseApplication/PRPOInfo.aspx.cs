@@ -39,6 +39,7 @@ select ROW_NUMBER() over(order by A.REQUESTDATE desc) RN, A.DOCUMENTNO,A.APPLICA
         public string Strwhere()
         {
             string returnvalue = "";
+             
             //if (txtPRNO.Text.Trim() != "")
             //{
             //    returnvalue = " and A.DOCUMENTNO like '%" + txtPRNO.Text.Trim() + "%'";
@@ -58,6 +59,8 @@ select ROW_NUMBER() over(order by A.REQUESTDATE desc) RN, A.DOCUMENTNO,A.APPLICA
                     returnvalue = " and A.PurchaseOrdStatus<>'0'";
                 }
             }
+            returnvalue += " and Incident<>-1 and status<>3";
+
             return returnvalue;
         }
         protected void AspNetPager1_PageChanged(object sender, EventArgs e)

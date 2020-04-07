@@ -190,13 +190,13 @@
 
                   <tr>
                     <td class="td-label"  style="text-align:center">Department  budget of this year</td>
-                    <td colspan="3" class="td-content" >
+                    <td colspan="7" class="td-content" >
                     <asp:Label runat="server"  ID="read_IsBudgetyear" ></asp:Label>
                     </td>
                     </tr>
                      <tr>
                     <td class="td-label"  style="text-align:center">Budget Comments</td>
-                    <td colspan="3">
+                    <td colspan="7">
                      <asp:TextBox runat="server" ID="read_BudetComments" ReadOnly="true" TextMode="MultiLine" Rows="3" Width="98%"></asp:TextBox>
                     </td>
                     </tr>
