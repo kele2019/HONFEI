@@ -29,6 +29,15 @@
             if (request("type") == "myapproval") {
                 $("#btnComplete").hide();
             }
+
+            var EVDay = $("#read_EvaluationDays").val();
+            if (EVDay != "") {
+                $("#EVDay").text("Yes");
+            }
+            else {
+                $("#EVDay").text("No");
+            }
+
         });
         function submitPageReview(obj) {
             $("#ButtonList1_btnSubmit").click();
@@ -236,6 +245,15 @@ float: left;
                 </ul>
                 </td>
                  </tr>
+
+                   <tr>
+                    <td class="td-label">
+                    Is need attendee evaluation<br /> (your manager will evaluate your training effect after one month)
+                    </td>
+                      <td class="td-content" colspan="7">
+                      <span id="EVDay"></span>
+                      </td>
+                      </tr>
                     </table>
 
             </div>
@@ -276,6 +294,7 @@ float: left;
         <asp:TextBox runat="server" ID="fld_TRSummary"></asp:TextBox>
         <asp:HiddenField runat="server" ID="hdIncident" />
         <asp:HiddenField runat="server" ID="hdPrint" />
+         <asp:TextBox runat="server" ID="read_EvaluationDays"></asp:TextBox>
         </div>
     </form>
 </body>

@@ -32,9 +32,12 @@
             $("#UserInfo1_fld_PROCESSSUMMARY").val(summary);
             return true;
         }
+        function changeseal() {
+            $("#fld_SealName").val($("#sealName option:selected").text());
+        }
         $(document).ready(function () {
             $("#sealName").val($("#fld_SealName").val());
-            if ($("#hdIncident").val() != "") {
+            if ($("#hdIncident").val()-0>0) {
                 $("#ButtonList1_btnSubmit").val("Submit");
                 $("#ButtonList1_btnBack").hide();
                 $("#ButtonList1_btnReject").show();
@@ -42,6 +45,8 @@
             if ($("#hdUrgeTask").val() == "Yes") {
                 $("#ReturnBackTask").show();
             }
+             
+
         });
         function beforeSave() {
             var summary = "Company Sale Request Process";
@@ -79,7 +84,7 @@
                          <p style="text-align:center">SealName</p>
                         </td>
                         <td class="td-content" colspan="3" >
-                        <asp:DropDownList runat="server" ID="sealName" Width="99%"></asp:DropDownList>
+                        <asp:DropDownList runat="server" ID="sealName" Width="99%" onchange="changeseal()"></asp:DropDownList>
                         <asp:TextBox runat="server" ID="fld_SealName" Width="95%" style="display:none;"></asp:TextBox>
                         <asp:TextBox runat="server" ID="fld_SealNameUser" style="display:none"></asp:TextBox>
                         </td>

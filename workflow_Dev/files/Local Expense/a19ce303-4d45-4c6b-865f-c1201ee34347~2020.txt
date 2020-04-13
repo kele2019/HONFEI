@@ -1,0 +1,28 @@
+https://github.com/kele2019/HONFEI.git
+
+
+
+git -c filter.lfs.smudge= -c filter.lfs.required=false -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks clone --branch master --recursive https://github.com/kele2019/HONFEI.git C:\Project\WorkflowDev
+Cloning into 'C:\Project\WorkflowDev'...
+fatal: early EOF
+fatal: the remote end hung up unexpectedly
+fatal: index-pack failed
+
+error: RPC failed; curl 18 transfer closed with outstanding read data remaining
+
+
+//添加文件
+git add * 
+
+//提交文件
+git commit -m '提交说明'
+
+//合并代码
+git push -u origin master
+
+// 查看提交历史记录
+git log
+
+
+账号：kele2019
+密码：AABBCCaabbcc1234

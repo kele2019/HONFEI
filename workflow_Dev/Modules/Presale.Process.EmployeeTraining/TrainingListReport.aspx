@@ -55,10 +55,18 @@
      </asp:DropDownList>
     
        </td>
-      
+        <td  class="td-label">
+      Training Type
+       </td>
         
-        <td class="td-content" colspan="2" >
-       <asp:Button runat="server" ID="btnSearch"  style="margin-left:40px" CssClass="btn" 
+        <td class="td-content" >
+        <asp:DropDownList runat="server" ID="dropTrainingType">
+        <asp:ListItem Value="">--Pls Select--</asp:ListItem>
+        <asp:ListItem Value="1">Face to Face </asp:ListItem>
+        <asp:ListItem Value="2">Self-study </asp:ListItem>
+        </asp:DropDownList>
+
+       <asp:Button runat="server" ID="btnSearch"  style="margin-left:10px" CssClass="btn" 
                 Text="Search" onclick="btnSearch_Click"  />
        </td>
        </tr>
@@ -86,7 +94,7 @@
                <ItemTemplate>
                <tr>
                <td rowspan="3"> <asp:Label ID="fld_ROWID" Text='<%# Container.ItemIndex+1%>' runat="server"></asp:Label></td>
-                <td><%#Eval("DOCUMENTNO")%></td>
+                <td><a href='HRComplete.aspx?ProcessName=Employee%20Training%20management&Incident=<%#Eval("INCIDENT") %>&Type=myapproval' target="_blank"> <%#Eval("DOCUMENTNO")%> </a></td>
                <td><%#Eval("APPLICANT")%></td>
                <td><%#Eval("TrainingPurpose")%></td>
                <td><%#Eval("TrainingTeacher")%></td>

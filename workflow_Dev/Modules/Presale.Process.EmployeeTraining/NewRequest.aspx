@@ -994,12 +994,12 @@
                 </table>
 
 
-                  <table id="Table1" class="table table-condensed table-bordered">
+         <table id="Table1" class="table table-condensed table-bordered">
          <tr >
          <td class="td-label">
-          Is need Attender Evaluation
+         Is need attendee evaluation<br /> (your manager will evaluate your training effect after one month)
             </td>
-            <td>
+            <td colspan="7" class="td-content">
             <input type="radio"  name="IsTraining" id="radioYTraining" onclick="CheckedEvaluation('1')" />Yes
             <input type="radio"  name="IsTraining"  id="radioNTraining" onclick="CheckedEvaluation('0')" />No
             </td>

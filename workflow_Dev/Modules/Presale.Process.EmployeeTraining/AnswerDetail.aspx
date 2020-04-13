@@ -66,6 +66,7 @@
 
 
       <div class="row">
+      <asp:Label runat="server" ID="lbMsg" style="color:Red; margin:40%;"></asp:Label>
       <table  class="table table-condensed table-bordered">
       <tbody>
       <asp:Repeater runat="server" ID="rpUserInfo">

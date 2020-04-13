@@ -49,3 +49,14 @@ C:\Download\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailService
 C:\Download\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\obj\x86\Debug\Ultimus.UWF.Workflow.EmailServices.csproj.CopyComplete
 C:\Download\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\obj\x86\Debug\Ultimus.UWF.Workflow.EmailServices.exe
 C:\Download\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\obj\x86\Debug\Ultimus.UWF.Workflow.EmailServices.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\bin\Debug\Ultimus.UWF.Workflow.EmailServices.exe.config
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\bin\Debug\Ultimus.UWF.Workflow.EmailServices.exe
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\bin\Debug\Ultimus.UWF.Workflow.EmailServices.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\bin\Debug\Newtonsoft.Json.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\bin\Debug\Ptcent.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\obj\x86\Debug\Ultimus.UWF.Workflow.EmailServices.csprojAssemblyReference.cache
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\obj\x86\Debug\Ultimus.UWF.Workflow.EmailServices.csproj.CopyComplete
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\obj\x86\Debug\Ultimus.UWF.Workflow.EmailServices.exe
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\Ultimus.UWF.Workflow.EmailServices\obj\x86\Debug\Ultimus.UWF.Workflow.EmailServices.pdb

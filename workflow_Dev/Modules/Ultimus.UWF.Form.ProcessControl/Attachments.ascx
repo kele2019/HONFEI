@@ -118,7 +118,8 @@
                                 </td>
                                 <td>
                                     <asp:LinkButton ID="LinkButton2" OnClientClick="changecolor(this)" runat="server" CommandArgument='<%# Eval("NEWNAME") %>'
-                                        CommandName="Download"><%# Eval("FileName")%></asp:LinkButton>
+                                        CommandName="Download" Visible="false"><%# Eval("FileName")%></asp:LinkButton>
+                                        <a href='../../<%#Eval("filePath") %>' target="_blank"><%# Eval("FileName")%></a>
                                 </td>
                                 <td>
                                     <%# Eval("STEPNAME")%>

@@ -224,7 +224,7 @@ float: left;
 
                       <tr>
                     <td class="td-label">
-                    Is need Attender Evaluation
+                    Is need attendee evaluation<br /> (your manager will evaluate your training effect after one month)
                     </td>
                       <td class="td-content" colspan="7">
                       <span id="EVDay"></span>

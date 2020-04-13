@@ -222,7 +222,7 @@ namespace Ultimus.UWF.Workflow.EmailServices
 
              try
              {
-                 string Strsql = "select DOCUMENTNO,EvaluationDays,HRAPPROVEDATE,ApprovalArr_TrainingPersonnel,TrainingPurpose CourseName,TrainingTeacher TrainerName,StartDate TrainingStart,EndDate TrainingEnd,TrainingDuration TrainingHours   from  dbo.PROC_EmployeeTraining where INCIDENT>0  and HRAPPROVEDATE is not null";
+                 string Strsql = "select APPLICANTACCOUNT,DOCUMENTNO,EvaluationDays,HRAPPROVEDATE,ApprovalArr_TrainingPersonnel,TrainingPurpose CourseName,TrainingTeacher TrainerName,StartDate TrainingStart,EndDate TrainingEnd,TrainingDuration TrainingHours   from  dbo.PROC_EmployeeTraining where INCIDENT>0  and HRAPPROVEDATE is not null";
                  DataTable dtTrainingInfo = DataAccess.Instance("BizDB").ExecuteDataTable(Strsql);
 
                  if (dtTrainingInfo.Rows.Count > 0)
@@ -259,7 +259,8 @@ namespace Ultimus.UWF.Workflow.EmailServices
                                  string TrainingStart = item["TrainingStart"].ToString();
                                  string TrainingEnd = item["TrainingEnd"].ToString();
                                  string TrainingHours = item["TrainingHours"].ToString();
-                                 CreateTraningResultProcess(TrainingPersonnel.Rows[i]["LOGINNAME"].ToString(), CourseName, TrainerName, TrainingStart, TrainingEnd, TrainingHours);
+                                string TrainingUser = item["APPLICANTACCOUNT"].ToString();
+                                 CreateTraningResultProcess(TrainingPersonnel.Rows[i]["LOGINNAME"].ToString(), CourseName, TrainerName, TrainingStart, TrainingEnd, TrainingHours, TrainingUser);
                              }
                          }
 
@@ -273,7 +274,7 @@ namespace Ultimus.UWF.Workflow.EmailServices
              }
          }
 
-        public static void CreateTraningResultProcess(string LoginName, string CourseName, string TrainerName, string TrainingStart, string TrainingEnd, string TrainingHours)
+        public static void CreateTraningResultProcess(string LoginName, string CourseName, string TrainerName, string TrainingStart, string TrainingEnd, string TrainingHours,string TrainingUser)
         {
             UserInfoEntity UserEntity = GetOrgLevel.GetUserInfo(LoginName);
             UserProcessEntity UserProcessEntity = new UserProcessEntity();
@@ -294,9 +295,18 @@ namespace Ultimus.UWF.Workflow.EmailServices
                 UserProcessEntity.TRSummary = PROCESSSUMMARY;
                 UserProcessEntity.USERCODE = UserEntity.USERCODE;
 
+                DataTable dtVar = new DataTable();
+                dtVar.TableName = "dtvar";
+                dtVar.Columns.Add("Key", typeof(string));
+                dtVar.Columns.Add("Value", typeof(string));
+                DataRow dr=dtVar.NewRow();
+                dr["Key"] = "TrainingUser";
+                dr["Value"] ="USER:org=HONFEI,user ="+ TrainingUser;
+                dtVar.Rows.Add(dr);
+
                 if (CreateTrainingData(UserProcessEntity, CourseName, TrainerName, TrainingStart, TrainingEnd, TrainingHours))
                 {
-                    int Incident = SubmitProcess(LoginName, ProcessName, PROCESSSUMMARY, null, "", "0", "Flow Start");
+                    int Incident = SubmitProcess(LoginName, ProcessName, PROCESSSUMMARY, dtVar, "", "0", "Flow Start");
                     if (Incident > 0)
                     {
                         UserProcessEntity.INCIDENT = Incident;

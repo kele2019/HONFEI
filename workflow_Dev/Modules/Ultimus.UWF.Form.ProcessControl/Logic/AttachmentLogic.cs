@@ -54,7 +54,8 @@ namespace Ultimus.UWF.Form.ProcessControl.Logic
 			{
 				DataAccess db = new DataAccess("BizDB");
 				StringBuilder strsql = new StringBuilder();
-				strsql.Append("select * from WF_Attachment where FORMID='" + strFormid + "' and TYPE='" + type + "'");
+                string filePath = MyLib.ConfigurationManager.AppSettings["AttachmentPath"].TrimStart('~');
+                strsql.Append("select *,('" + filePath + "\'+PROCESSNAME+'\\'+NEWNAME+FileType) filePath from WF_Attachment where FORMID='" + strFormid + "' and TYPE='" + type + "'");
 				DbCommand dbcom = db.CreateCommand(strsql.ToString());
 				//db.AddInParameter(dbcom, flag+"ProcessName", DbType.String, ProcessName);
 				//db.AddInParameter(dbcom, flag+"Incident", DbType.Int32, Incident);

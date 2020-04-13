@@ -312,7 +312,7 @@
          <table id="Table1" class="table table-condensed table-bordered">
          <tr >
          <td class="td-label">
-           Is Need Training Evaluation
+          Is need attendee evaluation<br /> (your manager will evaluate your training effect after one month)
             </td>
             <td>
             <input type="radio"  name="IsTraining" id="radioYTraining" onclick="CheckedEvaluation('1')" />Yes

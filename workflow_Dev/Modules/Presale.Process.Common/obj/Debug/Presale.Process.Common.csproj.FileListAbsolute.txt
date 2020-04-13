@@ -31,3 +31,4 @@ C:\Project\HONFEI\HONFEI\workflow_Dev\Bin\Presale.Process.Common.dll
 C:\Project\HONFEI\HONFEI\workflow_Dev\Bin\Presale.Process.Common.pdb
 C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.Common\obj\Debug\Presale.Process.Common.dll
 C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.Common\obj\Debug\Presale.Process.Common.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.Common\obj\Debug\Presale.Process.Common.csprojResolveAssemblyReference.cache

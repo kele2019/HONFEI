@@ -30,7 +30,7 @@ namespace Presale.Process.EmployeeTraining
                 dropDept.DataBind();
                 dropDept.Items.Insert(0, "--Plase Select--");
             }
-            DataTable dtYear = DataAccess.Instance("BizDB").ExecuteDataTable("select *  from  ( select distinct  YEAR(REQUESTDATE) RYear  from PROC_EmployeeTraining where INCIDENT>0 and (STATUS=1 or STATUS=2) )  C order by RYear Desc");
+            DataTable dtYear = DataAccess.Instance("BizDB").ExecuteDataTable("select *  from  ( select distinct  YEAR(REQUESTDATE) RYear  from PROC_EmployeeTraining where INCIDENT>0 and (STATUS=1 or STATUS=2))  C order by RYear Desc");
             if (dtYear.Rows.Count > 0)
             {
                 dropYear.DataSource = dtYear;
@@ -75,12 +75,19 @@ namespace Presale.Process.EmployeeTraining
             string CurrentMonth = dropMonth.SelectedItem.Value;// DateTime.Now.Month.ToString();
             if(CurrentYear!=""&&CurrentMonth!="")
             strwhere += " and YEAR(REQUESTDATE)='" + CurrentYear + "' and  month(REQUESTDATE)='" + CurrentMonth + "'";
+            if (dropTrainingType.SelectedValue != "")
+            {
+                if(dropTrainingType.SelectedValue=="1")
+                    strwhere += " and TrainingType in('off-line','Face to Face')";
+                else
+                    strwhere += " and TrainingType='Self-study'";
 
+            }
             string StrsColumn = @"(SELECT  EXT04+',' FROM ((
   select EXT04 from org_user where userid in(( select UserID from COM_EmployeeTrainSignInfo where TrainDocmentNo=PROC_EmployeeTraining.DOCUMENTNO
    and SumDate is not null and SumDate<>'0')))) AA for xml path('') )  ActualUsers";
 
-            string Strsql = @"select " + StrsColumn + ",TrainingUser,DOCUMENTNO,APPLICANT,DEPARTMENT,TrainingPurpose,TrainingTeacher,TrainingType,StartDate,EndDate,TrainingDuration,TrainingLocation  from PROC_EmployeeTraining where INCIDENT>0 and (STATUS=1 or STATUS=2)" + strwhere;
+            string Strsql = @"select " + StrsColumn + ", INCIDENT,TrainingUser,DOCUMENTNO,APPLICANT,DEPARTMENT,TrainingPurpose,TrainingTeacher,TrainingType,StartDate,EndDate,TrainingDuration,TrainingLocation  from PROC_EmployeeTraining where INCIDENT>0 and (STATUS=1 or STATUS=2)" + strwhere;
             Strsql += " order by REQUESTDATE desc";
             DataTable dtTraningData = DataAccess.Instance("BizDB").ExecuteDataTable(Strsql);
             if (dtTraningData.Rows.Count > 0)

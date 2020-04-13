@@ -23,6 +23,13 @@
                 $("#evaluationTable").hide();
                 $("#btnComplete1").hide();
             }
+            var EVDay = $("#read_EvaluationDays").val();
+            if (EVDay != "") {
+                $("#EVDay").text("Yes");
+            }
+            else {
+                $("#EVDay").text("No");
+            }
             // $("#btnComplete").attr("disabled", false);
         });
         function submitPageReview(obj) {
@@ -76,6 +83,23 @@
             }
         }
     </script>
+     <style type="text/css">
+        #menu {
+font-size: 12px;
+font-weight: bolder;
+ 
+}
+#menu li{
+list-style-image: none;
+list-style-type: none;
+padding-right:20px;
+margin-left:-20px;
+height:30px;
+float: left;
+}
+
+    
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -175,6 +199,35 @@
                             <asp:Label runat="server" ID="read_TrainingLocation"></asp:Label>
                         </td>
                     </tr>
+
+
+                      <tr>
+                    <td class="td-label">
+                    Training personnel
+                    </td>
+                      <td class="td-content" colspan="7">
+                        <ul id="menu">
+                <asp:Repeater runat="server" ID="RPList" onprerender="RPList_PreRender">
+                <ItemTemplate>
+                <li>
+                   <span> <%#Eval("EXT04") %>;</span>
+                </li>
+                </ItemTemplate>
+                </asp:Repeater>
+                </ul>
+                      </td>
+                    </tr>
+
+
+                      <tr>
+                    <td class="td-label">
+                    Is need attendee evaluation<br /> (your manager will evaluate your training effect after one month)
+                    </td>
+                      <td class="td-content" colspan="7">
+                      <span id="EVDay"></span>
+                      </td>
+                      </tr>
+
                 </table>
                 
             </div>
