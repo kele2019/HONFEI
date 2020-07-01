@@ -113,6 +113,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presale.Process.FixedAssetA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presale.Process.BusinessGiftRequest", "Modules\Presale.Process.BusinessGiftRequest\Presale.Process.BusinessGiftRequest.csproj", "{415CD0CF-4A21-4D0A-9179-F1770B50502C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presale.Process.CustomPurchaseorderRequest", "Modules\Presale.Process.CustomPurchaseorderRequest\Presale.Process.CustomPurchaseorderRequest.csproj", "{A63DE717-0D54-4C6F-8AC6-F0D66643C857}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -673,6 +675,16 @@ Global
 		{415CD0CF-4A21-4D0A-9179-F1770B50502C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{415CD0CF-4A21-4D0A-9179-F1770B50502C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{415CD0CF-4A21-4D0A-9179-F1770B50502C}.Release|x86.ActiveCfg = Release|Any CPU
+		{A63DE717-0D54-4C6F-8AC6-F0D66643C857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63DE717-0D54-4C6F-8AC6-F0D66643C857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63DE717-0D54-4C6F-8AC6-F0D66643C857}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A63DE717-0D54-4C6F-8AC6-F0D66643C857}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A63DE717-0D54-4C6F-8AC6-F0D66643C857}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A63DE717-0D54-4C6F-8AC6-F0D66643C857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63DE717-0D54-4C6F-8AC6-F0D66643C857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A63DE717-0D54-4C6F-8AC6-F0D66643C857}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A63DE717-0D54-4C6F-8AC6-F0D66643C857}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A63DE717-0D54-4C6F-8AC6-F0D66643C857}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -732,6 +744,7 @@ Global
 		{46BB675C-7DC0-48ED-95DE-C5A07E589808} = {252F5135-D333-4684-B360-D139969B54DE}
 		{CEA3C668-BB8F-4B80-9BA1-941C8ACC69B1} = {252F5135-D333-4684-B360-D139969B54DE}
 		{415CD0CF-4A21-4D0A-9179-F1770B50502C} = {252F5135-D333-4684-B360-D139969B54DE}
+		{A63DE717-0D54-4C6F-8AC6-F0D66643C857} = {252F5135-D333-4684-B360-D139969B54DE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		VisualSVNWorkingCopyRoot = .
