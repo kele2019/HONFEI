@@ -1,0 +1,5 @@
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.GoodsReceiveRequest.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\bin\Presale.Process.GoodsReceiveRequest.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.GoodsReceiveRequest\obj\Debug\Presale.Process.GoodsReceiveRequest.dll
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.GoodsReceiveRequest\obj\Debug\Presale.Process.GoodsReceiveRequest.pdb
+C:\Project\HONFEI\HONFEI\workflow_Dev\Modules\Presale.Process.GoodsReceiveRequest\obj\Debug\Presale.Process.GoodsReceiveRequest.csprojResolveAssemblyReference.cache

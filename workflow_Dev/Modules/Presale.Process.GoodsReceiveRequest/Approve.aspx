@@ -1,0 +1,229 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Approve.aspx.cs" Inherits="Presale.Process.GoodsReceiveRequest.Approve" %>
+ 
+<%@ Register Src="/Modules/Ultimus.UWF.Form.ProcessControl/UserInfo.ascx" TagName="UserInfo" TagPrefix="ui" %>
+<%@ Register Src="/Modules/Ultimus.UWF.Form.ProcessControl/ApprovalHistory.ascx" TagName="ApprovalHistory" TagPrefix="ah" %>
+<%@ Register Src="/Modules/Ultimus.UWF.Form.ProcessControl/Attachments.ascx" TagName="Attachments" TagPrefix="attach" %>
+<%@ Register Src="/Modules/Ultimus.UWF.Form.ProcessControl/ButtonList.ascx" TagName="ButtonList" TagPrefix="btn" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible"  content="IE=EmulateIE8" />
+    <title>Goods Receive Process</title>
+    <script type="text/javascript" src="/Assets/js/common.js"></script>
+    <script type="text/javascript">
+
+        function beforeSubmit() {
+            var summary = "Goods Receive Process";
+            $("#UserInfo1_fld_PROCESSSUMMARY").val(summary);
+            return true;
+        }
+        function beforeSave() {
+          
+            return true;
+        }
+        $(document).ready(function () {
+
+            $(".container").attr("style", "width:1200px");
+            $(".td-label").attr("style", "width:15%");
+            $(".td-content").attr("style", "width:35%");
+
+//            $("#buyer option:selected").text($("#fld_BUYER").val());
+//            $("#wareHouse option:selected").text($("#fld_WAREHOUSE").val());
+//            $("#currency").val($("#fld_Currency").val());
+            POStatus_onchange($("#read_GoodsFlag").val());
+        });
+        function POStatus_onchange(obj) {
+            if (obj != "") {
+                if (obj == 1) {
+                    $("#span_GoodsFlag").text("PO");
+                    $("#PO").attr("checked", true);
+                    $("#trPO").show();
+                    $("#divPO").show();
+                    $("#trPR").hide();
+                    $("#fld_PurchaseRequestNo").val("");
+                }
+                if (obj == 0) {
+                    $("#span_GoodsFlag").text("No PO");
+                    $("#NoPO").attr("checked", true);
+                    $("#trPR").show();
+                    $("#divPO").hide();
+                    $("#trPO").hide();
+                    $("#fld_PurchaseOrderNo").val("");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="myDiv" class="container">
+            <div class="row">
+                <ui:userinfo id="UserInfo1" processtitle="Goods Receive Request" processprefix="GR" tablename="PROC_GoodsReceive" tablenamedetail="PROC_GoodsReceive_DT" runat="server"  ></ui:userinfo>
+            </div>
+      
+        <div class="row">
+            <p style="font-weight:bold;">Request require（"<span style=" background:red;">&nbsp;</span>" must write） </p>
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <td class="td-label" style="vertical-align:middle;">
+                        <p style="text-align:center">SUPPLIER</p>
+                    </td>
+                    <td class="td-content" colspan="3">
+                        <asp:TextBox runat="server" ID="read_CardCode" style="display:none;"></asp:TextBox>
+                        <asp:Label runat="server" ID="read_CardName"  ></asp:Label>
+                    </td>
+                     <td class="td-label"> 
+                        <p style="text-align:center">CURRENCY</p>
+                    </td>
+                    <td class="td-content" colspan="3"> 
+                        <asp:Label ID="read_Currency" runat="server"    ></asp:Label>
+                    </td>
+                </tr>
+             
+                <tr>
+                    <td class="td-label" style="vertical-align:middle;"> 
+                        <p style="text-align:center">BUYER</p>
+                    </td>
+                    <td class="td-content" colspan="3">
+                        <asp:Label runat="server"  ID="read_BUYER" value="Buyer1"  ></asp:Label>
+                    </td>
+                    <td class="td-label" style="vertical-align:middle;"> 
+                        
+                        <p style="text-align:center">WAREHOUSE</p>
+                    </td>
+                    <td class="td-content" colspan="3">
+                       
+                        <asp:Label runat="server"  ID="read_WAREHOUSE" value="901"  ></asp:Label>
+                    </td>
+                </tr>
+
+                   <tr style="display:none;">
+                    <td class="td-label">
+                        <p style="text-align:center">Purcahse Order Status</p>
+                    </td>
+                    <td class="td-content" colspan="7">
+                    <span id="span_GoodsFlag"></span>
+                        <asp:TextBox runat="server"  ID="read_GoodsFlag"   ></asp:TextBox>
+                    </td>
+                </tr>
+
+
+                 <tr id="trPO" style="display:none">
+                    <td class="td-label">
+                        <p style="text-align:center">Purcahse Order No</p>
+                    </td>
+                    <td class="td-content" colspan="7">
+                        <asp:Label runat="server" ID="read_PurchaseOrderNo"   ></asp:Label>
+                       
+                    </td>
+                </tr>
+
+
+                <tr id="trPR"  style="display:none">
+                    <td class="td-label">
+                    <span style=" background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">PUR. REQUEST NO</p>
+                    </td>
+                    <td class="td-content" colspan="7">
+                        <asp:Label runat="server" ID="read_PurchaseRequestNo"  ></asp:Label>
+
+                    </td>
+                </tr>
+                <tr>
+                <td class="td-label">Remark</td>
+                 <td  colspan="7" class="td-content">
+                 <asp:TextBox runat="server" ID="read_GRRemark" ReadOnly="true" TextMode="MultiLine" Rows="5"  Width="95%" ></asp:TextBox>
+                 </td>
+                  
+                </tr>
+            </table>
+            <div id="divPO" style="display:none;">
+            <p style="font-weight:bold">Request require</p>
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <th width="0.3%">NO.</th>
+                    <th width="6.8%">ITEMNO.</th>
+                    <th width="7.6%">QUANTITY</th>
+                    <th width="7.6%">UNIT PRICE</th>
+                    <th width="7.6">TAX CODE</th>
+                    <th width="7.1%">COSTCENTER</th>
+                    <th width="10.1%">UOM CODE</th>
+                    <th width="10.1%">PR NO.</th>
+                    <th width="7%">REQUESTER</th>
+                    <th width="7%">DETAIL DESCRIPTION</th>
+                    <th width="4%">REQUIRED DATE</th>
+                    <th width="7.6%">PO NO.</th>
+                    <th width="5%">POLINENO.</th>
+                    <th width="6%">PRLINENO.</th>
+                </tr>
+                <tbody id="detail">
+                    <asp:Repeater runat="server" ID="read_detail_PROC_GoodsReceive_DT"  >
+                        <ItemTemplate>
+                            <tr>
+                                <td style="text-align:center">
+                                    <asp:TextBox ID="read_FORMID" Text='<%#Eval("FORMID") %>' runat="server" Style="display: none" ></asp:TextBox>
+                                    <asp:Label ID="fld_ROWID" Text='<%# Container.ItemIndex+1%>' runat="server"></asp:Label>
+                                </td>
+                                <td>
+                                    <%#Eval("ITEMNO") %>
+                                </td>
+                                  <td><%#Eval("QUANTITY")%>
+                                </td>
+                               <td>
+                                <%#Eval("UnitPrice")%>
+                                </td>
+                                <td>
+                                 <%#Eval("TaxCode")%>
+                                </td>
+                                  <td>
+                                   <%#Eval("CostCenter")%>
+                               </td>
+                                <td>
+                                 <%#Eval("UOMCode")%>
+                                </td>
+                                  <td>
+                                   <%#Eval("PRNo")%>
+                                </td>
+                                <td>
+                                 <%#Eval("Requester")%>
+                                </td>
+                                <td>
+                                 <%#Eval("DetailDescription")%>
+                                </td>
+                                <td>
+                                <%# String.IsNullOrEmpty(Eval("RequestDate").ToString()) ? "" : DateTime.Parse(Eval("RequestDate").ToString()).ToString("yyyy-MM-dd")%>
+                                </td>
+                              
+                                <td>
+                                 <%#Eval("PONo")%>
+                                </td>
+                                  <td>
+                                  <%#Eval("POLineNo")%>
+                                </td>
+
+                                  <td>
+                                  <%#Eval("PRLineNo")%>
+                                </td>
+                            </tr>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </tbody>
+            </table>
+            </div>
+
+        </div>
+         <div class="row">
+            <attach:attachments id="Attachments1"  ReadOnly="true" runat="server"></attach:attachments>
+        </div>
+        <div class="row">
+            <ah:approvalhistory id="ApprovalHistory1" showaction="true" runat="server"></ah:approvalhistory>
+        </div>
+        <btn:buttonlist id="ButtonList1" runat="server"></btn:buttonlist>
+        <div style="display:none">
+            <asp:TextBox runat="server" ID="fld_TRSummary"></asp:TextBox>
+        </div>
+    </form>
+</body>
+</html>
+

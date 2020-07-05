@@ -9,7 +9,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta http-equiv="X-UA-Compatible"  content="IE=EmulateIE8" />
-    <title>Company Seal Request Process</title>
+    <title>Custom Purchase order review</title>
     <script type="text/javascript" src="/Assets/js/common.js"></script>
     <script type="text/javascript">
      
