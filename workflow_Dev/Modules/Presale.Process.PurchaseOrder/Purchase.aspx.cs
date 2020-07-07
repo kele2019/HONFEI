@@ -59,7 +59,7 @@ namespace Presale.Process.PurchaseOrder
 				}
 				else
 				{
-					sql += " where DEPARTMENTNAME ='" + dropDepartment.SelectedValue + "'";
+                    sql += " where DEPARTMENT ='" + dropDepartment.SelectedValue + "'";
 				}
 			}
 			string strsqlcount = "select  COUNT(1) from  (" + sql + ")E";

@@ -78,7 +78,11 @@ namespace Presale.Process.GoodsReceiveRequest
         }
         protected void NewRequest_AfterSubmit(object sender, CancelEventArgs g)
         {
-
+            if (!string.IsNullOrEmpty(fld_PurchaseRequestNo.Text))
+            {
+                string strinsert = string.Format("update PROC_Purchase set PurchaseOrdStatus = 1 where DOCUMENTNO='" + fld_PurchaseRequestNo.Text + "'");
+                DataAccess.Instance("BizDB").ExecuteNonQuery(strinsert);
+            }
         }
         protected void btnAdd_Click(object sender, EventArgs e)
         {

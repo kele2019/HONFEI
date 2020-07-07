@@ -36,7 +36,7 @@
         function POStatus_onchange(obj) {
             if (obj != "") {
                 if (obj == 1) {
-                    $("#span_GoodsFlag").text("PO");
+                    $("#span_GoodsFlag").text("Goods Receiving with PO");
                     $("#PO").attr("checked", true);
                     $("#trPO").show();
                     $("#divPO").show();
@@ -44,7 +44,7 @@
                     $("#fld_PurchaseRequestNo").val("");
                 }
                 if (obj == 0) {
-                    $("#span_GoodsFlag").text("No PO");
+                    $("#span_GoodsFlag").text("None  PO ");
                     $("#NoPO").attr("checked", true);
                     $("#trPR").show();
                     $("#divPO").hide();
@@ -63,18 +63,18 @@
             </div>
       
         <div class="row">
-            <p style="font-weight:bold;">Request require（"<span style=" background:red;">&nbsp;</span>" must write） </p>
+            <p style="font-weight:bold;">Request require </p>
             <table class="table table-condensed table-bordered">
                 <tr>
                     <td class="td-label" style="vertical-align:middle;">
-                        <p style="text-align:center">SUPPLIER</p>
+                        <p style="text-align:center">Supplier</p>
                     </td>
                     <td class="td-content" colspan="3">
                         <asp:TextBox runat="server" ID="read_CardCode" style="display:none;"></asp:TextBox>
                         <asp:Label runat="server" ID="read_CardName"  ></asp:Label>
                     </td>
                      <td class="td-label"> 
-                        <p style="text-align:center">CURRENCY</p>
+                        <p style="text-align:center">Currency</p>
                     </td>
                     <td class="td-content" colspan="3"> 
                         <asp:Label ID="read_Currency" runat="server"    ></asp:Label>
@@ -83,17 +83,16 @@
              
                 <tr>
                     <td class="td-label" style="vertical-align:middle;"> 
-                        <p style="text-align:center">BUYER</p>
+                        <p style="text-align:center">Buyer</p>
                     </td>
                     <td class="td-content" colspan="3">
                         <asp:Label runat="server"  ID="read_BUYER" value="Buyer1"  ></asp:Label>
                     </td>
                     <td class="td-label" style="vertical-align:middle;"> 
                         
-                        <p style="text-align:center">WAREHOUSE</p>
+                        <p style="text-align:center">Warehouse</p>
                     </td>
                     <td class="td-content" colspan="3">
-                       
                         <asp:Label runat="server"  ID="read_WAREHOUSE" value="901"  ></asp:Label>
                     </td>
                 </tr>
@@ -119,19 +118,28 @@
                     </td>
                 </tr>
 
-
                 <tr id="trPR"  style="display:none">
                     <td class="td-label">
-                    <span style=" background:red;height:30px; float:left;">&nbsp;</span>
-                        <p style="text-align:center">PUR. REQUEST NO</p>
+                        <p style="text-align:center">Purchase Request No.</p>
                     </td>
                     <td class="td-content" colspan="7">
                         <asp:Label runat="server" ID="read_PurchaseRequestNo"  ></asp:Label>
 
                     </td>
                 </tr>
+
+                 <tr>
+                 <td class="td-label">
+                        <p style="text-align:center">Attachement Description</p>
+                    </td>
+                     <td class="td-content" colspan="7">
+                    <asp:Label runat="server" ID="read_Attchmentlist"   ></asp:Label>
+                     </td>
+                </tr>
                 <tr>
-                <td class="td-label">Remark</td>
+                <td class="td-label">
+                 <p style="text-align:center">Remark</p>
+                </td>
                  <td  colspan="7" class="td-content">
                  <asp:TextBox runat="server" ID="read_GRRemark" ReadOnly="true" TextMode="MultiLine" Rows="5"  Width="95%" ></asp:TextBox>
                  </td>
@@ -142,7 +150,6 @@
             <p style="font-weight:bold">Request require</p>
             <table class="table table-condensed table-bordered">
                 <tr>
-                    <th width="0.3%">NO.</th>
                     <th width="6.8%">ITEMNO.</th>
                     <th width="7.6%">QUANTITY</th>
                     <th width="7.6%">UNIT PRICE</th>
@@ -161,7 +168,7 @@
                     <asp:Repeater runat="server" ID="read_detail_PROC_GoodsReceive_DT"  >
                         <ItemTemplate>
                             <tr>
-                                <td style="text-align:center">
+                                <td style="text-align:center;display:none;">
                                     <asp:TextBox ID="read_FORMID" Text='<%#Eval("FORMID") %>' runat="server" Style="display: none" ></asp:TextBox>
                                     <asp:Label ID="fld_ROWID" Text='<%# Container.ItemIndex+1%>' runat="server"></asp:Label>
                                 </td>

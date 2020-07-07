@@ -11,6 +11,11 @@
 <head id="Head1" runat="server">
     <meta http-equiv="X-UA-Compatible"  content="IE=EmulateIE8" />
     <title>Goods Receive Process</title>
+    <style type="text/css">
+    label {
+        padding-right:10px;
+        }
+    </style>
     <script type="text/javascript" src="/Assets/js/common.js"></script>
     <script type="text/javascript">
           
@@ -83,6 +88,23 @@
                 }
             });
 
+            $("#dropAttchment").find("input[type='checkbox']").click(function () {
+                var checkedstr = "";
+                $("#dropAttchment").find("input[type='checkbox']").each(function (i, item) {
+                    if ($(item).attr("checked")) {
+                        checkedstr += $(item).next().html() + ";"; //获取value值 
+                    }
+                });
+                $("#Attchmentlist").val(checkedstr);
+            });
+
+            var checkedstr = $("#Attchmentlist").val();
+            $("#dropAttchment").find("input[type='checkbox']").each(function (i, item) {
+                if (checkedstr.indexOf($(item).next().html()) >=0) {
+                    $(item).attr("checked", true);
+                }
+            });
+            
         });
         function POStatus_onchange(obj) {
             if (obj != ""){
@@ -139,7 +161,7 @@
                 <tr>
                     <td class="td-label" style="vertical-align:middle;">
                         <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
-                        <p style="text-align:center">SUPPLIER</p>
+                        <p style="text-align:center">Supplier</p>
                     </td>
                     <td class="td-content" colspan="3">
                         <asp:TextBox runat="server" ID="fld_SUPPLIER" onfocus="this.blur()" CssClass="validate[required]" onclick="supplier_onclick(this)" Width="94%"></asp:TextBox>
@@ -148,7 +170,7 @@
                     </td>
                      <td class="td-label"> 
                     <span style=" background:red;height:30px; float:left;">&nbsp;</span>
-                        <p style="text-align:center">CURRENCY</p>
+                        <p style="text-align:center">Currency</p>
                     </td>
                     <td class="td-content" colspan="3"> 
                         <asp:TextBox ID="fld_Currency" runat="server"   style="Width:95%"></asp:TextBox>
@@ -158,17 +180,17 @@
                 <tr>
                     <td class="td-label" style="vertical-align:middle;"> 
                         <span style=" background:red;height:30px; float:left;">&nbsp;</span>
-                        <p style="text-align:center">BUYER</p>
+                        <p style="text-align:center">Buyer</p>
                     </td>
                     <td class="td-content" colspan="3">
                         <asp:DropDownList runat="server" ID="buyer"  onchange="drop_onchange(this)">
-                            <asp:ListItem Selected="True">Buyer1</asp:ListItem>
+                            <asp:ListItem Selected="True">Buyer</asp:ListItem>
                         </asp:DropDownList>
                         <asp:TextBox runat="server"  ID="fld_BUYER" value="Buyer1" style=" display:none;" Width="94%"></asp:TextBox>
                     </td>
                     <td class="td-label" style="vertical-align:middle;"> 
                         <span style=" background:red;height:30px; float:left;">&nbsp;</span>
-                        <p style="text-align:center">WAREHOUSE</p>
+                        <p style="text-align:center">Warehouse</p>
                     </td>
                     <td class="td-content" colspan="3">
                          <asp:DropDownList runat="server" ID="wareHouse"  onchange="drop_onchange(this)">
@@ -184,8 +206,10 @@
                         <p style="text-align:center">Purcahse Order Status</p>
                     </td>
                     <td class="td-content" colspan="7">
-                       <input type="radio" name="POPR" id="PO" onclick="POStatus_onchange('1')" /> PO  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <input type="radio" name="POPR" id="NoPO" onclick="POStatus_onchange('0')"  />No PO
+                       <input type="radio" name="POPR" id="PO" onclick="POStatus_onchange('1')" /> Goods Receiving with PO  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <input type="radio" name="POPR" id="NoPO" onclick="POStatus_onchange('0')"  />None  PO 
+                     <br />  Goods Receiving with PO “ Confirm acceptance of the above quantity of goods (services) according to the delivery requirements agreed by PO”
+                       <br /> None  PO “Confirmation of acceptance of the goods (services) listed in the annex (packing list/invoice)”
                         <asp:TextBox runat="server"  ID="fld_GoodsFlag"   style="display:none;"></asp:TextBox>
                     </td>
                 </tr>
@@ -207,7 +231,7 @@
                 <tr id="trPR"  style="display:none">
                     <td class="td-label">
                     <span style=" background:red;height:30px; float:left;">&nbsp;</span>
-                        <p style="text-align:center">PUR. REQUEST NO</p>
+                        <p style="text-align:center">Purchase Request No.</p>
                     </td>
                     <td class="td-content" colspan="7">
                         <asp:TextBox runat="server" ID="fld_PurchaseRequestNo" CssClass="validate[required]" Width="90%" style="background-color:White;" onfocus="this.blur()"></asp:TextBox>
@@ -216,8 +240,28 @@
                     </td>
                 </tr>
                 <tr>
-                <td class="td-label">Remark</td>
-                 <td  colspan="7" class="td-content">
+                 <td class="td-label">
+                    <span style=" background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">Attachement Description</p>
+                    </td>
+                    <td class="td-content" colspan="7">
+                    <asp:CheckBoxList runat="server" ID="dropAttchment"  RepeatDirection="Horizontal" RepeatLayout="Flow"   >
+                    <asp:ListItem Text="Verification certificate/Quality inspection report"  Value="Verification certificate/Quality inspection report"></asp:ListItem>
+                    <asp:ListItem Text="Project acceptance form" Value="Project acceptance form"></asp:ListItem>
+                    <asp:ListItem Text="Packing List"  Value="Packing List"></asp:ListItem>
+                    <asp:ListItem Text="Invoice"  Value="Invoice"></asp:ListItem>
+                    <asp:ListItem Text="Time report"  Value="Time report"></asp:ListItem>
+                    <asp:ListItem Text="Other settlement documents agreed in the contract"  Value="Other settlement documents agreed in the contract"></asp:ListItem>
+                    </asp:CheckBoxList>
+                    <asp:TextBox runat="server" ID="fld_Attchmentlist"    style="display:none;"></asp:TextBox>
+                  </td>
+                </tr>
+
+                <tr>
+                <td class="td-label" >
+                   <p style="text-align:center">Remark</p>
+                </td>
+                 <td  class="td-content" colspan="7">
                  <asp:TextBox runat="server" ID="fld_GRRemark" TextMode="MultiLine" Rows="5"  Width="95%" ></asp:TextBox>
                  </td>
                   
@@ -227,7 +271,6 @@
             <p style="font-weight:bold">Request require</p>
             <table class="table table-condensed table-bordered">
                 <tr>
-                    <th width="0.3%">NO.</th>
                     <th width="6.8%">ITEMNO.</th>
                     <th width="7.6%">QUANTITY</th>
                     <th width="7.6%">UNIT PRICE</th>
@@ -241,13 +284,12 @@
                     <th width="7.6%">PO NO.</th>
                     <th width="5%">POLINENO.</th>
                     <th width="6%">PRLINENO.</th>
-                    <th width="6.2%"></th>
                 </tr>
                 <tbody id="detail">
                     <asp:Repeater runat="server" ID="fld_detail_PROC_GoodsReceive_DT" OnItemCommand="fld_detail_PROC_GoodsReceive_DT_ItemCommand" OnItemDataBound="fld_detail_PROC_GoodsReceive_DT_ItemDataBound">
                         <ItemTemplate>
                             <tr>
-                                <td style="text-align:center">
+                                <td style="text-align:center;display:none;">
                                     <asp:TextBox ID="fld_FORMID" Text='<%#Eval("FORMID") %>' runat="server" Style="display: none" ></asp:TextBox>
                                     <asp:Label ID="fld_ROWID" Text='<%# Container.ItemIndex+1%>' runat="server"></asp:Label>
                                 </td>
@@ -303,7 +345,7 @@
                                   <%#Eval("PRLineNo")%>
                                     <asp:TextBox ID="fld_PRLineNo" style="display:none" runat="server" Text='<%#Eval("PRLineNo")%>' Width="74%" ></asp:TextBox>
                                 </td>
-                                <td>
+                                <td style="display:none">
                                     <asp:Button ID="btnDelete" runat="server" Text="Del" CssClass="btn" CommandName="del" ClientIDMode="Static" OnClientClick="return confirm('Confirm Del？')" />
                                 </td>
                             </tr>
