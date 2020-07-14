@@ -278,14 +278,15 @@
                     <th width="7.6%">UNIT PRICE</th>
                     <th width="7.6">TAX CODE</th>
                     <th width="7.1%">COSTCENTER</th>
-                    <th width="10.1%">UOM CODE</th>
+                    <th width="4%">UOM CODE</th>
+                    <th width="7.6%">PO NO.</th>
                     <th width="10.1%">PR NO.</th>
                     <th width="7%">REQUESTER</th>
                     <th width="7%">DETAIL DESCRIPTION</th>
                     <th width="4%">REQUIRED DATE</th>
-                    <th width="7.6%">PO NO.</th>
                     <th width="5%">POLINENO.</th>
                     <th width="6%">PRLINENO.</th>
+                    <th width="6.2%"></th>
                 </tr>
                 <tbody id="detail">
                     <asp:Repeater runat="server" ID="fld_detail_PROC_GoodsReceive_DT" OnItemCommand="fld_detail_PROC_GoodsReceive_DT_ItemCommand" OnItemDataBound="fld_detail_PROC_GoodsReceive_DT_ItemDataBound">
@@ -321,6 +322,10 @@
                                  <%#Eval("UOMCode")%>
                                     <asp:TextBox ID="fld_UOMCode" style="display:none" runat="server"   Text='<%#Eval("UOMCode") %>'  Width="84%"></asp:TextBox>
                                 </td>
+                                <td>
+                                 <%#Eval("PONo")%>
+                               <asp:TextBox ID="fld_PONo" style="display:none" runat="server" Text='<%#Eval("PONo") %>' Width="84%" ></asp:TextBox>
+                                </td>
                                   <td>
                                    <%#Eval("PRNo")%>
                                     <asp:TextBox ID="fld_PRNo" style="display:none" runat="server"    Text='<%#Eval("PRNo") %>' Width="74%"  ></asp:TextBox>
@@ -338,10 +343,7 @@
                                     <asp:TextBox ID="fld_RequestDate" style="display:none" runat="server"  CssClass="validate[required]" Text='<%# String.IsNullOrEmpty(Eval("RequestDate").ToString())? "":DateTime.Parse(Eval("RequestDate").ToString()).ToString("yyyy-MM-dd") %>'  Width="84%"></asp:TextBox>
                                 </td>
                               
-                                <td>
-                                 <%#Eval("PONo")%>
-                               <asp:TextBox ID="fld_PONo" style="display:none" runat="server" Text='<%#Eval("PONo") %>' Width="84%" ></asp:TextBox>
-                                </td>
+                                
                                   <td>
                                   <%#Eval("POLineNo")%>
                                     <asp:TextBox ID="fld_POLineNo" style="display:none" runat="server" Text='<%#Eval("POLineNo") %>' Width="84%"  ></asp:TextBox>
@@ -351,7 +353,7 @@
                                   <%#Eval("PRLineNo")%>
                                     <asp:TextBox ID="fld_PRLineNo" style="display:none" runat="server" Text='<%#Eval("PRLineNo")%>' Width="74%" ></asp:TextBox>
                                 </td>
-                                <td style="display:none">
+                                <td >
                                     <asp:Button ID="btnDelete" runat="server" Text="Del" CssClass="btn" CommandName="del" ClientIDMode="Static" OnClientClick="return confirm('Confirm Del？')" />
                                 </td>
                             </tr>

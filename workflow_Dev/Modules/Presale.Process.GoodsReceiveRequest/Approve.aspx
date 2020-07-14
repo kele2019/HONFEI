@@ -155,12 +155,13 @@
                     <th width="7.6%">UNIT PRICE</th>
                     <th width="7.6">TAX CODE</th>
                     <th width="7.1%">COSTCENTER</th>
-                    <th width="10.1%">UOM CODE</th>
+                    <th width="4%">UOM CODE</th>  
+                    <th width="7.6%">PO NO.</th>
                     <th width="10.1%">PR NO.</th>
                     <th width="7%">REQUESTER</th>
                     <th width="7%">DETAIL DESCRIPTION</th>
                     <th width="4%">REQUIRED DATE</th>
-                    <th width="7.6%">PO NO.</th>
+                  
                     <th width="5%">POLINENO.</th>
                     <th width="6%">PRLINENO.</th>
                 </tr>
@@ -189,6 +190,9 @@
                                 <td>
                                  <%#Eval("UOMCode")%>
                                 </td>
+                                 <td>
+                                 <%#Eval("PONo")%>
+                                </td>
                                   <td>
                                    <%#Eval("PRNo")%>
                                 </td>
@@ -200,10 +204,6 @@
                                 </td>
                                 <td>
                                 <%# String.IsNullOrEmpty(Eval("RequestDate").ToString()) ? "" : DateTime.Parse(Eval("RequestDate").ToString()).ToString("yyyy-MM-dd")%>
-                                </td>
-                              
-                                <td>
-                                 <%#Eval("PONo")%>
                                 </td>
                                   <td>
                                   <%#Eval("POLineNo")%>

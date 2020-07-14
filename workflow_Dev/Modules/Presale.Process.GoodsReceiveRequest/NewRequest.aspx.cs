@@ -101,6 +101,9 @@ namespace Presale.Process.GoodsReceiveRequest
                     {
                         item.FORMID = userInfo.FormId;
                         fld_PurchaseOrderNo.Text = item.PONo + ",";
+                        item.QUANTITY = Convert.ToDecimal(item.QUANTITY).ToString("f2");
+                        item.UnitPrice = Convert.ToDecimal(item.UnitPrice).ToString("f2");
+
                     }
                      List<string> listpono=listEntity.Select(o => o.PONo).Distinct().ToList();
                      string PONOstr = string.Join(",", listpono);

@@ -81,39 +81,40 @@
     <form id="form1" runat="server" style="width:95%;margin-top:5%;margin-left:2.5%">
     <div>
         <div>
-        <p style="font-weight:bold">PO Information</p>
-       <%-- <table class="table table-condensed table-bordered" >
+        <p style="font-weight:bold; text-align:center; font-size:larger;"> SAP PO Information</p>
+        <table class="table table-condensed table-bordered" >
                 <tr>
-                    <td class="td-label">Dept</td>
-                    <td class="td-content"><asp:DropDownList runat="server" 
-                            ID="dropDepartment" 
-                            onselectedindexchanged="dropDepartment_SelectedIndexChanged" 
-                            AutoPostBack="True" ></asp:DropDownList></td>
-                    <td class="td-label" >Employee Name</td>
-                    <td class="td-content"><asp:DropDownList ID="dropEmployee" runat="server"></asp:DropDownList></td>
+                    <td class="td-label">PO No.</td>
+                    <td class="td-content"> 
+                    <asp:TextBox runat="server" ID="txtPONO"></asp:TextBox>
+                    </td>
+                    <td class="td-label" >PR No.</td>
+                    <td class="td-content"> 
+                     <asp:TextBox runat="server" ID="txtPRNO"></asp:TextBox>
+                    </td>
                 </tr>
                 <tr>
                     <td style="text-align:center" colspan="4">
                         <asp:Button runat="server" CssClass="btn" ID="btnSearch" Text="Search" onclick="btnSearch_Click" style="float:right"/>
                     </td>
                  </tr>
-            </table>--%>
+            </table>
         <table class="table table-condensed table-bordered">
             <tr>
-                <td  ></td>
-                <td width="4%" style="text-align:center">ItemCode</td>
-                <td width="4%" style="text-align:center">Quantity</td>
-                <td width="4%" style="text-align:center">UnitPrice</td>
-                <td width="4%" style="text-align:center">VatRate</td>
-                <td width="4%" style="text-align:center">Cost center</td>
-                <td width="4%" style="text-align:center">UOM</td>
-                <td width="4%" style="text-align:center">PR No.</td>
-                <td width="4%" style="text-align:center">Requester</td>
-                <td width="4%" style="text-align:center">Detail Description</td>
-                <td width="4%" style="text-align:center">Require Date</td>
-                <td width="4%" style="text-align:center">PO No.</td>
-                <td width="4%" style="text-align:center">PO LineNo.</td>
-                <td width="4%" style="text-align:center">PR LineNo.</td>
+                <th  width="2%" style="text-align:center"></th>
+                <th width="4%" style="text-align:center">ItemCode</th>
+                <th width="4%" style="text-align:center">Quantity</th>
+                <th width="4%" style="text-align:center">UnitPrice</th>
+                <th width="4%" style="text-align:center">VatRate</th>
+                <th width="4%" style="text-align:center">Cost center</th>
+                <th width="4%" style="text-align:center">UOM</th>
+                <th width="4%" style="text-align:center">PO No.</th>
+                <th width="4%" style="text-align:center">PR No.</th>
+                <th width="4%" style="text-align:center">Requester</th>
+                <th width="4%" style="text-align:center">Detail Description</th>
+                <th width="4%" style="text-align:center">Require Date</th>
+                <th width="4%" style="text-align:center">PO LineNo.</th>
+                <th width="4%" style="text-align:center">PR LineNo.</th>
 
             </tr>
             <tbody id="tbodylist">
@@ -141,6 +142,9 @@
                         </td>
                         <td style="text-align:center">
                             <asp:Label runat="server" ID="UOM" CssClass="UOM" Text='<%#Eval("UOM") %>'></asp:Label>
+                        </td> 
+                         <td style="text-align:center">
+                            <asp:Label runat="server" ID="DocNum" CssClass="DocNum" Text='<%#Eval("DocNum") %>'></asp:Label>
                         </td>
                         <td >
                             <asp:Label runat="server" ID="U_M_PRNo" CssClass="U_M_PRNo" Text='<%#Eval("U_M_PRNo") %>'></asp:Label>
@@ -155,9 +159,7 @@
                             <asp:Label runat="server" ID="U_M_ReqD" CssClass="U_M_ReqD" Text='<%#Eval("U_M_ReqD") %>'></asp:Label>
                         </td>
                         
-                         <td style="text-align:center">
-                            <asp:Label runat="server" ID="DocNum" CssClass="DocNum" Text='<%#Eval("DocNum") %>'></asp:Label>
-                        </td>
+                       
 
                         <td style="text-align:center">
                             <asp:Label runat="server" ID="LineNum" CssClass="LineNum" Text='<%#Eval("LineNum") %>'></asp:Label>
