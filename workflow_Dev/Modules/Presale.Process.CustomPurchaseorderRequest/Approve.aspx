@@ -86,11 +86,17 @@
                     </tr>
 
                        <tr>
-                    <td class="td-label">
-                         <p style="text-align:center">PO Amount US / RMB</p>
+                         <td class="td-label">
+                         <p style="text-align:center">Currency</p>
                         </td>
-                        <td class="td-content" colspan="3" >
-                        <asp:Label runat="server" ID="read_PoAmount"   ></asp:Label>
+                        <td class="td-content" >
+                          <asp:Label runat="server" ID="read_Currency" ></asp:Label>
+                        </td>
+                    <td class="td-label">
+                         <p style="text-align:center">PO Amount</p>
+                        </td>
+                        <td class="td-content"  >
+                        <asp:Label runat="server" ID="read_PoAmount"></asp:Label>
                         </td>
                     </tr>
 

@@ -107,9 +107,19 @@
                        <tr>
                     <td class="td-label">
                          <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
-                         <p style="text-align:center">PO Amount US / RMB</p>
+                         <p style="text-align:center">Currency</p>
                         </td>
-                        <td class="td-content" colspan="3" >
+                        <td class="td-content" >
+                         <asp:DropDownList runat="server" ID="fld_Currency">
+                            <asp:ListItem Selected="True" Value="RMB">RMB</asp:ListItem>
+                            <asp:ListItem  Value="USD">USD</asp:ListItem>
+                         </asp:DropDownList>
+                        </td>
+                        <td>
+                         <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
+                         <p style="text-align:center">PO Amount</p>
+                        </td>
+                        <td class="td-content"  >
                         <asp:TextBox runat="server" ID="fld_PoAmount"   Width="95%"  CssClass="validate[required]"></asp:TextBox>
                         </td>
                     </tr>

@@ -102,7 +102,9 @@ namespace Presale.Process.GoodsReceiveRequest
                         item.FORMID = userInfo.FormId;
                         fld_PurchaseOrderNo.Text = item.PONo + ",";
                     }
-                    fld_PurchaseOrderNo.Text = fld_PurchaseOrderNo.Text.TrimEnd(',');
+                     List<string> listpono=listEntity.Select(o => o.PONo).Distinct().ToList();
+                     string PONOstr = string.Join(",", listpono);
+                    fld_PurchaseOrderNo.Text = PONOstr;// fld_PurchaseOrderNo.Text.TrimEnd(',');
                     fld_detail_PROC_GoodsReceive_DT.DataSource = listEntity;
                     fld_detail_PROC_GoodsReceive_DT.DataBind();
                 }

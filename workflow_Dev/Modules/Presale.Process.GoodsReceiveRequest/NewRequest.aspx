@@ -111,6 +111,8 @@
                 $("#fld_GoodsFlag").val(obj);
                 if (obj == 1) {
                     $("#PO").attr("checked", true);
+                    $("#attchmentpo").show();
+                    $("#attchmentpr").hide();
                     $("#trPO").show();
                     $("#divPO").show();
                     $("#trPR").hide();
@@ -118,6 +120,8 @@
                 }
                 if (obj == 0) {
                     $("#NoPO").attr("checked", true);
+                    $("#attchmentpo").hide();
+                    $("#attchmentpr").show();
                     $("#trPR").show();
                     $("#divPO").hide();
                     $("#trPO").hide();
@@ -208,8 +212,6 @@
                     <td class="td-content" colspan="7">
                        <input type="radio" name="POPR" id="PO" onclick="POStatus_onchange('1')" /> Goods Receiving with PO  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                        <input type="radio" name="POPR" id="NoPO" onclick="POStatus_onchange('0')"  />None  PO 
-                     <br />  Goods Receiving with PO “ Confirm acceptance of the above quantity of goods (services) according to the delivery requirements agreed by PO”
-                       <br /> None  PO “Confirmation of acceptance of the goods (services) listed in the annex (packing list/invoice)”
                         <asp:TextBox runat="server"  ID="fld_GoodsFlag"   style="display:none;"></asp:TextBox>
                     </td>
                 </tr>
@@ -292,6 +294,10 @@
                                 <td style="text-align:center;display:none;">
                                     <asp:TextBox ID="fld_FORMID" Text='<%#Eval("FORMID") %>' runat="server" Style="display: none" ></asp:TextBox>
                                     <asp:Label ID="fld_ROWID" Text='<%# Container.ItemIndex+1%>' runat="server"></asp:Label>
+                                    <asp:TextBox ID="fld_WhsCode" Text='<%#Eval("WhsCode") %>' runat="server" Style="display: none" ></asp:TextBox>
+                                    <asp:TextBox ID="fld_Project" Text='<%#Eval("Project") %>' runat="server" Style="display: none" ></asp:TextBox>
+                                    <asp:TextBox ID="fld_ItemName" Text='<%#Eval("ItemName") %>' runat="server" Style="display: none" ></asp:TextBox>
+
                                 </td>
                                 <td>
                                     <%#Eval("ITEMNO") %>
@@ -357,6 +363,8 @@
 
         </div>
          <div class="row">
+         <p id="attchmentpo" style="display:none;color:Red; font-weight:bold;"> Confirm acceptance of the above quantity of goods (services) according to the delivery requirements agreed by PO</p>
+         <p id="attchmentpr"  style="display:none;color:Red; font-weight:bold;">Confirmation of acceptance of the goods (services) listed in the annex (packing list/invoice) </p>
             <attach:attachments id="Attachments1" runat="server"></attach:attachments>
         </div>
         <div class="row">

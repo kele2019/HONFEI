@@ -35,6 +35,10 @@
                 var DocNum = $(item).find('.DocNum').text();
                 var LineNum = $(item).find('.LineNum').text();
                 var U_M_PRLi = $(item).find('.U_M_PRLi').text();
+                var WhsCode = $(item).find('.WhsCode').text();
+                var Project = $(item).find('.Project').text();
+                var ItemName = $(item).find('.ItemName').text();
+
                 if (cbflag) {
                     returnJson += "{'ITEMNO':'" + ItemCode;
                     returnJson += "','QUANTITY':'" + Quantity;
@@ -49,6 +53,10 @@
                     returnJson += "','PONo':'" + DocNum;
                     returnJson += "','POLineNo':'" + LineNum;
                     returnJson += "','PRLineNo':'" + U_M_PRLi;
+                    returnJson += "','WhsCode':'" + WhsCode;
+                    returnJson += "','Project':'" + Project;
+                    returnJson += "','ItemName':'" + ItemName;
+
                     returnJson += "'},";
                 }
             });
@@ -156,6 +164,10 @@
                         </td>
                         <td style="text-align:center">
                             <asp:Label runat="server" ID="U_M_PRLi" CssClass="U_M_PRLi" Text='<%#Eval("U_M_PRLi") %>'></asp:Label>
+                            <asp:Label runat="server" ID="WhsCode" CssClass="WhsCode" style="display:none" Text='<%#Eval("WhsCode") %>'></asp:Label>
+                            <asp:Label runat="server" ID="Project" CssClass="Project" style="display:none" Text='<%#Eval("Project") %>'></asp:Label>
+                            <asp:Label runat="server" ID="ItemName" CssClass="ItemName" style="display:none" Text='<%#Eval("ItemName") %>'></asp:Label>
+
                         </td>
                     </tr>
                 </ItemTemplate>

@@ -103,7 +103,7 @@
                     </td>
                     <td class="td-content" colspan="7">
                     <span id="span_GoodsFlag"></span>
-                        <asp:TextBox runat="server"  ID="read_GoodsFlag"   ></asp:TextBox>
+                        <asp:TextBox runat="server"  ID="read_GoodsFlag"  style="display:none"  ></asp:TextBox>
                     </td>
                 </tr>
 

@@ -21,6 +21,9 @@ namespace Presale.Process.GoodsReceiveRequest
         public string PONo { get; set; }
         public string POLineNo { get; set; }
         public string PRLineNo { get; set; }
+        public string WhsCode { get; set; }
+        public string Project { get; set; }
+        public string ItemName { get; set; }
 
     }
 }
