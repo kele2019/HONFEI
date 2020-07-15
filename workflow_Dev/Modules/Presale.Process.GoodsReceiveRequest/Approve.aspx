@@ -37,7 +37,9 @@
             if (obj != "") {
                 if (obj == 1) {
                     $("#span_GoodsFlag").text("Goods Receiving with PO");
-                    $("#PO").attr("checked", true);
+                    //$("#PO").attr("checked", true);
+                    $("#attchmentpo").show();
+                    $("#attchmentpr").hide();
                     $("#trPO").show();
                     $("#divPO").show();
                     $("#trPR").hide();
@@ -45,7 +47,9 @@
                 }
                 if (obj == 0) {
                     $("#span_GoodsFlag").text("None  PO ");
-                    $("#NoPO").attr("checked", true);
+                    // $("#NoPO").attr("checked", true);
+                    $("#attchmentpo").hide();
+                    $("#attchmentpr").show();
                     $("#trPR").show();
                     $("#divPO").hide();
                     $("#trPO").hide();
@@ -141,7 +145,7 @@
                  <p style="text-align:center">Remark</p>
                 </td>
                  <td  colspan="7" class="td-content">
-                 <asp:TextBox runat="server" ID="read_GRRemark" ReadOnly="true" TextMode="MultiLine" Rows="5"  Width="95%" ></asp:TextBox>
+                 <asp:TextBox runat="server" ID="read_GRRemark" ReadOnly="true" TextMode="MultiLine" Rows="5"  Width="98%" ></asp:TextBox>
                  </td>
                   
                 </tr>
@@ -221,6 +225,8 @@
 
         </div>
          <div class="row">
+            <p id="attchmentpo" style="display:none;color:Red; font-weight:bold;"> Confirm acceptance of the above quantity of goods (services) according to the delivery requirements agreed by PO</p>
+            <p id="attchmentpr"  style="display:none;color:Red; font-weight:bold;">Confirmation of acceptance of the goods (services) listed in the annex (packing list/invoice) </p>
             <attach:attachments id="Attachments1"  ReadOnly="true" runat="server"></attach:attachments>
         </div>
         <div class="row">

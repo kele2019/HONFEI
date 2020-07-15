@@ -95,10 +95,10 @@
                         checkedstr += $(item).next().html() + ";"; //获取value值 
                     }
                 });
-                $("#Attchmentlist").val(checkedstr);
+                $("#fld_Attchmentlist").val(checkedstr);
             });
 
-            var checkedstr = $("#Attchmentlist").val();
+            var checkedstr = $("#fld_Attchmentlist").val();
             $("#dropAttchment").find("input[type='checkbox']").each(function (i, item) {
                 if (checkedstr.indexOf($(item).next().html()) >=0) {
                     $(item).attr("checked", true);
