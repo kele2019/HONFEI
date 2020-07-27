@@ -11,7 +11,8 @@ namespace Presale.Process.CustomPurchaseorderRequest
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string StepName = Request.QueryString["StepName"];
+            hdStepname.Value = StepName;
         }
     }
 }

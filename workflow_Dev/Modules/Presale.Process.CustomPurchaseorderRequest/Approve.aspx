@@ -18,7 +18,36 @@
         }
 
         $(document).ready(function () {
-           
+            var stepname = $("#hdStepname").val();
+            if (request("type") == "mytask") {
+
+                $("#fld_PEComments").hide();
+                $("#fld_QUAComments").hide();
+                $("#fld_FINComments").hide();
+                $("#fld_SCMComments").hide();
+                $("#PEComments").text($("#fld_PEComments").val());
+                $("#QUAComments").text($("#fld_QUAComments").val());
+                $("#FINComments").text($("#fld_FINComments").val());
+                $("#SCMComments").text($("#fld_SCMComments").val());
+                console.log(stepname);
+                if (stepname == "Program Engineering") {
+                    $("#fld_PEComments").show();
+                    $("#PE").show();
+
+                }
+                if (stepname == "Finance Manager") {
+                    $("#fld_FINComments").show();
+                    $("#FIN").show();
+                }
+                if (stepname == "Buyer and Planner") {
+                    $("#fld_SCMComments").show();
+                    $("#SCM").show();
+                }
+                if (stepname == "Quality Manager") {
+                    $("#fld_QUAComments").show();
+                    $("#QUA").show();
+                }
+            }
         });
        
     </script>
@@ -117,19 +146,70 @@
                         <asp:Label runat="server" ID="read_Othermatters"  ></asp:Label>
                         </td>
                     </tr>
+
+                    <tr>
+                    <td class="td-label">
+                         <p style="text-align:center">Contract comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <asp:Label runat="server" ID="read_Contractcomments"  MaxLength="100"   ></asp:Label>
+                        </td>
+                    </tr>
+
                         <tr>
                     <td class="td-label">
-                         <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
+                         <span id="PE"  style="background:red;  height:30px; float:left;display:none;">&nbsp;</span>
+                         <p style="text-align:center">PE  Comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <span id="PEComments"></span>
+                        <asp:TextBox runat="server" ID="fld_PEComments" MaxLength="100"    Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        </td>
+                    </tr>
+                      <tr>
+                    <td class="td-label">
+                         <span id="QUA" style=" background:red;  height:30px; float:left;display:none;">&nbsp;</span>
+                         <p style="text-align:center">QUA comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                         <span id="QUAComments"></span>
+                        <asp:TextBox runat="server" ID="fld_QUAComments"   MaxLength="100"   Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        </td>
+                    </tr>
+                      <tr>
+                    <td class="td-label">
+                         <span  id="FIN"  style=" background:red;  height:30px; float:left;display:none;">&nbsp;</span>
+                         <p style="text-align:center">FIN comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                         <span id="FINComments"></span>
+                        <asp:TextBox runat="server" ID="fld_FINComments"   MaxLength="100"   Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        </td>
+                    </tr>
+                      <tr>
+                    <td class="td-label">
+                         <span id="SCM" style="background:red;  height:30px; float:left;display:none;">&nbsp;</span>
+                         <p style="text-align:center">SCM comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <span id="SCMComments"></span>
+                        <asp:TextBox runat="server" ID="fld_SCMComments"   MaxLength="100"   Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        </td>
+                    </tr>
+
+                        <tr>
+                    <td class="td-label">
                          <p style="text-align:center">Review Conclusion</p>
                         </td>
                         <td class="td-content" colspan="3" >
-                        <asp:TextBox runat="server" ReadOnly=true ID="read_Reviewcomments"  TextMode="MultiLine" Rows="5"  Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        <asp:TextBox runat="server" ReadOnly="true" ID="read_Reviewcomments"  TextMode="MultiLine" Rows="5"  Width="95%" ></asp:TextBox>
                         </td>
                     </tr>
                     </table>
                     </div>
 
             <div class="row" style="display:block;">
+             <p style="color:Red; font-weight:bold;">Note:the items abovementioned have been pre-reviewed by the team prior to this formal review.</p>
                 <attach:attachments id="Attachments1" Readonly="true"  runat="server"></attach:attachments>
             </div>
             <div class="row">
@@ -137,7 +217,10 @@
             </div>
              
         <btn:buttonlist id="ButtonList1" runat="server"></btn:buttonlist>
-       
+      
+        </div>
+        <div>
+        <asp:HiddenField runat="server" ID="hdStepname" />
         </div>
     </form>
 </body>

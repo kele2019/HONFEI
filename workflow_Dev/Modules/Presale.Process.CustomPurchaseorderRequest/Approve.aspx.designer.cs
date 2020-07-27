@@ -130,6 +130,51 @@ namespace Presale.Process.CustomPurchaseorderRequest {
         protected global::System.Web.UI.WebControls.Label read_Othermatters;
         
         /// <summary>
+        /// read_Contractcomments 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label read_Contractcomments;
+        
+        /// <summary>
+        /// fld_PEComments 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fld_PEComments;
+        
+        /// <summary>
+        /// fld_QUAComments 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fld_QUAComments;
+        
+        /// <summary>
+        /// fld_FINComments 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fld_FINComments;
+        
+        /// <summary>
+        /// fld_SCMComments 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fld_SCMComments;
+        
+        /// <summary>
         /// read_Reviewcomments 控件。
         /// </summary>
         /// <remarks>
@@ -164,5 +209,14 @@ namespace Presale.Process.CustomPurchaseorderRequest {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.UserControl ButtonList1;
+        
+        /// <summary>
+        /// hdStepname 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdStepname;
     }
 }

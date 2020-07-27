@@ -516,6 +516,7 @@ namespace Presale.Process.EmployeeTraining
 				{
 					UserData.Rows.Add(UserData.NewRow());
 					DataRow DRUSER = UserData.Rows[(i / 5)];
+                    if ((UserCount - 1) >=i) DRUSER["USER1"] = dtUserInfoPM.Rows[i]["EXT04"];
 					if ((UserCount - 1) > i) DRUSER["USER1"] = dtUserInfoPM.Rows[i]["EXT04"];
 					if ((UserCount - 1) > i) DRUSER["USER2"] = dtUserInfoPM.Rows[++i]["EXT04"];
 					if ((UserCount - 1) > i) DRUSER["USER3"] = dtUserInfoPM.Rows[++i]["EXT04"];

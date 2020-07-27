@@ -18,8 +18,9 @@
             $("#UserInfo1_fld_PROCESSSUMMARY").val(summary);
             return true;
         }
-      
+
         $(document).ready(function () {
+            $("#Attachments1_txtMust").val("1");
             if ($("#hdIncident").val() - 0 > 0) {
                 $("#ButtonList1_btnSubmit").val("Submit");
                 $("#ButtonList1_btnBack").hide();
@@ -28,7 +29,30 @@
             if ($("#hdUrgeTask").val() == "Yes") {
                 $("#ReturnBackTask").show();
             }
+            selectproducttype();
         });
+        function selectproducttype(obj) {
+            if (obj != undefined) {
+                if (obj == "1") {
+                    $("#ptype1").attr("checked", true);
+                    $("#fld_Producttype").val("New products");
+                  
+                }
+                if (obj == "2") {
+                    $("#ptype2").attr("checked", true);
+                    $("#fld_Producttype").val("Existing products");
+                }
+            }
+            else {
+                var pttyp = $("#fld_Producttype").val();
+                if (pttyp == "New products") {
+                    $("#ptype1").attr("checked", true);
+                }
+                if (pttyp == "Existing products") {
+                    $("#ptype2").attr("checked", true);
+                }
+            }
+        }
         function beforeSave() {
             var summary = "Custom Purchase order review";
             $("#UserInfo1_fld_PROCESSSUMMARY").val(summary);
@@ -79,6 +103,28 @@
                         <asp:TextBox runat="server" ID="fld_PurchaseOrderrevision" Width="95%"  CssClass="validate[required]" ></asp:TextBox>
                         </td>
                     </tr>
+                    <tr>
+                      <td class="td-label">
+                         <p style="text-align:center">Products Type</p>
+
+                        </td>
+                      <td class="td-content"  colspan="3" >
+                       <input type="radio" name="ptype" id="ptype1" onclick="selectproducttype('1')" />  New products
+                       <br />
+                       Review attached Customer PO and Provide the supporting documents as below:
+                        <br />●Specify roles and method to different customer requirements
+                        <br /> ●Opportunity and Risk Assessment
+                        <br />●Quantify Customer Needs
+                        <br />●Special requirements of products and services are determined
+                       <br />
+                       <input type="radio" name="ptype" id="ptype2" onclick="selectproducttype('2')" /> Existing products
+                       <br />
+                       Review attached Customer PO 
+                        <asp:TextBox runat="server" ID="fld_Producttype"  style="display:none" ></asp:TextBox>
+                      </td>
+
+                    </tr>
+
                 </table>
             </div>
 
@@ -88,22 +134,22 @@
                     <tr>
                     <td class="td-label">
                          <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
-                         <p style="text-align:center">Technical and Quality Requirements</p>
+                         <p style="text-align:center">Technical Requirements</p>
                         </td>
                         <td class="td-content" colspan="3" >
-                        <asp:TextBox runat="server" ID="fld_Techicalquality"   Width="95%"  CssClass="validate[required]"></asp:TextBox>
-                        </td>
-                    </tr>
-                      <tr>
-                    <td class="td-label">
-                         <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
-                         <p style="text-align:center">Quantity And Delivery Schedule</p>
-                        </td>
-                        <td class="td-content" colspan="3" >
-                        <asp:TextBox runat="server" ID="fld_Quantitydelivery"   Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="fld_Techicalquality"  MaxLength="50"  Width="95%"  CssClass="validate[required]"></asp:TextBox>
                         </td>
                     </tr>
 
+                     <tr>
+                    <td class="td-label">
+                         <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
+                         <p style="text-align:center">Quantity Requirements</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <asp:TextBox runat="server" ID="fld_qualityrequirements"    MaxLength="50" Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        </td>
+                    </tr>
                        <tr>
                     <td class="td-label">
                          <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
@@ -124,13 +170,23 @@
                         </td>
                     </tr>
 
+                    <tr>
+                    <td class="td-label">
+                         <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
+                         <p style="text-align:center">Quantity And Delivery Schedule</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <asp:TextBox runat="server" ID="fld_Quantitydelivery"   MaxLength="50"   Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        </td>
+                    </tr>
+
                      <tr>
                     <td class="td-label">
                          <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
                          <p style="text-align:center">Delivery Terms</p>
                         </td>
                         <td class="td-content" colspan="3" >
-                        <asp:TextBox runat="server" ID="fld_Deliveryterms"   Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="fld_Deliveryterms"  MaxLength="50"    Width="95%"  CssClass="validate[required]"></asp:TextBox>
                         </td>
                     </tr>
                      <tr>
@@ -139,22 +195,67 @@
                          <p style="text-align:center">Other Matters</p>
                         </td>
                         <td class="td-content" colspan="3" >
-                        <asp:TextBox runat="server" ID="fld_Othermatters"   Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="fld_Othermatters"  MaxLength="100"   Width="95%"  CssClass="validate[required]"></asp:TextBox>
                         </td>
                     </tr>
-                        <tr>
+
+                     <tr>
                     <td class="td-label">
                          <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
+                         <p style="text-align:center">Contract comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <asp:TextBox runat="server" ID="fld_Contractcomments"  MaxLength="100"   Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        </td>
+                    </tr>
+
+                    
+                    
+                      <tr>
+                    <td class="td-label">
+                         <p style="text-align:center">PE  Comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <asp:Label runat="server" ID="read_PEComments"   ></asp:Label>
+                        </td>
+                    </tr>
+                      <tr>
+                    <td class="td-label">
+                         <p style="text-align:center">QUA comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <asp:Label runat="server" ID="read_QUAComments"  ></asp:Label>
+                        </td>
+                    </tr>
+                      <tr>
+                    <td class="td-label">
+                         <p style="text-align:center">FIN comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <asp:Label runat="server" ID="read_FINComments"    ></asp:Label>
+                        </td>
+                    </tr>
+                      <tr>
+                    <td class="td-label">
+                         <p style="text-align:center">SCM comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <asp:Label runat="server" ID="read_SCMComments"   ></asp:Label>
+                        </td>
+                    </tr>
+                      <tr>
+                    <td class="td-label">
                          <p style="text-align:center">Review Conclusion</p>
                         </td>
                         <td class="td-content" colspan="3" >
-                        <asp:TextBox runat="server" ID="fld_Reviewcomments"  TextMode="MultiLine" Rows="5"  Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="read_Reviewcomments"  ReadOnly="true" TextMode="MultiLine" Rows="5"  Width="95%"  ></asp:TextBox>
                         </td>
                     </tr>
                     </table>
                     </div>
 
             <div class="row" style="display:block;">
+            <p style="color:Red; font-weight:bold;">Note:the items abovementioned have been pre-reviewed by the team prior to this formal review.</p>
                 <attach:attachments id="Attachments1" runat="server"></attach:attachments>
             </div>
             <div class="row">

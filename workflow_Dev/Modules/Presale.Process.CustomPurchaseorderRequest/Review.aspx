@@ -119,7 +119,7 @@
                          <p style="text-align:center">Review Conclusion</p>
                         </td>
                         <td class="td-content" colspan="3" >
-                        <asp:TextBox runat="server" ReadOnly=true ID="read_Reviewcomments"  TextMode="MultiLine" Rows="5"  Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        <asp:TextBox runat="server" ReadOnly="true" ID="read_Reviewcomments"  TextMode="MultiLine" Rows="5"  Width="95%"  CssClass="validate[required]"></asp:TextBox>
                         </td>
                     </tr>
                     </table>

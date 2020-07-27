@@ -264,7 +264,7 @@
                    <p style="text-align:center">Remark</p>
                 </td>
                  <td  class="td-content" colspan="7">
-                 <asp:TextBox runat="server" ID="fld_GRRemark" TextMode="MultiLine" Rows="5"  Width="95%" ></asp:TextBox>
+                 <asp:TextBox runat="server" ID="fld_GRRemark" TextMode="MultiLine"  CssClass="validate[required]"  Rows="5"  Width="95%" ></asp:TextBox>
                  </td>
                   
                 </tr>

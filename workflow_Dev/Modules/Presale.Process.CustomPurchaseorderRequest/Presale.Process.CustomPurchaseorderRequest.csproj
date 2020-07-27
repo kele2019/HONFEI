@@ -57,6 +57,9 @@
   <ItemGroup>
     <Content Include="Approve.aspx" />
     <Content Include="NewRequest.aspx" />
+    <Content Include="OtherApprove.aspx" />
+    <Content Include="PEApprove.aspx" />
+    <Content Include="Resubmit.aspx" />
     <Content Include="Review.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +77,28 @@
     <Compile Include="NewRequest.aspx.designer.cs">
       <DependentUpon>NewRequest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="OtherApprove.aspx.cs">
+      <DependentUpon>OtherApprove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OtherApprove.aspx.designer.cs">
+      <DependentUpon>OtherApprove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PEApprove.aspx.cs">
+      <DependentUpon>PEApprove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PEApprove.aspx.designer.cs">
+      <DependentUpon>PEApprove.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resubmit.aspx.cs">
+      <DependentUpon>Resubmit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resubmit.aspx.designer.cs">
+      <DependentUpon>Resubmit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Review.aspx.cs">
       <DependentUpon>Review.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
