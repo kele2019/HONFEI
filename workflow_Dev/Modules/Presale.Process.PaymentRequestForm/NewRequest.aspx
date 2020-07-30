@@ -80,6 +80,7 @@
                $("#ReturnBackTask").show();
            }
            totalAmount_onchange();
+           selectpaymenttype();
        });
        function amount_onblur(obj) {
            var amount = $(obj).parent().parent().find("td").eq(2).children().val() - 0;
@@ -173,6 +174,69 @@
            }
        }
 
+       function showGRInfo() {
+           var digStr = "dialogHeight:500px;dialogWidth:850px;"
+           var Vendercode = $("#fld_vendorcode").val();
+           var ReturnValue = window.showModalDialog("GRList.aspx?Vendercode=" + Vendercode, null, digStr);
+           if (ReturnValue != null) {
+               var purchaseNo = eval("(" + ReturnValue + ")");
+               // var havePapers1 = eval(havePapers);
+               var value = "";// 
+               value += "," + purchaseNo[0].PurchaseNo;
+               if (value.substr(0, 1) == ',')
+                   value = value.substr(1);
+               $("#fld_GRNo").val(value);
+           }
+       }
+       function showPOInfo() {
+           var digStr = "dialogHeight:500px;dialogWidth:850px;"
+           var Vendercode = $("#fld_vendorcode").val();
+           var ReturnValue = window.showModalDialog("POList.aspx?Vendercode=" + Vendercode, null, digStr);
+           if (ReturnValue != null) {
+               var purchaseNo = eval("(" + ReturnValue + ")");
+               // var havePapers1 = eval(havePapers);
+               var value = ""; // 
+               value += "," + purchaseNo[0].PurchaseNo;
+               if (value.substr(0, 1) == ',')
+                   value = value.substr(1);
+               $("#fld_GRNo").val(value);
+           }
+       }
+       function selectpaymenttype(obj) {
+           if (obj != undefined) {
+               if (obj == "1") {
+                   $("#ptype1").attr("checked", true);
+                   $("#fld_PaymentType").val("Payment With PO");
+                   $("#trPO").show();
+                   $("#trGR").hide();
+                   $("#fld_GRNo").val("");
+
+               }
+               if (obj == "2") {
+                   $("#ptype2").attr("checked", true);
+                   $("#fld_PaymentType").val("Payment without PO");
+                   $("#trPO").hide();
+                   $("#trGR").show();
+                   $("#fld_PO").val("");
+               }
+           }
+           else {
+               var pttyp = $("#fld_PaymentType").val();
+               if (pttyp == "Payment With PO") {
+                   $("#ptype1").attr("checked", true);
+                   $("#trPO").show();
+                   $("#trGR").hide();
+                   $("#fld_GRNo").val("");
+
+               }
+               if (pttyp == "Payment without PO") {
+                   $("#ptype2").attr("checked", true);
+                   $("#trPO").hide();
+                   $("#trGR").show();
+                   $("#fld_PO").val("");
+               }
+           }
+       }
 
    </script>
 </head>
@@ -180,7 +244,7 @@
 <form id="form1" runat="server">
     <div id="myDiv" class="container">
         <div class="row">
-            <ui:userinfo id="UserInfo1" processtitle="Payment Request Process" processprefix="FINPAY" tablename="PROC_PaymentRequest" runat="server" tablenamedetail="PROC_PaymentRequest_DT"></ui:userinfo>
+            <ui:userinfo id="UserInfo1" processtitle="Payment Request Process" processprefix="FINPAY" tablename="PROC_PaymentRequest" runat="server" tablenamedetail="PROC_PaymentRequest_DT,PROC_PaymentRequestPO_DT"></ui:userinfo>
             <asp:TextBox runat="server" ID="fld_DGMLogin" style="display:none"></asp:TextBox>
             <asp:TextBox runat="server" ID="fld_GMLogin" style="display:none"></asp:TextBox>
             <asp:TextBox runat="server" ID="fld_CompareValue" value="1500.00" style="display:none"></asp:TextBox>
@@ -193,10 +257,25 @@
             <p style="font-weight:bold">Request require（<span style=" background:red">&nbsp;</span> must write）</p>
             <table class="table table-condensed table-bordered">
 
+            
 
              <tr>
                     <td class="td-label">
-                 <%--   <span style=" background:red;height:30px; float:left;">&nbsp;</span>--%>
+                <span style="background:red;height:30px; float:left;">&nbsp;</span>
+                 <p style="text-align:center">   Payment Type</p>
+                    </td>
+                    <td  class="td-content" colspan="7">
+                     <input type="radio" name="ptype" id="ptype1" onclick="selectpaymenttype('1')" />
+                     Payment with PO
+                     &nbsp;&nbsp;&nbsp;
+                       <input type="radio" name="ptype" id="ptype2" onclick="selectpaymenttype('2')" />
+                       Payment without PO
+                    <asp:TextBox runat="server" ID="fld_PaymentType" style="display:none"></asp:TextBox>
+                    </td>
+                  </tr>
+                  
+                               <tr style="display:none">
+                    <td class="td-label">
                         <p style="text-align:center">PUR. REQUEST NO</p>
                     </td>
                     <td class="td-content" colspan="7">
@@ -243,10 +322,10 @@
                     </td>
                     <td class="td-label">
                         <span style=" height:30px;float:left">&nbsp;</span>
-                        <p style="text-align:center">PO Number</p>
+                        <p style="text-align:center">Payment Term</p>
                     </td>
                     <td class="td-content" colspan="3">
-                        <asp:TextBox ID="fld_PO" runat="server" Width="95%"></asp:TextBox>
+                         <asp:TextBox ID="fld_payterm" runat="server" Width="95%"></asp:TextBox>
                     </td>
                 </tr> 
                 <tr>
@@ -282,10 +361,10 @@
                 <tr>
                     <td class="td-label">
                         <span style=" height:30px;float:left">&nbsp;</span>
-                        <p style="text-align:center">Payment Term</p>
+                        <p style="text-align:center">EMERGENCY</p>
                     </td>
                     <td class="td-content" colspan="3">
-                        <asp:TextBox ID="fld_payterm" runat="server" Width="95%"></asp:TextBox>
+                        <asp:CheckBox runat="server" ID="fld_EmergencyNew" />
                     </td>
                     <td class="td-label">
                         <span style="height:30px;float:left">&nbsp;</span>
@@ -295,16 +374,79 @@
                       <asp:CheckBox runat="server" ID="fld_Emergency" />
                     </td>
                 </tr>
-                <tr>
-                  <td class="td-label">
-                        <span style="height:30px;float:left">&nbsp;</span>
-                        <p style="text-align:center; color:Red;">EMERGENCY</p>
+
+                   <tr id="trGR" style="display:none">
+                    <td class="td-label">
+                    <span style="background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">GR NO</p>
                     </td>
                     <td class="td-content" colspan="7">
-                      <asp:CheckBox runat="server" ID="fld_EmergencyNew" />
+                        <asp:TextBox runat="server" ID="fld_GRNo"  Width="92%" style="background-color:White;" onfocus="this.blur()"></asp:TextBox>
+                        <input type="button" value="..." class="btn" onclick="return showGRInfo()" />
+
                     </td>
-                </tr> 
+                </tr>
+
+                  <tr id="trPO" style="display:none">
+                    <td class="td-label">
+                    <span style="background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">PO Number</p>
+                    </td>
+                    <td class="td-content" colspan="7">
+                     <asp:TextBox ID="fld_PO" runat="server" Width="92%"></asp:TextBox>
+                      <input type="button" value="..." class="btn" onclick="return showPOInfo()" />
+                    </td>
+                    </tr>
             </table>
+
+               <table class="table table-condensed table-bordered">
+                <tr>
+                    <th style="display:none"></th>
+                    <th width="10%">PO No</th>
+                    <th width="30%">PO Remark</th>
+                    <th width="10%">GRNo</th>
+                    <th width="10%">GR Total</th>
+                    <th width="30%">GR Remark</th>
+                    <th width="10%"></th>
+                </tr>
+            <tbody id="Tbody1">
+                <asp:Repeater runat="server" ID="fld_detail_PROC_PaymentRequestPO_DT" OnItemCommand="fld_detail_PROC_PaymentRequestPO_DT_ItemCommand" >
+                    <ItemTemplate>
+                        <tr>
+                          <td style="display:none">
+                           <asp:TextBox ID="fld_FORMID" Text='<%#Eval("FORMID") %>' runat="server" Style="display: none" ></asp:TextBox>
+                           <asp:Label ID="fld_ROWID" Text='<%# Container.ItemIndex+1%>' runat="server"></asp:Label>
+                        </td>
+                        <td>
+                        <asp:TextBox runat="server" ID="fld_PONo" Text='<%#Eval("PONo") %>' Width="86%"></asp:TextBox>
+                        </td>
+                        <td>
+                        <asp:TextBox runat="server" ID="fld_PORemark" Text='<%#Eval("PORemark") %>' Width="86%"></asp:TextBox>
+                        </td>
+                          <td>
+                        <asp:TextBox runat="server" ID="fld_GRNo" Text='<%#Eval("GRNo") %>' Width="86%"></asp:TextBox>
+                        </td>
+                          <td>
+                        <asp:TextBox runat="server" ID="fld_GRTotal" Text='<%#Eval("GRTotal") %>' Width="86%"></asp:TextBox>
+                        </td>
+                            <td>
+                        <asp:TextBox runat="server" ID="fld_GRRemark" Text='<%#Eval("GRRemark") %>' Width="86%"></asp:TextBox>
+                        </td>
+                        <td>
+                <asp:Button ID="btnDelete" runat="server" Text="delete" CssClass="btn" CommandName="del" ClientIDMode="Static" OnClientClick="return confirm('Confirm Del？')" />
+                        </td>
+                        </tr>
+                        </ItemTemplate>
+                        </asp:Repeater>
+            </tbody>
+              <tr style="display:none">
+                <td colspan="8" style="text-align:left">
+                    <asp:Button ID="Button2" runat="server" Text="add" CssClass="btn" CausesValidation="false" OnClick="btn2Add_Click"/>
+                </td>
+            </tr>  
+            </table>
+
+
             <table class="table table-condensed table-bordered">
                 <tr>
                     <th width="14%">Inv#</th>
@@ -320,6 +462,7 @@
                 <asp:Repeater runat="server" ID="fld_detail_PROC_PaymentRequest_DT" OnItemCommand="fld_detail_PROC_PaymentRequest_DT_ItemCommand" OnItemDataBound="fld_detail_PROC_PaymentRequest_DT_ItemDataBound">
                     <ItemTemplate>
                         <tr>
+                      
                             <td>
                                 <asp:TextBox runat="server" ID="fld_InvNumer" Text='<%#Eval("InvNumer") %>' Width="86%"></asp:TextBox>
                             </td>

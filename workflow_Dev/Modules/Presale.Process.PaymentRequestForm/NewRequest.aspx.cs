@@ -118,12 +118,22 @@ namespace Presale.Process.PaymentRequestForm
 			UserInfo userInfo = Page.FindControl("UserInfo1") as UserInfo;
 			userInfo.AddNewRow(fld_detail_PROC_PaymentRequest_DT);
 		}
-
+        protected void btn2Add_Click(object sender, EventArgs e)
+        {
+            UserInfo userInfo = Page.FindControl("UserInfo1") as UserInfo;
+            userInfo.AddNewRow(fld_detail_PROC_PaymentRequestPO_DT);
+        }
 		protected void fld_detail_PROC_PaymentRequest_DT_ItemCommand(object source, RepeaterCommandEventArgs e)
 		{
 			UserInfo userInfo = Page.FindControl("UserInfo1") as UserInfo;
 			userInfo.DeleteRow(fld_detail_PROC_PaymentRequest_DT, e);
 		}
+
+        protected void fld_detail_PROC_PaymentRequestPO_DT_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            UserInfo userInfo = Page.FindControl("UserInfo1") as UserInfo;
+            userInfo.DeleteRow(fld_detail_PROC_PaymentRequestPO_DT, e);
+        }
 
 		protected void fld_detail_PROC_PaymentRequest_DT_ItemDataBound(object sender, RepeaterItemEventArgs e)
 		{

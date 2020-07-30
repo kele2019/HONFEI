@@ -134,7 +134,7 @@
                     <td colspan="10">
                       <webdiyer:aspnetpager id="AspNetPager1" runat="server" custominfohtml="Count %RecordCount%"
                         horizontalalign="right" width="100%" cssclass="aspNetPager" onpagechanged="AspNetPager1_PageChanged"
-                        pagesize="10" alwaysshow="true" submitbuttonstyle="display:none" inputboxstyle="display:none"
+                        pagesize="8" alwaysshow="true" submitbuttonstyle="display:none" inputboxstyle="display:none"
                         nextpagetext="Next" firstpagetext="Home" lastpagetext="Last" prevpagetext="Prev">
                     </webdiyer:aspnetpager>
                     </td>

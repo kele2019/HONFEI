@@ -29,7 +29,7 @@
                 $("#QUAComments").text($("#fld_QUAComments").val());
                 $("#FINComments").text($("#fld_FINComments").val());
                 $("#SCMComments").text($("#fld_SCMComments").val());
-                console.log(stepname);
+               
                 if (stepname == "Program Engineering") {
                     $("#fld_PEComments").show();
                     $("#PE").show();
@@ -44,6 +44,7 @@
                     $("#SCM").show();
                 }
                 if (stepname == "Quality Manager") {
+                      
                     $("#fld_QUAComments").show();
                     $("#QUA").show();
                 }

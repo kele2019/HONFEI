@@ -103,6 +103,15 @@ namespace Presale.Process.PaymentRequestForm {
         protected global::System.Web.UI.WebControls.TextBox fld_deptName;
         
         /// <summary>
+        /// fld_PaymentType 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fld_PaymentType;
+        
+        /// <summary>
         /// fld_PurchaseOrderNo 控件。
         /// </summary>
         /// <remarks>
@@ -148,13 +157,13 @@ namespace Presale.Process.PaymentRequestForm {
         protected global::System.Web.UI.WebControls.TextBox fld_Contract;
         
         /// <summary>
-        /// fld_PO 控件。
+        /// fld_payterm 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fld_PO;
+        protected global::System.Web.UI.WebControls.TextBox fld_payterm;
         
         /// <summary>
         /// fld_bankAccount 控件。
@@ -193,13 +202,13 @@ namespace Presale.Process.PaymentRequestForm {
         protected global::System.Web.UI.WebControls.TextBox fld_SwiftNumber;
         
         /// <summary>
-        /// fld_payterm 控件。
+        /// fld_EmergencyNew 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fld_payterm;
+        protected global::System.Web.UI.WebControls.CheckBox fld_EmergencyNew;
         
         /// <summary>
         /// fld_Emergency 控件。
@@ -211,13 +220,40 @@ namespace Presale.Process.PaymentRequestForm {
         protected global::System.Web.UI.WebControls.CheckBox fld_Emergency;
         
         /// <summary>
-        /// fld_EmergencyNew 控件。
+        /// fld_GRNo 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox fld_EmergencyNew;
+        protected global::System.Web.UI.WebControls.TextBox fld_GRNo;
+        
+        /// <summary>
+        /// fld_PO 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fld_PO;
+        
+        /// <summary>
+        /// fld_detail_PROC_PaymentRequestPO_DT 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater fld_detail_PROC_PaymentRequestPO_DT;
+        
+        /// <summary>
+        /// Button2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
         /// fld_detail_PROC_PaymentRequest_DT 控件。
