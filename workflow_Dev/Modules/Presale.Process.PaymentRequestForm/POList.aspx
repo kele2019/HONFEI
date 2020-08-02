@@ -18,13 +18,36 @@
             var value = $(obj).parent().next().next().children().text();
             $("#AllPurchase").val(value);
         }
+        function GetGoodsList() {
+            var Jsonstr = "[";
+            $("input[type=checkbox]").each(function (i, item) {
+                if ($(item).attr("checked")) {
+                    var pono = $(item).parent().next().children().text();
+                    var poremark = $(item).parent().next().next().children().text();
+                    var grno = $(item).parent().next().next().next().children().text();
+                    var grremark = $(item).parent().next().next().next().next().children().text();
+                    var grtotal = $(item).parent().next().next().next().next().next().children().text();
+                    Jsonstr += "{'PONo':'" + pono + "'";
+                    Jsonstr += ",'PORemark':'" + poremark + "'";
+                    Jsonstr += ",'GRNo':'" + grno + "'";
+                    Jsonstr += ",'GRRemark':'" + grremark + "'";
+                    Jsonstr += ",'GRTotal':'" + grtotal + "'";
+                    Jsonstr += "},"
+                }
+            });
+            if (Jsonstr.length >1) {
+                Jsonstr = Jsonstr.substr(0, Jsonstr.length - 1);
+            }
+            Jsonstr= Jsonstr + "]";
+            $("#AllPurchase").val(Jsonstr);
+        }
         function SinglePersonConfirm() {
-            var returnJson = "[{'PurchaseNo':'";
-            returnJson += $("#AllPurchase").val();
-            returnJson += "'},{'Applicant':'";
-            returnJson += $("#ApplicantAccount").val();
-            returnJson += "'}]";
-            //            alert(returnJson);
+//            var returnJson = "[{'PurchaseNo':'";
+//            returnJson += $("#AllPurchase").val();
+//            returnJson += "'},{'Applicant':'";
+//            returnJson += $("#ApplicantAccount").val();
+//            returnJson += "'}]";
+            var returnJson = $("#AllPurchase").val()
             window.returnValue = returnJson;
             window.close();
         }
@@ -78,8 +101,8 @@
                 <ItemTemplate>
                     <tr>
                         <td style="text-align:center">
-                            <%--<asp:CheckBox runat="server" onclick="getButtonCheck(this)"/>--%>
-                            <input type="radio" id="rbtnSelect" name ="FlowCode" runat="server" onclick="selectSingleRadio(this,'FlowCode');" />
+                          <asp:CheckBox ID="CheckBox1" runat="server" onclick="GetGoodsList()"/> 
+                            <%--<input type="radio" id="rbtnSelect" name ="FlowCode" runat="server" onclick="selectSingleRadio(this,'FlowCode');" />--%>
 
                         </td>
                         <td   style="text-align:center">

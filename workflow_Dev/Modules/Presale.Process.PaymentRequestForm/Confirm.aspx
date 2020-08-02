@@ -37,7 +37,23 @@
                $("#ButtonList1_btnBack").hide();
                $("#ButtonList1_btnReject").show();
            }
+           changepogr();
        });
+       function changepogr() {
+           var paymenttype = $("#read_PaymentType").text();
+           if (paymenttype == "Payment without PO") {
+               $("#trGR").show();
+               $("#trPO").hide();
+               $("#SAPPO").hide();
+           }
+           if (paymenttype == "Payment With PO") {
+               $("#trGR").hide();
+               $("#trPO").show();
+               $("#SAPPO").show();
+
+           }
+
+       }
    </script>
 </head>
 <body>
@@ -45,11 +61,20 @@
         <div id="myDiv" class="container">
             <div class="row">
                 <ui:userinfo id="UserInfo1" processtitle="Payment Request Process" processprefix="FINPAY" tablename="PROC_PaymentRequest"
-                    runat="server" tablenamedetail="PROC_PaymentRequest_DT"></ui:userinfo>
+                    runat="server" tablenamedetail="PROC_PaymentRequest_DT,PROC_PaymentRequestPO_DT"></ui:userinfo>
             </div>
          <div class="row">
           <p style="font-weight:bold">Request require</p>
          <table class="table table-condensed table-bordered">
+          <tr>
+                    <td class="td-label">
+                 <p style="text-align:center">Payment Type</p>
+                    </td>
+                    <td  class="td-content" colspan="7">
+                    <asp:Label runat="server" ID="read_PaymentType"></asp:Label>
+                    </td>
+                  </tr>
+
                 <tr>
                     <td class="td-label">
                         <p style="text-align:center">Payment description</p>
@@ -82,12 +107,12 @@
                     <td class="td-content" colspan="3">
                         <asp:Label ID="read_Contract" runat="server"></asp:Label>
                     </td>
-                    <td class="td-label">
+                     <td class="td-label">
                         <span style=" height:30px;float:left">&nbsp;</span>
-                        <p style="text-align:center">PO Number</p>
+                        <p style="text-align:center">Payment Term</p>
                     </td>
                     <td class="td-content" colspan="3">
-                        <asp:Label ID="read_PO" runat="server"></asp:Label>
+                        <asp:Label ID="read_payterm" runat="server"></asp:Label>
                     </td>
                 </tr> 
                 <tr>
@@ -121,12 +146,13 @@
                     </td>
                 </tr> 
                 <tr>
-                    <td class="td-label">
-                        <span style=" height:30px;float:left">&nbsp;</span>
-                        <p style="text-align:center">Payment Term</p>
+                   <td class="td-label">
+                        <span style="height:30px;float:left">&nbsp;</span>
+                       <p style="text-align:center; color:Red;">CONFIDENTIAL</p>
                     </td>
-                    <td class="td-content" colspan="3">
-                        <asp:Label ID="read_payterm" runat="server"></asp:Label>
+                    <td class="td-content" colspan="3" >
+                         <asp:CheckBox runat="server" ID="fld_EmergencyNew" style="display:none" />
+                         <span id="spanEmergencyNew"></span>
                     </td>
                        <td class="td-label">
                         <span style="height:30px;float:left">&nbsp;</span>
@@ -137,17 +163,63 @@
                          <span id="spanEmergency"></span>
                     </td>
                 </tr>
-                <tr>
-                  <td class="td-label">
-                        <span style="height:30px;float:left">&nbsp;</span>
-                       <p style="text-align:center; color:Red;">CONFIDENTIAL</p>
+                 <tr id="trGR" style="display:none">
+                    <td class="td-label">
+                        <p style="text-align:center">GR NO</p>
                     </td>
-                    <td class="td-content" colspan="7" >
-                         <asp:CheckBox runat="server" ID="fld_EmergencyNew" style="display:none" />
-                         <span id="spanEmergencyNew"></span>
+                    <td class="td-content" colspan="7">
+                        <asp:Label runat="server" ID="read_GRNo" onprerender="read_GRNo_PreRender"  Width="92%"  ></asp:Label>
                     </td>
                 </tr>
+                <tr id="trPO">
+                 <td    class="td-label">
+                        <span style=" height:30px;float:left">&nbsp;</span>
+                        <p style="text-align:center">PO Number</p>
+                    </td>
+                    <td class="td-content" colspan="7">
+                        <asp:Label ID="read_PO" runat="server"></asp:Label>
+                    </td>
+                </tr> 
+                
             </table>
+                   <table id="SAPPO"  class="table table-condensed table-bordered">
+                <tr>
+                    <th style="display:none"></th>
+                    <th width="10%">PO No</th>
+                    <th width="30%">PO Remark</th>
+                    <th width="10%">GRNo</th>
+                    <th width="10%">GR Total</th>
+                    <th width="30%">GR Remark</th>
+                </tr>
+            <tbody id="Tbody1">
+                <asp:Repeater runat="server" ID="read_detail_PROC_PaymentRequestPO_DT"   >
+                    <ItemTemplate>
+                        <tr>
+                          <td style="display:none">
+                           <asp:Label ID="read_FORMID" Text='<%#Eval("FORMID") %>' runat="server" Style="display: none" ></asp:Label>
+                           <asp:Label ID="read_ROWID" Text='<%# Container.ItemIndex+1%>' runat="server"></asp:Label>
+                        </td>
+                        <td>
+                        <asp:Label runat="server" ID="read_PONo" Text='<%#Eval("PONo") %>' Width="86%"></asp:Label>
+                        </td>
+                        <td>
+                        <asp:Label runat="server" ID="read_PORemark" Text='<%#Eval("PORemark") %>' Width="86%"></asp:Label>
+                        </td>
+                          <td>
+                        <asp:Label runat="server" ID="read_GRNo" Text='<%#Eval("GRNo") %>' Width="86%"></asp:Label>
+                        </td>
+                          <td>
+                        <asp:Label runat="server" ID="read_GRTotal" Text='<%#Eval("GRTotal") %>' Width="86%"></asp:Label>
+                        </td>
+                            <td>
+                        <asp:Label runat="server" ID="read_GRRemark" Text='<%#Eval("GRRemark") %>' Width="86%"></asp:Label>
+                        </td>
+                        </tr>
+                        </ItemTemplate>
+                        </asp:Repeater>
+            </tbody>
+            </table>
+
          <table class="table table-condensed table-bordered">
             <tr>
                 <th width="15%">Inv#</th>

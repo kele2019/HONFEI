@@ -122,6 +122,42 @@ namespace Presale.Process.PaymentRequestForm
         {
             UserInfo userInfo = Page.FindControl("UserInfo1") as UserInfo;
             userInfo.AddNewRow(fld_detail_PROC_PaymentRequestPO_DT);
+
+            string JSonstr = hdPOJsonStr.Value;
+            if (!string.IsNullOrEmpty(JSonstr))
+            {
+                string JSonstrnew = "" + JSonstr.TrimEnd(',') + "";
+                List<SAPPOEntity> listEntity = Newtonsoft.Json.JsonConvert.DeserializeObject<List<SAPPOEntity>>(JSonstrnew);
+                if (listEntity.Count > 0)
+                {
+                    foreach (var item in listEntity)
+                    {
+                        item.FORMID = userInfo.FormId;
+                       // fld_PO.Text = item.PONo + ",";
+                        //item.pono = item.pono;
+
+                        //item.poremark =item.poremark;
+                        //item.grno = item.grno;
+                        //item.grremark = item.grremark;
+                        //item.grtotal = Convert.ToDecimal(item.grtotal).ToString("f2");
+
+
+                    }
+                    List<string> listpono = listEntity.Select(o => o.PONo).Distinct().ToList();
+                    string PONOstr = string.Join(",", listpono);
+                    fld_PO.Text = PONOstr;// fld_PurchaseOrderNo.Text.TrimEnd(',');
+                    fld_detail_PROC_PaymentRequestPO_DT.DataSource = listEntity;
+                    fld_detail_PROC_PaymentRequestPO_DT.DataBind();
+                }
+
+            }
+            else
+            {
+                fld_PO.Text = "";
+                fld_detail_PROC_PaymentRequestPO_DT.DataSource = null;
+                fld_detail_PROC_PaymentRequestPO_DT.DataBind();
+            }
+
         }
 		protected void fld_detail_PROC_PaymentRequest_DT_ItemCommand(object source, RepeaterCommandEventArgs e)
 		{

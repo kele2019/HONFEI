@@ -177,29 +177,41 @@
        function showGRInfo() {
            var digStr = "dialogHeight:500px;dialogWidth:850px;"
            var Vendercode = $("#fld_vendorcode").val();
-           var ReturnValue = window.showModalDialog("GRList.aspx?Vendercode=" + Vendercode, null, digStr);
-           if (ReturnValue != null) {
-               var purchaseNo = eval("(" + ReturnValue + ")");
-               // var havePapers1 = eval(havePapers);
-               var value = "";// 
-               value += "," + purchaseNo[0].PurchaseNo;
-               if (value.substr(0, 1) == ',')
-                   value = value.substr(1);
-               $("#fld_GRNo").val(value);
+           if (Vendercode == "") {
+               alert("Please select vender info");
+           }
+           else {
+               var ReturnValue = window.showModalDialog("GRList.aspx?Vendercode=" + Vendercode, null, digStr);
+               if (ReturnValue != null) {
+                   var purchaseNo = eval("(" + ReturnValue + ")");
+                   // var havePapers1 = eval(havePapers);
+                   var value = ""; // 
+                   value += "," + purchaseNo[0].PurchaseNo;
+                   if (value.substr(0, 1) == ',')
+                       value = value.substr(1);
+                   $("#fld_GRNo").val(value);
+               }
            }
        }
        function showPOInfo() {
            var digStr = "dialogHeight:500px;dialogWidth:850px;"
            var Vendercode = $("#fld_vendorcode").val();
-           var ReturnValue = window.showModalDialog("POList.aspx?Vendercode=" + Vendercode, null, digStr);
-           if (ReturnValue != null) {
-               var purchaseNo = eval("(" + ReturnValue + ")");
-               // var havePapers1 = eval(havePapers);
-               var value = ""; // 
-               value += "," + purchaseNo[0].PurchaseNo;
-               if (value.substr(0, 1) == ',')
-                   value = value.substr(1);
-               $("#fld_GRNo").val(value);
+           if (Vendercode == "") {
+               alert("Please select vender info");
+           }
+           else {
+               var ReturnValue = window.showModalDialog("POList.aspx?Vendercode=" + Vendercode, null, digStr);
+               if (ReturnValue != null) {
+                   $("#hdPOJsonStr").val(ReturnValue);
+                   // var purchaseNo = eval("(" + ReturnValue + ")");
+                   //console.log(ReturnValue);
+                   $("#btn2Add").click();
+                   //               var value = ""; // 
+                   //               value += "," + purchaseNo[0].PurchaseNo;
+                   //               if (value.substr(0, 1) == ',')
+                   //                   value = value.substr(1);
+                   //               $("#fld_GRNo").val(value);
+               }
            }
        }
        function selectpaymenttype(obj) {
@@ -210,6 +222,7 @@
                    $("#trPO").show();
                    $("#trGR").hide();
                    $("#fld_GRNo").val("");
+                   $("#SAPPO").show();
 
                }
                if (obj == "2") {
@@ -218,6 +231,7 @@
                    $("#trPO").hide();
                    $("#trGR").show();
                    $("#fld_PO").val("");
+                   $("#SAPPO").hide();
                }
            }
            else {
@@ -227,13 +241,14 @@
                    $("#trPO").show();
                    $("#trGR").hide();
                    $("#fld_GRNo").val("");
-
+                   $("#SAPPO").show();
                }
                if (pttyp == "Payment without PO") {
                    $("#ptype2").attr("checked", true);
                    $("#trPO").hide();
                    $("#trGR").show();
                    $("#fld_PO").val("");
+                   $("#SAPPO").hide();
                }
            }
        }
@@ -381,7 +396,7 @@
                         <p style="text-align:center">GR NO</p>
                     </td>
                     <td class="td-content" colspan="7">
-                        <asp:TextBox runat="server" ID="fld_GRNo"  Width="92%" style="background-color:White;" onfocus="this.blur()"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="fld_GRNo"  Width="92%" CssClass="validate[required]" style="background-color:White;" onfocus="this.blur()"></asp:TextBox>
                         <input type="button" value="..." class="btn" onclick="return showGRInfo()" />
 
                     </td>
@@ -393,13 +408,13 @@
                         <p style="text-align:center">PO Number</p>
                     </td>
                     <td class="td-content" colspan="7">
-                     <asp:TextBox ID="fld_PO" runat="server" Width="92%"></asp:TextBox>
+                     <asp:TextBox ID="fld_PO" CssClass="validate[required]" runat="server" Width="92%"></asp:TextBox>
                       <input type="button" value="..." class="btn" onclick="return showPOInfo()" />
                     </td>
                     </tr>
             </table>
 
-               <table class="table table-condensed table-bordered">
+               <table id="SAPPO"  class="table table-condensed table-bordered">
                 <tr>
                     <th style="display:none"></th>
                     <th width="10%">PO No</th>
@@ -441,7 +456,7 @@
             </tbody>
               <tr style="display:none">
                 <td colspan="8" style="text-align:left">
-                    <asp:Button ID="Button2" runat="server" Text="add" CssClass="btn" CausesValidation="false" OnClick="btn2Add_Click"/>
+                    <asp:Button ID="btn2Add" runat="server" Text="add" CssClass="btn" CausesValidation="false" OnClick="btn2Add_Click"/>
                 </td>
             </tr>  
             </table>
@@ -546,6 +561,7 @@
         <asp:HiddenField runat="server" ID="hdIncident" />
         <asp:HiddenField runat="server" ID="hdPrint" />
          <asp:HiddenField runat="server" ID="hdUrgeTask" />
+         <asp:HiddenField runat="server" ID="hdPOJsonStr" />
     </div>
 </form>
 </body>

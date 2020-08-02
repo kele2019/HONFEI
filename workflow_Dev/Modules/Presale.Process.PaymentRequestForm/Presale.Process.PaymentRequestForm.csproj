@@ -42,6 +42,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Presale.Process.Traval\Bin\MyLib.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assets\ref\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -85,6 +89,7 @@
       <DependentUpon>CostCenter.aspx</DependentUpon>
     </Compile>
     <Compile Include="Entity\ApprovalUsrePost.cs" />
+    <Compile Include="Entity\SAPPOEntity.cs" />
     <Compile Include="Entity\Vendor.cs" />
     <Compile Include="GRList.aspx.cs">
       <DependentUpon>GRList.aspx</DependentUpon>

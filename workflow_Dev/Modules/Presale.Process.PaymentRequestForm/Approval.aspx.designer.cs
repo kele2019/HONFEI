@@ -49,6 +49,15 @@ namespace Presale.Process.PaymentRequestForm {
         protected global::System.Web.UI.WebControls.TextBox fld_ApprovalUserPost;
         
         /// <summary>
+        /// read_PaymentType 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label read_PaymentType;
+        
+        /// <summary>
         /// read_PurchaseOrderNo 控件。
         /// </summary>
         /// <remarks>
@@ -94,13 +103,13 @@ namespace Presale.Process.PaymentRequestForm {
         protected global::System.Web.UI.WebControls.Label read_Contract;
         
         /// <summary>
-        /// read_PO 控件。
+        /// read_payterm 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label read_PO;
+        protected global::System.Web.UI.WebControls.Label read_payterm;
         
         /// <summary>
         /// read_bankAccount 控件。
@@ -139,13 +148,13 @@ namespace Presale.Process.PaymentRequestForm {
         protected global::System.Web.UI.WebControls.Label read_SwiftNumber;
         
         /// <summary>
-        /// read_payterm 控件。
+        /// fld_EmergencyNew 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label read_payterm;
+        protected global::System.Web.UI.WebControls.CheckBox fld_EmergencyNew;
         
         /// <summary>
         /// fld_Emergency 控件。
@@ -157,13 +166,31 @@ namespace Presale.Process.PaymentRequestForm {
         protected global::System.Web.UI.WebControls.CheckBox fld_Emergency;
         
         /// <summary>
-        /// fld_EmergencyNew 控件。
+        /// read_GRNo 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox fld_EmergencyNew;
+        protected global::System.Web.UI.WebControls.Label read_GRNo;
+        
+        /// <summary>
+        /// read_PO 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label read_PO;
+        
+        /// <summary>
+        /// read_detail_PROC_PaymentRequestPO_DT 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater read_detail_PROC_PaymentRequestPO_DT;
         
         /// <summary>
         /// fld_detail_PROC_PaymentRequest_DT 控件。

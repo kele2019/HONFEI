@@ -247,13 +247,13 @@ namespace Presale.Process.PaymentRequestForm {
         protected global::System.Web.UI.WebControls.Repeater fld_detail_PROC_PaymentRequestPO_DT;
         
         /// <summary>
-        /// Button2 控件。
+        /// btn2Add 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btn2Add;
         
         /// <summary>
         /// fld_detail_PROC_PaymentRequest_DT 控件。
@@ -380,5 +380,14 @@ namespace Presale.Process.PaymentRequestForm {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdUrgeTask;
+        
+        /// <summary>
+        /// hdPOJsonStr 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdPOJsonStr;
     }
 }

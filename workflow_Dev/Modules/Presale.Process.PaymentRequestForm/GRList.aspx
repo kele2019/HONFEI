@@ -9,7 +9,7 @@
     <meta http-equiv="Expires" content="-1" />
     <meta http-equiv="PRAGMA" content="NO-CACHE" />
     <meta http-equiv="Cache-Control" content="no-cache" />
-    <title>PurchaseDetails</title>
+    <title>Goods Recive info</title>
     <script type="text/javascript" src="/Assets/js/common.js"></script>
     <script type="text/javascript">
         function getButtonCheck(obj) {
@@ -17,6 +17,19 @@
             $("#ApplicantAccount").val(ApplicantAccount);
             var value = $(obj).parent().next().next().children().text();
             $("#AllPurchase").val(value);
+        }
+        function GetGoodsList() {
+            var goodsNo = "";
+            $("input[type=checkbox]").each(function (i, item) {
+                if ($(item).attr("checked")) {
+                    goodsNo += $(item).parent().next().children().text() + ",";
+                }
+            });
+            
+            if (goodsNo.length > 0) {
+                goodsNo=goodsNo.substr(0, goodsNo.length - 1);
+            }
+            $("#AllPurchase").val(goodsNo);
         }
         function SinglePersonConfirm() {
             var returnJson = "[{'PurchaseNo':'";
@@ -40,6 +53,7 @@
             rbtn1.checked = true;
             getButtonCheck(rbtn1);
         }
+
     </script>
 </head>
 <body>
@@ -81,15 +95,13 @@
                 <ItemTemplate>
                     <tr>
                         <td style="text-align:center">
-                            <%--<asp:CheckBox runat="server" onclick="getButtonCheck(this)"/>--%>
-                            <input type="radio" id="rbtnSelect" name ="FlowCode" runat="server" onclick="selectSingleRadio(this,'FlowCode');" />
+                            <asp:CheckBox runat="server" onclick="GetGoodsList()"/> 
+                            <%--<input type="radio" id="rbtnSelect" name ="FlowCode" runat="server" onclick="selectSingleRadio(this,'FlowCode');" />--%>
 
                         </td>
-                        <td style="display:none;">
-                            <asp:Label runat="server" ID="APPLICANTACCOUNT" Text='<%#Eval("APPLICANTACCOUNT") %>'></asp:Label>
-                        </td>
                         <td style="text-align:center">
-                            <asp:Label runat="server" ID="DOCUMENTNO" Text='<%#Eval("DOCUMENTNO") %>'></asp:Label>
+                        <a href='../Presale.Process.GoodsReceiveRequest/Approve.aspx?ProcessName=Goods%20Receive%20Application&Type=MyApprove&StepName=SCM approval&incident=<%#Eval("Incident") %>' target="_blank"><%#Eval("DOCUMENTNO") %></a>
+                           <%-- <asp:Label runat="server" ID="DOCUMENTNO" Text='<%#Eval("DOCUMENTNO") %>'></asp:Label>--%>
                         </td>
                         <td style="text-align:center">
                             <asp:Label runat="server" ID="APPLICANT" Text='<%#Eval("APPLICANT") %>'></asp:Label>

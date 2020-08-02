@@ -16,7 +16,7 @@
             $("#ButtonList1_btnSubmit").click();
         }
         function beforeSubmit() {
-
+            return true;
         }
 
         $(document).ready(function () {

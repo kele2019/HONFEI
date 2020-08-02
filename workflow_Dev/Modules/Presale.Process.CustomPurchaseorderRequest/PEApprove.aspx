@@ -15,7 +15,7 @@
     <script type="text/javascript">
 
         function beforeSubmit() {
-
+            return true;
         }
 
         $(document).ready(function () {
@@ -161,17 +161,27 @@
                         </td>
                     </tr>
                     
-                    <tr>
-                    <td class="td-label">
+                   
+                    </table>
+
+
+                      <div style="display:block">
+                     <p style="font-weight:bold;">Program Execution manager Review</p>
+                     <table class="table table-condensed table-bordered">
+                     
+                      <tr>
+                    <td class="td-label"  style="width:17%;">
                          <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
-                         <p style="text-align:center">Program Execution manager Review</p>
+                         <p style="text-align:center">Review Conclusion</p>
                         </td>
                         <td class="td-content" colspan="3" >
              <p style="color:Red; font-weight:bold;">Note:the items abovementioned have been pre-reviewed by the team prior to this formal review.</p>
                         <asp:TextBox runat="server"   ID="fld_Reviewcomments"  TextMode="MultiLine" Rows="5"  Width="95%"  CssClass="validate[required]"></asp:TextBox>
                         </td>
                     </tr>
-                    </table>
+                     </table>
+                     </div>
+
                     </div>
 
             <div class="row" style="display:block;">

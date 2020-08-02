@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using Ultimus.UWF.Form.ProcessControl;
 using System.ComponentModel;
 using MyLib;
+using System.Data.Common;
+using System.Data;
 
 namespace Presale.Process.PaymentRequestForm
 {
@@ -37,5 +39,29 @@ namespace Presale.Process.PaymentRequestForm
 				DataAccess.Instance("BizDB").ExecuteNonQuery(strinsert1);
 			}
 		}
+        protected void read_GRNo_PreRender(object sender, EventArgs e)
+        {
+            string GRNO = read_GRNo.Text;
+            string ReNo = "";
+            string CANo = "";
+            for (int i = 0; i < read_GRNo.Text.Trim().Split(',').Length; i++)
+            {
+                string strsql = "select INCIDENT from PROC_GoodsReceive  where DOCUMENTNO =@DOCUMENTNO";
+                DataAccess dac = new DataAccess("BizDB");
+                DbCommand cmd = dac.CreateCommand();
+                dac.AddInParameter(cmd, "DOCUMENTNO", DbType.String, read_GRNo.Text.Trim().Split(',')[i].ToString());
+                cmd.CommandText = "begin " + strsql + " end;";
+                object ReturnNo = dac.ExecuteScalar(cmd);
+                if (ReturnNo != null)
+                {
+                    ReNo += "<a href='../Presale.Process.GoodsReceiveRequest/Approve.aspx?&Incident=" + ReturnNo + "&type=MYAPPROVAL&ProcessName=" + Server.HtmlEncode("Goods Receive Application") + "' target='_blank'>" + read_GRNo.Text.Trim().Split(',')[i].ToString() + "</a>";
+                }
+
+            }
+            if (ReNo != "")
+            {
+                read_GRNo.Text = ReNo;
+            }
+        }
 	}
 }
