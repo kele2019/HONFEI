@@ -19,9 +19,18 @@
         }
 
         $(document).ready(function () {
-
+            selectproducttype();
         });
-       
+        function selectproducttype() {
+
+            var pttyp = $("#read_Producttype").text();
+            if (pttyp == "New products") {
+                $("#ptype1").attr("checked", true);
+            }
+            if (pttyp == "Existing products") {
+                $("#ptype2").attr("checked", true);
+            }
+        }
     </script>
 </head>
 <body>
@@ -62,6 +71,27 @@
                         <td class="td-content"  >
                         <asp:Label runat="server" ID="read_PurchaseOrderrevision"  ></asp:Label>
                         </td>
+                    </tr>
+                    <tr>
+                      <td class="td-label">
+                         <p style="text-align:center">Products Type</p>
+
+                        </td>
+                      <td class="td-content"  colspan="3" >
+                       <input type="radio" name="ptype" disabled="disabled" id="ptype1" onclick="selectproducttype('1')" />  New products
+                       <br />
+                       Review attached Customer PO and Provide the supporting documents as below:
+                        <br />●Specify roles and method to different customer requirements
+                        <br /> ●Opportunity and Risk Assessment
+                        <br />●Quantify Customer Needs
+                        <br />●Special requirements of products and services are determined
+                       <br />
+                       <input type="radio" name="ptype" disabled="disabled" id="ptype2" onclick="selectproducttype('2')" /> Existing products
+                       <br />
+                       Review attached Customer PO 
+                        <asp:Label runat="server" ID="read_Producttype"  style="display:none" ></asp:Label>
+                      </td>
+
                     </tr>
                 </table>
             </div>

@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using Ultimus.UWF.Form.ProcessControl;
 using System.ComponentModel;
 using MyLib;
+using System.Data.Common;
+using System.Data;
 
 namespace Presale.Process.GoodsReceiveRequest
 {
@@ -20,6 +22,30 @@ namespace Presale.Process.GoodsReceiveRequest
             }
             ((ButtonList)ButtonList1).BeforeSubmit += new System.ComponentModel.CancelEventHandler(NewRequest_BeforeSubmit);
             ((ButtonList)ButtonList1).AfterSubmit += new System.ComponentModel.CancelEventHandler(NewRequest_AfterSubmit);
+        }
+        protected void read_PurchaseRequestNo_PreRender(object sender, EventArgs e)
+        {
+            string GRNO = read_PurchaseRequestNo.Text;
+            string ReNo = "";
+            string CANo = "";
+            for (int i = 0; i < read_PurchaseRequestNo.Text.Trim().Split(',').Length; i++)
+            {
+                string strsql = "select INCIDENT from PROC_Purchase  where DOCUMENTNO =@DOCUMENTNO";
+                DataAccess dac = new DataAccess("BizDB");
+                DbCommand cmd = dac.CreateCommand();
+                dac.AddInParameter(cmd, "DOCUMENTNO", DbType.String, read_PurchaseRequestNo.Text.Trim().Split(',')[i].ToString());
+                cmd.CommandText = "begin " + strsql + " end;";
+                object ReturnNo = dac.ExecuteScalar(cmd);
+                if (ReturnNo != null)
+                {
+                    ReNo += "<a href='../Presale.Process.PurchaseApplication/Approval.aspx?&Incident=" + ReturnNo + "&type=MYAPPROVAL&ProcessName=" + Server.HtmlEncode("Purchase Request") + "' target='_blank'>" + read_PurchaseRequestNo.Text.Trim().Split(',')[i].ToString() + "</a>";
+                }
+
+            }
+            if (ReNo != "")
+            {
+                read_PurchaseRequestNo.Text = ReNo;
+            }
         }
         protected void NewRequest_BeforeSubmit(object sender, CancelEventArgs g)
         {

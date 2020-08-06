@@ -93,7 +93,7 @@
                          <p style="text-align:center">Purchase Order No</p>
                         </td>
                         <td class="td-content"   >
-                        <asp:TextBox runat="server" ID="fld_PurchaseOrderNo" MaxLength="5" Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="fld_PurchaseOrderNo" MaxLength="50" Width="95%"  CssClass="validate[required]"></asp:TextBox>
                         </td>
                         <td class="td-label">
                          <span style=" background:red;  height:30px; float:left;">&nbsp;</span>

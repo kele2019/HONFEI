@@ -127,7 +127,7 @@
                         <p style="text-align:center">Purchase Request No.</p>
                     </td>
                     <td class="td-content" colspan="7">
-                        <asp:Label runat="server" ID="read_PurchaseRequestNo"  ></asp:Label>
+                        <asp:Label runat="server" ID="read_PurchaseRequestNo"  onprerender="read_PurchaseRequestNo_PreRender" ></asp:Label>
 
                     </td>
                 </tr>

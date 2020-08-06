@@ -18,9 +18,19 @@
         function beforeSubmit() {
             return true;
         }
+        function selectproducttype() {
+
+            var pttyp = $("#read_Producttype").text();
+            if (pttyp == "New products") {
+                $("#ptype1").attr("checked", true);
+            }
+            if (pttyp == "Existing products") {
+                $("#ptype2").attr("checked", true);
+            }
+        }
 
         $(document).ready(function () {
-
+            selectproducttype()
         });
        
     </script>
@@ -64,12 +74,34 @@
                         <asp:Label runat="server" ID="read_PurchaseOrderrevision"  ></asp:Label>
                         </td>
                     </tr>
+
+                    <tr>
+                      <td class="td-label">
+                         <p style="text-align:center">Products Type</p>
+
+                        </td>
+                      <td class="td-content"  colspan="3" >
+                       <input type="radio" name="ptype" disabled="disabled" id="ptype1" onclick="selectproducttype('1')" />  New products
+                       <br />
+                       Review attached Customer PO and Provide the supporting documents as below:
+                        <br />●Specify roles and method to different customer requirements
+                        <br /> ●Opportunity and Risk Assessment
+                        <br />●Quantify Customer Needs
+                        <br />●Special requirements of products and services are determined
+                       <br />
+                       <input type="radio" name="ptype" disabled="disabled" id="ptype2" onclick="selectproducttype('2')" /> Existing products
+                       <br />
+                       Review attached Customer PO 
+                        <asp:Label runat="server" ID="read_Producttype"  style="display:none" ></asp:Label>
+                      </td>
+
+                    </tr>
                 </table>
             </div>
 
             <div class="row">
                 <p style="font-weight:bold;">Review content  </p>
-                <table class="table table-condensed table-bordered">
+                    <table class="table table-condensed table-bordered">
                     <tr>
                     <td class="td-label">
                          <p style="text-align:center">Technical and Quality Requirements</p>
@@ -88,11 +120,17 @@
                     </tr>
 
                        <tr>
-                    <td class="td-label">
-                         <p style="text-align:center">PO Amount US / RMB</p>
+                         <td class="td-label">
+                         <p style="text-align:center">Currency</p>
                         </td>
-                        <td class="td-content" colspan="3" >
-                        <asp:Label runat="server" ID="read_PoAmount"   ></asp:Label>
+                        <td class="td-content" >
+                          <asp:Label runat="server" ID="read_Currency" ></asp:Label>
+                        </td>
+                    <td class="td-label">
+                         <p style="text-align:center">PO Amount</p>
+                        </td>
+                        <td class="td-content"  >
+                        <asp:Label runat="server" ID="read_PoAmount"></asp:Label>
                         </td>
                     </tr>
 
@@ -113,17 +151,66 @@
                         <asp:Label runat="server" ID="read_Othermatters"  ></asp:Label>
                         </td>
                     </tr>
-                        <tr>
+
+                    <tr>
                     <td class="td-label">
-                         <span style=" background:red;  height:30px; float:left;">&nbsp;</span>
-                         <p style="text-align:center">Program Execution manager Review</p>
+                         <p style="text-align:center">Contract comments</p>
                         </td>
                         <td class="td-content" colspan="3" >
-            <p style="color:Red; font-weight:bold;">Note:the items abovementioned have been pre-reviewed by the team prior to this formal review.</p>
-                        <asp:TextBox runat="server" ReadOnly="true" ID="read_Reviewcomments"  TextMode="MultiLine" Rows="5"  Width="95%"  CssClass="validate[required]"></asp:TextBox>
+                        <asp:Label runat="server" ID="read_Contractcomments"  MaxLength="100"   ></asp:Label>
                         </td>
                     </tr>
+                     
+                       <tr>
+                    <td class="td-label">
+                         <p style="text-align:center">PE  Comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <asp:Label runat="server" ID="read_PEComments"   ></asp:Label>
+                        </td>
+                    </tr>
+                      <tr>
+                    <td class="td-label">
+                         <p style="text-align:center">QUA comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <asp:Label runat="server" ID="read_QUAComments"  ></asp:Label>
+                        </td>
+                    </tr>
+                      <tr>
+                    <td class="td-label">
+                         <p style="text-align:center">FIN comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <asp:Label runat="server" ID="read_FINComments"    ></asp:Label>
+                        </td>
+                    </tr>
+                      <tr>
+                    <td class="td-label">
+                         <p style="text-align:center">SCM comments</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+                        <asp:Label runat="server" ID="read_SCMComments"   ></asp:Label>
+                        </td>
+                    </tr>
+                    
+                    
                     </table>
+
+                     <div style="display:block">
+                     <p style="font-weight:bold;">Program Execution manager Review</p>
+                <table class="table table-condensed table-bordered">
+                   <tr>
+                    <td class="td-label" style="width:17%;">
+                         <p style="text-align:center">Review Conclusion</p>
+                        </td>
+                        <td class="td-content" colspan="3" >
+             <p style="color:Red; font-weight:bold;">Note:the items abovementioned have been pre-reviewed by the team prior to this formal review.</p>
+                        <asp:TextBox runat="server" ReadOnly="true" ID="read_Reviewcomments"  TextMode="MultiLine" Rows="5"  Width="95%" ></asp:TextBox>
+                        </td>
+                    </tr>
+                </table>
+                </div>
                     </div>
 
             <div class="row" style="display:block;">

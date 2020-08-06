@@ -76,6 +76,15 @@ namespace Presale.Process.CustomPurchaseorderRequest {
         protected global::System.Web.UI.WebControls.Label read_PurchaseOrderrevision;
         
         /// <summary>
+        /// read_Producttype 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label read_Producttype;
+        
+        /// <summary>
         /// read_Techicalquality 控件。
         /// </summary>
         /// <remarks>
@@ -92,6 +101,15 @@ namespace Presale.Process.CustomPurchaseorderRequest {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label read_Quantitydelivery;
+        
+        /// <summary>
+        /// read_Currency 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label read_Currency;
         
         /// <summary>
         /// read_PoAmount 控件。
@@ -119,6 +137,51 @@ namespace Presale.Process.CustomPurchaseorderRequest {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label read_Othermatters;
+        
+        /// <summary>
+        /// read_Contractcomments 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label read_Contractcomments;
+        
+        /// <summary>
+        /// read_PEComments 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label read_PEComments;
+        
+        /// <summary>
+        /// read_QUAComments 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label read_QUAComments;
+        
+        /// <summary>
+        /// read_FINComments 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label read_FINComments;
+        
+        /// <summary>
+        /// read_SCMComments 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label read_SCMComments;
         
         /// <summary>
         /// read_Reviewcomments 控件。
