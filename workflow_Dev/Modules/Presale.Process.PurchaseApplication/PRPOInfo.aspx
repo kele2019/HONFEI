@@ -7,14 +7,19 @@
 <head runat="server">
  <base target="_self"></base>
  <meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
- <title>PRPOInfo</title>
+ <title>PR&PO&GR Info</title>
  <script type="text/javascript" src="/Assets/js/common.js"></script>
-
+ <script type="text/javascript">
+     $(document).ready(function () {
+     if($("#hidFlag").val()=="")
+          $(".Operation").hide();
+     });
+</script>
 </head>
 <body>
     <form id="form1" runat="server">
     <div  style="width:98%;"   class="container" >
-     <div style="text-align:center"> <h2>PR&PO Reports</h2></div>
+     <div style="text-align:center"> <h2>PR&PO&GR Reports</h2></div>
 
     <table class="table table-condensed table-bordered" width="100%">
     <tr><th colspan="4" style="text-align:left; font-weight:bold;">Search </th> </tr>
@@ -39,6 +44,7 @@
     <td colspan="2">
     <asp:Button runat="server" ID="btnSearch" CssClass="btn" Text="Search" 
             onclick="btnSearch_Click" />
+          <asp:HiddenField runat="server" ID="hidFlag" />
     </td>
     </tr>
    </table>
@@ -58,7 +64,11 @@
      <th width="6%">PO Amount</th>
      <th>PORequestdate</th>
      <th>PRStatus</th>
-     <th>Operation</th>
+     <th class="Operation">Operation</th>
+     <th>GRNo</th>
+      <th>GR Applicant</th>
+     <th>GRRequestdate</th>
+     <th>GR Supplier</th>
      </tr>
       
      <asp:Repeater runat="server" ID="RPList" onitemcommand="RPList_ItemCommand" 
@@ -82,10 +92,18 @@
      <td>
      <%#Eval("PurchaseOrdStatus").ToString()=="0"?"Open":"Close" %>
      </td>
-     <td>
+     <td class="Operation">
      <asp:Button runat="server" ID="btnOpen"  CommandName="EnableCom" OnClientClick='return confirm("Confirm Open this PR")' CommandArgument='<%#Eval("DOCUMENTNO") %>' Visible='<%#  Eval("Status").ToString()=="2"?(Eval("PurchaseOrdStatus").ToString()=="0"? false:true):false%>' Text="Open" CssClass="btn"></asp:Button>
      <asp:Button runat="server" ID="btnClose" CommandName="DisableCom" OnClientClick='return confirm("Confirm Close this PR")' CommandArgument='<%#Eval("DOCUMENTNO") %>'  Visible='<%# Eval("Status").ToString()=="2"? (Eval("PurchaseOrdStatus").ToString()!="0"? false:true) :false%>' Text="Close" CssClass="btn"></asp:Button>
      </td>
+
+     <td>
+     <a href='../Presale.Process.GoodsReceiveRequest/Approve.aspx?Incident=<%#Eval("GRIncident") %>&ProcessName=Goods%20Receive%20Application&Type=myapproval' target="_blank"><%#Eval("GRNo")%></a>
+     </td>
+     <td><%#Eval("GRAPPLICANT")%></td>
+     <td><%#Eval("GRREQUESTDATE")%></td>
+     <td><%#Eval("GRSupplier")%></td>
+
      </tr>
      </ItemTemplate>
      </asp:Repeater>

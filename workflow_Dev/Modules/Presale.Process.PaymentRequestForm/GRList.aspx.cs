@@ -51,7 +51,7 @@ namespace Presale.Process.PaymentRequestForm
             int pageIndex = AspNetPager1.CurrentPageIndex;
             int pageSize = AspNetPager1.PageSize;
             string Vendercode=Request.QueryString["Vendercode"];
-            string sql = "select * from  [dbo].[PROC_GoodsReceive] where STATUS=2 and CardCode='" + Vendercode + "'";
+            string sql = "select * from  [dbo].[PROC_GoodsReceive] where STATUS=2 and incident>0 and isnull(PaymentStatus,0)=0 and CardCode='" + Vendercode + "'";
             if (dropDepartment.Text.Trim() != "0")
             {
                 if (dropEmployee.Text.Trim() != "0")

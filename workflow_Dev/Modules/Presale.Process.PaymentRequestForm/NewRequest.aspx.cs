@@ -110,6 +110,17 @@ namespace Presale.Process.PaymentRequestForm
         {
             string strinsert = string.Format("update PROC_Purchase set PurchaseOrdStatus = 1 where DOCUMENTNO='" + fld_PurchaseOrderNo.Text + "'");
             DataAccess.Instance("BizDB").ExecuteNonQuery(strinsert);
+            string GrNo=fld_GRNo.Text.Trim();
+            string sqlfitler="";
+            if (GrNo!= "")
+            {
+                for (int i = 0; i < GrNo.Split(',').Length; i++)
+                {
+                    sqlfitler += "'" + GrNo.Split(',')[i] + "',";
+                }
+                string strinsertGR = string.Format("update PROC_GoodsReceive set PaymentStatus = 1 where DOCUMENTNO in(" + sqlfitler.TrimEnd(',') + ")");
+            DataAccess.Instance("BizDB").ExecuteNonQuery(strinsertGR);
+            }
         }
 
 
@@ -194,6 +205,8 @@ namespace Presale.Process.PaymentRequestForm
 			{
 				if (GetOrgLevel.RevokeFunc(ProcessName.ToString(), StepName.ToString(), Incident.ToString(), Page.User.Identity.Name))
 				{
+                    ChangeGRPaymentStatus(fld_GRNo.Text.Trim());
+
 					Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "RevokSuccess()", true);
 
 				}
@@ -207,5 +220,21 @@ namespace Presale.Process.PaymentRequestForm
 				MessageBox.Show(this.Page, "任务已经被处理，无法撤回！\\n Task Already Pass, Don't Revoke!");
 			}
 		}
+
+        public void ChangeGRPaymentStatus(string GrNo)
+        {
+            string sqlfitler = "";
+            if (GrNo != "")
+            {
+                for (int i = 0; i < GrNo.Split(',').Length; i++)
+                {
+                    sqlfitler += "'" + GrNo.Split(',')[i] + "',";
+                }
+                string strinsertGR = string.Format("update PROC_GoodsReceive set PaymentStatus =0 where DOCUMENTNO in(" + sqlfitler.TrimEnd(',') + ")");
+                DataAccess.Instance("BizDB").ExecuteNonQuery(strinsertGR);
+            }
+        }
+
+
 	}
 }

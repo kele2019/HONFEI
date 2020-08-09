@@ -481,7 +481,7 @@
             <asp:TextBox ID="completeEvaluation" runat="server" style="display:none;"></asp:TextBox>
             <div  style="width:90%" align="center">
                  <asp:Button ID="btnSave" runat="server" Text="OK" OnClientClick="return checkOption()" onclick="btnSave_Clcik"  CssClass="btn btn-primary"  />
-                 <input type="button" value="Cancle" class="btn" onclick="CloseForm()"  />
+                 <input type="button" value="Cancel" class="btn" onclick="CloseForm()"  />
                  <asp:HiddenField runat="server" ID="hdUserID" />
              </div>
         </div>

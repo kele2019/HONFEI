@@ -17,17 +17,34 @@ namespace Presale.Process.PurchaseApplication
             if (!IsPostBack)
             {
                 GetDataBind();
+
+                string Strchecksql = @" select COUNT(1) from ORG_GROUPMEMBER
+                                    where GROUPID=(select GROUPID from ORG_GROUP  where GROUPNAME='SCM' ) AND
+                                    MEMBERID=(select USERID from ORG_USER where LOGINNAME='" + Page.User.Identity.Name + "')";
+                if (Convert.ToInt32(DataAccess.Instance("BizDB").ExecuteScalar(Strchecksql)) > 0)
+                    hidFlag.Value = "1";
             }
         }
+
         public void GetDataBind()
         {
             string streFilter = Strwhere();
             int PageSize = AspNetPager1.PageSize;
             int PageIndex = AspNetPager1.CurrentPageIndex;
-            string StrsqlCount = "select  COUNT(1) from PROC_Purchase A left join  V_PRPO B on A.DOCUMENTNO=B.PRNO WHERE 1=1"+streFilter;
+            string StrsqlCount = @"select  COUNT(1) from PROC_Purchase A left join  V_PRPO B on A.DOCUMENTNO=B.PRNO
+            left join (select DOCUMENTNO,INCIDENT,REQUESTDATE,SUPPLIER,APPLICANT,PurchaseRequestNo from PROC_GoodsReceive where GoodsFlag='0' and STATUS<>3 and INCIDENT>0) C
+ on A.DOCUMENTNO=C.PurchaseRequestNo
+            WHERE 1=1 "+streFilter;
             AspNetPager1.RecordCount=Convert.ToInt32(DataAccess.Instance("BizDB").ExecuteScalar(StrsqlCount).ToString());
             string Strsql = @"select * from (
-select ROW_NUMBER() over(order by A.REQUESTDATE desc) RN, A.DOCUMENTNO,A.APPLICANT AS PRAPPLICANT,CONVERT(nvarchar(50),A.REQUESTDATE,111) as PRREQUESTDATE,A.STATUS,A.Incident,A.Remarks,A.TotalAmount,B.*,CONVERT(nvarchar(50),B.REQUESTDATE,111) as POREQUESTDATE,PurchaseOrdStatus from PROC_Purchase A left join  V_PRPO B on A.DOCUMENTNO=B.PRNO WHERE 1=1
+select ROW_NUMBER() over(order by A.REQUESTDATE desc) RN, A.DOCUMENTNO,A.APPLICANT AS PRAPPLICANT,CONVERT(nvarchar(50),A.REQUESTDATE,111) as PRREQUESTDATE,A.STATUS,A.Incident,A.Remarks,A.TotalAmount,B.*,CONVERT(nvarchar(50),B.REQUESTDATE,111) as POREQUESTDATE,PurchaseOrdStatus 
+,C.DOCUMENTNO as GRNo, C.APPLICANT as GRAPPLICANT,CONVERT(nvarchar(50), C.REQUESTDATE,111) as GRREQUESTDATE,C.SUPPLIER as GRSupplier,C.INCIDENT as GRIncident
+from PROC_Purchase A left join  V_PRPO B on A.DOCUMENTNO=B.PRNO
+
+left join (select DOCUMENTNO,INCIDENT,REQUESTDATE,SUPPLIER,APPLICANT,PurchaseRequestNo from PROC_GoodsReceive where GoodsFlag='0' and STATUS<>3 and INCIDENT>0) C
+ on A.DOCUMENTNO=C.PurchaseRequestNo
+
+WHERE 1=1
 " + streFilter + ") AA WHERE RN BETWEEN " + ((PageSize * (PageIndex - 1))+1) + " AND " +PageSize * PageIndex;
             DataTable dtPurchaseInfo = DataAccess.Instance("BizDB").ExecuteDataTable(Strsql);
             if (dtPurchaseInfo.Rows.Count > 0)
@@ -35,6 +52,8 @@ select ROW_NUMBER() over(order by A.REQUESTDATE desc) RN, A.DOCUMENTNO,A.APPLICA
             else
                 RPList.DataSource = null;
             RPList.DataBind();
+
+           
         }
         public string Strwhere()
         {
@@ -59,7 +78,7 @@ select ROW_NUMBER() over(order by A.REQUESTDATE desc) RN, A.DOCUMENTNO,A.APPLICA
                     returnvalue = " and A.PurchaseOrdStatus<>'0'";
                 }
             }
-            returnvalue += " and Incident<>-1 and status<>3";
+            returnvalue += " and A.Incident<>-1 and status<>3";
 
             return returnvalue;
         }

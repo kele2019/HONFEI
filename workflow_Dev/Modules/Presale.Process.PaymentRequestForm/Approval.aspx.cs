@@ -54,10 +54,26 @@ namespace Presale.Process.PaymentRequestForm
             string FormID = userInfo.FormId;
             ApprovalHistory approvalHistory = Page.FindControl("ApprovalHistory1") as ApprovalHistory;
             int ActiontType = approvalHistory.ActionType;
+            string GrNo = read_GRNo.Text.Trim();
             if (ActiontType != 0)//成功
             {
                 string strinsert = string.Format("update PROC_Purchase set PurchaseOrdStatus = 0 where DOCUMENTNO='" + read_PurchaseOrderNo.Text + "'");
                 DataAccess.Instance("BizDB").ExecuteNonQuery(strinsert);
+            }
+            else
+            {
+                NewRequest nr = new NewRequest();
+                nr.ChangeGRPaymentStatus(GrNo);
+                //string sqlfitler = "";
+                //if (GrNo != "")
+                //{
+                //    for (int i = 0; i < GrNo.Split(',').Length; i++)
+                //    {
+                //        sqlfitler += "'" + GrNo.Split(',')[i] + "'";
+                //    }
+                //    string strinsertGR = string.Format("update PROC_GoodsReceive set PaymentStatus =0 where DOCUMENTNO in(" + sqlfitler + "");
+                //    DataAccess.Instance("BizDB").ExecuteNonQuery(strinsertGR);
+                //}
             }
         }
         protected void read_GRNo_PreRender(object sender, EventArgs e)

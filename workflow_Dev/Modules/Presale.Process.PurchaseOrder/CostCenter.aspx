@@ -73,7 +73,7 @@
         </div>
         <div class="center">
             <asp:Button ID="btnSave" runat="server" Text="OK" onClientClick="SinglePersonConfirm()"   CssClass="btn btn-primary " />
-            <input type="button" value="Cancle" class="btn" onclick="CloseForm()" style="height: 25px;" />
+            <input type="button" value="Cancel" class="btn" onclick="CloseForm()" style="height: 25px;" />
         </div>
     </div>
     </form>

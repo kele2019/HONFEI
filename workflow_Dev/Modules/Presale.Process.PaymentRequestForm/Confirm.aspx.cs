@@ -33,11 +33,17 @@ namespace Presale.Process.PaymentRequestForm
 			string FormID = userInfo.FormId;
 			ApprovalHistory approvalHistory = Page.FindControl("ApprovalHistory1") as ApprovalHistory;
 			int ActiontType = approvalHistory.ActionType;
-			if (ActiontType == 0)//成功
-			{
-				string strinsert1 = string.Format("update PROC_PaymentRequest set status='2' where formid='" + FormID + "'");
-				DataAccess.Instance("BizDB").ExecuteNonQuery(strinsert1);
-			}
+            string GrNo = read_GRNo.Text.Trim();
+            if (ActiontType == 0)//成功
+            {
+                string strinsert1 = string.Format("update PROC_PaymentRequest set status='2' where formid='" + FormID + "'");
+                DataAccess.Instance("BizDB").ExecuteNonQuery(strinsert1);
+            }
+            else
+            {
+                NewRequest nr = new NewRequest();
+                nr.ChangeGRPaymentStatus(GrNo);
+            }
 		}
         protected void read_GRNo_PreRender(object sender, EventArgs e)
         {

@@ -131,7 +131,7 @@
         <asp:TextBox runat="server" ID="successOrNot" style="display:none;"></asp:TextBox>
         <div class="center">
              <asp:Button ID="btnSave" runat="server" Text="OK" onclick="btnSave_Clcik"  CssClass="btn btn-primary " />
-             <input type="button" value="Cancle" class="btn" onclick="CloseForm()"   />
+             <input type="button" value="Cancel" class="btn" onclick="CloseForm()"   />
         </div>
     </form>
 </body>
