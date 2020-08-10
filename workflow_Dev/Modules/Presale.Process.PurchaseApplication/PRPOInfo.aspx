@@ -11,6 +11,9 @@
  <script type="text/javascript" src="/Assets/js/common.js"></script>
  <script type="text/javascript">
      $(document).ready(function () {
+         $(".container").attr("style", "width:1630px");
+         $(".td-label").attr("style", "width:15%");
+         $(".td-content").attr("style", "width:35%");
      if($("#hidFlag").val()=="")
           $(".Operation").hide();
      });
@@ -40,10 +43,9 @@
   <asp:ListItem Value="0">Open</asp:ListItem>
   <asp:ListItem Value="2">Close</asp:ListItem>
   </asp:DropDownList>
-  </td>
-    <td colspan="2">
+   
     <asp:Button runat="server" ID="btnSearch" CssClass="btn" Text="Search" 
-            onclick="btnSearch_Click" />
+            onclick="btnSearch_Click" style="margin-left:10px;" />
           <asp:HiddenField runat="server" ID="hidFlag" />
     </td>
     </tr>
@@ -54,14 +56,14 @@
      <tr>
      <th>No</th>
      <th>PRNo</th>
-     <th>Remark</th>
+     <th style="width:1800px">Remark</th>
      <th width="6%">PR Amount</th>
      <th>PRApplicant</th>
      <th>PRRequestdate</th>
      <th>PR Process Status</th>
      <th>PONo</th>
      <th>SUPPLIER</th>
-     <th width="6%">PO Amount</th>
+     <th width="5%">PO Amount</th>
      <th>PORequestdate</th>
      <th>PRStatus</th>
      <th class="Operation">Operation</th>
@@ -79,7 +81,7 @@
      <td>
      <a href='Approval.aspx?Incident=<%#Eval("Incident") %>&ProcessName=Purchase+Request&Type=myapproval' target="_blank"><%#Eval("DOCUMENTNO")%></a>
      </td>
-     <td><%#Eval("Remarks")%></td>
+     <td style="width:1800px"><%#Eval("Remarks")%></td>
      <td><%#Eval("TotalAmount")%></td>
      <td><%#Eval("PRAPPLICANT")%></td>
      <td><%#Eval("PRREQUESTDATE")%></td>

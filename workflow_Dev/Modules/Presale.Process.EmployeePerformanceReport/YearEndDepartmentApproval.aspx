@@ -31,13 +31,14 @@
             SelectedCheckboxList();
             var PYear = $("#read_Year").text() - 0;
             $("#tablediv").find("table").each(function (i, Etr) {
+
                 if (PYear > 2017) {
+
                     $(Etr).find(".Initiativesclass").find("label").eq(0).html("Culture")
                     $(Etr).find(".Initiativesclass").find("label").eq(1).html("Expand Margins")
                     $(Etr).find(".Initiativesclass").find("label").eq(2).html("Organic Growth")
                     $(Etr).find(".Initiativesclass").find("label").eq(3).html("Smart Investment")
                     $(Etr).find(".Initiativesclass").find("label").eq(4).html("Software Transformation")
-
                 }
                 var values = $(Etr).find(".Honfei5InitiativesValue").text().split(",");
                 for (var j = 0; j < values.length; j++) {
@@ -98,7 +99,7 @@
              LoadBehavior($("#fld_Behavior6Score"),'Behavior6Score');
              LoadBehavior($("#fld_Behavior7Score"),'Behavior7Score');
              LoadBehavior($("#fld_Behavior8Score"),'Behavior8Score');
-             LoadBehavior($("#fld_Behavior9Score"));
+             LoadBehavior($("#fld_Behavior9Score"),'Behavior9Score');
              LoadBehavior($("#fld_Behavior10Score"));
              LoadBehavior($("#fld_Behavior11Score"));
              LoadBehavior($("#fld_Behavior12Score"));
@@ -1043,8 +1044,32 @@
                         </td>
                     </tr>
                     
-                    
-                  
+                      
+                  <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                         <span style=" background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">9</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center">Be Committed</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"> 
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton69" runat="server" GroupName="Behavior9Score" Value="Exceed" onclick="getButtonCheck('9','Exceed')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton70" runat="server" GroupName="Behavior9Score" Value="At" onclick="getButtonCheck('9','At')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton71" runat="server" GroupName="Behavior9Score" Value="Below" onclick="getButtonCheck('9','Below')" />
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton72" runat="server" GroupName="Behavior9Score" Value="Below" onclick="getButtonCheck('9','Rarely')" />
+                        </td>
+                    </tr>
                 </table>
 
 

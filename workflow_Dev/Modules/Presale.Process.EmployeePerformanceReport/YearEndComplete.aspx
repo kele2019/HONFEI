@@ -46,187 +46,6 @@
                     }
                 }
             });
-
-//            if ($("#read_Result1Score").text() == "Exceed") {
-//                $("#RadioButton1").attr("checked", true);
-//            }
-//            if ($("#read_Result1Score").text() == "At") {
-//                $("#RadioButton2").attr("checked", true);
-//            }
-//            if ($("#read_Result1Score").text() == "Below") {
-//                $("#RadioButton3").attr("checked", true);
-//            }
-//            if ($("#read_Result2Score").text() == "Exceed") {
-//                $("#RadioButton4").attr("checked", true);
-//            }
-//            if ($("#read_Result2Score").text() == "At") {
-//                $("#RadioButton5").attr("checked", true);
-//            }
-//            if ($("#read_Result2Score").text() == "Below") {
-//                $("#RadioButton6").attr("checked", true);
-//            }
-//            if ($("#read_Result3Score").text() == "Exceed") {
-//                $("#RadioButton7").attr("checked", true);
-//            }
-//            if ($("#read_Result3Score").text() == "At") {
-//                $("#RadioButton8").attr("checked", true);
-//            }
-//            if ($("#read_Result3Score").text() == "Below") {
-//                $("#RadioButton9").attr("checked", true);
-//            }
-//            if ($("#read_Result4Score").text() == "Exceed") {
-//                $("#RadioButton10").attr("checked", true);
-//            }
-//            if ($("#read_Result4Score").text() == "At") {
-//                $("#RadioButton11").attr("checked", true);
-//            }
-//            if ($("#read_Result4Score").text() == "Below") {
-//                $("#RadioButton12").attr("checked", true);
-//            }
-//            if ($("#read_Result5Score").text() == "Exceed") {
-//                $("#RadioButton13").attr("checked", true);
-//            }
-//            if ($("#read_Result5Score").text() == "At") {
-//                $("#RadioButton14").attr("checked", true);
-//            }
-//            if ($("#read_Result5Score").text() == "Below") {
-//                $("#RadioButton15").attr("checked", true);
-//            }
-//            if ($("#read_Result6Score").text() == "Exceed") {
-//                $("#RadioButton16").attr("checked", true);
-//            }
-//            if ($("#read_Result6Score").text() == "At") {
-//                $("#RadioButton17").attr("checked", true);
-//            }
-//            if ($("#read_Result6Score").text() == "Below") {
-//                $("#RadioButton18").attr("checked", true);
-//            }
-//            if ($("#read_Result7Score").text() == "Exceed") {
-//                $("#RadioButton19").attr("checked", true);
-//            }
-//            if ($("#read_Result7Score").text() == "At") {
-//                $("#RadioButton20").attr("checked", true);
-//            }
-//            if ($("#read_Result7Score").text() == "Below") {
-//                $("#RadioButton21").attr("checked", true);
-//            }
-//            if ($("#read_Result8Score").text() == "Exceed") {
-//                $("#RadioButton22").attr("checked", true);
-//            }
-//            if ($("#read_Result8Score").text() == "At") {
-//                $("#RadioButton23").attr("checked", true);
-//            }
-//            if ($("#read_Result8Score").text() == "Below") {
-//                $("#RadioButton24").attr("checked", true);
-//            }
-//            if ($("#read_Behavior1Score").text() == "Exceed") {
-//                $("#RadioButton25").attr("checked", true);
-//            }
-//            if ($("#read_Behavior1Score").text() == "At") {
-//                $("#RadioButton26").attr("checked", true);
-//            }
-//            if ($("#read_Behavior1Score").text() == "Below") {
-//                $("#RadioButton27").attr("checked", true);
-//            }
-//            if ($("#read_Behavior2Score").text() == "Exceed") {
-//                $("#RadioButton28").attr("checked", true);
-//            }
-//            if ($("#read_Behavior2Score").text() == "At") {
-//                $("#RadioButton29").attr("checked", true);
-//            }
-//            if ($("#read_Behavior2Score").text() == "Below") {
-//                $("#RadioButton30").attr("checked", true);
-//            }
-//            if ($("#read_Behavior3Score").text() == "Exceed") {
-//                $("#RadioButton31").attr("checked", true);
-//            }
-//            if ($("#read_Behavior3Score").text() == "At") {
-//                $("#RadioButton32").attr("checked", true);
-//            }
-//            if ($("#read_Behavior3Score").text() == "Below") {
-//                $("#RadioButton33").attr("checked", true);
-//            }
-//            if ($("#read_Behavior4Score").text() == "Exceed") {
-//                $("#RadioButton34").attr("checked", true);
-//            }
-//            if ($("#read_Behavior4Score").text() == "At") {
-//                $("#RadioButton35").attr("checked", true);
-//            }
-//            if ($("#read_Behavior4Score").text() == "Below") {
-//                $("#RadioButton36").attr("checked", true);
-//            }
-//            if ($("#read_Behavior5Score").text() == "Exceed") {
-//                $("#RadioButton37").attr("checked", true);
-//            }
-//            if ($("#read_Behavior5Score").text() == "At") {
-//                $("#RadioButton38").attr("checked", true);
-//            }
-//            if ($("#read_Behavior5Score").text() == "Below") {
-//                $("#RadioButton39").attr("checked", true);
-//            }
-//            if ($("#read_Behavior6Score").text() == "Exceed") {
-//                $("#RadioButton40").attr("checked", true);
-//            }
-//            if ($("#read_Behavior6Score").text() == "At") {
-//                $("#RadioButton41").attr("checked", true);
-//            }
-//            if ($("#read_Behavior6Score").text() == "Below") {
-//                $("#RadioButton42").attr("checked", true);
-//            }
-//            if ($("#read_Behavior7Score").text() == "Exceed") {
-//                $("#RadioButton43").attr("checked", true);
-//            }
-//            if ($("#read_Behavior7Score").text() == "At") {
-//                $("#RadioButton44").attr("checked", true);
-//            }
-//            if ($("#read_Behavior7Score").text() == "Below") {
-//                $("#RadioButton45").attr("checked", true);
-//            }
-//            if ($("#read_Behavior8Score").text() == "Exceed") {
-//                $("#RadioButton46").attr("checked", true);
-//            }
-//            if ($("#read_Behavior8Score").text() == "At") {
-//                $("#RadioButton47").attr("checked", true);
-//            }
-//            if ($("#read_Behavior8Score").text() == "Below") {
-//                $("#RadioButton48").attr("checked", true);
-//            }
-//            if ($("#read_Behavior9Score").text() == "Exceed") {
-//                $("#RadioButton49").attr("checked", true);
-//            }
-//            if ($("#read_Behavior9Score").text() == "At") {
-//                $("#RadioButton50").attr("checked", true);
-//            }
-//            if ($("#read_Behavior9Score").text() == "Below") {
-//                $("#RadioButton51").attr("checked", true);
-//            }
-//            if ($("#read_Behavior10Score").text() == "Exceed") {
-//                $("#RadioButton52").attr("checked", true);
-//            }
-//            if ($("#read_Behavior10Score").text() == "At") {
-//                $("#RadioButton53").attr("checked", true);
-//            }
-//            if ($("#read_Behavior10Score").text() == "Below") {
-//                $("#RadioButton54").attr("checked", true);
-//            }
-//            if ($("#read_Behavior11Score").text() == "Exceed") {
-//                $("#RadioButton55").attr("checked", true);
-//            }
-//            if ($("#read_Behavior11Score").text() == "At") {
-//                $("#RadioButton56").attr("checked", true);
-//            }
-//            if ($("#read_Behavior11Score").text() == "Below") {
-//                $("#RadioButton57").attr("checked", true);
-//            }
-//            if ($("#read_Behavior12Score").text() == "Exceed") {
-//                $("#RadioButton58").attr("checked", true);
-//            }
-//            if ($("#read_Behavior12Score").text() == "At") {
-//                $("#RadioButton59").attr("checked", true);
-//            }
-//            if ($("#read_Behavior12Score").text() == "Below") {
-//                $("#RadioButton60").attr("checked", true);
-//            }
             if ($("#read_NeedOrNo").val() == "No")
                 $("#NeedOrNo").hide();
 
@@ -252,7 +71,7 @@
             LoadBehavior($("#read_Behavior6Score"), 'Behavior6Score');
             LoadBehavior($("#read_Behavior7Score"), 'Behavior7Score');
             LoadBehavior($("#read_Behavior8Score"), 'Behavior8Score');
-            LoadBehavior($("#read_Behavior9Score"));
+            LoadBehavior($("#read_Behavior9Score"), 'Behavior9Score');
             LoadBehavior($("#read_Behavior10Score"));
             LoadBehavior($("#read_Behavior11Score"));
             LoadBehavior($("#read_Behavior12Score"));
@@ -952,7 +771,31 @@
                         </td>
                     </tr>
                     
-                    
+                      <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                         <span style=" background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">9</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center">Be Committed</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"> 
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton88" runat="server" GroupName="Behavior9Score" Value="Exceed"  Enabled="false"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton89" runat="server" GroupName="Behavior9Score" Value="At"   Enabled="false"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton90" runat="server" GroupName="Behavior9Score" Value="Below"  Enabled="false" />
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton91" runat="server" GroupName="Behavior9Score" Value="Below"   Enabled="false" />
+                        </td>
+                    </tr>
                   
                 </table>
 
@@ -990,52 +833,6 @@
                               <img src="standar.png" width="50px" height="50px" />
                         </td>
                     </tr>
-                    <%--<tr >
-                        <td class="td-label">
-                         <span style="height:30px; float:left;">&nbsp;</span>
-                        <p style="text-align:center"></p>
-                        </td>
-                        <td class="td-content" colspan="7" style="text-align:center;vertical-align:middle;height:70%;">
-                            <table align="center">
-                               <tr>
-                                    <td width="15%" style="border:0"></td>
-                                    <td width="3%" style="border:0"></td>
-                                    <td width="15%"></td>
-                                    <td width="15%"></td>
-                                    <td width="15%"></td>
-                                    <td width="15%" rowspan="5" style="border:0"></td>
-                               </tr>
-                               <tr>
-                                    <td height="3%" colspan="6" style="border:0"></td>
-                               </tr>
-                               <tr>
-                                    <td width="15%"></td>
-                                    <td width="3%" style="border:0"></td>
-                                    <td width="15%"></td>
-                                    <td width="15%"></td>
-                                    <td width="15%"></td>
-                               </tr>
-                               <tr>
-                                    <td width="15%"></td>
-                                    <td width="3%" style="border:0"></td>
-                                    <td width="15%"></td>
-                                    <td width="15%"></td>
-                                    <td width="15%"></td>
-                               </tr>
-                               <tr>
-                                    <td width="15%"></td>
-                                    <td width="3%" style="border:0"></td>
-                                    <td width="15%"></td>
-                                    <td width="15%"></td>
-                                    <td width="15%"></td>
-                               </tr>
-                               <tr>
-                                    <td colspan="5" style="border:0"></td>
-                                    <td width="15%" style="border:0"></td>
-                               </tr>
-                            </table>
-                        </td>
-                    </tr>--%>
                 </table>
                 <table class="table table-condensed table-bordered">
                     <tr>

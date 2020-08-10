@@ -793,7 +793,7 @@
                         <th colspan="5"><p style="float:left;font-weight:bold;">Special Case:</p></th>
                      </tr>
                      <tr>
-                        <th width="23%"><p style="text-align:center">Itme</p></th>
+                        <th width="23%"><p style="text-align:center">Item</p></th>
                         <th width="23%"><p style="text-align:center">Date</p></th>
                         <th width="23%"><p style="text-align:center">Amount</p></th>
                         <th width="23%"><p style="text-align:center">Reason</p></th>

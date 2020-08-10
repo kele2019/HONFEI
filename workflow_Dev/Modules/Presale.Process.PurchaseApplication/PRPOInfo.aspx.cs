@@ -19,7 +19,7 @@ namespace Presale.Process.PurchaseApplication
                 GetDataBind();
 
                 string Strchecksql = @" select COUNT(1) from ORG_GROUPMEMBER
-                                    where GROUPID=(select GROUPID from ORG_GROUP  where GROUPNAME='SCM' ) AND
+                                    where GROUPID=(select GROUPID from ORG_GROUP  where GROUPNAME='PurchaseGroup' ) AND
                                     MEMBERID=(select USERID from ORG_USER where LOGINNAME='" + Page.User.Identity.Name + "')";
                 if (Convert.ToInt32(DataAccess.Instance("BizDB").ExecuteScalar(Strchecksql)) > 0)
                     hidFlag.Value = "1";

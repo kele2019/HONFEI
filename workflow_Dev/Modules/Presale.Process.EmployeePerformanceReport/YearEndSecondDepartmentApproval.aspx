@@ -210,7 +210,7 @@
             LoadBehavior($("#read_Behavior6Score"), 'Behavior6Score');
             LoadBehavior($("#read_Behavior7Score"), 'Behavior7Score');
             LoadBehavior($("#read_Behavior8Score"), 'Behavior8Score');
-            LoadBehavior($("#read_Behavior9Score"));
+            LoadBehavior($("#read_Behavior9Score"), 'Behavior9Score');
             LoadBehavior($("#read_Behavior10Score"));
             LoadBehavior($("#read_Behavior11Score"));
             LoadBehavior($("#read_Behavior12Score"));
@@ -1013,6 +1013,32 @@
                         <td style="text-align:center;vertical-align:middle;">
                        <span style="height:30px; float:left;">&nbsp;</span>
                             <asp:RadioButton ID="RadioButton87" runat="server" GroupName="Behavior8Score" Value="Below"   Enabled="false" />
+                        </td>
+                    </tr>
+
+                      <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                         <span style=" background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">9</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center">Be Committed</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"> 
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton88" runat="server" GroupName="Behavior9Score" Value="Exceed"  Enabled="false"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton89" runat="server" GroupName="Behavior9Score" Value="At"   Enabled="false"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton90" runat="server" GroupName="Behavior9Score" Value="Below"  Enabled="false" />
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton91" runat="server" GroupName="Behavior9Score" Value="Below"   Enabled="false" />
                         </td>
                     </tr>
                     

@@ -46,7 +46,7 @@
                                 <%--<img   style="width:80px;height:50px;" alt='<%# Eval("UserName")%>' src='../../Modules/Ultimus.UWF.Form.ProcessControl/img/<%# Eval("UserName").ToString() %>.png' />--%>
                                 <img style="width:80%" alt='<%# Eval("UserName")%>' src='../../Modules/Ultimus.UWF.Form.ProcessControl/img/<%# Eval("UserName").ToString() %>.png' />
                             </td>
-                            <td align="center" style="text-align: center">
+                            <td align="center" style="text-align: center" class="stepname">
                                 <%# Eval("StepName")%>
                             </td>
                             <td align="center" style="text-align: center">
@@ -135,6 +135,15 @@
             }
             else {
                 $("#ApprovalHistory1_reachChar").css("color", "blue");
+            }
+        });
+        $(".stepname").each(function(i, item) {
+          //  console.log("|"+$(item).html()+"|");
+            if ($(item).html() == "CTO  Reivew") {
+                $(item).html("CTO Review");
+            }
+             if ($(item).html() == "Trainning") {
+                 $(item).html("Training");
             }
         });
     });

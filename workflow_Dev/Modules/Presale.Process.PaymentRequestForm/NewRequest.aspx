@@ -396,7 +396,7 @@
                         <p style="text-align:center">GR NO</p>
                     </td>
                     <td class="td-content" colspan="7">
-                        <asp:TextBox runat="server" ID="fld_GRNo"  Width="92%" CssClass="validate[required]" style="background-color:White;" onfocus="this.blur()"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="fld_GRNo"  Width="92%"  style="background-color:White;" onfocus="this.blur()"></asp:TextBox>
                         <input type="button" value="..." class="btn" onclick="return showGRInfo()" />
 
                     </td>

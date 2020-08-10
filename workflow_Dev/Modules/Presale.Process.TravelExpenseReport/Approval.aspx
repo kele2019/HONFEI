@@ -333,7 +333,7 @@
                         <th colspan="4"><p style="text-align:left;font-weight:bold;">Special Case:</p></th>
                      </tr>
                      <tr>
-                        <th width="24.5%"><p style="text-align:center">Itme</p></th>
+                        <th width="24.5%"><p style="text-align:center">Item</p></th>
                         <th width="24.5%"><p style="text-align:center">Date</p></th>
                         <th width="24.5%"><p style="text-align:center">Amount</p></th>
                         <th width="24.5%"><p style="text-align:center">Reason</p></th>

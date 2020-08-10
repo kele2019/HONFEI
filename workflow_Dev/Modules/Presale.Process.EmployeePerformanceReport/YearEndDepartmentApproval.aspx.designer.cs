@@ -814,6 +814,42 @@ namespace Presale.Process.EmployeePerformanceReport {
         protected global::System.Web.UI.WebControls.RadioButton RadioButton61;
         
         /// <summary>
+        /// RadioButton69 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton69;
+        
+        /// <summary>
+        /// RadioButton70 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton70;
+        
+        /// <summary>
+        /// RadioButton71 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton71;
+        
+        /// <summary>
+        /// RadioButton72 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton72;
+        
+        /// <summary>
         /// fld_DBEDW 控件。
         /// </summary>
         /// <remarks>
