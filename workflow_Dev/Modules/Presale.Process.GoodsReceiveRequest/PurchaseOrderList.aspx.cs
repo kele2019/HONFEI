@@ -16,18 +16,20 @@ namespace Presale.Process.GoodsReceiveRequest
             if (!IsPostBack)
             {
                 object venderInfo = Request.QueryString["VenderInfo"];
-                if (venderInfo != null)
+                object CostCenter = Request.QueryString["CostCenter"];
+
+                if (venderInfo != null && CostCenter!=null)
                 {
-                    repeaterbind(venderInfo.ToString());
+                    repeaterbind(venderInfo.ToString(), CostCenter.ToString());
                 }
             }
         }
-        public void repeaterbind(string CardCode)
+        public void repeaterbind(string CardCode,string CostCenter)
         {
             //int pageIndex = AspNetPager1.CurrentPageIndex;
             //int pageSize = AspNetPager1.PageSize;
 
-            string sql = "select * from V_SAPPO where CardCode='" + CardCode + "'";
+            string sql = "select * from V_SAPPO where CardCode='" + CardCode + "' and SharepointCostCenter='" + CostCenter + "'";
             if (txtPONO.Text.Trim() != "")
             {
                 sql += " AND DocNum LIKE '%" + txtPONO.Text.Trim() + "%'";
@@ -52,9 +54,11 @@ namespace Presale.Process.GoodsReceiveRequest
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             object venderInfo = Request.QueryString["VenderInfo"];
+            object CostCenter = Request.QueryString["CostCenter"];
+
             if (venderInfo != null)
             {
-                repeaterbind(venderInfo.ToString());
+                repeaterbind(venderInfo.ToString(), CostCenter.ToString());
             }
         }
     }

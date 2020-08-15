@@ -24,8 +24,13 @@ namespace Presale.Process.GoodsReceiveRequest
                 {
                     hdIncident.Value = Incident;
                 }
-
-
+                string StrqlCotcenter = @" select top(1) C.EXT02 from (
+	select USERID from ORG_USER WHERE LOGINNAME='"+Page.User.Identity.Name+"') A left join ORG_JOB B on A.USERID=B.USERID left join ORG_DEPARTMENT C on B.DEPARTMENTID=C.DEPARTMENTID";
+                object UserCostCenter = DataAccess.Instance("BizDB").ExecuteScalar(StrqlCotcenter);
+                if (UserCostCenter != null)
+                {
+                    hidCostCenter.Value = UserCostCenter.ToString();
+                }
                 if (Incident.ToString() != "0")
                 {
                     string FlagStatus = DataAccess.Instance("BizDB").ExecuteScalar("select  status from PROC_GoodsReceive where INCIDENT='" + Incident + "' ").ToString();

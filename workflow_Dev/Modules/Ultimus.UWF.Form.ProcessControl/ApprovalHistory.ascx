@@ -139,10 +139,10 @@
         });
         $(".stepname").each(function(i, item) {
           //  console.log("|"+$(item).html()+"|");
-            if ($(item).html() == "CTO  Reivew") {
+            if ($.trim($(item).html()) == "CTO  Reivew") {
                 $(item).html("CTO Review");
             }
-             if ($(item).html() == "Trainning") {
+             if ($.trim($(item).html()) == "Trainning") {
                  $(item).html("Training");
             }
         });

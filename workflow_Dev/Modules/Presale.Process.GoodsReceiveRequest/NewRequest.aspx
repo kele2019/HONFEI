@@ -22,8 +22,10 @@
         function showPurchaseOrder() {
             var digStr = "dialogHeight:500px;dialogWidth:850px;"
             var VenderInfo = $("#fld_CardCode").val();
+            var CostCenter = $("#hidCostCenter").val();
+
             if (VenderInfo != "") {
-                var ReturnValue = window.showModalDialog("./PurchaseOrderList.aspx?VenderInfo=" + VenderInfo, null, digStr);
+                var ReturnValue = window.showModalDialog("./PurchaseOrderList.aspx?VenderInfo=" + VenderInfo + "&CostCenter=" + CostCenter, null, digStr);
                 if (ReturnValue != null) {
                     $("#hdPOList").val(ReturnValue);
                    $("#btnAdd").click();
@@ -383,6 +385,8 @@
             <asp:HiddenField runat="server" ID="hdPrint" />
             <asp:HiddenField runat="server" ID="hdUrgeTask" />
             <asp:HiddenField runat="server" ID="hdPOList" />
+            <asp:HiddenField runat="server" ID="hidCostCenter" />
+
             <asp:Button ID="btnAdd" runat="server" Text="add" CssClass="btn" CausesValidation="false" OnClick="btnAdd_Click"/>
         </div>
     </form>
