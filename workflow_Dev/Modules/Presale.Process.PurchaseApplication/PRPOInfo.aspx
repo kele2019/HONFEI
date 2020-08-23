@@ -16,7 +16,41 @@
          $(".td-content").attr("style", "width:35%");
      if($("#hidFlag").val()=="")
           $(".Operation").hide();
-     });
+ });
+
+ function POsupplier(obj) {
+     var digStr = "dialogHeight:500px;dialogWidth:850px;";
+     var ReturnValue = window.showModalDialog("../Presale.Process.PurchaseOrder/Vendor.aspx", "", digStr);
+     if (ReturnValue != null) {
+         var vendor = eval("(" + ReturnValue + ")");
+         var VendorCode = vendor[0].VendorCode;
+         var VendorName = vendor[1].VendorName;
+         var Currency = vendor[3].Currency;
+         $("#txtPO").val(VendorCode + "-" + VendorName);
+         $("#hidPOVenderCode").val(VendorCode);
+     }
+ }
+
+ function GRsupplier(obj) {
+     var digStr = "dialogHeight:500px;dialogWidth:850px;";
+     var ReturnValue = window.showModalDialog("../Presale.Process.PurchaseOrder/Vendor.aspx", "", digStr);
+     if (ReturnValue != null) {
+         var vendor = eval("(" + ReturnValue + ")");
+         var VendorCode = vendor[0].VendorCode;
+         var VendorName = vendor[1].VendorName;
+         var Currency = vendor[3].Currency;
+         $("#txtGR").val(VendorCode + "-" + VendorName);
+         $("#hidGRVenderCode").val(VendorCode);
+     }
+ }
+ function ResetSearch() {
+     $("#txtPO").val("");
+     $("#hidPOVenderCode").val("");
+     $("#txtGR").val("");
+     $("#hidGRVenderCode").val("");
+     $("#DropPRStatus").val("");
+     $("#btnSearch").click();
+ }
 </script>
 </head>
 <body>
@@ -26,18 +60,20 @@
 
     <table class="table table-condensed table-bordered" width="100%">
     <tr><th colspan="4" style="text-align:left; font-weight:bold;">Search </th> </tr>
-  <%--  <tr>
-    <th> PRNO：</th>
-    <td><asp:TextBox runat="server" ID="txtPRNO"></asp:TextBox></td>
-    <th>PONO：</th>
-    <td>
-    <asp:TextBox runat="server" ID="txtPONO"></asp:TextBox>
+    <tr>
+    <th> PO Supplier：</th>
+    <td><asp:TextBox runat="server" ID="txtPO" onfocus="this.blur()" onclick="POsupplier(this)" ></asp:TextBox>
+    <asp:HiddenField runat="server" ID="hidPOVenderCode" />
     </td>
-    </tr>--%>
-    
+    <th>GR Supplier：</th>
+    <td>
+    <asp:TextBox runat="server" ID="txtGR" onfocus="this.blur()" onclick="GRsupplier(this)" ></asp:TextBox>
+    <asp:HiddenField runat="server" ID="hidGRVenderCode" />
+    </td>
+    </tr>
     <tr>
   <th>PR Status：</th>
-  <td>
+  <td colspan="3">
   <asp:DropDownList runat="server" ID="DropPRStatus">
   <asp:ListItem Value="">Pls Select</asp:ListItem>
   <asp:ListItem Value="0">Open</asp:ListItem>
@@ -45,8 +81,10 @@
   </asp:DropDownList>
    
     <asp:Button runat="server" ID="btnSearch" CssClass="btn" Text="Search" 
-            onclick="btnSearch_Click" style="margin-left:10px;" />
+            onclick="btnSearch_Click" style="margin-left:10px; margin-right:10px;" />
           <asp:HiddenField runat="server" ID="hidFlag" />
+
+          <input type="button" value="Reset" class="btn" onclick="ResetSearch()" />
     </td>
     </tr>
    </table>

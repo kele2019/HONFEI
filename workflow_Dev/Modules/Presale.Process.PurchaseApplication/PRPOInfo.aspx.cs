@@ -58,15 +58,15 @@ WHERE 1=1
         public string Strwhere()
         {
             string returnvalue = "";
-             
-            //if (txtPRNO.Text.Trim() != "")
-            //{
-            //    returnvalue = " and A.DOCUMENTNO like '%" + txtPRNO.Text.Trim() + "%'";
-            //}
-            //if (txtPONO.Text.Trim() != "")
-            //{
-            //    returnvalue = " and B.PONO like '%" + txtPONO.Text.Trim() + "%'";
-            //}
+
+            if (txtPO.Text.Trim() != "")
+            {
+                returnvalue = " and B.SUPPLIER like '%" + hidPOVenderCode.Value + "%'";
+            }
+            if (txtGR.Text.Trim() != "")
+            {
+                returnvalue = " and C.SUPPLIER like '%" + hidGRVenderCode.Value + "%'";
+            }
             if (DropPRStatus.SelectedItem.Value != "")
             {
                 if (DropPRStatus.SelectedItem.Value == "0")
