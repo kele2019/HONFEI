@@ -38,6 +38,7 @@
                 var WhsCode = $(item).find('.WhsCode').text();
                 var Project = $(item).find('.Project').text();
                 var ItemName = $(item).find('.ItemName').text();
+                var OrderQty = $(item).find('.OrderQty').text();
 
                 if (cbflag) {
                     returnJson += "{'ITEMNO':'" + ItemCode;
@@ -56,6 +57,7 @@
                     returnJson += "','WhsCode':'" + WhsCode;
                     returnJson += "','Project':'" + Project;
                     returnJson += "','ItemName':'" + ItemName;
+                    returnJson += "','OrderQty':'" + OrderQty;
 
                     returnJson += "'},";
                 }
@@ -129,10 +131,10 @@
                             <asp:Label runat="server" ID="ItemCode" CssClass="ItemCode" Text='<%#Eval("ItemCode") %>'></asp:Label>
                         </td>
                         <td style="text-align:center">
-                            <asp:Label runat="server" ID="Quantity" CssClass="Quantity" Text='<%#Eval("Quantity") %>'></asp:Label>
+                            <asp:Label runat="server" ID="Quantity" CssClass="Quantity" Text='<%#Eval("OpenQty") %>'></asp:Label>
                         </td>
                         <td style="text-align:center">
-                            <asp:Label runat="server" ID="PriceAfVAT" CssClass="PriceAfVAT" Text='<%#Eval("PriceAfVAT") %>'></asp:Label>
+                            <asp:Label runat="server" ID="PriceAfVAT" CssClass="PriceAfVAT" Text='<%#Eval("Price") %>'></asp:Label>
                         </td>
                         <td style="text-align:center">
                             <asp:Label runat="server" ID="VatRate" CssClass="VatRate" Text='<%#Eval("VatRate") %>'></asp:Label>
@@ -169,6 +171,7 @@
                             <asp:Label runat="server" ID="WhsCode" CssClass="WhsCode" style="display:none" Text='<%#Eval("WhsCode") %>'></asp:Label>
                             <asp:Label runat="server" ID="Project" CssClass="Project" style="display:none" Text='<%#Eval("Project") %>'></asp:Label>
                             <asp:Label runat="server" ID="ItemName" CssClass="ItemName" style="display:none" Text='<%#Eval("ItemName") %>'></asp:Label>
+                            <asp:Label runat="server" ID="OrderQty" CssClass="OrderQty" style="display:none" Text='<%#Eval("Quantity") %>'></asp:Label>
 
                         </td>
                     </tr>

@@ -32,17 +32,17 @@ namespace Presale.Process.PurchaseApplication
             int PageSize = AspNetPager1.PageSize;
             int PageIndex = AspNetPager1.CurrentPageIndex;
             string StrsqlCount = @"select  COUNT(1) from PROC_Purchase A left join  V_PRPO B on A.DOCUMENTNO=B.PRNO
-            left join (select DOCUMENTNO,INCIDENT,REQUESTDATE,SUPPLIER,APPLICANT,PurchaseRequestNo from PROC_GoodsReceive where GoodsFlag='0' and STATUS<>3 and INCIDENT>0) C
- on A.DOCUMENTNO=C.PurchaseRequestNo
-            WHERE 1=1 "+streFilter;
+            left join (select DOCUMENTNO,INCIDENT,REQUESTDATE,SUPPLIER,APPLICANT,PurchaseRequestNo,B.U_M_SharePointNum as  PurchaseOrderNo from PROC_GoodsReceive A left join V_SAPPOList1 B on A.PurchaseOrderNo=B.DocNum where STATUS<>3 and INCIDENT>0) C
+ on A.DOCUMENTNO=C.PurchaseRequestNo  or B.PONO=C.PurchaseOrderNo
+            WHERE 1=1 " + streFilter;
             AspNetPager1.RecordCount=Convert.ToInt32(DataAccess.Instance("BizDB").ExecuteScalar(StrsqlCount).ToString());
             string Strsql = @"select * from (
 select ROW_NUMBER() over(order by A.REQUESTDATE desc) RN, A.DOCUMENTNO,A.APPLICANT AS PRAPPLICANT,CONVERT(nvarchar(50),A.REQUESTDATE,111) as PRREQUESTDATE,A.STATUS,A.Incident,A.Remarks,A.TotalAmount,B.*,CONVERT(nvarchar(50),B.REQUESTDATE,111) as POREQUESTDATE,PurchaseOrdStatus 
 ,C.DOCUMENTNO as GRNo, C.APPLICANT as GRAPPLICANT,CONVERT(nvarchar(50), C.REQUESTDATE,111) as GRREQUESTDATE,C.SUPPLIER as GRSupplier,C.INCIDENT as GRIncident
 from PROC_Purchase A left join  V_PRPO B on A.DOCUMENTNO=B.PRNO
 
-left join (select DOCUMENTNO,INCIDENT,REQUESTDATE,SUPPLIER,APPLICANT,PurchaseRequestNo from PROC_GoodsReceive where GoodsFlag='0' and STATUS<>3 and INCIDENT>0) C
- on A.DOCUMENTNO=C.PurchaseRequestNo
+left join (select DOCUMENTNO,INCIDENT,REQUESTDATE,SUPPLIER,APPLICANT,PurchaseRequestNo,B.U_M_SharePointNum as  PurchaseOrderNo from PROC_GoodsReceive A left join V_SAPPOList1 B on A.PurchaseOrderNo=B.DocNum where STATUS<>3 and INCIDENT>0) C
+ on A.DOCUMENTNO=C.PurchaseRequestNo or B.PONO=C.PurchaseOrderNo
 
 WHERE 1=1
 " + streFilter + ") AA WHERE RN BETWEEN " + ((PageSize * (PageIndex - 1))+1) + " AND " +PageSize * PageIndex;

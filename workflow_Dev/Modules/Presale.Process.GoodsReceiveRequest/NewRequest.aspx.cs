@@ -100,6 +100,9 @@ namespace Presale.Process.GoodsReceiveRequest
             { 
                 string  JSonstrnew="["+JSonstr.TrimEnd(',')+"]";
                 List<SAPPOEntity> listEntity = Newtonsoft.Json.JsonConvert.DeserializeObject<List<SAPPOEntity>>(JSonstrnew);
+
+               List<TaxEntity> listtax=DataAccess.Instance("BizDB").ExecuteList<TaxEntity>("select * from PROC_PURCHASE_TAXCODE");
+
                 if (listEntity.Count > 0)
                 {
                     foreach (var item in listEntity)
@@ -108,7 +111,14 @@ namespace Presale.Process.GoodsReceiveRequest
                         fld_PurchaseOrderNo.Text = item.PONo + ",";
                         item.QUANTITY = Convert.ToDecimal(item.QUANTITY).ToString("f2");
                         item.UnitPrice = Convert.ToDecimal(item.UnitPrice).ToString("f2");
-
+                        item.OrderQty = Convert.ToDecimal(item.OrderQty).ToString("f2");
+                        var taxtdata=listtax.FirstOrDefault(o=>o.ID==item.TaxCode);
+                        if(taxtdata!=null)
+                        {
+                         item.TaxRate=taxtdata.code.ToString();
+                         item.TaxAmount = (Convert.ToDecimal(item.QUANTITY) * Convert.ToDecimal(item.UnitPrice) * taxtdata.code).ToString("f2");
+                        }
+                        item.NonTaxAmount = (Convert.ToDecimal(item.QUANTITY) * Convert.ToDecimal(item.UnitPrice)).ToString("f2");
                     }
                      List<string> listpono=listEntity.Select(o => o.PONo).Distinct().ToList();
                      string PONOstr = string.Join(",", listpono);

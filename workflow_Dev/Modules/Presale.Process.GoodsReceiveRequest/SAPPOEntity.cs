@@ -24,6 +24,14 @@ namespace Presale.Process.GoodsReceiveRequest
         public string WhsCode { get; set; }
         public string Project { get; set; }
         public string ItemName { get; set; }
-
+        public string OrderQty { get; set; }
+        public string TaxRate { get; set; }
+        public string TaxAmount { get; set; }
+        public string NonTaxAmount { get; set; }
+    }
+    public class TaxEntity {
+        public string ID { get; set; }
+        public decimal code { get; set; }
+        public string DESCRIPTION { get; set; }
     }
 }

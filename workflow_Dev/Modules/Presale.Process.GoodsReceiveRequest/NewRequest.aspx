@@ -49,7 +49,29 @@
         }
        
         function changecode(obj) {
-         
+            var ETR = $(obj).parent().parent();
+            var Qty = $(ETR).find('.QUANTITY').val();
+            var UnitPrice = $(ETR).find('.UnitPrice').val();
+            var TaxRate = $(ETR).find('.TaxRate').val();
+//            var TaxAmount = $(ETR).find('.TaxAmount').val();
+            //            var NonTaxAmount = $(ETR).find('.NonTaxAmount').val();
+            if (!isNaN(Qty) && !isNaN(UnitPrice)) {
+                var TaxAmount = (Qty * UnitPrice * TaxRate).toFixed(2);
+                var NonTaxAmount = (Qty * UnitPrice).toFixed(2);
+                $(ETR).find('.TaxAmount').val(TaxAmount);
+                $(ETR).find('.TaxAmount').prev().text(TaxAmount);
+
+                $(ETR).find('.NonTaxAmount').val(NonTaxAmount);
+                $(ETR).find('.NonTaxAmount').prev().text(NonTaxAmount);
+            }
+            else {
+                $(obj).val("0.00");
+                $(ETR).find('.TaxAmount').val("0.00");
+                $(ETR).find('.NonTaxAmount').val("0.00");
+                $(ETR).find('.TaxAmount').prev().text("0.00");
+                $(ETR).find('.NonTaxAmount').prev().text("0.00");
+
+            }
         }
          
         function beforeSubmit() {
@@ -276,10 +298,13 @@
             <table class="table table-condensed table-bordered">
                 <tr>
                     <th width="6.8%">ITEMNO.</th>
-                    <th width="7.6%">QUANTITY</th>
-                    <th width="7.6%">UNIT PRICE</th>
-                    <th width="7.6">TAX CODE</th>
-                    <th width="7.1%">COSTCENTER</th>
+                     <th width="3.8%">OpenQty</th>
+                    <th width="3.8%">OrderQty</th>
+                    <th width="8.6%">UNIT PRICE</th>
+                    <th width="3">TAX CODE</th>
+                     <th width="3">Tax-Amount</th>
+                      <th width="3">NonTax-Amount</th>
+                    <th width="4.1%">COST-CENTER</th>
                     <th width="4%">UOM CODE</th>
                     <th width="7.6%">PO NO.</th>
                     <th width="10.1%">PR NO.</th>
@@ -307,14 +332,27 @@
                                     <asp:TextBox ID="fld_ITEMNO" style="display:none" runat="server" Text='<%#Eval("ITEMNO") %>' onfocus="this.blur()" CssClass="validate[required]" onclick="openITEMNO(this)" Width="70%"></asp:TextBox>
                                 </td>
                                   <td>
-                                    <asp:TextBox ID="fld_QUANTITY" runat="server"  CssClass="validate[required]" Text='<%#Eval("QUANTITY") %>' Width="80%"></asp:TextBox>
+                                    <asp:TextBox ID="fld_QUANTITY" runat="server" onchange="changecode(this)"  CssClass="QUANTITY validate[required]" Text='<%#Eval("QUANTITY") %>' Width="80%"></asp:TextBox>
+                                </td>
+                                 <td>
+                                  <%#Eval("OrderQty")%>
+                                    <asp:TextBox ID="fld_OrderQty" runat="server" style="display:none"  CssClass="validate[required]" Text='<%#Eval("OrderQty") %>' Width="80%"></asp:TextBox>
                                 </td>
                                <td>
-                                    <asp:TextBox ID="fld_UnitPrice" runat="server"  CssClass="validate[required]" Text='<%#Eval("UnitPrice") %>' Width="80%"></asp:TextBox>
+                                    <asp:TextBox ID="fld_UnitPrice" runat="server" onchange="changecode(this)"   CssClass="UnitPrice validate[required]" Text='<%#Eval("UnitPrice") %>' Width="80%"></asp:TextBox>
                                 </td>
                                 <td>
                                  <%#Eval("TaxCode")%>
-                                    <asp:TextBox ID="fld_TaxCode" style="display:none" runat="server" MaxLength="17" Text='<%#Eval("TaxCode") %>' Width="74%"></asp:TextBox>
+                                    <asp:TextBox ID="fld_TaxRate" style="display:none" CssClass="TaxRate"  runat="server" MaxLength="17" Text='<%#Eval("TaxRate") %>' Width="74%"></asp:TextBox>
+                                    <asp:TextBox ID="fld_TaxCode" style="display:none"  runat="server" MaxLength="17" Text='<%#Eval("TaxCode") %>' Width="74%"></asp:TextBox>
+                                </td>
+                                  <td>
+                                  <p>  <%#Eval("TaxAmount")%></p>
+                                    <asp:TextBox ID="fld_TaxAmount"  CssClass="TaxAmount"  style="display:none" runat="server" MaxLength="17" Text='<%#Eval("TaxAmount") %>' Width="74%"></asp:TextBox>
+                                </td>
+                                  <td>
+                                   <p> <%#Eval("NonTaxAmount")%></p>
+                                    <asp:TextBox ID="fld_NonTaxAmount" CssClass="NonTaxAmount" style="display:none" runat="server" MaxLength="17" Text='<%#Eval("NonTaxAmount") %>' Width="74%"></asp:TextBox>
                                 </td>
                                   <td>
                                    <%#Eval("CostCenter")%>

@@ -155,9 +155,12 @@
             <table class="table table-condensed table-bordered">
                 <tr>
                     <th width="6.8%">ITEMNO.</th>
-                    <th width="7.6%">QUANTITY</th>
+                     <th width="3.8%">OpenQty</th>
+                    <th width="3.8%">OrderQty</th>
                     <th width="7.6%">UNIT PRICE</th>
                     <th width="7.6">TAX CODE</th>
+                      <th width="3">Tax-Amount</th>
+                      <th width="3">NonTax-Amount</th>
                     <th width="7.1%">COSTCENTER</th>
                     <th width="4%">UOM CODE</th>  
                     <th width="7.6%">PO NO.</th>
@@ -182,12 +185,23 @@
                                 </td>
                                   <td><%#Eval("QUANTITY")%>
                                 </td>
+                                 <td>
+                                  <%#Eval("OrderQty")%>
+                                  </td>
+
                                <td>
                                 <%#Eval("UnitPrice")%>
                                 </td>
                                 <td>
                                  <%#Eval("TaxCode")%>
                                 </td>
+
+                                 <td>
+                                    <%#Eval("TaxAmount")%> 
+                                  </td>
+                                   <td>
+                                    <%#Eval("NonTaxAmount")%> 
+                                  </td>
                                   <td>
                                    <%#Eval("CostCenter")%>
                                </td>
