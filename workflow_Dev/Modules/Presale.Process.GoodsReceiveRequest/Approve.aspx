@@ -22,16 +22,30 @@
           
             return true;
         }
+
+        function summaryTotalAmount() {
+            var totaltax = 0; var totalnontax = 0;
+            $("#detail").find("tr").each(function (i, Etr) {
+                var TaxAmount = $(Etr).find('.TaxAmount').val();
+                var NonTaxAmount = $(Etr).find('.NonTaxAmount').val();
+                totaltax += TaxAmount - 0;
+                totalnontax += NonTaxAmount - 0;
+            });
+            $("#NonTaxAmount").text(totalnontax.toFixed(2));
+            $("#TaxAmountan").text(totaltax.toFixed(2));
+        }
+
         $(document).ready(function () {
 
             $(".container").attr("style", "width:1200px");
             $(".td-label").attr("style", "width:15%");
             $(".td-content").attr("style", "width:35%");
 
-//            $("#buyer option:selected").text($("#fld_BUYER").val());
-//            $("#wareHouse option:selected").text($("#fld_WAREHOUSE").val());
-//            $("#currency").val($("#fld_Currency").val());
+            //            $("#buyer option:selected").text($("#fld_BUYER").val());
+            //            $("#wareHouse option:selected").text($("#fld_WAREHOUSE").val());
+            //            $("#currency").val($("#fld_Currency").val());
             POStatus_onchange($("#read_GoodsFlag").val());
+            summaryTotalAmount();
         });
         function POStatus_onchange(obj) {
             if (obj != "") {
@@ -159,8 +173,8 @@
                     <th width="3.8%">OrderQty</th>
                     <th width="7.6%">UNIT PRICE</th>
                     <th width="7.6">TAX CODE</th>
+                       <th width="3">NonTax-Amount</th>
                       <th width="3">Tax-Amount</th>
-                      <th width="3">NonTax-Amount</th>
                     <th width="7.1%">COSTCENTER</th>
                     <th width="4%">UOM CODE</th>  
                     <th width="7.6%">PO NO.</th>
@@ -195,13 +209,16 @@
                                 <td>
                                  <%#Eval("TaxCode")%>
                                 </td>
-
+                                 <td>
+                                    <%#Eval("NonTaxAmount")%> 
+                                    <asp:TextBox ID="read_NonTaxAmount" CssClass="NonTaxAmount" style="display:none" runat="server" MaxLength="17" Text='<%#Eval("NonTaxAmount") %>' Width="74%"></asp:TextBox>
+                                  </td>
                                  <td>
                                     <%#Eval("TaxAmount")%> 
+                                    <asp:TextBox ID="read_TaxAmount"  CssClass="TaxAmount"  style="display:none" runat="server" MaxLength="17" Text='<%#Eval("TaxAmount") %>' Width="74%"></asp:TextBox>
+
                                   </td>
-                                   <td>
-                                    <%#Eval("NonTaxAmount")%> 
-                                  </td>
+                                  
                                   <td>
                                    <%#Eval("CostCenter")%>
                                </td>
@@ -234,6 +251,13 @@
                         </ItemTemplate>
                     </asp:Repeater>
                 </tbody>
+
+                <tr>
+               <td colspan="5" style="text-align:right;">Total Amount</td>
+               <td><span id="NonTaxAmount"></span></td>
+               <td><span id="TaxAmountan"></span></td>
+               <td colspan="9"></td>
+               </tr>
             </table>
             </div>
 

@@ -47,7 +47,17 @@
                 $("#fld_PurchaseRequestNo").val(value);
             }
         }
-       
+        function summaryTotalAmount() {
+            var totaltax = 0;var totalnontax = 0;
+            $("#detail").find("tr").each(function (i, Etr) {
+                var TaxAmount = $(Etr).find('.TaxAmount').val();
+                var NonTaxAmount = $(Etr).find('.NonTaxAmount').val();
+                totaltax += TaxAmount-0;
+                totalnontax += NonTaxAmount-0;
+            });
+            $("#NonTaxAmount").text(totalnontax.toFixed(2));
+            $("#TaxAmountan").text(totaltax.toFixed(2));
+        }
         function changecode(obj) {
             var ETR = $(obj).parent().parent();
             var Qty = $(ETR).find('.QUANTITY').val();
@@ -70,8 +80,8 @@
                 $(ETR).find('.NonTaxAmount').val("0.00");
                 $(ETR).find('.TaxAmount').prev().text("0.00");
                 $(ETR).find('.NonTaxAmount').prev().text("0.00");
-
             }
+            summaryTotalAmount();
         }
          
         function beforeSubmit() {
@@ -128,7 +138,7 @@
                     $(item).attr("checked", true);
                 }
             });
-            
+            summaryTotalAmount();
         });
         function POStatus_onchange(obj) {
             if (obj != ""){
@@ -302,8 +312,8 @@
                     <th width="3.8%">OrderQty</th>
                     <th width="8.6%">UNIT PRICE</th>
                     <th width="3">TAX CODE</th>
-                     <th width="3">Tax-Amount</th>
-                      <th width="3">NonTax-Amount</th>
+                    <th width="3">NonTax-Amount</th>
+                    <th width="3">Tax-Amount</th>
                     <th width="4.1%">COST-CENTER</th>
                     <th width="4%">UOM CODE</th>
                     <th width="7.6%">PO NO.</th>
@@ -346,14 +356,17 @@
                                     <asp:TextBox ID="fld_TaxRate" style="display:none" CssClass="TaxRate"  runat="server" MaxLength="17" Text='<%#Eval("TaxRate") %>' Width="74%"></asp:TextBox>
                                     <asp:TextBox ID="fld_TaxCode" style="display:none"  runat="server" MaxLength="17" Text='<%#Eval("TaxCode") %>' Width="74%"></asp:TextBox>
                                 </td>
+
+                                 <td>
+                                   <p> <%#Eval("NonTaxAmount")%></p>
+                                    <asp:TextBox ID="fld_NonTaxAmount" CssClass="NonTaxAmount" style="display:none" runat="server" MaxLength="17" Text='<%#Eval("NonTaxAmount") %>' Width="74%"></asp:TextBox>
+                                </td>
+
                                   <td>
                                   <p>  <%#Eval("TaxAmount")%></p>
                                     <asp:TextBox ID="fld_TaxAmount"  CssClass="TaxAmount"  style="display:none" runat="server" MaxLength="17" Text='<%#Eval("TaxAmount") %>' Width="74%"></asp:TextBox>
                                 </td>
-                                  <td>
-                                   <p> <%#Eval("NonTaxAmount")%></p>
-                                    <asp:TextBox ID="fld_NonTaxAmount" CssClass="NonTaxAmount" style="display:none" runat="server" MaxLength="17" Text='<%#Eval("NonTaxAmount") %>' Width="74%"></asp:TextBox>
-                                </td>
+                                 
                                   <td>
                                    <%#Eval("CostCenter")%>
                                     <asp:TextBox ID="fld_CostCenter" style="display:none" runat="server" Text='<%#Eval("CostCenter") %>' Width="80%"></asp:TextBox>
@@ -399,7 +412,15 @@
                             </tr>
                         </ItemTemplate>
                     </asp:Repeater>
+               
+               
                 </tbody>
+               <tr>
+               <td colspan="5" style="text-align:right;">Total Amount</td>
+               <td><span id="NonTaxAmount"></span></td>
+               <td><span id="TaxAmountan"></span></td>
+               <td colspan="10"></td>
+               </tr>
             </table>
             </div>
 
