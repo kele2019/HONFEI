@@ -28,15 +28,20 @@
             var leavedays = 0.00;
             $("#leavedetails").find("tr").each(function (i, Etr) {
                 leavedays = $(Etr).find("td").eq(4).children().val() - 0;
-//                if (!((leavedays * 100) % 25)) {
-                if (!((leavedays) %0.5)) {
+                //                if (!((leavedays * 100) % 25)) {
+                if (!((leavedays) % 0.125)) {
 
                 }
 
                 else {
-                 //alert("Your Applying time is wrong.Please input again!");
+                    //alert("Your Applying time is wrong.Please input again!");
                     Msg = "Your Applying time is wrong.Please input again!";
                     $(Etr).find("td").eq(4).children().val("");
+                }
+                if ($(Etr).find("td").eq(1).find(".DropApplying").find("option:selected").text() == "Annual Leave") {
+                    if (leavedays <= 0) {
+                        Msg = "Your Applying time is wrong.Please input again!";
+                    }
                 }
 
             });
@@ -65,6 +70,7 @@
                 $("#fld_sumLeave").val(hours);
                 var summary = "Leave Application";
                 $("#UserInfo1_fld_PROCESSSUMMARY").val(summary);
+                $("body").find(".nodays").removeAttr("disabled");
                 return true;
             }
             else {
@@ -77,6 +83,7 @@
             var summary = "Leave Application";
             $("#UserInfo1_fld_PROCESSSUMMARY").val(summary);
             $("#fld_TRSummary").val(summary);
+            $("body").find(".nodays").removeAttr("disabled");
             return true;
         }
         $(document).ready(function () {
@@ -87,6 +94,19 @@
                 $(Etr).find("td").eq(2).find(".StartMinutes").val($(Etr).find("td").eq(2).find(".StartMinutes").next().val());
                 $(Etr).find("td").eq(3).find(".EndHours").val($(Etr).find("td").eq(3).find(".EndHours").next().val());
                 $(Etr).find("td").eq(3).find(".EndMinutes").val($(Etr).find("td").eq(3).find(".EndMinutes").next().val());
+
+                if ($(Etr).find("td").eq(1).find(".DropApplying").next().val() == "Annual Leave") {
+                    $(Etr).find(".txthours").show();
+                    var nodasy = $(Etr).find(".nodays").val();
+                    $(Etr).find(".txthours:eq(0)").val((nodasy * 8).toFixed(2));
+
+                    $(Etr).find(".txthours:eq(1)").next().attr("disabled", true);
+                }
+                else {
+                    $(Etr).find(".txthours").hide();
+                    $(Etr).find(".txthours:eq(1)").next().removeAttr("disabled");
+                }
+
             });
             if ($("#hdIncident").val() != "") {
                 $("#ButtonList1_btnSubmit").val("Submit");
@@ -97,12 +117,26 @@
                 $("#ReturnBackTask").show();
             }
         });
+        function clearedisabled() {
+           $("body").find(".nodays").removeAttr("disabled");
+       }
+       function deleteclearedisabled() {
+           if (confirm("Confirm Del ?")) {
+               $("body").find(".nodays").removeAttr("disabled");
+               return true;
+           }
+           else
+           { 
+           return false;
+       }
+       }
         function getItemChecked(obj) {
             $(obj).next().val($(obj).find("option:selected").text());
         }
         function changeOption(obj) {
             var times = $(obj).val();
             $(obj).next().val(times);
+            cacluateDate(obj);
         }
         function getHours(startDate, startHours, startMinutes, endDate, endHours, endMinutes) {
             var date1 = new Date(startDate.replace(/-/g,"/"));
@@ -188,11 +222,24 @@
                     }
                 }
             });
-            CheckEndDate(obj);
+
+            var LeaveType = $(obj).parent().parent().find(".DropApplying").find("option:selected").val();
+            
+            if (LeaveType == "Annual Leave") {
+              
+                $(obj).parent().parent().find(".txthours").show();
+                $(obj).parent().parent().find(".txthours:eq(1)").next().attr("disabled", true);
+                CheckEndDate(obj);
+            }
+            else {
+                $(obj).parent().parent().find(".txthours").hide();
+                $(obj).parent().parent().find(".txthours:eq(1)").next().removeAttr("disabled");
+            }
         }
         function NoODays_onblur(obj) {
- 
+
             if ($(obj).parent().parent().find("td:eq(1)").find(".DropApplying").val() == "Annual Leave") {
+
                 $("#fld_nowAnnualLeave").val($(obj).val());
                 var time = $("#fld_sumAnnualLeave").val;
                 if (parseFloat($("#fld_sumAnnualLeave").val()) - parseFloat($(obj).val()) < 0) {
@@ -203,14 +250,19 @@
                 }
             }
         }
+        function checkleavetype(obj) {
+            if ($(obj).parent().parent().find("td:eq(1)").find(".DropApplying").val() == "Annual Leave") {
+                $(obj).blur();
+            }        
+        }
 
         function CheckEndDate(obj) {
-            
 //            var myDate = new Date;
 //            var Cyear = myDate.getFullYear(); //获取当前年
             var EndDate = $(obj).parent().parent().parent().find('.endDate').val();
             var StartDate = $(obj).parent().parent().parent().find('.startDate').val();
            // var myEndDate = new Date(EndDate);
+       
             if (EndDate != "" && StartDate != "" && StartDate!=undefined&&EndDate!=undefined) {
                 var reg = new RegExp('-', "g")
                 var EndDateValue = EndDate.replace(reg, '/');
@@ -222,14 +274,60 @@
 //                console.log("结束月份" + Emonth);
 //                console.log("开始月份" + Smonth);
                 var LeaveType = $(obj).parent().parent().parent().find(".DropApplying").find("option:selected").val();
-                if (LeaveType == "Annual Leave" && (Emonth == 4 && Smonth==3)) {
+                  
+                if (LeaveType == "Annual Leave" && (Emonth == 4 && Smonth == 3)) {
                     alert("Date invalid,Please re-select");
                     $(obj).parent().parent().parent().find('.endDate').val("");
                     $(obj).parent().parent().parent().find('.startDate').val("");
                 }
+                else {
+                    if (LeaveType == "Annual Leave") {
+                        cacluateDate(obj);
+                    }
+                }
             }
-         
-            
+
+
+        }
+
+        function cacluateDate(obj) {
+               if($(obj).html()=="") {
+               obj=$(obj).parent();
+               }
+            var LeaveType = $(obj).parent().parent().find(".DropApplying").find("option:selected").val();
+           
+            if (LeaveType == "Annual Leave") {
+                var StartDate = $(obj).parent().parent().find(".startDate").val();
+                var EndDate = $(obj).parent().parent().find(".endDate").val();
+                var Starthour = $(obj).parent().parent().find(".StartHours").val();
+                var Endhour = $(obj).parent().parent().find(".EndHours").val();
+                var Startminutes = $(obj).parent().parent().find(".StartMinutes").val();
+                var Endtminutes = $(obj).parent().parent().find(".EndMinutes").val();
+                if (StartDate != "" && EndDate != "") {
+                    $.ajax({ url: 'checkSumAnnualLeave.ashx',
+                        data: { "StartDate": StartDate, "EndDate": EndDate, "Starthour": Starthour, "Endhour": Endhour, "Startminutes": Startminutes, "Endtminutes": Endtminutes },
+                        type: 'POST',
+                        success: function (value) {
+                        value=-1;
+                            $("#fld_nowAnnualLeave").val(value);
+                            if (parseFloat($("#fld_sumAnnualLeave").val()) - parseFloat(value) < 0) {
+                                var str = "Your remaining annual leave is less than the input of the holiday.Please input again";
+                                alert(str);
+                                $(obj).val("");
+                            }
+                            else {
+                                $(obj).parent().parent().find(".nodays").val(value);
+                                $(obj).parent().parent().find(".txthours:eq(0)").val((value * 8).toFixed(2));
+                            }
+                        }
+                    });
+                }
+                else {
+                    $(obj).parent().parent().find(".nodays").val(0);
+                    $(obj).parent().parent().find(".txthours:eq(0)").val(0);
+                }
+
+            }
         }
 
     </script>
@@ -253,6 +351,9 @@
             </div>
             <div class="row">
                 <p style="font-weight:bold;">Request require（"<span style=" background:red;">&nbsp;</span>" must write） </p>
+                <p style="color:red;">
+                “The minimum unit of annual leave consumed is 1 hour, 1 day annual leave=8 hours 年休假的最小计算单位为1小时。（一  天年假换算为8小时）”
+                </p>
                 
                 <table class="table table-condensed table-bordered">
                     <tr>
@@ -266,7 +367,7 @@
                         <p style="text-align:center">To</p>
                         </th>
                         <th width="22%">
-                        <p style="text-align:center">No of absence days(4 hours at least)</p>
+                        <p style="text-align:center">Number of absence</p>
                         </th>
                         <th width="12%"></th>
                     </tr>
@@ -472,14 +573,18 @@
                                     <asp:TextBox runat="server" ID="fld_EndMinutes" Text='<%# String.IsNullOrEmpty(Eval("EndMinutes").ToString())? "":Eval("EndMinutes")%>' style="display:none;"></asp:TextBox>
                                 </td>
                                 <td>
-                                    <asp:TextBox runat="server" ID="fld_NoODays" Text='<%#Eval("NoODays") %>' onblur="NoODays_onblur(this)" CssClass="validate[required]" Width="92%"></asp:TextBox>
+                                    <input type="text" value="" class="txthours" style="display:none;width:50%;" disabled="disabled" />
+                                    <span class="txthours" style="display:none">Hours</span>
+                                    <asp:TextBox runat="server" ID="fld_NoODays" Text='<%#Eval("NoODays") %>' onfocus="checkleavetype(this)" onblur="NoODays_onblur(this)" CssClass="validate[required] nodays" Width="50%"></asp:TextBox>
+                                    <span class="txthours" style="display:none">Days</span>
+
                                     <%--<p style="float:right">&nbsp;&nbsp;&nbsp;&nbsp;</p>--%>
                                     <%--<input type="checkbox" runat="server"  id="cb_SelectValue"  value='<%# Container.ItemIndex+1%>' style="float:right" />
                                     <asp:TextBox ID="fld_FORMID" Text='<%#Eval("FORMID") %>' runat="server" Style="display: none"></asp:TextBox>
                                     <asp:Label ID="fld_ROWID" Text='<%# Container.ItemIndex+1%>' runat="server" style="display:none;"></asp:Label>--%>
                                 </td>
                                  <td style="text-align:center">
-                                    <asp:Button ID="btnDelete" runat="server" Text="delete" CssClass="btn" CommandName="del" ClientIDMode="Static" OnClientClick="return confirm('Confirm Del？')" />
+                                    <asp:Button ID="btnDelete" runat="server" Text="delete" CssClass="btn" CommandName="del" ClientIDMode="Static" OnClientClick="return deleteclearedisabled()" />
                                 </td>
                             </tr>
                         </ItemTemplate>
@@ -487,7 +592,7 @@
                     </tbody>
                     <tr>
                         <td colspan="5">
-                            <asp:Button runat="server" ID="btnAdd" Text="add" CssClass="btn"  CausesValidation="false" OnClick="btnAdd_Click"/>
+                            <asp:Button runat="server" ID="btnAdd" Text="add" CssClass="btn"  CausesValidation="false" OnClientClick="clearedisabled()" OnClick="btnAdd_Click"/>
                         </td>
                     </tr>
                 </table>

@@ -14,6 +14,19 @@
         function submitPageReview(obj) {
             $("#ButtonList1_btnSubmit").click();
         }
+        $(document).ready(function () {
+            $("#leavedetails").find("tr").each(function (i, Etr) {
+
+                if ($(Etr).find("td").eq(1).children().text() == "Annual Leave") {
+                    $(Etr).find(".txthours").show();
+                    var nodasy = $(Etr).find(".nodays").text();
+                    $(Etr).find(".txthours:eq(0)").text((nodasy * 8).toFixed(2));
+                }
+                else {
+                    $(Etr).find(".txthours").hide();
+                }
+            });
+        });
     </script>
 </head>
 <body>
@@ -29,7 +42,10 @@
             </div>
             <div class="row">
                 <p style="font-weight:bold;">Request require</p>
-                <table class="table table-condensed table-bordered">
+                 <p style="color:red;">
+                “The minimum unit of annual leave consumed is 1 hour, 1 day annual leave=8 hours 年休假的最小计算单位为1小时。（一  天年假换算为8小时）”
+                </p>
+                <table class="table table-condensed table-bordered" >
                     <tr>
                         <th width="25%"> 
                         <p style="text-align:center">Applying for</p>
@@ -41,11 +57,13 @@
                         <p style="text-align:center">To</p>
                         </th>
                         <th width="25%">
-                        <p style="text-align:center">No of absence days</p>
+                        <p style="text-align:center">Number of absence</p>
                         </th>
                     </tr>
+                    <tbody id="leavedetails">
                     <asp:Repeater runat="server" ID="fld_detail_PROC_Leave_DT">
                         <ItemTemplate>
+                         
                             <tr>
                                 <td style="display:none">
                                     <span style=" background:red;">&nbsp;</span>
@@ -67,12 +85,16 @@
                                     <asp:Label runat="server" ID="read_EndHours" Text='<%# String.IsNullOrEmpty(Eval("EndHours").ToString())? "":Eval("EndHours")%>'></asp:Label>:
                                     <asp:Label runat="server" ID="read_EndMinutes" Text='<%# String.IsNullOrEmpty(Eval("EndMinutes").ToString())? "":Eval("EndMinutes")%>'></asp:Label>
                                 </td>
-                                <td style="text-align:center">
-                                    <asp:Label runat="server" ID="read_NoODays" Text='<%#Eval("NoODays") %>'></asp:Label>
+                                <td style="text-align:center"> 
+                                   <span   class="txthours" style="display:none;width:50%;"> </span>
+                                    <span class="txthours" style="display:none">Hours</span><br />
+                                    <asp:Label runat="server" ID="read_NoODays" style="width:50%;"  CssClass="nodays" Text='<%#Eval("NoODays") %>'></asp:Label>
+                                    <span class="txthours" style="display:none">Days</span>
                                 </td>
                             </tr>
                         </ItemTemplate>
                     </asp:Repeater>
+                     </tbody>
                 </table>
                 <table class="table table-condensed table-bordered">
                     <tr>

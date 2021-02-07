@@ -62,7 +62,6 @@
     </tr>
     <tr>
     <td colspan="2" style="text-align:center">
-    <input type="button" value="test"  onclick="ClosePage()"/>
     <asp:Button runat="server" ID="btnSave" Text="Save" CssClass="btn" 
             onclick="btnSave_Click" OnClientClick="return ValildData()" />
     

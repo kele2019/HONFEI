@@ -134,11 +134,17 @@
 
             var checkedstr = $("#fld_Attchmentlist").val();
             $("#dropAttchment").find("input[type='checkbox']").each(function (i, item) {
-                if (checkedstr.indexOf($(item).next().html()) >=0) {
+                if (checkedstr.indexOf($(item).next().html()) >= 0) {
                     $(item).attr("checked", true);
                 }
             });
             summaryTotalAmount();
+            $("#fld_GRRemark").keyup(function () {
+                var remark = $("#fld_GRRemark").val();
+                if (remark.length > 254) {
+                    $("#fld_GRRemark").val(remark.substring(0,254));
+                }
+            });
         });
         function POStatus_onchange(obj) {
             if (obj != ""){

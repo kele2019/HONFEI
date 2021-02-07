@@ -147,7 +147,7 @@ namespace Ultimus.UWF.Workflow.EmailServices
             DataAccess.Instance("BizDB").ExecuteNonQuery(StrCreateAnnualLog);
 
             string StrInsertsql = @"insert into COM_LevalManager(UserAccount,LeaveYear,LeaveYearCount,LeaveYearHourCount,LeaveLastYearHourCount,FuallpaySick,CountLeave,CountLastLeave)
-  values('" + UserAccount + "','" + DateTime.Now.Year + "','" + DayCount + "','" + (DayCount * 8) + "','" + LastYearHour + "','5','" + DayCount + "','" + (LastYearHour/8).ToString("f2")+ "')";
+  values('" + UserAccount + "','" + DateTime.Now.Year + "','" + DayCount + "','" + (DayCount * 8) + "','" + LastYearHour + "','5','" + DayCount + "','" + (LastYearHour/8).ToString("f3")+ "')";
             return DataAccess.Instance("BizDB").ExecuteNonQuery(StrInsertsql) > 0;
         }
 

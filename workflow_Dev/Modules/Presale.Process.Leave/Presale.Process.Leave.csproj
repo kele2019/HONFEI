@@ -13,6 +13,7 @@
     <RootNamespace>Presale.Process.Leave</RootNamespace>
     <AssemblyName>Presale.Process.Leave</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,6 +70,7 @@
       <DependentUpon>checkSumAnnualLeave.ashx</DependentUpon>
     </Compile>
     <Compile Include="Entity\AnnualLeave.cs" />
+    <Compile Include="Entity\DictionryEntity.cs" />
     <Compile Include="Entity\UserEntity.cs" />
     <Compile Include="HRFinish.aspx.cs">
       <DependentUpon>HRFinish.aspx</DependentUpon>

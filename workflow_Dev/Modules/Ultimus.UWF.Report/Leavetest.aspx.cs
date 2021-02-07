@@ -71,7 +71,7 @@ namespace Ultimus.UWF.Report
 		  (L.CountLeave+L.CountLastLeave)-(L.LeaveYearCount+L.LeaveLastYearCount) ALeavecount,
 LeaveLastYearCount,
 		 (L.LeaveYearCount+L.LeaveLastYearCount) EnableLeaveCount  ,L.FuallpaySick from  
-		 (select CountLeave,CountLastLeave,UserAccount,LeaveYear,LeaveYearCount,cast(LeaveLastYearHourCount/8 as NUMERIC(18,2)) as LeaveLastYearCount,FuallpaySick from COM_LevalManager) L left join  
+		 (select CountLeave,CountLastLeave,UserAccount,LeaveYear,LeaveYearCount,cast(LeaveLastYearHourCount/8 as NUMERIC(18,3)) as LeaveLastYearCount,FuallpaySick from COM_LevalManager) L left join  
 		 ( select u.EXT04,d.DEPARTMENTNAME,u.LOGINNAME from ORG_USER u left join ORG_JOB j on u.USERID = j.USERID left join ORG_DEPARTMENT d on j.DEPARTMENTID = d.DEPARTMENTID) A  
 		  on REPLACE(L.UserAccount,'/','\') = A.LOGINNAME ) B where  LeaveYear='" + dropYear.SelectedValue + "'";
 
