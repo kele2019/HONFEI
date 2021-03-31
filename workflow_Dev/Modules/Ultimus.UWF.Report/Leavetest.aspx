@@ -156,7 +156,9 @@
                  <ItemTemplate>
                  <tr>
                  <td><%# Container.ItemIndex+1%></td>
-                 <td><%#Eval("DOCUMENTNO")%></td>
+                 <td>
+                 <a href='../Presale.Process.Leave/Approval.aspx?Incident=<%#Eval("INCIDENT") %>&Type=myapproval&ProcessName=Leave%20Application' target="_blank"><%#Eval("DOCUMENTNO")%></a>
+                </td>
                  <td><%#Convert.ToDateTime(Eval("REQUESTDATE").ToString()).ToShortDateString()%></td>
                  <td class="Applying"><%#Eval("Applying") %></td>
                  <td><%#Eval("CreateDate")%></td>

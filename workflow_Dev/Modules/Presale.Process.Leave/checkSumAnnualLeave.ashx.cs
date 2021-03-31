@@ -105,6 +105,10 @@ namespace Presale.Process.Leave
                     }
                 }
             }
+            if (ts.Days <0)
+            {
+                countdays = countdays * -1;
+            }
             return countdays;
         }
 		public bool IsReusable

@@ -143,7 +143,7 @@
                 }
                 if (project != "") {
                     if (ITEMNO.substr(0, 1) == "E") {
-                        if (project.substr(0, 2) != "EC") {
+                        if (project.substr(0, 1) != "E") {
                             errorCount++;
                             alert("You have choose " + ITEMNO + ",Project is wrong");
                             return false;

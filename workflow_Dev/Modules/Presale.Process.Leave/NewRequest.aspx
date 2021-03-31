@@ -308,7 +308,7 @@
                         data: { "StartDate": StartDate, "EndDate": EndDate, "Starthour": Starthour, "Endhour": Endhour, "Startminutes": Startminutes, "Endtminutes": Endtminutes },
                         type: 'POST',
                         success: function (value) {
-                        value=-1;
+                       
                             $("#fld_nowAnnualLeave").val(value);
                             if (parseFloat($("#fld_sumAnnualLeave").val()) - parseFloat(value) < 0) {
                                 var str = "Your remaining annual leave is less than the input of the holiday.Please input again";
@@ -389,14 +389,8 @@
                                 <td>
                                     <span><asp:TextBox runat="server" ID="fld_StartDate" Text='<%# String.IsNullOrEmpty(Eval("StartDate").ToString())? "":DateTime.Parse(Eval("StartDate").ToString()).ToString("yyyy-MM-dd") %>' CssClass="validate[required] startDate" onclick="WdatePicker({readOnly:false,dateFmt: 'yyyy-MM-dd'})" onchange="CheckEndDate(this)" Width="35%"></asp:TextBox></span>
                                     <asp:DropDownList runat="server" class="StartHours" Width="25%" ID="starthours" onchange="changeOption(this)">
-                                        <asp:ListItem Selected="True">00</asp:ListItem>
-                                        <asp:ListItem>01</asp:ListItem>
-                                        <asp:ListItem>02</asp:ListItem>
-                                        <asp:ListItem>03</asp:ListItem>
-                                        <asp:ListItem>04</asp:ListItem>
-                                        <asp:ListItem>05</asp:ListItem>
-                                        <asp:ListItem>06</asp:ListItem>
-                                        <asp:ListItem>07</asp:ListItem>
+                                        <asp:ListItem Selected="True">--Pls select--</asp:ListItem>
+                                        
                                         <asp:ListItem>08</asp:ListItem>
                                         <asp:ListItem>09</asp:ListItem>
                                         <asp:ListItem>10</asp:ListItem>
@@ -407,12 +401,7 @@
                                         <asp:ListItem>15</asp:ListItem>
                                         <asp:ListItem>16</asp:ListItem>
                                         <asp:ListItem>17</asp:ListItem>
-                                        <asp:ListItem>18</asp:ListItem>
-                                        <asp:ListItem>19</asp:ListItem>
-                                        <asp:ListItem>20</asp:ListItem>
-                                        <asp:ListItem>21</asp:ListItem>
-                                        <asp:ListItem>22</asp:ListItem>
-                                        <asp:ListItem>23</asp:ListItem>
+                                        
                                     </asp:DropDownList>:
                                     <asp:TextBox runat="server" ID="fld_StartHours" Text='<%# String.IsNullOrEmpty(Eval("StartHours").ToString())? "":Eval("StartHours")%>' style="display:none;"></asp:TextBox>
                                     <asp:DropDownList runat="server" class="StartMinutes" Width="25%" ID="startminutes" onchange="changeOption(this)">
@@ -482,14 +471,8 @@
                                 <td >
                                     <span><asp:TextBox runat="server" ID="fld_EndDate"  Text='<%# String.IsNullOrEmpty(Eval("EndDate").ToString())? "":DateTime.Parse(Eval("EndDate").ToString()).ToString("yyyy-MM-dd") %>' CssClass="validate[required] endDate" onclick="WdatePicker({readOnly:false,dateFmt: 'yyyy-MM-dd'})" onchange="CheckEndDate(this)" Width="35%"></asp:TextBox></span>
                                     <asp:DropDownList runat="server" class="EndHours" Width="25%" ID="endhours" onchange="changeOption(this)">
-                                        <asp:ListItem Selected="True">00</asp:ListItem>
-                                        <asp:ListItem>01</asp:ListItem>
-                                        <asp:ListItem>02</asp:ListItem>
-                                        <asp:ListItem>03</asp:ListItem>
-                                        <asp:ListItem>04</asp:ListItem>
-                                        <asp:ListItem>05</asp:ListItem>
-                                        <asp:ListItem>06</asp:ListItem>
-                                        <asp:ListItem>07</asp:ListItem>
+                                        <asp:ListItem Selected="True">--Pls select--</asp:ListItem>
+                                        
                                         <asp:ListItem>08</asp:ListItem>
                                         <asp:ListItem>09</asp:ListItem>
                                         <asp:ListItem>10</asp:ListItem>
@@ -500,12 +483,7 @@
                                         <asp:ListItem>15</asp:ListItem>
                                         <asp:ListItem>16</asp:ListItem>
                                         <asp:ListItem>17</asp:ListItem>
-                                        <asp:ListItem>18</asp:ListItem>
-                                        <asp:ListItem>19</asp:ListItem>
-                                        <asp:ListItem>20</asp:ListItem>
-                                        <asp:ListItem>21</asp:ListItem>
-                                        <asp:ListItem>22</asp:ListItem>
-                                        <asp:ListItem>23</asp:ListItem>
+                                        
                                     </asp:DropDownList>:
                                     <asp:TextBox runat="server" ID="fld_EndHours" Text='<%# String.IsNullOrEmpty(Eval("EndHours").ToString())? "":Eval("EndHours")%>' style="display:none;"></asp:TextBox>
                                     <asp:DropDownList runat="server" class="EndMinutes" Width="25%" ID="endminutes" onchange="changeOption(this)">

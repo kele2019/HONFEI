@@ -112,14 +112,14 @@ LeaveLastYearCount,
                 string StrsqlDetail = string.Format(@"select * from (
 		  select A.DOCUMENTNO,A.REQUESTDATE,Applying,
 		  (CONVERT(nvarchar(50),StartDate,111)+' '+StartHours+':'+StartMinutes+'~'+CONVERT(nvarchar(50),EndDate,111)+' '+EndHours+':'+EndMinutes) CreateDate, 
-		  NoODays
+		  NoODays,A.INCIDENT
 		   from (
 		  select * from PROC_Leave where APPLICANTACCOUNT='{0}' and INCIDENT>0 and  (STATUS=1 or STATUS=2))A
 		  left join PROC_Leave_DT B on A.FORMID=B.FORMID where (StartDate>='{1}' or EndDate>='{1}')
 		  and (StartDate<'{2}' or EndDate<'{2}')
 		  union all
-		  select '' as DOCUMENTNO,GETDATE() as REQUESTDATE, LOGTYPE Applying, CONVERT(nvarchar(50),CreateDate,111)+' '+ LOGCONTENT,FORMID as NoODays from COM_LOG where MODULE='LevalType' and FORMNAME='{0}' and(CREATEDATE>='{1}' and CREATEDATE<'{2}')
-		  ) C order by REQUESTDATE", hdUserID.Value, SelectYear + "-01-01", (SelectYear + 1) + "-01-01");
+		  select '' as DOCUMENTNO,GETDATE() as REQUESTDATE, LOGTYPE Applying, CONVERT(nvarchar(50),CreateDate,111)+' '+ LOGCONTENT,FORMID as NoODays,'' as INCIDENT from COM_LOG where MODULE='LevalType' and FORMNAME='{0}' and(CREATEDATE>='{1}' and CREATEDATE<'{2}')
+		  ) C order by REQUESTDATE,INCIDENT", hdUserID.Value, SelectYear + "-01-01", (SelectYear + 1) + "-01-01");
                 DataTable dtTraningDetailData = DataAccess.Instance("BizDB").ExecuteDataTable(StrsqlDetail);
                 if (dtTraningDetailData.Rows.Count > 0)
                     RPLeaveDetail.DataSource = dtTraningDetailData;

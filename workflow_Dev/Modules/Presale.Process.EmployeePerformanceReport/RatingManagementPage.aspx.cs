@@ -17,6 +17,8 @@ namespace Presale.Process.EmployeePerformanceReport
             {
                 DataBindYear();
                 DataBindPage();
+                if(dropYear.SelectedValue==(DateTime.Now.Year-1).ToString())
+                hdEdit.Value = "Y";
             }
         }
         public void DataBindYear()
@@ -29,11 +31,11 @@ namespace Presale.Process.EmployeePerformanceReport
              dropYear.DataTextField = "RatingYear";
              dropYear.DataValueField = "RatingYear";
              dropYear.DataBind();
-             if(dropYear.Items.IndexOf(new ListItem(DateTime.Now.Year.ToString(),DateTime.Now.Year.ToString()))<0)
-                 dropYear.Items.Insert(0, new ListItem(DateTime.Now.Year.ToString(), DateTime.Now.Year.ToString()));
+             if(dropYear.Items.IndexOf(new ListItem((DateTime.Now.Year-1).ToString(),(DateTime.Now.Year-1).ToString()))<0)
+                 dropYear.Items.Insert(0, new ListItem((DateTime.Now.Year-1).ToString(), (DateTime.Now.Year-1).ToString()));
          }
          else
-             dropYear.Items.Insert(0, new ListItem(DateTime.Now.Year.ToString(), DateTime.Now.Year.ToString()));
+             dropYear.Items.Insert(0, new ListItem((DateTime.Now.Year - 1).ToString(), (DateTime.Now.Year - 1).ToString()));
 
          string strsqld = "select * from ORG_DEPARTMENT where PARENTID=1";
          DataTable dtd = DataAccess.Instance("BizDB").ExecuteDataTable(strsqld);
