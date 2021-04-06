@@ -71,7 +71,7 @@ namespace Presale.Process.LocalExpense
                 //fld_DGMLogin.Text = (DataAccess.Instance("BizDB").ExecuteScalar("select LoginName+'|USER' from dbo.ORG_USER where EXT03 ='DGM'").ToString()).Replace("\\", "/");
                 fld_DGM.Text = (DataAccess.Instance("BizDB").ExecuteScalar("select USERCODE from ORG_USER  where loginname = '" + Page.User.Identity.Name + "' ").ToString());
                 //fld_DGM.Text = DataAccess.Instance("BizDB").ExecuteScalar("select EXT04 from dbo.ORG_USER where EXT03 ='DGM'").ToString();
-                fld_GM.Text = DataAccess.Instance("BizDB").ExecuteScalar("select USERCODE from dbo.ORG_USER where EXT03 ='GM'").ToString();
+                fld_GM.Text = DataAccess.Instance("BizDB").ExecuteScalar("select USERCODE from dbo.ORG_USER where LOGINNAME=( SELECT top(1) UserAccount FROM  [dbo].[ORG_ROLEINFO] where RoleName='GM')").ToString();
                 //fld_FinLogin.Text = (DataAccess.Instance("BizDB").ExecuteScalar("select LoginName+'|USER' from dbo.ORG_USER where EXT03 ='CFO'").ToString()).Replace("\\", "/");
                 //fld_deptLogin.Text = DataAccess.Instance("BizDB").ExecuteScalar("select Replace(EXT02,'\\','/')+'|USER'  from dbo.ORG_USER where loginname = '" + Page.User.Identity.Name + "'").ToString();
 			}
