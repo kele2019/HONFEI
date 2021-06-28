@@ -16,6 +16,8 @@ namespace Presale.Process.PurchaseApplication
         {
             if (!IsPostBack)
             {
+                GetDataBasic();
+
                 GetDataBind();
 
                 string Strchecksql = @" select COUNT(1) from ORG_GROUPMEMBER
@@ -38,10 +40,10 @@ namespace Presale.Process.PurchaseApplication
             AspNetPager1.RecordCount=Convert.ToInt32(DataAccess.Instance("BizDB").ExecuteScalar(StrsqlCount).ToString());
             string Strsql = @"select * from (
 select ROW_NUMBER() over(order by A.REQUESTDATE desc) RN, A.DOCUMENTNO,A.APPLICANT AS PRAPPLICANT,CONVERT(nvarchar(50),A.REQUESTDATE,111) as PRREQUESTDATE,A.STATUS,A.Incident,A.Remarks,A.TotalAmount,B.*,CONVERT(nvarchar(50),B.REQUESTDATE,111) as POREQUESTDATE,PurchaseOrdStatus 
-,C.DOCUMENTNO as GRNo, C.APPLICANT as GRAPPLICANT,CONVERT(nvarchar(50), C.REQUESTDATE,111) as GRREQUESTDATE,C.SUPPLIER as GRSupplier,C.INCIDENT as GRIncident
+,C.DOCUMENTNO as GRNo, C.APPLICANT as GRAPPLICANT,CONVERT(nvarchar(50), C.REQUESTDATE,111) as GRREQUESTDATE,C.SUPPLIER as GRSupplier,C.INCIDENT as GRIncident,C.DocNum
 from PROC_Purchase A left join  V_PRPO B on A.DOCUMENTNO=B.PRNO
 
-left join (select DOCUMENTNO,INCIDENT,REQUESTDATE,SUPPLIER,APPLICANT,PurchaseRequestNo,B.U_M_SharePointNum as  PurchaseOrderNo from PROC_GoodsReceive A left join V_SAPPOList1 B on A.PurchaseOrderNo=B.DocNum where STATUS<>3 and INCIDENT>0) C
+left join (select DOCUMENTNO,INCIDENT,REQUESTDATE,SUPPLIER,APPLICANT,PurchaseRequestNo,B.U_M_SharePointNum as  PurchaseOrderNo,B.DocNum  from PROC_GoodsReceive A left join V_SAPPOList1 B on A.PurchaseOrderNo=B.DocNum where STATUS<>3 and INCIDENT>0) C
  on A.DOCUMENTNO=C.PurchaseRequestNo or B.PONO=C.PurchaseOrderNo
 
 WHERE 1=1
@@ -55,10 +57,31 @@ WHERE 1=1
 
            
         }
+        public void GetDataBasic()
+        {
+            DataTable dtdept = DataAccess.Instance("BizDB").ExecuteDataTable("select distinct DEPARTMENT from PROC_Purchase with(nolock)");
+            if (dtdept.Rows.Count > 0)
+            {
+                dropDept.DataSource = dtdept;
+                dropDept.DataTextField = "DEPARTMENT";
+                dropDept.DataValueField = "DEPARTMENT";
+                dropDept.DataBind();
+                dropDept.Items.Insert(0, new ListItem("Pls Select", ""));
+            }
+        }
         public string Strwhere()
         {
             string returnvalue = "";
 
+
+            if (txtPRapplicant.Text.Trim() != "")
+            {
+                returnvalue = " and A.APPLICANT like '%" + txtPRapplicant.Text.Trim() + "%'";
+            }
+            if (dropDept.SelectedValue.Trim() != "")
+            {
+                returnvalue = " and A.DEPARTMENT ='" + dropDept.SelectedValue.Trim() + "'";
+            }
             if (txtPO.Text.Trim() != "")
             {
                 returnvalue = " and B.SUPPLIER like '%" + hidPOVenderCode.Value + "%'";

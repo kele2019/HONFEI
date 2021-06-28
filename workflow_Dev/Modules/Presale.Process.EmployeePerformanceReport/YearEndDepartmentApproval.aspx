@@ -106,13 +106,13 @@
         }
         function LoadBehavior(obj,flag) {
             var RDate = $("#UserInfo1_fld_REQUESTDATE").text();
-            var RYear = new Date(RDate).getFullYear() - 0;
+            var RYear =new Date(RDate).getFullYear() - 0;
             var value = $(obj).val();
 
             if (RYear < 2017) {
                 $("#behaviortable1").show();
                 $("#behaviortable2").hide();
-
+                $("#behaviortable3").hide();
                 if (value == "Exceed")
                     $(obj).parent().prev().prev().find("input").attr("checked", true);
                 if (value == "At")
@@ -123,8 +123,29 @@
                     $(obj).prev().attr("checked", true);
             }
             else {
-                $("#behaviortable1").hide();
-                $("#behaviortable2").show();
+                if (RYear >= 2021) {
+                    $("#behaviortable1").hide();
+                    $("#behaviortable2").hide();
+                    $("#behaviortable3").show();
+
+
+                    if (flag != undefined) {
+                        if (value == "Exceed")
+                            $("input[name^='" + flag + "']").eq(7).attr("checked", true);
+                        if (value == "At")
+                            $("input[name^='" + flag + "']").eq(8).attr("checked", true);
+                        if (value == "Below")
+                            $("input[name^='" + flag + "']").eq(9).attr("checked", true);
+                        if (value == "Rarely")
+                            $("input[name^='" + flag + "']").eq(10).attr("checked", true);
+
+                    }
+                }
+                else {
+                    $("#behaviortable1").hide();
+                    $("#behaviortable2").show();
+                    $("#behaviortable3").hide();
+                
                 if (flag != undefined) {
                     if (value == "Exceed")
                     // $(obj).parent().prev().prev().find("input").attr("checked", true);
@@ -140,6 +161,7 @@
                         $("input[name^='" + flag + "']").eq(6).attr("checked", true);
 
                 }
+            }
             }
         }
         function getButtonCheck(obj, value) {
@@ -817,8 +839,6 @@
                 </table>
 
 
-
-
                    <table class="table table-condensed table-bordered" id="behaviortable2">
                     <tr>
                         <th width="4%">
@@ -972,7 +992,7 @@
                         <p style="text-align:center">6</p>
                         </td>
                         <td style="text-align:center;vertical-align:middle;">
-                            <p style="text-align:center">Go Beyond</p>
+                            <p style="text-align:center">Go Beyond</p><%--Go Beyond--%>
                         </td>
                         <td style="text-align:center;vertical-align:middle;"> 
                        <span style="height:30px; float:left;">&nbsp;</span>
@@ -998,7 +1018,7 @@
                         <p style="text-align:center">7</p>
                         </td>
                         <td style="text-align:center;vertical-align:middle;">
-                            <p style="text-align:center">Inspire Greatness</p>
+                            <p style="text-align:center">Inspire Greatness</p><%--Inspire Greatness--%>
                         </td>
                         <td style="text-align:center;vertical-align:middle;"> 
                        <span style="height:30px; float:left;">&nbsp;</span>
@@ -1024,7 +1044,7 @@
                         <p style="text-align:center">8</p>
                         </td>
                         <td style="text-align:center;vertical-align:middle;">
-                            <p style="text-align:center">Become Your Best</p>
+                            <p style="text-align:center">Become Your Best</p><%--Become Your Best--%>
                         </td>
                         <td style="text-align:center;vertical-align:middle;"> 
                        <span style="height:30px; float:left;">&nbsp;</span>
@@ -1073,6 +1093,237 @@
                 </table>
 
 
+                
+                   <table class="table table-condensed table-bordered" id="behaviortable3">
+                    <tr>
+                        <th width="4%">
+                            <p style="text-align:center" >No</p>
+                        </th>
+                         <th width="40%">
+                            <p style="text-align:center">Behaviors</p>
+                        </th>
+                         <th width="14%">
+                            <p style="text-align:center" >Always</p>
+                        </th>
+                        <th width="14%">
+                            <p style="text-align:center">Frequently</p>
+                        </th>
+                         <th width="14%">
+                            <p style="text-align:center">Sometimes</p>
+                        </th>
+                          <th width="14%">
+                            <p style="text-align:center">Rarely</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                         <span style="background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">1</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center">Have a Passion for Winning</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"> 
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton73" runat="server" GroupName="Behavior1Score" Value="Exceed" onclick="getButtonCheck('1','Exceed')" />
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton74" runat="server" GroupName="Behavior1Score" Value="At" onclick="getButtonCheck('1','At')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton75" runat="server" GroupName="Behavior1Score" Value="Below" onclick="getButtonCheck('1','Below')"/>
+                        </td>
+                         <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton76" runat="server" GroupName="Behavior1Score" Value="Below" onclick="getButtonCheck('1','Rarely')"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                         <span style=" background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">2</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center">Be a Zealot for Growth</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"> 
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton77" runat="server" GroupName="Behavior2Score" Value="Exceed" onclick="getButtonCheck('2','Exceed')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton78" runat="server" GroupName="Behavior2Score" Value="At"  onclick="getButtonCheck('2','At')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton79" runat="server" GroupName="Behavior2Score" Value="Below" onclick="getButtonCheck('2','Below')" />
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton80" runat="server" GroupName="Behavior2Score" Value="Below" onclick="getButtonCheck('2','Rarely')" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                         <span style="background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">3</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center">Think Big … Then Make It Happen</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"> 
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton81" runat="server" GroupName="Behavior3Score" Value="Exceed"  onclick="getButtonCheck('3','Exceed')" />
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton82" runat="server" GroupName="Behavior3Score" Value="At"  onclick="getButtonCheck('3','At')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton83" runat="server" GroupName="Behavior3Score" Value="Below"  onclick="getButtonCheck('3','Below')" />
+                        </td>
+                          <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton84" runat="server" GroupName="Behavior3Score" Value="Below"  onclick="getButtonCheck('3','Rarely')" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                         <span style=" background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">4</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center">Act with Urgency</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"> 
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton85" runat="server" GroupName="Behavior4Score" Value="Exceed"  onclick="getButtonCheck('4','Exceed')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton86" runat="server" GroupName="Behavior4Score" Value="At"  onclick="getButtonCheck('4','At')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton87" runat="server" GroupName="Behavior4Score" Value="Below"  onclick="getButtonCheck('4','Below')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton88" runat="server" GroupName="Behavior4Score" Value="Below"  onclick="getButtonCheck('4','Rarely')"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                         <span style=" background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">5</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center">Be Courageous</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"> 
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton89" runat="server" GroupName="Behavior5Score" Value="Exceed"  onclick="getButtonCheck('5','Exceed')" />
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton90" runat="server" GroupName="Behavior5Score" Value="At"  onclick="getButtonCheck('5','At')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton91" runat="server" GroupName="Behavior5Score" Value="Below"  onclick="getButtonCheck('5','Below')" />
+                        </td>
+
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton92" runat="server" GroupName="Behavior5Score" Value="Below"  onclick="getButtonCheck('5','Rarely')" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                         <span style=" background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">6</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center">Become your best</p><%--Go Beyond--%>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"> 
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton93" runat="server" GroupName="Behavior6Score" Value="Exceed"  onclick="getButtonCheck('6','Exceed')" />
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton94" runat="server" GroupName="Behavior6Score" Value="At"  onclick="getButtonCheck('6','At')" />
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton95" runat="server" GroupName="Behavior6Score" Value="Below"  onclick="getButtonCheck('6','Below')" />
+                        </td>
+
+                         <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton96" runat="server" GroupName="Behavior6Score" Value="Below"  onclick="getButtonCheck('6','Rarely')" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                         <span style=" background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">7</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center">Be Committed</p><%--Inspire Greatness--%>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"> 
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton97" runat="server" GroupName="Behavior7Score" Value="Exceed" onclick="getButtonCheck('7','Exceed')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton98" runat="server" GroupName="Behavior7Score" Value="At" onclick="getButtonCheck('7','At')" />
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton99" runat="server" GroupName="Behavior7Score" Value="Below" onclick="getButtonCheck('7','Below')"/>
+                        </td>
+
+                          <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton100" runat="server" GroupName="Behavior7Score" Value="Below" onclick="getButtonCheck('7','Rarely')"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                         <span style=" background:red;height:30px; float:left;">&nbsp;</span>
+                        <p style="text-align:center">8</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center">Build Exceptional Talent</p><%--Become Your Best--%>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"> 
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton101" runat="server" GroupName="Behavior8Score" Value="Exceed" onclick="getButtonCheck('8','Exceed')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton102" runat="server" GroupName="Behavior8Score" Value="At" onclick="getButtonCheck('8','At')"/>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton103" runat="server" GroupName="Behavior8Score" Value="Below" onclick="getButtonCheck('8','Below')" />
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                       <span style="height:30px; float:left;">&nbsp;</span>
+                            <asp:RadioButton ID="RadioButton104" runat="server" GroupName="Behavior8Score" Value="Below" onclick="getButtonCheck('8','Rarely')" />
+                        </td>
+                    </tr>
+                    
+                      
+                  
+                </table>
+
+
 
                  <table class="table table-condensed table-bordered" style="display:none">
                     <tr>
@@ -1103,7 +1354,9 @@
                         <p style="text-align:center">9 Block rating</p>
                         </td>
                         <td class="td-content" colspan="7" >
-                        <asp:TextBox runat="server" ID="fld_BRating" Width="45%"></asp:TextBox><br />
+                        <asp:TextBox runat="server" ID="fld_BRating" Width="45%" ReadOnly="true"></asp:TextBox>
+                        Please send the rating to HR separately
+                        <br />
                         <img src="standar.png" width="50px" height="50px" />
                         </td>
                     </tr>

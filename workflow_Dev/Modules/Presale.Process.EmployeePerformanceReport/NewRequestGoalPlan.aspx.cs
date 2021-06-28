@@ -47,9 +47,12 @@ namespace Presale.Process.EmployeePerformanceReport
 				fld_OnBoardingDepartment.Text = user.DEPARTMENTNAME;
 				fld_EmployeePost.Text = user.EXT03;
 				string sql1 = "select LOGINNAME from ORG_USER where EXT03 = 'GM'";
+                sql1 = " SELECT top(1) UserAccount as LOGINNAME  FROM  [dbo].[ORG_ROLEINFO] where RoleName='GM'";
 				EmployeeLoginEntity loginname = DataAccess.Instance("BizDB").ExecuteEntity<EmployeeLoginEntity>(sql1);
+                if (loginname != null)
+                { 
 				fld_GM.Text = loginname.LOGINNAME.Replace("\\","/") + "|USER";
-
+                }
 				if (myRequest != null)
 				{
 					if (myRequest.ToString().ToUpper() == "NEWREQUEST")

@@ -71,6 +71,19 @@
     <asp:HiddenField runat="server" ID="hidGRVenderCode" />
     </td>
     </tr>
+
+     <tr>
+    <th> PRApplicant：</th>
+    <td><asp:TextBox runat="server" ID="txtPRapplicant" ></asp:TextBox>
+    </td>
+    <th>Department：</th>
+    <td>
+        <asp:DropDownList runat="server" ID="dropDept">
+       </asp:DropDownList>
+    </td>
+    </tr>
+
+
     <tr>
   <th>PR Status：</th>
   <td colspan="3">
@@ -100,6 +113,7 @@
      <th>PRRequestdate</th>
      <th>PR Process Status</th>
      <th>PONo</th>
+     <th>SAPPONo</th>
      <th>SUPPLIER</th>
      <th width="5%">PO Amount</th>
      <th>PORequestdate</th>
@@ -125,6 +139,7 @@
      <td><%#Eval("PRREQUESTDATE")%></td>
      <td><%# Eval("STATUS").ToString()=="1"?"Inprocessing":(Eval("STATUS").ToString()=="2"?"Complete":"Colse")%></td>
      <td> <a href='../Presale.Process.PurchaseOrder/Approval.aspx?Incident=<%#Eval("POINCIDENT") %>&ProcessName=Purchase+Order&Type=myapproval' target="_blank"><%#Eval("PONO") %></a></td>
+     <td><%#Eval("DocNum")%></td>
      <td><%#Eval("SUPPLIER")%></td>
       <td><%#Eval("TotalValueWithTax")%></td>
     
