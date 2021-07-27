@@ -27,7 +27,7 @@
     <form id="form1" runat="server">
      <div id="myDiv" class="container">
             <div class="row">
-                <ui:userinfo id="UserInfo1" processtitle="Badge Lost/Readjustment Application" processprefix="BLP" tablename="PROC_BadgeLostPeadjustment"
+                <ui:userinfo id="UserInfo1" processtitle="Badge  Application" processprefix="BLP" tablename="PROC_BadgeLostPeadjustment"
                     runat="server"  ></ui:userinfo>
             </div>
             <div class="row">

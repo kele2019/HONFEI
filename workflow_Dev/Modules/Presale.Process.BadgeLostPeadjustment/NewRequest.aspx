@@ -16,13 +16,13 @@
     <script type="text/javascript">
         $(document).ready(function () {
             var reason = $("#fld_Reason").val();
-            if (reason == "Role Change / New Access") {
+            if (reason == "Role Change" || reason == "Role Change / New Access") {
                 $("#Reason1").attr("checked", true);
             }
             if ($("#hdUrgeTask").val() == "Yes") {
                 $("#ReturnBackTask").show();
             }
-            if (reason == "Lost/Damage") {
+            if (reason == "New Access/Lost/Damage" || reason == "Lost/Damage") {
                 $("#Reason2").attr("checked", true);
                 $("#original").hide();
                 $("#current").hide();
@@ -103,10 +103,10 @@
             $("#fld_Access").val(subttoal);
 
             if ($("#Reason1").attr("checked")) {
-                $("#Reason2").next().val("Role Change / New Access");
+                $("#Reason2").next().val("Role Change");
             }
             if ($("#Reason2").attr("checked")) {
-                $("#Reason2").next().val("Lost/Damage");
+                $("#Reason2").next().val("New Access/Lost/Damage");
             }
             $("#dropOriginalRole").next().val($("#dropOriginalRole option:selected").text());
             $("#dropCurrentRole").next().val($("#dropCurrentRole option:selected").text());
@@ -213,7 +213,7 @@
     <form id="form1" runat="server">
      <div id="myDiv" class="container">
             <div class="row">
-                <ui:userinfo id="UserInfo1" processtitle="Badge Lost/Readjustment Application" processprefix="BLP" tablename="PROC_BadgeLostPeadjustment"
+                <ui:userinfo id="UserInfo1" processtitle="Badge Application  Process" processprefix="BLP" tablename="PROC_BadgeLostPeadjustment"
                     runat="server"  ></ui:userinfo>
                 <asp:TextBox runat="server" ID="fld_ITManager" style="display:none;"></asp:TextBox>
                 <asp:TextBox runat="server" ID="fld_ITManagerLogin" style="display:none;"></asp:TextBox>
@@ -243,8 +243,9 @@
                         <p style="text-align:center">Reason</p>
                         </td>
                         <td class="td-content" colspan="7" >
-                           <input type="radio" name="reason" checked="checked" value="Role change" id="Reason1" onclick="roleChange(this)"/>Role Change / New Access&nbsp;&nbsp;
-                           <input type="radio" name="reason" value="Lost/Damage" id="Reason2" onclick="lostDamage(this)"/>Lost/Damage&nbsp;&nbsp;
+                         
+                           <input type="radio" name="reason"   value="Role change" id="Reason1" onclick="roleChange(this)"/>Role Change&nbsp;&nbsp;
+                           <input type="radio" name="reason" value="Lost/Damage" id="Reason2" onclick="lostDamage(this)"/>New Access/Lost/Damage&nbsp;&nbsp;
                            <asp:TextBox runat="server" ID="fld_Reason" style="display:none;"></asp:TextBox>
                            <%--<asp:HiddenField runat="server" ID="fld_Reason" />--%>
                         </td>
@@ -291,7 +292,7 @@
                         <p style="text-align:center">Access</p>
                         </td>
                         <td class="td-content"  colspan="7" >
-                        <div   id="divmain" style="display:none;">
+                        <div   id="divmain" style="">
                             <input id="access1" type="checkbox" value="main door" style=" float:left" /> 
                             <span style="float: left;margin-right:10px;" >main door</span>
                             </div>
